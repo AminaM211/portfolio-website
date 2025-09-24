@@ -1,0 +1,57 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Kristi&family=Manuale:ital@0;1&family=Marcellus&family=Marcellus+SC&display=swap');
+
+/* Font-variabelen */
+:root {
+  --font-brand: 'Kristi', cursive;        /* enkel voor logo / brand */
+  --font-heading: 'Marcellus', serif;     /* titels */
+  --font-body: 'Manuale', serif;          /* body tekst */
+}
+
+/* Basis gebruik */
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+.brand, .logo {
+  font-family: var(--font-brand);
+}
+
+.kristi-regular {
+    font-family: "Kristi", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .manuale {
+    font-family: "Manuale", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .marcellus-regular {
+    font-family: "Marcellus", serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .just-me-again-down-here-regular {
+    font-family: "Just Me Again Down Here", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .marcellus-sc-regular {
+    font-family: "Marcellus SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  

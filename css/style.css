@@ -1,0 +1,272 @@
+:root{
+  --text:#f2f5f9;
+  --muted:#d9dde4;
+  --card:#eceff4;
+  --shadow:0 10px 30px rgba(0,0,0,.25);
+  --radius:22px;
+  --max:1100px;
+  --bg-deep:#0a0a12;
+  --bg-light: #b8e2fa;
+}
+
+.chaos {
+  padding-bottom: 10px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0 0;
+  font-family: Marcellus, serif;
+  color:var(--text);
+  background:var(--bg-light);
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+.hero{
+  text-align:center;
+  
+}
+
+.arrow {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.name{
+  font-family:Kristi, cursive;
+  font-size: 160px; margin:0 0 .15em; line-height:65%;
+  padding-top:100px;
+}
+
+.roles{
+  font-family:manuale, serif;
+  font-size:26px; margin:0;
+}
+.tagline-wrap{
+  margin-top:22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0px;  
+}
+
+.tagline{
+  font-size:40px; 
+  font-weight:600; 
+  opacity:.95; 
+  margin:.25rem 0;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#tag {
+  padding-bottom: 40px;
+}
+
+/* --- Projects grid fix --- */
+.projects{ 
+  padding: 24px 100px;
+  /* margin:0 100px; */
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(12, minmax(0,1fr));
+  gap: 40px;
+}
+
+/* basiskaart: halfbreed in desktop, nette hoogte */
+.card{
+  grid-column: span 6;
+  background:#eceff4;
+  color: white;
+  border-radius:24px;
+  /* box-shadow:0 10px 30px rgba(0,0,0,.25); */
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  text-decoration: none;
+  /* box-shadow: inset 0px -100px 100px rgba(0, 0, 0, 0.5); */
+}
+
+.thumb img{
+  width:120%; 
+  object-fit:cover;
+}
+
+.card .thumb{ height: 250px ; }
+.card-footer{
+  padding:18px 20px;
+}
+.card-title{ margin:0 0; font-size:20px; }
+.card-meta{ margin:0; color:white; opacity:.75; font-size:14px; }
+
+/* brede kaart: links onder de eerste rij */
+.card-wide{ grid-column: 1 / span 8; margin-top: 10px;}
+
+.card-right{ grid-column: 9 / span 4; margin-top: 10px;}
+
+.hero{ 
+  padding-top: 56px;
+  position: relative; 
+  } 
+
+  .viewheight {
+    position: relative;
+    min-height: 95vh; /* altijd volle schermhoogte */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden; /* verbergt scroll van achtergrond */
+  }
+  
+  /* Unicorn embed als achtergrond */
+  .viewheight .unicorn-embed {
+    position: absolute;
+    inset: 0;              /* vult hele .viewheight */
+    z-index: 0;            /* achter content */
+    inline-size: 100%;
+    block-size: 100%;
+  }
+  
+  
+  /* Zorg dat content erboven staat */
+  .viewheight .hero,
+  .viewheight .tagline-wrap {
+    position: relative;
+    z-index: 1;
+  }
+
+  .scroll-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .chaos {
+    padding-bottom: 30px;
+  }
+  
+
+/* responsive: stapel onder 900px */
+@media (max-width: 900px){
+  .card, .card-wide, .card-right{ grid-column: 1 / -1; }
+  .card .thumb{ height: 160px; }
+}
+
+/* About */
+.about{
+  padding:100px 10px; 
+  margin:0 100px;
+}
+
+.about-inner{
+  display:grid; 
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap:60px; 
+}
+.avatar{
+  width:180px; 
+  height:180px; 
+  border-radius:50%;
+  background:linear-gradient(135deg,#e5e7eb,#cbd5e1); 
+  box-shadow:var(--shadow);
+}
+
+.about-copy p{
+  font-size: 30px;
+  color:var(--muted)
+}
+
+.stack{list-style:none; padding:0; margin:18px 0 0; display:flex; flex-wrap:wrap; gap:10px}
+.stack li{
+  background:#ffffff20; 
+  border:1px solid #ffffff44; 
+  padding:.4rem 1rem;
+  border-radius:999px;
+  font-weight:600; 
+  backdrop-filter: blur(2px);
+}
+@media (max-width: 720px){
+  .about-inner{grid-template-columns: 1fr}
+  .avatar{margin:auto}
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-inner p {
+    font-size: 24px;
+  }
+  .hero-inner h1 {
+    font-size: 100px;
+  }
+  .tagline {
+    font-size: 40px;
+  }
+  .projects { margin: 0 40px; }
+  .about { margin: 0 40px; }
+  .site-footer { padding: 40px 60px; }
+}
+
+/* Mobiel breed (tot 720px) */
+@media (max-width: 720px) {
+  .name {
+    padding-top: 30px;
+  }
+
+  .chaos {
+    padding-bottom: 20px;
+  }
+
+  .mouse {
+    display: none;
+  }
+  /* hero */
+  .name { font-size: 80px;
+    padding-top:140px;
+  }
+  .tagline { font-size: 28px; }
+
+  /* projects */
+  .projects { margin: 0 30px; }
+  .grid { gap: 18px; }
+  .card .thumb { height: 140px; }
+
+  /* about */
+  .about { margin: 0 20px; padding: 60px 10px; }
+  .about-copy p { font-size: 20px; }
+  .socials { justify-content: center; }
+}
+
+/* Heel smal (tot 480px) */
+@media (max-width: 480px) {
+  .name { font-size: 56px; }
+  .roles { font-size: 18px; }
+  .tagline { font-size: 22px; }
+
+  .card-title { font-size: 18px; }
+  .card-meta { font-size: 12px; }
+
+  .about-copy p { font-size: 18px; }
+  .chip { font-size: 14px; padding: .3rem .6rem; }
+}
+

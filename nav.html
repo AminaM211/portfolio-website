@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nav - Amina</title>
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="css/fonts.css">
+
+  <style>
+    /* ====== Header ====== */
+    .site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: linear-gradient(#00000070, #00000000);
+      backdrop-filter: saturate(100%) blur(10px);
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    .brand {
+      font-family: var(--font-brand, 'Kristi', cursive);
+      font-size: clamp(36px, 5vw, 60px);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* ====== Nav links (desktop) ====== */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .pill {
+      font-family: var(--font-funky, 'Just Me Again Down Here', cursive);
+      font-size: clamp(18px, 2.5vw, 24px);
+      padding: 8px 30px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1.5px solid #ffffff55;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(2px);
+      transition: .25s ease;
+    }
+    .pill:hover {
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    /* ====== Hamburger ====== */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    .hamburger span {
+      display: block;
+      width: 28px;
+      height: 3px;
+      background: #fff;
+      border-radius: 10px;
+      transition: transform .3s ease, opacity .3s ease;
+    }
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* ====== Mobiel menu ====== */
+    @media (max-width: 720px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        position: fixed;
+        inset: 0;
+        transform: translateX(100%);
+        background: linear-gradient(135deg, #0a0a12 0%, #1a1a28 100%);
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        transition: transform .35s ease-in-out;
+        z-index: 1000;
+        height: 100vh;
+        padding-top: 40px;
+
+      }
+      .nav-links.active { transform: translateX(0); }
+    }
+
+    /* ====== Overlay ====== */
+    .menu-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.45);
+      backdrop-filter: blur(5px);
+      z-index: 999;
+      transition: opacity .3s ease;
+      height: 100vh;
+      width: 50vw;
+    }
+    .menu-overlay[hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="nav container">
+      <a class="brand" href="index.html">Amina</a>
+
+      <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="mobile-menu">
+        <a class="pill" href="index.html#about">Over mij</a>
+        <a class="pill" href="index.html#tag">Projecten</a>
+        <a class="pill" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Overlay -->
+  <div class="menu-overlay" hidden></div>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const overlay = document.querySelector('.menu-overlay');
+
+    function openMenu() {
+      navLinks.classList.add('active');
+      hamburger.classList.add('open');
+      overlay.hidden = false;
+      document.body.style.overflow = 'hidden';
+      hamburger.setAttribute('aria-expanded', 'true');
+    }
+    function closeMenu() {
+      navLinks.classList.remove('active');
+      hamburger.classList.remove('open');
+      overlay.hidden = true;
+      document.body.style.overflow = '';
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+    function toggleMenu() {
+      navLinks.classList.contains('active') ? closeMenu() : openMenu();
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    // Smooth scroll en sluiten bij klik op link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', e => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        }
+        closeMenu();
+      });
+    });
+  </script>
+</body>
+</html>

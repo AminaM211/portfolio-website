@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amina – UX/UI Designer</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fonts.css">
+
+  <!-- Unicorn Studio -->
+  <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.31/dist/unicornStudio.umd.js" defer></script>
+
+  <style>
+    /* Responsive unicorn embed */
+    .unicorn-embed {
+      inline-size: 100%;
+      block-size: clamp(360px, 80svh, 900px);
+      display: block;
+      overflow: hidden;
+    }
+    @media (max-width: 720px){
+      .unicorn-embed { block-size: 60svh; }
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <div class="viewheight">
+      <!-- Unicorn Background -->
+    <div
+      class="unicorn-embed"
+      data-us-project="j3Iv1bP0lvemTLBRgw5J"
+      data-us-scale="1"
+      data-us-dpi="1.5"
+      data-us-lazyload="true"
+      aria-label="Unicorn Studio canvas">
+    </div>
+    
+    <section class="hero">
+      <div class="hero-inner">
+        <h1 class="name">Amina Moutalibova</h1>
+        <p class="roles">UX/UI Designer · Webdesigner</p>
+      </div>
+    </section>
+
+    <div class="tagline-wrap">
+      <h2 class="chaos tagline">van creatieve chaos</h2>
+      <div id="tag" class="scroll-down">
+        <img class="mouse" src="images/SVG/scroll-icon.svg" alt="scroll down icon">
+        <img class="arrow" src="images/SVG/arrow.svg" alt="arrow down" style="width: 30px;">
+      </div>
+    </div>
+  </div>
+    
+  <h2 class="tagline">naar krachtige interfaces</h2>
+
+  <!-- Projects -->
+  <section class="projects container">
+    <div class="grid">
+      <!-- twee halve breedte kaarten -->
+      <a href="project-detail.html" class="card">
+        <div class="thumb"><img src="images/ecopick-mockup.png" alt=""></div>
+        <div class="card-footer">
+          <h3 class="card-title">ecopick - duurzame mode app</h3>
+          <p class="card-meta">Student Project — Sept 2024-Dec 2024</p>
+        </div>
+      </a href="project-detail.html">
+  
+      <a href="project-detail.html" class="card">
+        <div class="thumb"><img src="images/zuiderbad-mockup1.jpeg" alt=""></div>
+        <div class="card-footer">
+          <h3 class="card-title">Zuiderbad - Interactieve Kaart</h3>
+          <p class="card-meta">Student Project — Sept 2025-Dec 2025</p>
+        </div>
+      </a href="project-detail.html">
+  
+      <!-- brede kaart links -->
+      <a href="project-detail.html" class="card card-wide">
+        <div class="thumb"></div>
+        <div class="card-footer">
+          <h3 class="card-title">Special Olympics Website</h3>
+          <p class="card-meta">Redesign / User Testing</p>
+        </div>
+      </a href="project-detail.html">
+  
+      <!-- smalle kaart rechts -->
+      <a href="project-detail.html" class="card card-right">
+        <div class="thumb"></div>
+        <div class="card-footer">
+          <h3 class="card-title">Latte Lab VR</h3>
+          <p class="card-meta">Unity / XR Training</p>
+        </div>
+      </a href="project-detail.html">
+  
+    </div>
+  </section>
+  
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container about-inner">
+      <div class="avatar" aria-hidden="true"></div>
+
+      <div class="about-copy">
+        <p>
+          Ik ontwerp heldere interfaces en bouw gebruiksvriendelijke websites.
+          Ik ben gepassioneerd over wat ik doe want ik vind dat goed design een
+          echte verandering maakt. Ik hou ervan om ideeën om te zetten in dingen die echt werken.
+          Van idee naar interface: altijd met passie en detail.
+        </p>
+
+        <ul class="stack">
+          <li>Figma</li><li>HTML</li><li>CSS</li><li>JS</li>
+          <li>Illustrator</li><li>After Effects</li><li>React</li><li>PHP</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // nav en footer includen
+    Promise.all([
+      fetch("nav.html").then(res => res.text()),
+      fetch("footer.html").then(res => res.text())
+    ]).then(([navHtml, footerHtml]) => {
+      document.getElementById("nav-placeholder").innerHTML = navHtml;
+      document.getElementById("footer-placeholder").innerHTML = footerHtml;
+  
+      // nu pas elementen selecteren
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+  
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('open');
+      });
+  
+      // sluiten bij klik op link + smooth scroll
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href');
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('open');
+        });
+      });
+    });
+  </script>
+  
+  <script>
+    // init unicorn
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.UnicornStudio && typeof UnicornStudio.init === 'function') {
+        UnicornStudio.init();
+      }
+    });
+  </script>
+</body>
+</html>

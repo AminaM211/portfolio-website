@@ -1,0 +1,285 @@
+:root{
+    --bg:#0b0b10;
+    --text:#111;
+    --paper:#f9fafb;
+    --muted:#6b7280;
+    --brand:#e45f2a;       /* oranje bandkleur */
+    --brand-200:#f29b73;
+    --pill:#ffffff12;
+    --white:#fff;
+    --ink:#0f172a;
+    --shadow:0 10px 30px rgba(0,0,0,.15);
+    --radius:20px;
+    --max:1100px;
+  }
+  
+  /* Base */
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0; scroll-behavior: smooth;}
+  body{
+    font-family: Manuale, serif;
+    font-weight:400;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+  }
+  img{max-width:100%; height:auto; display:block}
+  .container{
+    width:min(92%, var(--max)); 
+    margin-inline:auto;    
+  }
+  
+  /* Header */
+  .site-header{position:sticky; 
+    top:0; z-index:50; 
+    background:var(--brand); color:#fff; box-shadow:0 1px 0 #00000010;
+  }
+
+  /* HERO */
+  .hero{
+    background-image: url('../images/zuiderbad-mockup1.jpeg');
+    color:#fff;
+    position:relative;
+    padding: 200px 0;
+    height: 70vh;
+    background-position: 30px 70px;
+    background-size: cover;
+  }
+  .hero-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0em 2em; 
+    padding: 0;
+    position: absolute;
+    width: calc(100% - 4em);
+    left: 0;
+    bottom: 2em;
+  }
+
+  .h-title{
+    font-family: 'Marcellus';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    color: #FFFFFF;
+  }
+
+  .h-lead{
+    opacity:.95; 
+    font-size: 20px;
+    max-width:30vw; ; 
+    margin:0 0 20px;
+    font-family: 'Manuale';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+    color: #FFFFFF;
+    }
+
+  .h-meta{
+    display:grid; 
+    grid-template-columns: repeat(3, minmax(0,auto)); 
+    gap:5%;
+    margin:20px 100px ; 
+    justify-content: center;
+    }
+
+  .meta-item h3{
+    font-family: 'Marcellus';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+    color: #000000;
+  }
+  .meta-item p{
+    font-family: 'Manuale';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+    color: #000000;
+  }
+
+  .meta-item span{opacity:.85;}
+  
+  .toc{
+    position:absolute; 
+    right:0%; 
+    top: 45%; 
+    transform:translateY(-50%);
+    display:flex; 
+    align-items: flex-end;
+    flex-direction:column; 
+    gap:0.8em;
+
+    font-family: 'Marcellus';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    text-align: right;
+  }
+  .toc a{
+    color:#fff; 
+    text-decoration: none;
+    border-radius:999px; 
+    font-weight:600; 
+    white-space:nowrap;
+  }
+
+  .toc a:hover{
+    text-decoration: underline;
+  }
+
+  .toc a:active {
+    text-decoration: underline;
+  }
+  
+  main p {
+    font-family: 'Manuale';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 170%;
+    color: #3B3B3B;
+    text-align: center;
+    margin: 0em 8em;
+  }
+
+  main h2 {
+    font-family: "Marcellus SC", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  #opl {
+    color: white;
+  }
+  /* Sections */
+  .section{padding-bottom:20px;}
+ 
+
+
+  
+  /* Color bands */
+  .band{background:var(--brand); color:#fff; padding:30px 0}
+  .band--alt{background:#f0f3f8; color:var(--ink)}
+  .band-title{
+    font-family: Marcellus, serif;
+    font-size: clamp(24px, 4.5vw, 34px);
+    margin:0 0 12px;
+    position:relative;
+  }
+ 
+  .band--alt .band-title::after{background:var(--brand)}
+  
+  /* Mijn rol grid */
+  .grid-2{display:grid; grid-template-columns: 1fr 1fr; gap:18px}
+  .media-grid figure img{border-radius:14px; box-shadow:var(--shadow)}
+  .bullets{padding-left:1.2rem}
+  .bullets li{margin:.35rem 0}
+  
+  /* Timeline */
+  .timeline{position:relative; padding:10px 0 10px 0; margin-top:8px}
+  .t-rail{position:absolute; left:24px; top:0; bottom:0; width:2px; background:#cbd5e1}
+  .t-step{position:relative; padding:0 0 26px 64px}
+  .t-badge{
+    position:absolute; left:8px; top:6px;
+    background:#fff; border:2px solid var(--brand); color:var(--brand);
+    font-weight:700; font-size:.8rem; padding:.18rem .5rem; border-radius:999px;
+  }
+  .t-title{margin:.2rem 0 .4rem; font-weight:800}
+  .t-content{display:grid; grid-template-columns: 1.1fr .9fr; gap:22px}
+  
+  @media (max-width: 1024px){
+    .h-title{
+      font-size: 2em !important;
+      line-height: 1em !important;
+    }  
+    .h-lead {
+      font-size: 1em !important;
+      max-width: 40% !important;
+    }
+    .hero-inner{margin:2em 2em; width: calc(100% - 4em);}
+    .hero{background-position: 0px 140px;} 
+   }
+
+  @media (max-width: 920px){
+    .hero-inner{grid-template-columns: 1fr; align-items: start}
+    .hero-mock{max-width: 720px; margin: 10px auto 0}
+    .hero-mock .over{right:-6%; top:-10%}
+    .toc{display:none}
+    .h-meta{grid-template-columns: 1fr 1fr 1fr}
+    .hero{
+      padding: 100px 0;
+    }  
+    .hero{background-position: 120px 70px;} 
+  }
+
+  @media (max-width: 860px){
+    .cols-2{grid-template-columns: 1fr}
+    .grid-2{grid-template-columns: 1fr}
+    .t-content{grid-template-columns: 1fr}
+    .hero-mock {background-position: 10px;}
+  }
+
+  @media (max-width: 720px){
+    .h-meta {
+      grid-template-columns: 1fr; 
+      gap:2em;
+      margin:30px 30px ; 
+      justify-content: center;
+    }
+
+    .h-meta h3 {
+      font-size: 24px;
+      margin: 0px 0;
+    }
+    .h-meta p {
+      font-size: 18px;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 620px){
+    .h-meta{grid-template-columns: 1fr; gap:12px}
+    .t-step{padding-left:56px}
+    .t-rail{left:18px}
+    .h-title {
+      font-size: 26px !important;
+    }
+    .h-meta {
+      gap:2em;
+    }
+    .hero{background-position: 3em 70px;} 
+  }
+
+  @media (max-width: 485px){
+    .hero{background-position: 0px 70px;
+    } 
+    .h-title {
+      font-size: 21px !important;
+      max-width: 50%;
+    }
+    .h-lead {
+      font-size: 14px !important;
+      max-width: 55% !important;
+    }
+  }
+
+  @media (max-width: 485px){
+    .hero{background-position: -100px 70px;
+    } 
+    .h-title {
+      font-size: 21px !important;
+      max-width: 50%;
+    }
+    .h-lead {
+      font-size: 14px !important;
+      max-width: 55% !important;
+    }
+  }
