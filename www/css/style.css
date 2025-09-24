@@ -6,7 +6,8 @@
   --radius:22px;
   --max:1100px;
   --bg-deep:#0a0a12;
-  --bg-light: #b8e2fa;
+  --bg-light: #06152b;
+  /* --bg-light: linear-gradient(90deg, #00346B 90%, #0A2B5D 100% ); */
 }
 
 .chaos {
@@ -19,6 +20,21 @@ body{
   font-family: Marcellus, serif;
   color:var(--text);
   background:var(--bg-light);
+  cursor: url('../images/cursor.png'), auto;
+}
+
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: fadeOut 1s forwards;
+  box-shadow: 0 0 10px rgba(255,255,255,0.7);
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.3);
+  }
 }
 
 html{
@@ -82,6 +98,14 @@ html{
 .projects{ 
   padding: 24px 100px;
   /* margin:0 100px; */
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+  z-index: 0;
 }
 
 .grid{

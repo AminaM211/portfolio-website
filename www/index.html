@@ -46,16 +46,18 @@
       </div>
     </section>
 
+      <canvas id="trail"></canvas>
+
     <div class="tagline-wrap">
       <h2 class="chaos tagline">van creatieve chaos</h2>
       <div id="tag" class="scroll-down">
         <img class="mouse" src="images/SVG/scroll-icon.svg" alt="scroll down icon">
-        <img class="arrow" src="images/SVG/arrow.svg" alt="arrow down" style="width: 30px;">
+        <img onclick="goTagline" class="arrow" src="images/SVG/arrow.svg" alt="arrow down" style="width: 30px;">
       </div>
     </div>
   </div>
     
-  <h2 class="tagline">naar krachtige interfaces</h2>
+  <h2 id="tagline" class="tagline">naar krachtige interfaces</h2>
 
   <!-- Projects -->
   <section class="projects container">
@@ -152,6 +154,34 @@
           hamburger.classList.remove('open');
         });
       });
+    });
+
+    const colors = ["#ff6ec7", "#6ecbff", "#a2ff6e", "#ffe36e", "#d36eff"];
+
+    document.addEventListener("mousemove", (e) => {
+      const dot = document.createElement("div");
+      dot.className = "dot";
+
+      // random grootte en kleur
+      const size = Math.random() * 12 + 6; 
+      dot.style.width = `${size}px`;
+      dot.style.height = `${size}px`;
+      dot.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+      dot.style.left = `${e.pageX - size/2}px`;
+      dot.style.top = `${e.pageY - size/2 + window.scrollY}px`;
+
+      document.body.appendChild(dot);
+
+      setTimeout(() => dot.remove(), 1000);
+    });
+
+    // scroll traag en smooth naar tagline
+    document.getElementById("tag").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const target = document.getElementById("tagline");
+    target.scrollIntoView({ behavior: "smooth" });
     });
   </script>
   
