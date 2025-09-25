@@ -17,7 +17,7 @@ html.is-animating.is-rendering #swup { opacity: 0; }
 
 #progress-bar {
   position: fixed;
-  top: 10%;
+  top: 75px;
   left: 0;
   height: 5px;
   background: linear-gradient(90deg, #ff6a95, #ffc773);
@@ -89,8 +89,8 @@ html{
 }
 
 .roles{
-  font-family:manuale, serif;
-  font-size:26px; margin:0;
+  font-family:marcellus SC, serif;
+  font-size:21px !important; margin:0;
 }
 .tagline-wrap{
   /* margin-top:22px; */
@@ -102,12 +102,13 @@ html{
 }
 
 .tagline{
-  font-size:40px; 
+  font-size:32px !important; 
   font-weight:600; 
   opacity:.95; 
   margin:.25rem 0;
   text-align: center;
   padding-bottom: 10px;
+  font-family: "Marcellus", serif;
 }
 
 #tag {
@@ -295,7 +296,7 @@ html{
     font-size: 100px;
   }
   .tagline {
-    font-size: 40px;
+    font-size: 30px !important;
   }
   .projects { margin: 0 40px; }
   .about { margin: 0 40px; }
