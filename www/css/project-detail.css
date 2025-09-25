@@ -25,7 +25,6 @@
   }
   img{max-width:100%; height:auto; display:block}
   .container{
-    width:min(92%, var(--max)); 
     margin-inline:auto;    
   }
   
@@ -45,6 +44,41 @@
     background-position: 30px 70px;
     background-size: cover;
   }
+
+  .hero2{
+    /* background-image: url('../images/ecopick-mockup.png'); */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/ecopick-mockup.png);
+    background-image: cover;
+    background-repeat: no-repeat;
+    color:#fff;
+    position:relative;
+    padding: 200px 0;
+    height: 70vh;
+    background-position: 0px 0px;
+    background-size: cover;
+  }
+
+  section.images {
+    margin: auto;
+    text-align: center;
+  }
+
+  .hero3{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/foodkiosk.webp);
+    background-image: cover;
+    background-repeat: no-repeat;
+    color:#fff;
+    position:relative;
+    padding: 200px 0;
+    height: 70vh;
+    background-position: bottom center;
+    background-size: cover;
+  }
+
+  h2.section-title {
+    margin-bottom: 0;
+  }
+
   .hero-inner {
     display: flex;
     justify-content: space-between;
@@ -54,7 +88,7 @@
     position: absolute;
     width: calc(100% - 4em);
     left: 0;
-    bottom: 2em;
+    bottom: 1em;
   }
 
   .h-title{
@@ -70,12 +104,13 @@
     opacity:.95; 
     font-size: 20px;
     max-width:30vw; ; 
-    margin:0 0 20px;
     font-family: 'Manuale';
     font-style: normal;
     font-weight: 400;
     line-height: 170%;
     color: #FFFFFF;
+    margin: 0;
+    padding-bottom: 1em;
     }
 
   .h-meta{
@@ -108,7 +143,7 @@
   .toc{
     position:absolute; 
     right:0%; 
-    top: 45%; 
+    top: 55%; 
     transform:translateY(-50%);
     display:flex; 
     align-items: flex-end;
@@ -171,6 +206,7 @@
   
   /* Color bands */
   .band{background:var(--brand); color:#fff; padding:30px 0}
+  .band2{ background: #709FA6;color:#fff; padding:30px 0}
   .band--alt{background:#f0f3f8; color:var(--ink)}
   .band-title{
     font-family: Marcellus, serif;
@@ -207,10 +243,14 @@
     .h-lead {
       font-size: 1em !important;
       max-width: 40% !important;
+      padding-bottom: 0;
     }
-    .hero-inner{margin:2em 2em; width: calc(100% - 4em);}
+    .hero-inner{margin: 1em 2em; width: calc(100% - 4em);}
     .hero{background-position: 0px 140px;} 
+    .toc{
+      top: 35%; 
    }
+  }
 
   @media (max-width: 920px){
     .hero-inner{grid-template-columns: 1fr; align-items: start}
@@ -266,20 +306,7 @@
     .hero{background-position: 3em 70px;} 
   }
 
-  @media (max-width: 485px){
-    .hero{background-position: 0px 70px;
-    } 
-    .h-title {
-      font-size: 21px !important;
-      max-width: 50%;
-    }
-    .h-lead {
-      font-size: 14px !important;
-      max-width: 55% !important;
-    }
-  }
-
-  @media (max-width: 485px){
+ @media (max-width: 485px){
     .hero{background-position: -100px 70px;
     } 
     .h-title {
@@ -288,24 +315,51 @@
     }
     .h-lead {
       font-size: 14px !important;
-      max-width: 60% !important;
-      margin-bottom: -20px;
+      max-width: 80% !important;
+      margin-bottom: 0px;
     }
     #context h2, p {
       text-align: left !important;
+    }
+
+    .h-meta {
+      margin-left: 1.6em !important;
+    }
+
+    .h-meta h3 {
+      font-size: x-large;
+      padding-left: 0em !important;
+    }
+    .h-meta p {
+      font-size: 16px;
     }
 
     .section-title {
       padding-left: 0.5em !important;
       text-align: left !important;
       margin:0.3em 0em;
+      font-size: x-large;
     }
 
     .band-title {
       padding-left: 0.5em !important;
       text-align: left !important;
       margin: 0.4em 0em;
-      font-size: 2em;
+      font-size: x-large !important;
+    }
+    .container p {
+      font-size: 14px !important;
+    }
+
+    #context, #uitdaging, #rol, #proces, #reflectie {
+      padding: 0em 0.8em !important;
+    }
+
+    #oplossing {
+      padding: 1em 0.8em !important;
+    }
+    #oplossing p {
+      padding-bottom: 1em;
     }
   }
 
@@ -319,7 +373,7 @@
   @media (max-width: 375px){
     .h-lead {
       font-size: 12px !important;
-      max-width: 30% !important;
+      max-width: 70% !important;
       margin-bottom: -20px;
     }
     .h-title {

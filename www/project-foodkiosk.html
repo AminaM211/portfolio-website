@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mochi Foodkiosk — Amina</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/project-detail.css" />
+  <link rel="stylesheet" href="css/fonts.css">
+
+</head>
+<body>
+  <!-- HERO -->
+  <section id="situatieschets" class="hero3">
+    <div id="nav-placeholder"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1 class="h-title">Mochi Foodkiosk</h1>
+        <p class="h-lead">
+          Een 3D streetfood kiosk in Blender, geïnspireerd door Japanse mochi. Het project focust op branding, 3D-modellering en sfeer.
+        </p>
+      </div>
+      <!-- Side TOC -->
+      <aside class="toc">
+        <a href="#situatieschets">Situatieschets</a>
+        <a href="#context">Context</a>
+        <a href="#deliverables">Deliverables</a>
+        <a href="#reflectie">Reflectie</a>
+      </aside>
+    </div>
+  </section>
+
+  <div class="h-meta">
+    <div class="meta-item">
+      <h3>Jaar</h3>
+      <p>2025</p>
+    </div>
+    <div class="meta-item">
+      <h3>Samenwerkingen</h3>
+      <p>Solo project</p>
+    </div>
+    <div class="meta-item">
+      <h3>Rol</h3>
+      <p>3D Design<br>Branding</p>
+    </div>
+  </div>
+
+  <main>
+    <!-- Context -->
+    <section id="context" class="section container">
+      <h2 class="section-title">Context</h2>
+      <p>
+        Voor mijn 3D-cursus ontwierp en modelleerde ik een <strong>foodkiosk rond mochi</strong> in Blender. Het doel was een visueel aantrekkelijke en thematische kiosk te maken waarbij <strong>branding</strong>, <strong>materiaalgebruik</strong> en <strong>licht</strong> samenkomen in één concept.
+      </p>
+    </section>
+
+    <section class="images">
+      <img src="/images/mochi-render1.png" alt="Mochi kiosk render front">
+      <img src="/images/mochi-render2.png" alt="Mochi kiosk render detail">
+      <img src="/images/mochi-render3.png" alt="Mochi kiosk render interior">
+    </section>
+
+    <!-- Reflectie -->
+    <section id="reflectie" class="section container">
+      <h2 class="section-title">Reflectie</h2>
+      <p>
+        Dit project liet me experimenteren met <strong>3D-branding</strong>: hoe materialen, vormen en sfeer een merkidentiteit kunnen dragen. 
+        Het combineren van speelse <strong>Japanse invloeden</strong> met functioneel design gaf me nieuwe inzichten in hoe 3D en storytelling elkaar versterken. 
+        Daarnaast verbeterde ik mijn vaardigheden in <strong>rendering en belichting</strong>.
+      </p>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // nav en footer includen
+    Promise.all([
+      fetch("nav.html").then(res => res.text()),
+      fetch("footer.html").then(res => res.text())
+    ]).then(([navHtml, footerHtml]) => {
+      document.getElementById("nav-placeholder").innerHTML = navHtml;
+      document.getElementById("footer-placeholder").innerHTML = footerHtml;
+  
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+  
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('open');
+      });
+  
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href');
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('open');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

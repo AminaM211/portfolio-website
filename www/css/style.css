@@ -47,7 +47,6 @@ html{
 
 .hero{
   text-align:center;
-  
 }
 
 .arrow {
@@ -120,54 +119,86 @@ html{
 /* basiskaart: halfbreed in desktop, nette hoogte */
 .card{
   grid-column: span 6;
-  background:#eceff4;
+  /* background:#eceff4; */
   color: white;
   border-radius:24px;
-  /* box-shadow:0 10px 30px rgba(0,0,0,.25); */
+  box-shadow:0 20px 30px rgba(0,0,0,.25);
   overflow:hidden;
   display:flex;
   flex-direction:column;
   text-decoration: none;
-  /* box-shadow: inset 0px -100px 100px rgba(0, 0, 0, 0.5); */
-}
+  
+  }
 
-.thumb img{
-  width:120%; 
-  object-fit:cover;
-}
+  #zuiderbad:hover {
+    cursor: url("../images/zd-logo.cur") 16 16, pointer;
+  }
 
-.card .thumb{ height: 250px ; }
-.card-footer{
-  padding:18px 20px;
-}
-.card-title{ margin:0 0; font-size:20px; }
-.card-meta{ margin:0; color:white; opacity:.75; font-size:14px; }
+  .card {
+    width: 100%; 
+    height: 15em;
+    object-fit: contain;
+    position: relative;
+  }
 
-/* brede kaart: links onder de eerste rij */
-.card-wide{ grid-column: 1 / span 8; margin-top: 10px;}
+  .card1 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(../images/ecopick-mockup.png);
+    background-size: cover;
+  }
 
-.card-right{ grid-column: 9 / span 4; margin-top: 10px;}
+  .card2 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(../images/zuiderbad-mockup1.jpeg);
+    background-size: cover;
+  }
 
-.hero{ 
-  padding-top: 56px;
-  position: relative; 
+  .card-wide {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(../images/foodkiosk.webp);
+    background-size: cover;
+    background-position:  center;
+  }
+
+  .card-title, .card-meta {
+    position: relative;
+    z-index: 2;
+  }
+
+  .card .thumb{ height: 250px ; }
+  .card-footer{
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .card-title{ margin:0 0; font-size:20px;
+   }
+  .card-meta{ margin:0; color:rgb(237, 237, 237); font-size:14px; }
+ 
+  /* brede kaart: links onder de eerste rij */
+  .card-wide{ grid-column: 1 / span 8; margin-top: 10px;}
+
+  .card-right{ grid-column: 9 / span 4; margin-top: 10px;}
+
+  .hero{ 
+    padding-top: 56px;
+    position: relative; 
   } 
 
   .viewheight {
     position: relative;
-    min-height: 80vh !important; /* altijd volle schermhoogte */
+    min-height: 80vh !important; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden; /* verbergt scroll van achtergrond */
+    overflow: hidden;
+    pointer-events:none;
   }
   
   /* Unicorn embed als achtergrond */
   .viewheight .unicorn-embed {
     position: absolute;
-    inset: 0;              /* vult hele .viewheight */
-    z-index: 0;            /* achter content */
+    inset: 0;        
+    z-index: 0; 
     inline-size: 100%;
     block-size: 100%;
   }
@@ -251,6 +282,14 @@ html{
   .projects { margin: 0 40px; }
   .about { margin: 0 40px; }
   .site-footer { padding: 40px 60px; }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    grid-column: span 12;
+  }
 }
 
 /* Mobiel breed (tot 720px) */
@@ -272,7 +311,9 @@ html{
   .tagline { font-size: 28px; }
 
   /* projects */
-  .projects { margin: 0 30px; }
+  .projects { margin: 0 30px; 
+    padding: 24px 3em; 
+  }
   .grid { gap: 18px; }
   .card .thumb { height: 140px; }
 
@@ -282,8 +323,15 @@ html{
   .socials { justify-content: center; }
 }
 
+@media (max-width: 600px) {
+
+.projects { 
+  padding: 24px 3em; 
+}
+}
+
 /* Heel smal (tot 480px) */
-@media (max-width: 510px) {
+@media (max-width: 530px) {
   .name { font-size: 80px !important; margin: 0 0.5em;}
   .roles { font-size: 18px !important; }
   .viewheight {
@@ -291,6 +339,13 @@ html{
   }
   .tagline { font-size: 22px !important; }
   .chaos { font-size: 24px !important; }
+  .projects {
+    padding: 2em 0.5em;
+  }
+ /* 
+  .card {
+   height: 10em; 
+  }*/
 
   .card-title { font-size: 18px !important; }
   .card-meta { font-size: 12px !important; }
@@ -299,3 +354,11 @@ html{
   .chip { font-size: 14px; padding: .3rem .6rem; }
 }
 
+@media (max-width: 370px) {
+  .projects {
+    padding: 2em 0em;
+  }
+  .card {
+    margin: 0 1em;
+  }
+}
