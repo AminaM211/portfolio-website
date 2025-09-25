@@ -11,7 +11,7 @@
 }
 
 .chaos {
-  padding-bottom: 10px;
+  padding-bottom: 40px !important;
 }
 
 *{box-sizing:border-box}
@@ -77,7 +77,7 @@ html{
   font-size:26px; margin:0;
 }
 .tagline-wrap{
-  margin-top:22px;
+  /* margin-top:22px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,7 +155,7 @@ html{
 
   .viewheight {
     position: relative;
-    min-height: 95vh; /* altijd volle schermhoogte */
+    min-height: 80vh !important; /* altijd volle schermhoogte */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -208,19 +208,18 @@ html{
   display:grid; 
   grid-template-columns: auto 1fr;
   align-items: center;
-  gap:60px; 
+  gap:20px; 
 }
-.avatar{
-  width:180px; 
-  height:180px; 
+.avatar img{
+  width:200px; 
+  height:auto; 
   border-radius:50%;
-  background:linear-gradient(135deg,#e5e7eb,#cbd5e1); 
   box-shadow:var(--shadow);
 }
 
 .about-copy p{
   font-size: 30px;
-  color:var(--muted)
+  color: white;
 }
 
 .stack{list-style:none; padding:0; margin:18px 0 0; display:flex; flex-wrap:wrap; gap:10px}
@@ -259,7 +258,6 @@ html{
   .name {
     padding-top: 30px;
   }
-
   .chaos {
     padding-bottom: 20px;
   }
@@ -285,15 +283,19 @@ html{
 }
 
 /* Heel smal (tot 480px) */
-@media (max-width: 480px) {
-  .name { font-size: 56px;}
-  .roles { font-size: 18px; }
-  .tagline { font-size: 22px; }
+@media (max-width: 510px) {
+  .name { font-size: 80px !important; margin: 0 0.5em;}
+  .roles { font-size: 18px !important; }
+  .viewheight {
+    min-height: 100vh !important; 
+  }
+  .tagline { font-size: 22px !important; }
+  .chaos { font-size: 24px !important; }
 
-  .card-title { font-size: 18px; }
-  .card-meta { font-size: 12px; }
+  .card-title { font-size: 18px !important; }
+  .card-meta { font-size: 12px !important; }
 
-  .about-copy p { font-size: 18px; }
+  .about-copy p { font-size: 18px !important; }
   .chip { font-size: 14px; padding: .3rem .6rem; }
 }
 

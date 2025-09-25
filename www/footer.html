@@ -15,6 +15,13 @@
   align-content: center;
 }
 
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
 .logo-footer{
   font-family:Kristi, cursive; 
   font-size:60px;
@@ -24,13 +31,14 @@
 .socials{display:flex; gap:10px; margin-top:10px}
 .chip{
   display:inline-block; padding:.45rem .8rem; border-radius:999px; text-decoration:none;
-  background:#ffffff15; border:1px solid #ffffff3a; color:#fff; font-weight:600
+  background:#ffffff15; border:1px solid #ffffff3a; color:#fff; font-weight:400;
+  font-family: marcellus, serif;
 }
 .footer-right h3{
   margin:10px 0px;
   font-size:50px;
 }
-.mail{color:#fff; text-decoration:none; font-weight:700}
+.mail{color:#fff; text-decoration:none; font-weight:400;  font-family: marcellus, serif;}
 .mail:hover{text-decoration:underline}
 .copyright{margin-top:100px; font-size:14px; color:#cfd6e3; text-align:center}
 
@@ -78,8 +86,7 @@
         <div class="logo-footer">Amina</div>
         <div class="socials">
           <a href="https://www.linkedin.com/in/amina-moutalibova-02a621297/" class="chip">LinkedIn</a>
-          <a href="#" class="chip">Dribbble</a>
-          <a href="#" class="chip">Behance</a>
+          <a href="#" class="chip">Github</a>
         </div>
       </div>
 
@@ -90,6 +97,6 @@
     </div>
 
     <div class="container copyright">
-      © 2025 Amina – Digital Designer
+      <p class="copy" style="font-size: 21px; margin-top: 26px;">©</p> 2025 Amina – UX/UI Designer
     </div>
   </footer>
