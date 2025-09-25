@@ -6,8 +6,8 @@
   --radius:22px;
   --max:1100px;
   --bg-deep:#0a0a12;
-  --bg-light: #06152b;
-  /* --bg-light: linear-gradient(90deg, #00346B 90%, #0A2B5D 100% ); */
+  --bg-light: #00346B;
+  /* --bg-light: linear-gradient(90deg, #00346B 90%, #082859 100% ); */
 }
 
 .chaos {
@@ -20,7 +20,6 @@ body{
   font-family: Marcellus, serif;
   color:var(--text);
   background:var(--bg-light);
-  cursor: url('../images/cursor.png'), auto;
 }
 
 .dot {
@@ -35,6 +34,11 @@ body{
     opacity: 0;
     transform: scale(0.3);
   }
+}
+
+.bg-color {
+  background-image: url('../images/Untitled.webp');
+  background-size: cover;
 }
 
 html{
@@ -104,7 +108,6 @@ html{
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.2);
   z-index: 0;
 }
 
@@ -283,7 +286,7 @@ html{
 
 /* Heel smal (tot 480px) */
 @media (max-width: 480px) {
-  .name { font-size: 56px; }
+  .name { font-size: 56px;}
   .roles { font-size: 18px; }
   .tagline { font-size: 22px; }
 
