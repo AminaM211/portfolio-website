@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Interactive Map — Amina</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -12,11 +13,13 @@
 
 </head>
 <body>
+  <div id="progress-bar"></div>
+
   <!-- HERO -->
   <section id="situatieschets" class="hero">
     <div id="nav-placeholder"></div>
     <div class="container hero-inner">
-      <div class="hero-copy">
+      <div class="hero-copy" data-id="zuid">
         <h1 class="h-title">Zuiderbad:<br> Interactive Map</h1>
         <p class="h-lead">
           Een interactieve kaart die bezoekers van Hofstade helpt het domein op een intuïtieve en speelse manier te ontdekken.
@@ -143,6 +146,13 @@
 
   <div id="footer-placeholder"></div>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // animatie duurtijd in ms
+      once: true      // animatie maar één keer afspelen
+    });
+  </script>
   <script>
     // nav en footer includen
     Promise.all([
@@ -175,6 +185,13 @@
         });
       });
     });
+
+    window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    document.getElementById('progress-bar').style.width = scrollPercent + "%";
+  });
   </script>
 </body>
 </html>

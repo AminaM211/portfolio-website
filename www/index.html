@@ -5,8 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amina – UX/UI Designer</title>
 
+    <!-- Primary SEO -->
+    <meta name="description" content="Portfolio van Amina Moutalibova" />
+    <link rel="canonical" href="https://amina-moutalibova.be/" />
+    <meta name="theme-color" content="#E1B755" />
+  
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Amina Moutalibova – Portfolio" />
+    <meta property="og:title" content="Amina Moutalibova – UX/UI Designer" />
+    <meta property="og:description" content="Digitale ervaringen creëren die een visie vertalen naar helderheid, waarde en betekenis." />
+    <meta property="og:url" content="https://amina-moutalibova.be/" />
+    <meta property="og:image" content="https://amina-moutalibova.be/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="nl_BE">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Amina Moutalibova – UX/UI Designer" />
+    <meta name="twitter:description" content="Digitale ervaringen creëren die een visie vertalen naar helderheid, waarde en betekenis." />
+    <meta name="twitter:image" content="https://amina-moutalibova.be/social-preview.png" />
+
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <!-- Styles -->
-   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fonts.css">
 
@@ -27,10 +52,12 @@
   </style>
 </head>
 <body>
+  <!-- <div id="preloader-placeholder"></div> -->
   <div id="nav-placeholder"></div>
+  <div id="progress-bar"></div>
 
   <div class="viewheight">
-      <!-- Unicorn Background -->
+    <!-- Unicorn Background -->
     <div
       class="unicorn-embed"
       data-us-project="j3Iv1bP0lvemTLBRgw5J"
@@ -42,14 +69,14 @@
     
     <section class="hero">
       <div class="hero-inner">
-        <h1 class="name">Amina Moutalibova</h1>
-        <p class="roles">UX/UI Designer · Webdesigner</p>
+        <h1 class="name" data-aos="fade-up">Amina Moutalibova</h1>
+        <p class="roles" data-aos="fade-up">UX/UI Designer · Webdesigner</p>
       </div>
     </section>
 
-      <canvas id="trail"></canvas>
+    <canvas id="trail"></canvas>
 
-    <div class="tagline-wrap">
+    <div class="tagline-wrap" data-aos="fade-up">
       <h2 class="chaos tagline">van creatieve chaos</h2>
       <div id="tag" class="scroll-down">
         <img class="mouse" src="images/SVG/scroll-icon.svg" alt="scroll down icon">
@@ -58,53 +85,49 @@
     </div>
   </div>
     
-  <h2 id="tagline" class="tagline">naar krachtige interfaces</h2>
+  <h2 id="tagline" class="tagline" data-aos="fade-up">naar krachtige interfaces</h2>
   <div class="bg-color">
   <!-- Projects -->
   <section class="projects container">
     <div class="grid">
-      <!-- twee halve breedte kaarten -->
-      <a href="project-ecopick.html" class="card card1">
+      <a href="project-ecopick.html" class="card card1" data-aos="fade-up">
         <div class="card-footer">
           <h3 class="card-title">ecopick - duurzame mode app</h3>
           <p class="card-meta">Student Project — Sept 2024-Dec 2024</p>
         </div>
-      </a href="project-detail.html">
+      </a>
   
-      <a href="project-detail.html" id="zuiderbad" class="card card2">
+      <a href="project-detail.html" id="zuiderbad" class="card card2" data-aos="fade-up">
         <div class="card-footer">
           <h3 class="card-title">Zuiderbad - Interactieve Kaart</h3>
           <p class="card-meta">Group Project — Sept 2025-Dec 2025</p>
         </div>
-      </a href="project-detail.html">
+      </a>
   
-      <!-- brede kaart links -->
-      <a href="project-foodkiosk.html" class="card card-wide">
+      <a href="project-foodkiosk.html" class="card card-wide" data-aos="fade-up">
         <div class="card-footer">
           <h3 class="card-title">3D Mochi Foodkiosk</h3>
           <p class="card-meta">Student Project — Sept 2025-Dec 2025</p>
         </div>
-      </a href="project-detail.html">
+      </a>
   
-      <!-- smalle kaart rechts -->
-      <a href="project-detail.html" class="card card-right">
+      <a href="project-detail.html" class="card card-right" data-aos="fade-up">
         <div class="card-footer">
           <h3 class="card-title">Special Olympics - Webdesign</h3>
           <p class="card-meta">Student Project — Sept 2025-Dec 2025</p>
         </div>
-      </a href="project-detail.html">
-  
+      </a>
     </div>
   </section>
   
   <!-- About -->
   <section id="about" class="about">
     <div class="container about-inner">
-      <div class="avatar" aria-hidden="true">
+      <div class="avatar" aria-hidden="true" data-aos="fade-up">
         <img src="./images/me.png" alt="">
       </div>
 
-      <div class="about-copy">
+      <div class="about-copy" data-aos="fade-up">
         <p>
           Ik ontwerp heldere interfaces en bouw gebruiksvriendelijke websites.
           Ik ben gepassioneerd over wat ik doe want ik vind dat goed design een
@@ -123,6 +146,14 @@
   <div id="footer-placeholder"></div>
 
   <script>
+    fetch("loader.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("preloader-placeholder").innerHTML = html;
+      });
+  </script>
+  
+  <script>
     // nav en footer includen
     Promise.all([
       fetch("nav.html").then(res => res.text()),
@@ -131,7 +162,6 @@
       document.getElementById("nav-placeholder").innerHTML = navHtml;
       document.getElementById("footer-placeholder").innerHTML = footerHtml;
   
-      // nu pas elementen selecteren
       const hamburger = document.querySelector('.hamburger');
       const navLinks = document.querySelector('.nav-links');
   
@@ -140,7 +170,6 @@
         hamburger.classList.toggle('open');
       });
   
-      // sluiten bij klik op link + smooth scroll
       document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', e => {
           e.preventDefault();
@@ -155,34 +184,27 @@
       });
     });
 
+    // kleurrijke muis trail
     const colors = ["#ff6ec7", "#6ecbff", "#a2ff6e", "#ffe36e", "#d36eff"];
-
     document.addEventListener("mousemove", (e) => {
       const dot = document.createElement("div");
       dot.className = "dot";
-
-      // random grootte en kleur
       const size = Math.random() * 12 + 6; 
       dot.style.width = `${size}px`;
       dot.style.height = `${size}px`;
       dot.style.background = colors[Math.floor(Math.random() * colors.length)];
-
       dot.style.left = `${e.pageX - size/2}px`;
       dot.style.top = `${e.pageY - size/2 + window.scrollY}px`;
-
       document.body.appendChild(dot);
-
       setTimeout(() => dot.remove(), 1000);
     });
 
-    // scroll traag en smooth naar tagline
+    // scroll smooth naar tagline
     document.getElementById("tag").addEventListener("click", (e) => {
-    e.preventDefault();
-
-    const target = document.getElementById("tagline");
-    target.scrollIntoView({ behavior: "smooth" });
+      e.preventDefault();
+      const target = document.getElementById("tagline");
+      target.scrollIntoView({ behavior: "smooth" });
     });
-
   </script>
   
   <script>
@@ -191,6 +213,17 @@
       if (window.UnicornStudio && typeof UnicornStudio.init === 'function') {
         UnicornStudio.init();
       }
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrollPercent + "%";
     });
   </script>
 </body>

@@ -12,6 +12,17 @@
     --radius:20px;
     --max:1100px;
   }
+
+  #progress-bar {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #ff6a95, #ffc773);
+    width: 0%;
+    z-index: 9999;
+    transition: width 0.1s ease;
+  }
   
   /* Base */
   *{box-sizing:border-box}
@@ -40,9 +51,11 @@
     color:#fff;
     position:relative;
     padding: 200px 0;
-    height: 70vh;
-    background-position: 30px 70px;
+    height: 60vh;
+    background-position: 30px 0px;
     background-size: cover;
+    border-radius: 20px;
+    margin: 8em 15px 15px 15px;
   }
 
   .hero2{
@@ -53,7 +66,7 @@
     color:#fff;
     position:relative;
     padding: 200px 0;
-    height: 70vh;
+    height: 60vh;
     background-position: 0px 0px;
     background-size: cover;
   }
@@ -70,7 +83,7 @@
     color:#fff;
     position:relative;
     padding: 200px 0;
-    height: 70vh;
+    height: 60vh;
     background-position: bottom center;
     background-size: cover;
   }
@@ -95,8 +108,8 @@
     font-family: 'Marcellus';
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
-    line-height: 45px;
+    font-size: 4em;
+    line-height: 100%;
     color: #FFFFFF;
   }
 
@@ -143,7 +156,7 @@
   .toc{
     position:absolute; 
     right:0%; 
-    top: 55%; 
+    top: 50%; 
     transform:translateY(-50%);
     display:flex; 
     align-items: flex-end;
@@ -237,19 +250,23 @@
   
   @media (max-width: 1024px){
     .h-title{
-      font-size: 2em !important;
+      font-size: 2.5em !important;
       line-height: 1em !important;
     }  
     .h-lead {
       font-size: 1em !important;
-      max-width: 40% !important;
+      max-width: 50% !important;
       padding-bottom: 0;
     }
     .hero-inner{margin: 1em 2em; width: calc(100% - 4em);}
-    .hero{background-position: 0px 140px;} 
-    .toc{
-      top: 35%; 
-   }
+    .hero{background-position: 0px 100px;} 
+ 
+   .hero, .hero2, .hero3 {
+    margin: 120px 15px 15px 15px;
+  }
+  .toc {
+    top: 30%;
+  }
   }
 
   @media (max-width: 920px){
@@ -261,7 +278,10 @@
     .hero{
       padding: 100px 0;
     }  
-    .hero{background-position: 120px 70px;} 
+    .hero, .hero2, .hero3 {
+      background-position: -80px 60px;
+      height: 60vh;
+    } 
   }
 
   @media (max-width: 860px){
@@ -272,6 +292,10 @@
     .hero-mock {background-position: 10px;}
     .section p {margin: 0em 4em;}
     #opl {margin: 0em 4em;}
+    .hero, .hero2, .hero3 {
+      background-position: -150px 60px;
+      height: 60vh;
+    } 
 
   }
 
@@ -291,6 +315,10 @@
       font-size: 18px;
       margin: 0;
     }
+    .hero, .hero2, .hero3 {
+      margin: 100px 15px 15px 15px;
+      background-position: -330px 50px;
+    }
   }
 
   @media (max-width: 620px){
@@ -303,12 +331,13 @@
     .h-meta {
       gap:2em;
     }
-    .hero{background-position: 3em 70px;} 
   }
 
  @media (max-width: 485px){
-    .hero{background-position: -100px 70px;
-    } 
+  .hero, .hero2, .hero3 {
+    background-position: -100px 0px;
+    height:30vh;
+  }
     .h-title {
       font-size: 21px !important;
       max-width: 50%;
@@ -370,14 +399,17 @@
 
 
 
-  @media (max-width: 375px){
+  @media (max-width: 390px){
     .h-lead {
       font-size: 12px !important;
-      max-width: 70% !important;
-      margin-bottom: -20px;
+      max-width: 100% !important;
+      margin-bottom: 0px;
     }
     .h-title {
       font-size: 18px !important;
-      max-width: 20%;
+      max-width: 100%;
+        }
+    .hero, .hero2, .hero3 {
+      background-position: -150px 0px;
     }
   }

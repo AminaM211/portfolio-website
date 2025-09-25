@@ -15,7 +15,7 @@
       top: 0; left: 0; right: 0;
       z-index: 1000;
       background: linear-gradient(#00000070, #00000000);
-      backdrop-filter: saturate(100%);
+      backdrop-filter: saturate(100%) blur(10px);
         }
     .nav {
       display: flex;
@@ -84,23 +84,28 @@
     }
 
     /* ====== Mobiel menu ====== */
-    @media (max-width: 720px) {
+    @media (max-width: 600px) {
       .hamburger { display: flex; }
       .nav-links {
         position: fixed;
         inset: 0;
-        transform: translateX(100%);
-        background: linear-gradient(135deg, #0a0a12 0%, #1a1a28 100%);
+        transform: translateX(200%);
+        /* background: linear-gradient(135deg, #0a0a12 0%, #1a1a28 100%); */
+        background: linear-gradient(#000000, #00000054);
+        backdrop-filter: saturate(100%) blur(200px);
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
         display: flex;
         flex-direction: column;
         gap: 32px;
         transition: transform .35s ease-in-out;
         z-index: 1000;
         height: 100vh;
-        padding-top: 40px;
+        width: 50vw;
+        padding-top: 100px;
 
       }
-      .nav-links.active { transform: translateX(0); }
+      .nav-links.active { transform: translateX(100%); }
     }
 
     /* ====== Overlay ====== */
@@ -139,6 +144,7 @@
 
   <!-- Overlay -->
   <div class="menu-overlay" hidden></div>
+  
 
   <script>
     const hamburger = document.querySelector('.hamburger');

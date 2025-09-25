@@ -10,6 +10,23 @@
   /* --bg-light: linear-gradient(90deg, #00346B 90%, #082859 100% ); */
 }
 
+#swup { transition: opacity .35s ease; }
+html.is-animating.is-leaving #swup,
+html.is-animating.is-rendering #swup { opacity: 0; }
+
+
+#progress-bar {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ff6a95, #ffc773);
+  width: 0%;
+  z-index: 9999;
+  border-radius: 20%;
+  transition: width 0.1s ease;
+}
+
 .chaos {
   padding-bottom: 40px !important;
 }
@@ -265,6 +282,7 @@ html{
 @media (max-width: 720px){
   .about-inner{grid-template-columns: 1fr}
   .avatar{margin:auto}
+
 }
 
 
