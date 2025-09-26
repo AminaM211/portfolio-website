@@ -107,7 +107,7 @@ html{
 
 /* --- Projects grid fix --- */
 .projects{ 
-  padding: 24px 100px;
+  padding: 24px 100px !important;
   /* margin:0 100px; */
 }
 
@@ -120,7 +120,7 @@ html{
 
 .grid{
   display:grid;
-  grid-template-columns: repeat(12, minmax(0,1fr));
+  grid-template-columns: repeat(13, minmax(0,1fr));
   gap: 40px;
 }
 
@@ -147,22 +147,42 @@ html{
     height: 15em;
     object-fit: contain;
     position: relative;
+    height: 20em;
   }
 
   .card1 {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(../images/ecopick-mockup.png);
     background-size: cover;
+    grid-column: span 8 !important;
   }
 
   .card2 {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(../images/zuiderbad-mockup1.jpeg);
-    background-size: cover;
-  }
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(../images/mockuuups-macbook-air-mockup-on-a-modern-dark-surface.webp);
+      background-size: cover;
+      background-position:  center;
+      grid-column: span 5 !important;
+    }
 
   .card-wide {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(../images/zuiderbad-mockup1.jpeg);
+    background-size: cover;
+    grid-column: span 13 !important;
+    margin: 0;
+  }
+
+
+  .card-left {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(../images/portfolio-mockup.png);
+    background-size: cover;
+    background-position: center;
+    grid-column: span 5 !important;
+  }
+
+  .card-bottom {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(../images/foodkiosk.webp);
     background-size: cover;
-    background-position:  center;
+    background-position: center;
+    grid-column: span 8 !important;
   }
 
   .card-title, .card-meta {
@@ -180,11 +200,6 @@ html{
   .card-title{ margin:0 0; font-size:20px;
    }
   .card-meta{ margin:0; color:rgb(237, 237, 237); font-size:14px; }
- 
-  /* brede kaart: links onder de eerste rij */
-  .card-wide{ grid-column: 1 / span 8; margin-top: 10px;}
-
-  .card-right{ grid-column: 9 / span 4; margin-top: 10px;}
 
   .hero{ 
     padding-top: 56px;
@@ -265,6 +280,13 @@ html{
   backdrop-filter: blur(2px);
 }
 
+@media (min-width: 1800px) {
+  .bg-color { padding: 0 20%; }
+}
+
+@media (min-width: 1200px) {
+  .projects { padding: 3em 10em; }
+}
 
 /* Tablet */
 @media (max-width: 1024px) {
@@ -277,23 +299,22 @@ html{
   .tagline {
     font-size: 30px !important;
   }
-  .projects { margin: 0 40px; }
+  /* .projects { margin: 0 40px; } */
   .about { margin: 0 40px; }
   .site-footer { padding: 40px 60px; }
 
-  .grid {
+  /* .grid {
     grid-template-columns: 1fr;
-  }
+  } */
 
   .card {
-    grid-column: span 12;
+    grid-column: span 13 !important;
   }
 }
 
 
 /* responsive: stapel onder 900px */
 @media (max-width: 900px){
-  .card, .card-wide, .card-right{ grid-column: 1 / -1; }
   .card .thumb{ height: 160px; }
 }
 
@@ -345,9 +366,4 @@ html{
 
   .about-copy p { font-size: 18px !important; }
   .chip { font-size: 14px; padding: .3rem .6rem; }
-}
-
-@media (max-width: 370px) {
-  .projects {padding: 2em 0em;}
-  .card {margin: 0 1em;}
 }

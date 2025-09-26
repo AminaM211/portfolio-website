@@ -52,29 +52,42 @@
     color:#fff;
     position:relative;
     padding: 200px 0;
-    height: 60vh;
+    height: 70vh;
     background-position: 30px 0px;
     background-size: cover;
     border-radius: 20px;
-    margin: 8em 15px 15px 15px;
+    margin: 6em 4em 15px 4em;
   }
 
   .hero2{
-    /* background-image: url('../images/ecopick-mockup.png'); */
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/ecopick-mockup.png);
-    background-image: cover;
-    background-repeat: no-repeat;
+    background-image: url('../images/mockuuups-macbook-air-mockup-on-a-modern-dark-surface.webp');
     color:#fff;
     position:relative;
     padding: 200px 0;
-    height: 60vh;
-    background-position: 0px 0px;
+    height: 70vh;
     background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    margin: 6em 4em 15px 4em;
   }
 
   section.images {
-    margin: auto;
-    text-align: center;
+    height: 80vh;
+    position: relative;
+    margin: 0em 4em 6em 4em;
+  }
+
+  section.images img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    margin: 0 auto;
+    background: #f4f4f4;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 20px;
   }
 
   .hero3{
@@ -266,7 +279,7 @@
  
    .hero, .hero2, .hero3 {
     margin: 120px 15px 15px 15px;
-  }
+    }
   .toc {
     top: 30%;
   }
@@ -281,10 +294,15 @@
     .hero{
       padding: 100px 0;
     }  
-    .hero, .hero2, .hero3 {
+    .hero {
       background-position: -80px 60px;
       height: 60vh;
     } 
+
+    .hero2, .hero3 {
+      background-position: 0px 0px;
+      height: 60vh;
+    }
   }
 
   @media (max-width: 860px){
@@ -295,7 +313,7 @@
     .hero-mock {background-position: 10px;}
     .section p {margin: 0em 4em;}
     #opl {margin: 0em 4em;}
-    .hero, .hero2, .hero3 {
+    .hero {
       background-position: -150px 60px;
       height: 60vh;
     } 
@@ -318,9 +336,16 @@
       font-size: 18px;
       margin: 0;
     }
-    .hero, .hero2, .hero3 {
+    .hero {
       margin: 100px 15px 15px 15px;
       background-position: -330px 50px;
+    }
+
+    .h-title {
+      max-width: 60%;
+    }
+    .h-lead {
+      max-width: 80% !important;
     }
   }
 
@@ -336,18 +361,30 @@
     }
   }
 
+  @media (max-width: 500px){
+    .section p {margin: 0em 1em;}
+    #opl {margin: 0em 1em;}
+    main {
+      margin: 0 1em;
+    }
+    .images {
+      margin: 0 1em !important;
+      height: 70vh !important;
+    }
+    }  
+
  @media (max-width: 485px){
-  .hero, .hero2, .hero3 {
-    background-position: -100px 0px;
-    height:30vh;
+  .hero, .hero2 {
+    background-position: -80px 0px;
+    height:40vh;
   }
     .h-title {
       font-size: 21px !important;
-      max-width: 50%;
+      max-width: 60%;
     }
     .h-lead {
       font-size: 14px !important;
-      max-width: 80% !important;
+      max-width: 100% !important;
       margin-bottom: 0px;
     }
     #context h2, p {
@@ -395,13 +432,6 @@
     }
   }
 
-  @media (max-width: 500px){
-  .section p {margin: 0em 1em;}
-  #opl {margin: 0em 1em;}
-  }
-
-
-
   @media (max-width: 390px){
     .h-lead {
       font-size: 12px !important;
@@ -412,7 +442,10 @@
       font-size: 18px !important;
       max-width: 100%;
         }
-    .hero, .hero2, .hero3 {
+    .hero {
       background-position: -150px 0px;
+    }
+    .hero2 {
+      background-position: -90px 0px;
     }
   }

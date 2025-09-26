@@ -26,6 +26,7 @@
       font-size: clamp(45px, 5vw, 60px);
       color: #fff;
       text-decoration: none;
+      /* padding-top: 25px; */
     }
 
     .nav-links {
@@ -52,6 +53,10 @@
       box-shadow : 0 0 20px 2px white, 0 0 6px 2px rgba(255,255,255,0.3);
     }
 
+    @media (min-width: 1500px) {
+    .nav { padding: 0 15%; }
+    }
+
     @media (max-width: 425px) {
       .nav-links {
         gap: 1em;
@@ -70,6 +75,7 @@
 <body>
   <header class="site-header">
     <div class="nav container">
+      <!-- <a class="brand" href="index.html"><img src="./images/favicon.webp" style="width: 1em;" alt=""></a> -->
       <a class="brand" href="index.html">Amina</a>
 
       <nav class="nav-links" id="mobile-menu">
