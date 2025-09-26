@@ -5,28 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amina – UX/UI Designer</title>
 
-    <!-- Primary SEO -->
-    <meta name="description" content="Portfolio van Amina Moutalibova" />
-    <link rel="canonical" href="https://amina-moutalibova.be/" />
-    <meta name="theme-color" content="#E1B755" />
-  
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Amina Moutalibova – Portfolio" />
-    <meta property="og:title" content="Amina Moutalibova – UX/UI Designer" />
-    <meta property="og:description" content="Digitale ervaringen creëren die een visie vertalen naar helderheid, waarde en betekenis." />
-    <meta property="og:url" content="https://amina-moutalibova.be/" />
-    <meta property="og:image" content="https://amina-moutalibova.be/social-preview.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="nl_BE">
+  <!-- Primary SEO -->
+  <meta name="description" content="Portfolio van Amina Moutalibova" />
+  <link rel="canonical" href="https://amina-moutalibova.be/" />
+  <meta name="theme-color" content="#E1B755" />
+  <meta name="robots" content="index,follow">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Amina Moutalibova – UX/UI Designer" />
-    <meta name="twitter:description" content="Digitale ervaringen creëren die een visie vertalen naar helderheid, waarde en betekenis." />
-    <meta name="twitter:image" content="https://amina-moutalibova.be/social-preview.png" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Amina Moutalibova – Portfolio" />
+  <meta property="og:title" content="Amina Moutalibova – UX/UI Designer" />
+  <meta property="og:description" content="Digitale ervaringen creëren die een visie vertalen naar helderheid, waarde en betekenis." />
+  <meta property="og:url" content="https://amina-moutalibova.be/" />
+  <meta property="og:image" content="https://amina-moutalibova.be/social-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="nl_BE">
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Amina Moutalibova – UX/UI Designer" />
+  <meta name="twitter:description" content="Digitale ervaringen creëren die een visie vertalen naar helderheid, waarde en betekenis." />
+  <meta name="twitter:image" content="https://amina-moutalibova.be/social-preview.png" />
+
+  <!-- Perf: preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -39,6 +43,15 @@
   <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.31/dist/unicornStudio.umd.js" defer></script>
 
   <style>
+    /* Minimal responsive hardening without stijl te veranderen */
+    html { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: inherit; }
+    img, picture, video, canvas, svg { max-width: 100%; height: auto; }
+    iframe { max-width: 100%; }
+
+    /* Lock scroll wanneer mobiel menu open is (class wordt via JS gezet) */
+    .no-scroll { overflow: hidden; touch-action: none; }
+
     /* Responsive unicorn embed */
     .unicorn-embed {
       inline-size: 100%;
@@ -80,130 +93,169 @@
       <h2 class="chaos tagline">van creatieve chaos</h2>
       <div id="tag" class="scroll-down">
         <img class="mouse" src="images/SVG/scroll-icon.svg" alt="scroll down icon">
-        <img onclick="goTagline" id="tagline" class="arrow" src="images/SVG/arrow.svg" alt="arrow down" style="width: 30px;">
+        <!-- Verwijderd dubbele id; klik handelt JS af op #tag -->
+        <img id="arrow" class="arrow" src="images/SVG/arrow.svg" alt="arrow down" style="width: 30px;">
       </div>
     </div>
   </div>
     
+  <!-- Eén unieke ID voor scroll-doel -->
   <h2 id="tagline" class="tagline" data-aos="fade-up">naar krachtige interfaces</h2>
+
   <div class="bg-color">
-  <!-- Projects -->
-  <section class="projects container">
-    <div class="grid">
-      <a href="project-ecopick.html" class="card card1" data-aos="fade-up">
-        <div class="card-footer">
-          <h3 class="card-title">ecopick - duurzame mode app</h3>
-          <p class="card-meta">Student Project — Sept 2024-Dec 2024</p>
-        </div>
-      </a>
-  
-      <a href="project-detail.html" id="zuiderbad" class="card card2" data-aos="fade-up">
-        <div class="card-footer">
-          <h3 class="card-title">Zuiderbad - Interactieve Kaart</h3>
-          <p class="card-meta">Group Project — Sept 2025-Dec 2025</p>
-        </div>
-      </a>
-  
-      <a href="project-foodkiosk.html" class="card card-wide" data-aos="fade-up">
-        <div class="card-footer">
-          <h3 class="card-title">3D Mochi Foodkiosk</h3>
-          <p class="card-meta">Student Project — Sept 2025-Dec 2025</p>
-        </div>
-      </a>
-  
-      <a href="project-detail.html" class="card card-right" data-aos="fade-up">
-        <div class="card-footer">
-          <h3 class="card-title">Special Olympics - Webdesign</h3>
-          <p class="card-meta">Student Project — Sept 2025-Dec 2025</p>
-        </div>
-      </a>
-    </div>
-  </section>
-  
-  <!-- About -->
-  <section id="about" class="about">
-    <div class="container about-inner">
-      <div class="avatar" aria-hidden="true" data-aos="fade-up">
-        <img src="./images/me.png" alt="">
+    <!-- Projects -->
+    <section class="projects container">
+      <div class="grid">
+        <a href="project-ecopick.html" class="card card1" data-aos="fade-up">
+          <div class="card-footer">
+            <h3 class="card-title">ecopick - duurzame mode app</h3>
+            <p class="card-meta">Student Project — Sept 2024-Dec 2024</p>
+          </div>
+        </a>
+    
+        <a href="project-detail.html" id="zuiderbad" class="card card2" data-aos="fade-up">
+          <div class="card-footer">
+            <h3 class="card-title">Zuiderbad - Interactieve Kaart</h3>
+            <p class="card-meta">Group Project — Sept 2025-Dec 2025</p>
+          </div>
+        </a>
+    
+        <a href="project-foodkiosk.html" class="card card-wide" data-aos="fade-up">
+          <div class="card-footer">
+            <h3 class="card-title">3D Mochi Foodkiosk</h3>
+            <p class="card-meta">Student Project — Sept 2025-Dec 2025</p>
+          </div>
+        </a>
+    
+        <a href="project-detail.html" class="card card-right" data-aos="fade-up">
+          <div class="card-footer">
+            <h3 class="card-title">Special Olympics - Webdesign</h3>
+            <p class="card-meta">Student Project — Sept 2025-Dec 2025</p>
+          </div>
+        </a>
       </div>
+    </section>
+    
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="container about-inner">
+        <div class="avatar" aria-hidden="true" data-aos="fade-up">
+          <img src="./images/me.png" alt="">
+        </div>
 
-      <div class="about-copy" data-aos="fade-up">
-        <p>
-          Ik ontwerp heldere interfaces en bouw gebruiksvriendelijke websites.
-          Ik ben gepassioneerd over wat ik doe want ik vind dat goed design een
-          echte verandering maakt. Ik hou ervan om ideeën om te zetten in dingen die echt werken.
-          Van idee naar interface: altijd met passie en detail.
-        </p>
+        <div class="about-copy" data-aos="fade-up">
+          <p>
+            Ik ontwerp heldere interfaces en bouw gebruiksvriendelijke websites.
+            Ik ben gepassioneerd over wat ik doe want ik vind dat goed design een
+            echte verandering maakt. Ik hou ervan om ideeën om te zetten in dingen die echt werken.
+            Van idee naar interface: altijd met passie en detail.
+          </p>
 
-        <ul class="stack">
-          <li>Figma</li><li>HTML</li><li>CSS</li><li>JS</li>
-          <li>Illustrator</li><li>After Effects</li><li>React</li><li>PHP</li>
-        </ul>
+          <ul class="stack">
+            <li>Figma</li><li>HTML</li><li>CSS</li><li>JS</li>
+            <li>Illustrator</li><li>After Effects</li><li>React</li><li>PHP</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
+
   <div id="footer-placeholder"></div>
 
   <script>
+    // loader include (optioneel)
     fetch("loader.html")
       .then(res => res.text())
       .then(html => {
-        document.getElementById("preloader-placeholder").innerHTML = html;
+        const slot = document.getElementById("preloader-placeholder");
+        if (slot) slot.innerHTML = html;
       });
   </script>
   
   <script>
-    // nav en footer includen
+    // nav & footer includen + robuuste mobiele toggle
     Promise.all([
       fetch("nav.html").then(res => res.text()),
       fetch("footer.html").then(res => res.text())
     ]).then(([navHtml, footerHtml]) => {
       document.getElementById("nav-placeholder").innerHTML = navHtml;
       document.getElementById("footer-placeholder").innerHTML = footerHtml;
-  
+
       const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.nav-links');
-  
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('open');
-      });
-  
-      document.querySelectorAll('.nav-links a').forEach(link => {
+      const navLinks  = document.querySelector('.nav-links');
+
+      function openNav(){
+        if (!navLinks) return;
+        navLinks.classList.add('active');
+        document.body.classList.add('no-scroll');
+        if (hamburger) hamburger.classList.add('open');
+        if (hamburger) hamburger.setAttribute('aria-expanded','true');
+      }
+      function closeNav(){
+        if (!navLinks) return;
+        navLinks.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+        if (hamburger) hamburger.classList.remove('open');
+        if (hamburger) hamburger.setAttribute('aria-expanded','false');
+      }
+
+      if (hamburger && navLinks){
+        hamburger.addEventListener('click', () => {
+          navLinks.classList.contains('active') ? closeNav() : openNav();
+        });
+      }
+
+      // Sluit menu bij klik op link (alleen interne ankers)
+      document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
         link.addEventListener('click', e => {
           e.preventDefault();
           const targetId = link.getAttribute('href');
           const targetEl = document.querySelector(targetId);
-          if (targetEl) {
-            targetEl.scrollIntoView({ behavior: 'smooth' });
-          }
-          navLinks.classList.remove('active');
-          hamburger.classList.remove('open');
+          if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth' });
+          closeNav();
         });
       });
-    });
 
-    // kleurrijke muis trail
+      // Sluit menu wanneer we naar desktop breedte gaan
+      const mq = window.matchMedia('(min-width: 900px)');
+      (mq.addEventListener ? mq.addEventListener : mq.addListener).call(mq, 'change', e => { if (e.matches) closeNav(); });
+
+      // Fail-safe bij back/forward
+      window.addEventListener('pageshow', closeNav);
+    });
+  </script>
+
+  <script>
+    // Kleurrijke muis trail — uitschakelen op touch (fix voor mobiel chaos)
+    const pointerFine = window.matchMedia('(pointer: fine)').matches;
     const colors = ["#ff6ec7", "#6ecbff", "#a2ff6e", "#ffe36e", "#d36eff"];
-    document.addEventListener("mousemove", (e) => {
-      const dot = document.createElement("div");
-      dot.className = "dot";
-      const size = Math.random() * 12 + 6; 
-      dot.style.width = `${size}px`;
-      dot.style.height = `${size}px`;
-      dot.style.background = colors[Math.floor(Math.random() * colors.length)];
-      dot.style.left = `${e.pageX - size/2}px`;
-      dot.style.top = `${e.pageY - size/2 + window.scrollY}px`;
-      document.body.appendChild(dot);
-      setTimeout(() => dot.remove(), 1000);
-    });
 
-    // scroll smooth naar tagline
-    document.getElementById("tag").addEventListener("click", (e) => {
+    if (pointerFine) {
+      document.addEventListener("mousemove", (e) => {
+        const dot = document.createElement("div");
+        dot.className = "dot";
+        const size = Math.random() * 12 + 6; 
+        dot.style.width = `${size}px`;
+        dot.style.height = `${size}px`;
+        dot.style.position = "absolute";
+        dot.style.zIndex = "9999";
+        dot.style.borderRadius = "50%";
+        dot.style.pointerEvents = "none";
+        dot.style.background = colors[Math.floor(Math.random() * colors.length)];
+        dot.style.left = `${e.pageX - size/2}px`;
+        dot.style.top = `${e.pageY - size/2 + window.scrollY}px`;
+        document.body.appendChild(dot);
+        setTimeout(() => dot.remove(), 1000);
+      });
+    }
+  </script>
+
+  <script>
+    // Scroll smooth naar tagline (fix: uniek target-id)
+    document.getElementById("tag")?.addEventListener("click", (e) => {
       e.preventDefault();
       const target = document.getElementById("tagline");
-      target.scrollIntoView({ behavior: "smooth" });
+      if (target) target.scrollIntoView({ behavior: "smooth" });
     });
   </script>
   
@@ -215,15 +267,17 @@
       }
     });
   </script>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
 
     window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.body.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      document.getElementById('progress-bar').style.width = scrollPercent + "%";
+      const scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+      const docHeight = Math.max(1, document.body.scrollHeight - window.innerHeight);
+      const scrollPercent = Math.min(100, (scrollTop / docHeight) * 100);
+      const bar = document.getElementById('progress-bar');
+      if (bar) bar.style.width = scrollPercent + "%";
     });
   </script>
 </body>

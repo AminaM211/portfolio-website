@@ -1,94 +1,102 @@
-  <style>
-    /* Footer */
-.site-footer{
-  padding: 50px 150px 50px 150px; 
-  border-top:1px solid #ffffff1a;
-}
-
-body {
-  background-color: 00346B;
-}
-
-#contact {
-  background-color:#d6d6d60f !important; 
-}
-
-.footer-grid{
-  display:grid; 
-  grid-template-columns: 300px 300px; 
-  gap:30%; 
-  align-items:center;
-  justify-content: center;
-  align-content: center;
-}
-
-.copyright {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
-
-.logo-footer{
-  font-family:Kristi, cursive; 
-  font-size:60px;
-  padding-bottom: 10px;
-}
-
-.copy {
-  margin: 0;
-}
-
-.socials{display:flex; gap:10px; margin-top:10px}
-.chip{
-  display:inline-block; padding:.45rem .8rem; border-radius:999px; text-decoration:none;
-  background:#ffffff15; border:1px solid #ffffff3a; color:#fff; font-weight:400;
-  font-family: marcellus, serif;
-}
-.footer-right h3{
-  margin:10px 0px;
-  font-size:50px;
-}
-.mail{color:#fff; text-decoration:none; font-weight:400;  font-family: marcellus, serif;}
-.mail:hover{text-decoration:underline}
-.copyright{margin-top:50px; font-size:14px; color:#cfd6e3; text-align:center}
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .hero-inner p {
-    font-size: 24px;
+<style>
+  /* Footer */
+  .site-footer {
+    padding: 50px 150px;
+    border-top: 1px solid #ffffff1a;
+    background: #00346B; /* correcte kleur */
+    color: var(--text, #f2f5f9);
   }
-  .hero-inner h1 {
-    font-size: 100px;
+  
+  #contact {
+    background-color: #d6d6d60f !important; 
   }
-  .tagline {
-    font-size: 40px;
-  }
-  .nav { padding: 20px 40px; }
-  .projects { margin: 0 40px; }
-  .about { margin: 0 40px; }
-  .site-footer { padding: 40px 60px; }
-}
-
-/* Mobiel breed (tot 720px) */
-@media (max-width: 720px) {
-    .socials { justify-content: center; }
-  /* footer */
-  .site-footer { padding: 30px 20px 5px 20px; }
+  
   .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 300px 300px; 
+    gap: 30%; 
+    align-items: center;
+    justify-content: center;
+    align-content: center;
   }
-  .footer-right h3 { font-size: 30px; }
-  .logo-footer { font-size: 50px; }
-}
-
-/* Heel smal (tot 480px) */
-@media (max-width: 480px) {
-  .footer-right h3 { font-size: 24px; }
-  .chip { font-size: 14px; padding: .3rem .6rem; }
-}
+  
+  .logo-footer {
+    font-family: Kristi, cursive; 
+    font-size: 60px;
+    padding-bottom: 10px;
+  }
+  
+  .socials {
+    display: flex; 
+    gap: 10px; 
+    margin-top: 10px;
+  }
+  
+  .chip {
+    display: inline-block;
+    padding: .45rem .8rem;
+    border-radius: 999px;
+    text-decoration: none;
+    background: #ffffff15;
+    border: 1px solid #ffffff3a;
+    color: #fff;
+    font-weight: 400;
+    font-family: Marcellus, serif;
+    transition: background .2s ease;
+  }
+  .chip:hover {
+    background: #ffffff33;
+  }
+  
+  .footer-right h3 {
+    margin: 10px 0;
+    font-size: 50px;
+  }
+  
+  .mail {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;  
+    font-family: Marcellus, serif;
+  }
+  .mail:hover { text-decoration: underline; }
+  
+  .copyright {
+    margin-top: 40px; 
+    font-size: 14px; 
+    color: #cfd6e3; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .copy { margin: 0; }
+  
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .site-footer { padding: 40px 60px; }
+    .footer-right h3 { font-size: 40px; }
+  }
+  
+  /* Mobiel breed */
+  @media (max-width: 720px) {
+    .site-footer { padding: 30px 20px 10px 20px; }
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      text-align: center;
+    }
+    .socials { justify-content: center; }
+    .footer-right h3 { font-size: 30px; }
+    .logo-footer { font-size: 50px; }
+  }
+  
+  /* Heel smal */
+  @media (max-width: 480px) {
+    .footer-right h3 { font-size: 24px; }
+    .chip { font-size: 14px; padding: .3rem .6rem; }
+  }
   </style>
   
   <footer id="contact" class="site-footer">
@@ -96,18 +104,19 @@ body {
       <div class="footer-left">
         <div class="logo-footer">Amina</div>
         <div class="socials">
-          <a href="https://www.linkedin.com/in/amina-moutalibova-02a621297/" class="chip">LinkedIn</a>
-          <a href="#" class="chip">Github</a>
+          <a href="https://www.linkedin.com/in/amina-moutalibova-02a621297/" class="chip" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/AminaM211" class="chip" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
-
+  
       <div class="footer-right">
-        <h3>Lets talk!</h3>
+        <h3>Let’s talk!</h3>
         <a class="mail" href="mailto:amina.m@gmail.com">amina.m@gmail.com</a>
       </div>
     </div>
-
+  
     <div class="container copyright">
       <p class="copy" style="font-size: 21px;">©</p> 2025 Amina – UX/UI Designer
     </div>
   </footer>
+  
