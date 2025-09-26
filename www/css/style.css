@@ -37,6 +37,7 @@ body{
   font-family: Marcellus, serif;
   color:var(--text);
   background:var(--bg-light);
+  background-image: none; /* tenzij je bewust een image wilt */
 }
 
 .dot {
@@ -84,9 +85,13 @@ html{
 
 .name{
   font-family:Kristi, cursive;
-  font-size: 160px; margin:0 0 .15em; line-height:65%;
-  padding-top:100px;
-}
+  margin:0 0 .15em; 
+  /* padding-top:100px; */
+  font-size: clamp(48px, 12vw, 160px);
+  line-height: 70%;
+  padding-top: 15vh; /* i.p.v. 100px / 140px */
+  }
+  
 
 .roles{
   font-family:marcellus SC, serif;
@@ -241,33 +246,27 @@ html{
   }
   
 
-/* responsive: stapel onder 900px */
-@media (max-width: 900px){
-  .card, .card-wide, .card-right{ grid-column: 1 / -1; }
-  .card .thumb{ height: 160px; }
-}
-
 /* About */
 .about{
   padding:100px 10px; 
-  margin:0 100px;
+  margin:0 5em;
 }
 
 .about-inner{
   display:grid; 
   grid-template-columns: auto 1fr;
   align-items: center;
-  gap:20px; 
+  gap:50px; 
 }
 .avatar img{
   width:200px; 
   height:auto; 
-  border-radius:50%;
+  border-radius:50% !important;
   box-shadow:var(--shadow);
 }
 
 .about-copy p{
-  font-size: 30px;
+  font-size: 24px;
   color: white;
 }
 
@@ -279,11 +278,6 @@ html{
   border-radius:999px;
   font-weight:600; 
   backdrop-filter: blur(2px);
-}
-@media (max-width: 720px){
-  .about-inner{grid-template-columns: 1fr}
-  .avatar{margin:auto}
-
 }
 
 
@@ -311,45 +305,40 @@ html{
   }
 }
 
-/* Mobiel breed (tot 720px) */
-@media (max-width: 720px) {
-  .name {
-    padding-top: 30px;
-  }
-  .chaos {
-    padding-bottom: 20px;
-  }
 
-  .mouse {
-    display: none;
-  }
-  /* hero */
-  .name { font-size: 80px;
+/* responsive: stapel onder 900px */
+@media (max-width: 900px){
+  .card, .card-wide, .card-right{ grid-column: 1 / -1; }
+  .card .thumb{ height: 160px; }
+}
+
+@media (max-width: 720px) {
+  .chaos {padding-bottom: 20px;}
+  .mouse {display: none;}
+  .name { 
+    font-size: 80px;
     padding-top:140px;
   }
   .tagline { font-size: 28px; }
-
-  /* projects */
-  .projects { margin: 0 30px; 
+  .projects { 
+    margin: 0 30px; 
     padding: 24px 3em; 
   }
   .grid { gap: 18px; }
   .card .thumb { height: 140px; }
 
-  /* about */
   .about { margin: 0 20px; padding: 60px 10px; }
   .about-copy p { font-size: 20px; }
   .socials { justify-content: center; }
+
+  .about-inner{grid-template-columns: 1fr}
+  .avatar{margin:auto}
 }
 
 @media (max-width: 600px) {
-
-.projects { 
-  padding: 24px 3em; 
-}
+  .projects { padding: 24px 3em; }
 }
 
-/* Heel smal (tot 480px) */
 @media (max-width: 530px) {
   .name { font-size: 80px !important; margin: 0 0.5em;}
   .roles { font-size: 18px !important; }
@@ -361,11 +350,6 @@ html{
   .projects {
     padding: 2em 0.5em;
   }
- /* 
-  .card {
-   height: 10em; 
-  }*/
-
   .card-title { font-size: 18px !important; }
   .card-meta { font-size: 12px !important; }
 
@@ -374,10 +358,6 @@ html{
 }
 
 @media (max-width: 370px) {
-  .projects {
-    padding: 2em 0em;
-  }
-  .card {
-    margin: 0 1em;
-  }
+  .projects {padding: 2em 0em;}
+  .card {margin: 0 1em;}
 }
