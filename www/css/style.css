@@ -306,17 +306,21 @@ html{
   /* .grid {
     grid-template-columns: 1fr;
   } */
-
-  .card {
-    grid-column: span 13 !important;
-  }
 }
 
 
 /* responsive: stapel onder 900px */
 @media (max-width: 900px){
   .card .thumb{ height: 160px; }
+  .projects { padding: 3em 4em !important; }
+
 }
+
+@media (max-width: 800px){
+  .projects { padding: 3em 3em !important; }
+  .grid { gap: 25px; }
+}
+
 
 @media (max-width: 720px) {
   .chaos {padding-bottom: 20px;}
@@ -344,18 +348,22 @@ html{
 
   .about-inner{grid-template-columns: 1fr}
   .avatar{margin:auto}
+  .card {
+    grid-column: span 13 !important;
+  }
 }
 
 @media (max-width: 600px) {
   .projects { padding: 24px 3em; }
+  .card {
+    height: 14em;
+  }
 }
 
 @media (max-width: 530px) {
   .name { font-size: 80px !important; margin: 0 0.5em;}
   .roles { font-size: 18px !important; }
-  /* .viewheight {
-    min-height: 100vh !important; 
-  } */
+
   .tagline { font-size: 22px !important; }
   .chaos { font-size: 24px !important; }
   .projects {
@@ -366,4 +374,19 @@ html{
 
   .about-copy p { font-size: 18px !important; }
   .chip { font-size: 14px; padding: .3rem .6rem; }
+}
+
+@media (max-width: 460px) {
+  .card {
+    height: 12em;
+    grid-column: span 9 !important;
+  }
+
+  .grid {
+    grid-template-columns: repeat(1, minmax(0,1fr)) !important;
+  }
+
+  .projects {
+    padding: 2em 0em !important;
+  }
 }
