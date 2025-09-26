@@ -333,9 +333,9 @@ html{
   .tagline { font-size: 28px; }
   .projects { 
     margin: 0 30px; 
-    padding: 24px 3em; 
+    padding: 24px 2em !important; 
   }
-  .grid { gap: 18px; }
+  .grid { gap: 30px; }
   .card .thumb { height: 140px; }
 
   .about { margin: 0 20px; padding: 60px 10px; }
