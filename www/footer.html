@@ -3,14 +3,15 @@
   .site-footer {
     padding: 50px 150px;
     border-top: 1px solid #ffffff1a;
-    background: #00346B; /* correcte kleur */
-    color: var(--text, #f2f5f9);
+    color: var(--text);
+    border-radius: 5% 5% 0 0;
+    margin-top: -20px;
   }
-  
-  #contact {
-    background-color: #d6d6d60f !important; 
+
+  footer {
+    background: #00346B !important; 
   }
-  
+
   .footer-grid {
     display: grid;
     grid-template-columns: 100px 150px; 
@@ -23,16 +24,17 @@
   .logo-footer {
     font-family: Kristi, cursive; 
     font-size: 60px;
+    color: #fff;
   }
   
   .socials {
     display: flex; 
-    gap: 10px; 
+    gap: 15px; 
   }
   
   .chip {
     display: inline-block;
-    padding: .45rem .8rem;
+    padding: .45rem 1.2rem;
     border-radius: 999px;
     text-decoration: none;
     background: #ffffff15;
@@ -44,12 +46,15 @@
   }
 
   .chip:hover {
-    background: #ffffff33;
+    background: #ffffff4d;
+    box-shadow : 0 0 20px 2px white, 0 0 6px 2px rgba(255,255,255,0.3);
+    transition: all .3s ease;
   }
   
   .footer-right p {
     margin: 10px 0;
     font-size: 2em;
+    color: #fff;
   }
   
   .mail {

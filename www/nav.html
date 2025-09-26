@@ -10,9 +10,9 @@
     .site-header {
       position: fixed;
       top: 0; left: 0; right: 0;
-      z-index: 1000;
+      z-index: 10000;
       background: linear-gradient(#00000070, #00000000);
-      backdrop-filter: saturate(100%) blur(10px);
+      backdrop-filter: saturate(100%) blur(10px) !important;
     }
     .nav {
       display: flex;
@@ -27,6 +27,7 @@
       color: #fff;
       text-decoration: none;
     }
+
     .nav-links {
       display: flex;
       align-items: center;
@@ -48,6 +49,7 @@
     .pill:hover {
       border-color: #fff;
       background: rgba(255,255,255,0.4);
+      box-shadow : 0 0 20px 2px white, 0 0 6px 2px rgba(255,255,255,0.3);
     }
 
     @media (max-width: 425px) {

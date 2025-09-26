@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amina – UX/UI Designer</title>
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 
   <!-- Primary SEO -->
   <meta name="description" content="Portfolio van Amina Moutalibova" />
@@ -45,7 +46,7 @@
         "https://github.com/AminaM211"
       ],
       "worksFor": { "@type":"Organization", "name":"Freelance" },
-      "knowsAbout":["UX","UI","Webdesign","Prototyping","Figma","React"]
+      "knowsAbout":["UX","UI","Webdesign","Prototyping","Figma","front-end"]
     }
     </script>
     <script type="application/ld+json">
@@ -69,6 +70,9 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fonts.css">
 
+  <!-- scripts -->
+  <script src="./js/index.js" defer></script>
+
   <!-- Unicorn Studio -->
   <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.31/dist/unicornStudio.umd.js" defer></script>
 
@@ -80,7 +84,7 @@
     iframe { max-width: 100%; }
 
     /* Lock scroll wanneer mobiel menu open is (class wordt via JS gezet) */
-    .no-scroll { overflow: hidden; touch-action: none; }
+    /* .no-scroll { overflow: hidden; touch-action: none; } */
 
     /* Responsive unicorn embed */
     .unicorn-embed {
@@ -113,7 +117,7 @@
     <section class="hero">
       <div class="hero-inner">
         <h1 class="name" data-aos="fade-up">Amina Moutalibova</h1>
-        <p class="roles" data-aos="fade-up">UX/UI Designer · Webdesigner</p>
+        <p class="roles" data-aos="fade-up">UX/UI Design · Webdesign</p>
       </div>
     </section>
 
@@ -189,112 +193,6 @@
   </div>
 
   <div id="footer-placeholder"></div>
-
-  <script>
-    // loader include (optioneel)
-    fetch("loader.html")
-      .then(res => res.text())
-      .then(html => {
-        const slot = document.getElementById("preloader-placeholder");
-        if (slot) slot.innerHTML = html;
-      });
-  </script>
-  
-  <script>
-    // nav & footer includen + robuuste mobiele toggle
-    Promise.all([
-      fetch("nav.html").then(res => res.text()),
-      fetch("footer.html").then(res => res.text())
-    ]).then(([navHtml, footerHtml]) => {
-      document.getElementById("nav-placeholder").innerHTML = navHtml;
-      document.getElementById("footer-placeholder").innerHTML = footerHtml;
-
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks  = document.querySelector('.nav-links');
-
-      function openNav(){
-        if (!navLinks) return;
-        navLinks.classList.add('active');
-        document.body.classList.add('no-scroll');
-        if (hamburger) hamburger.classList.add('open');
-        if (hamburger) hamburger.setAttribute('aria-expanded','true');
-      }
-      function closeNav(){
-        if (!navLinks) return;
-        navLinks.classList.remove('active');
-        document.body.classList.remove('no-scroll');
-        if (hamburger) hamburger.classList.remove('open');
-        if (hamburger) hamburger.setAttribute('aria-expanded','false');
-      }
-
-      if (hamburger && navLinks){
-        hamburger.addEventListener('click', () => {
-          navLinks.classList.contains('active') ? closeNav() : openNav();
-        });
-      }
-
-      // Sluit menu bij klik op link (alleen interne ankers)
-      document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
-        link.addEventListener('click', e => {
-          e.preventDefault();
-          const targetId = link.getAttribute('href');
-          const targetEl = document.querySelector(targetId);
-          if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth' });
-          closeNav();
-        });
-      });
-
-      // Sluit menu wanneer we naar desktop breedte gaan
-      const mq = window.matchMedia('(min-width: 900px)');
-      (mq.addEventListener ? mq.addEventListener : mq.addListener).call(mq, 'change', e => { if (e.matches) closeNav(); });
-
-      // Fail-safe bij back/forward
-      window.addEventListener('pageshow', closeNav);
-    });
-  </script>
-
-  <script>
-    // Kleurrijke muis trail — uitschakelen op touch (fix voor mobiel chaos)
-    const pointerFine = window.matchMedia('(pointer: fine)').matches;
-    const colors = ["#ff6ec7", "#6ecbff", "#a2ff6e", "#ffe36e", "#d36eff"];
-
-    if (pointerFine) {
-      document.addEventListener("mousemove", (e) => {
-        const dot = document.createElement("div");
-        dot.className = "dot";
-        const size = Math.random() * 12 + 6; 
-        dot.style.width = `${size}px`;
-        dot.style.height = `${size}px`;
-        dot.style.position = "absolute";
-        dot.style.zIndex = "9999";
-        dot.style.borderRadius = "50%";
-        dot.style.pointerEvents = "none";
-        dot.style.background = colors[Math.floor(Math.random() * colors.length)];
-        dot.style.left = `${e.pageX - size/2}px`;
-        dot.style.top = `${e.pageY - size/2 + window.scrollY}px`;
-        document.body.appendChild(dot);
-        setTimeout(() => dot.remove(), 1000);
-      });
-    }
-  </script>
-
-  <script>
-    // Scroll smooth naar tagline (fix: uniek target-id)
-    document.getElementById("tag")?.addEventListener("click", (e) => {
-      e.preventDefault();
-      const target = document.getElementById("tagline");
-      if (target) target.scrollIntoView({ behavior: "smooth" });
-    });
-  </script>
-  
-  <script>
-    // init unicorn
-    document.addEventListener('DOMContentLoaded', () => {
-      if (window.UnicornStudio && typeof UnicornStudio.init === 'function') {
-        UnicornStudio.init();
-      }
-    });
-  </script>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>

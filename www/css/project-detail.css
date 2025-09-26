@@ -20,7 +20,7 @@
     height: 5px;
     background: linear-gradient(90deg, #ff6a95, #ffc773);
     width: 0%;
-    z-index: 9999;
+    z-index: 999999;
     transition: width 0.1s ease;
   }
   
@@ -34,11 +34,12 @@
     background:var(--paper);
     line-height:1.6;
   }
+
   img{max-width:100%; height:auto; display:block}
   .container{
     margin-inline:auto;    
   }
-  
+    
   /* Header */
   .site-header{position:sticky; 
     top:0; z-index:50; 
@@ -214,7 +215,9 @@
   /* Sections */
   .section{padding-bottom:20px;}
  
-
+  #reflectie p {
+    margin-bottom: 4em;
+  }
 
   
   /* Color bands */
