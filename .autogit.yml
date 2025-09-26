@@ -1,0 +1,10 @@
+version: 1
+tasks:
+  deploy:
+    type: copy
+    source: .
+    destination: /www
+    delete: true
+    exclude:
+      - .git
+      - .autogit
