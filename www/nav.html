@@ -49,13 +49,27 @@
       border-color: #fff;
       background: rgba(255,255,255,0.4);
     }
+
+    @media (max-width: 425px) {
+      .nav-links {
+        gap: 1em;
+      }
+      .pill {
+        padding: 2px 20px;
+        font-size: clamp(16px, 3vw, 20px);
+      }
+      .brand {
+        font-size: clamp(38px, 6vw, 50px);
+      }
+    }
+
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="nav container">
       <a class="brand" href="index.html">Amina</a>
-      
+
       <nav class="nav-links" id="mobile-menu">
         <a class="pill" href="index.html#tagline">Projecten</a>
         <a class="pill" href="#contact">Contact</a>
