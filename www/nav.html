@@ -1,99 +1,73 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nav - Amina</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/fonts.css">
-
   <style>
-    .site-header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
+    :root{ --nav-h:80px; }
+
+    .site-header{
+      position: fixed; inset: 0 auto auto 0; right: 0;
+      height: var(--nav-h);
       z-index: 10000;
       background: linear-gradient(#00000070, #00000000);
-      backdrop-filter: saturate(100%) blur(10px) !important;
+      backdrop-filter: saturate(100%) blur(10px);
+      -webkit-backdrop-filter: saturate(100%) blur(10px);
+      transform: translateY(0);
+      transition: transform 220ms ease, box-shadow 220ms ease;
+      will-change: transform;
     }
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 40px;
-      height: 80px;
-    }
-    .brand {
-      font-family: var(--font-brand, 'Kristi', cursive);
-      font-size: clamp(45px, 5vw, 60px);
-      color: #fff;
-      text-decoration: none;
-      /* padding-top: 25px; */
-    }
+    .site-header.nav--hidden{ transform: translateY(-100%); }
+    .site-header.nav--scrolled{ box-shadow: 0 8px 24px rgba(0,0,0,.08); }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
+    .nav{
+      max-width: 1400px; margin: 0 auto;
+      display:flex; justify-content:space-between; align-items:center;
+      padding: 0 40px; height: var(--nav-h);
     }
-    .pill {
-      font-family: var(--font-funky, 'Just Me Again Down Here', cursive);
+    .brand{
+      font-family: var(--font-brand,'Kristi',cursive);
+      font-size: clamp(45px, 5vw, 60px);
+      color:#fff; text-decoration:none; line-height:1;
+      display:inline-flex; align-items:center; gap:.5rem;
+    }
+    .nav-links{ display:flex; align-items:center; gap:28px; }
+    .pill{
+      font-family: var(--font-funky,'Just Me Again Down Here',cursive);
       font-size: clamp(18px, 2.5vw, 24px);
       padding: 2px 30px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      border: 1.5px solid #ffffff55;
-      border-radius: 100px;
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(2px);
-      transition: .25s ease;
+      color:#fff; text-decoration:none; font-weight:600;
+      border: 1.5px solid #ffffff55; border-radius:999px;
+      background: rgba(255,255,255,.10);
+      backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px);
+      transition: border-color .2s, background .2s, box-shadow .2s;
+      white-space: nowrap;
     }
-    .pill:hover {
-      border-color: #fff;
-      background: rgba(255,255,255,0.4);
-      box-shadow : 0 0 20px 2px white, 0 0 6px 2px rgba(255,255,255,0.3);
+    .pill:hover{
+      border-color:#fff; background:rgba(255,255,255,.40);
+      box-shadow:0 0 20px 2px #fff, 0 0 6px 2px rgba(255,255,255,.3);
     }
-
-    @media (min-width: 1500px) {
-    .nav { padding: 0 15%; }
+    @media (min-width:1500px){ .nav{ padding:0 10%; } }
+    @media (max-width:425px){
+      .nav-links{ gap:1em; }
+      .pill{ padding:2px 20px; font-size: clamp(18px,3vw,20px); }
+      .brand{ font-size: clamp(38px,6vw,50px); }
     }
-
-    @media (max-width: 425px) {
-      .nav-links {
-        gap: 1em;
-      }
-      .pill {
-        padding: 2px 20px;
-        font-size: clamp(18px, 3vw, 20px);
-      }
-      .brand {
-        font-size: clamp(38px, 6vw, 50px);
-      }
-    }
-
+    @media (prefers-reduced-motion: reduce){ .site-header{ transition:none; } }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="nav container">
-      <!-- <a class="brand" href="index.html"><img src="./images/favicon.webp" style="width: 1em;" alt=""></a> -->
+  <header class="site-header" id="site-header">
+    <div class="nav">
       <a class="brand" href="index.html">Amina</a>
-
-      <nav class="nav-links" id="mobile-menu">
+      <nav class="nav-links" id="nav-links">
         <a class="pill" href="index.html#arrow">Projecten</a>
         <a class="pill" href="#footer-placeholder">Contact</a>
       </nav>
     </div>
   </header>
-  
-  <script>
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.contains('active') ? closeMenu() : openMenu();
-    });
-    overlay.addEventListener('click', closeMenu);
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => closeMenu());
-    });
-  </script>
 </body>
 </html>

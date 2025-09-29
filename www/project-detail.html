@@ -16,6 +16,7 @@
 <body>
   <div id="progress-bar"></div>
 
+  <div class="content-wrap">
   <!-- HERO -->
   <section id="situatieschets" class="hero">
     <div id="nav-placeholder"></div>
@@ -28,7 +29,7 @@
       </div>
     <!-- Side TOC -->
     <aside class="toc">
-      <a href="#situatieschets">Situatieschets</a>
+      <a href="#">Situatieschets</a>
       <a href="#context">Context</a>
       <a href="#uitdaging">Uitdaging</a>
       <a href="#oplossing">Oplossing</a>
@@ -46,7 +47,8 @@
     </div>
     <div class="meta-item">
       <h3>Samenwerkingen</h3>
-      <p>2 teamgenoten</p>
+        <a target="_blank" rel="noopener noreferrer" href="https://lukasdhaese.be">Lukas D'Haese</a>
+        <br><a target="_blank" rel="noopener noreferrer" href="https://arthur-webdesign.be">Arthur De klerck</a>
     </div>
     <div class="meta-item">
       <h3>Rol</h3>
@@ -69,8 +71,7 @@
       <p>Bezoekers van Hofstade vonden het moeilijk om het domein te verkennen. Er was geen duidelijke kaart die horeca, activiteiten en routes overzichtelijk toonde. De bestaande informatie was verspreid en niet mobielvriendelijk, waardoor gebruikers vaak verdwaalden of moeite hadden om snel iets terug te vinden.          </p>
     </section>
 
-    <!-- Oplossing (gekleurde band) -->
-    <section id="oplossing" class="band">
+    <section id="oplossing" class="section container">
       <div class="container">
         <h2 class="band-title">Oplossing</h2>
         <p id="opl">We ontwikkelden een interactieve kaart die het volledige domein visueel en intuïtief weergeeft. Dankzij een routeplanner, filters en pop-ups kunnen bezoekers eenvoudig navigeren en direct de info vinden die ze zoeken. Het design is afgestemd op de Zuiderbad-branding, met op maat gemaakte iconen en illustraties. De kaart werkt bovendien responsief, zodat zowel gezinnen als sporters en bedrijven ze makkelijk kunnen gebruiken, op desktop en mobiel.          </p>
@@ -97,12 +98,12 @@
         <div class="t-rail"></div>
 
         <div class="t-step">
-          <div class="t-badge">UX Design</div>
-          <h3 class="t-title">Projectanalyse &amp; Definitie</h3>
+          <div class="t-badge">Projectanalyse &amp; Definitie</div>
           <div class="t-content">
+            <p>In deze fase brachten we de noden van bezoekers en stakeholders in kaart. Het sitebezoek hielp ons beter begrijpen hoe mensen zich fysiek door het domein bewegen.</p>
             <ul>
-              <li>Kick-off met Zuiderbad: doelen & verwachtingen.</li>
-              <li>Context mapping & doelgroepbehoeften.</li>
+              <li>Kick-off met Zuiderbad om noden en verwachtingen in kaart te brengen.</li>
+              <li>Sitebezoek om de fysieke omgeving en de gebruikersbehoeftes beter te begrijpen.</li>
               <li>Analyse van bestaande kaartoplossingen.</li>
               <li>Functionele scope bepaald.</li>
             </ul>
@@ -110,28 +111,40 @@
         </div>
 
         <div class="t-step">
-          <div class="t-badge">UI</div>
-          <h3 class="t-title">Wireframes → Hi-fi UI</h3>
+          <div class="t-badge">UX Design</div>
           <div class="t-content">
+            <p>We onderzochten hoe de kaart intuïtief gebruikt kon worden. Het doel was dat bezoekers met zo min mogelijk clicks de juiste info vinden.</p>
             <ul>
-              <li>Low-fi schetsen, flow en states.</li>
-              <li>Hi-fi UI in Figma afgestemd op branding.</li>
-              <li>Design review & iteraties met klant.</li>
+              <li>Ontwikkeling van wireframes in Figma met focus op navigatie en gebruiksgemak.</li>
+              <li>Informatiearchitectuur opgesteld en gebruikersflows uitgewerkt.</li>
+              <li>Iteratieve feedbackrondes en interne tests.</li>
             </ul>
           </div>
         </div>
 
         <div class="t-step">
-          <div class="t-badge">Dev</div>
-          <h3 class="t-title">Implementatie & Testen</h3>
+          <div class="t-badge">Visueel Design</div>
           <div class="t-content">
+            <p>Het visuele luik draaide om herkenbaarheid en plezier. Door speelse iconen en een frisse stijl voelt de kaart uitnodigend en past ze bij de sfeer van Zuiderbad.</p>
             <ul>
-              <li>Leaflet integratie (markers, clusters, routes).</li>
-              <li>Pop-ups & detailpagina’s met dynamische data.</li>
-              <li>QA, bugfixes, performance checks.</li>
+              <li>Ontwerp van een visuele stijl die aansluit bij de branding van Zuiderbad.</li>
+              <li>Illustraties en iconenset ontwikkelen.</li>
+              <li>High-fidelity designs in Figma uitgewerkt en geoptimaliseerd voor mobile/desktop.</li>
             </ul>
           </div>
         </div>
+        <div class="t-step">
+          <div class="t-badge">Development &amp; Testing</div>
+          <div class="t-content">
+            <p>De focus lag hier op het functioneel maken van het design. Mijn codebijdragen zorgden ervoor dat de visuele elementen en interacties naadloos in de kaart geïntegreerd werden.</p>
+            <ul>
+              <li>Omzetten van de designs naar een werkende kaart in Leaflet.</li>
+              <li>Toevoegen van filters en de zoekfunctionaliteit en de routeplanner.</li>
+              <li>Responsief design geïmplementeerd en prestaties geoptimaliseerd.</li>
+              <li>iteratief testen, zowel op afstand als op locatie.</li>
+              <li>Finale bugfixes en oplevering van een gebruiksklare kaart.</li>
+            </ul>
+          </div>
       </div>
     </section>
 
@@ -145,6 +158,7 @@
     </section>
   </main>
 
+  </div>
   <div id="footer-placeholder"></div>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -193,6 +207,110 @@
     const scrollPercent = (scrollTop / docHeight) * 100;
     document.getElementById('progress-bar').style.width = scrollPercent + "%";
   });
+
+    window.addEventListener('scroll', () => {
+    const hero = document.querySelector('.hero');
+    const toc = document.querySelector('.toc');
+
+    if (window.scrollY > hero.scrollHeight - 200) {
+      toc.classList.add('black');
+    } else {
+      toc.classList.remove('black');
+    }
+    });
+
+    // ---- boven de footer blijven ----
+    const tocEl     = document.querySelector('.toc');
+    // Gebruik de placeholder (die is er altijd), i.p.v. #site-footer
+    const footerEl  = document.getElementById('footer-placeholder');
+
+    function stickToc() {
+      if (!tocEl || !footerEl) return;
+
+      // Hoeveel de footer al de viewport in schuift
+      const footerTopInView = footerEl.getBoundingClientRect().top;
+      const overlap = window.innerHeight - footerTopInView;
+
+      if (overlap > 0) {
+        tocEl.style.top = 'auto';          
+        tocEl.style.bottom = overlap + 'px';
+      } else {
+        tocEl.style.bottom = 'auto';
+        tocEl.style.top = '';
+      }
+    }
+
+  window.addEventListener('scroll', stickToc, { passive: true });
+  window.addEventListener('resize', stickToc);
+  stickToc();
+
   </script>
+<script>
+  // ===== Fancy timeline driver =====
+  (function(){
+    const tl = document.querySelector('.timeline');
+    if(!tl) return;
+    const steps = [...tl.querySelectorAll('.t-step')];
+    const rail = tl.querySelector('.t-rail');
+  
+    // 1) Reveal + stagger once per step
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          const step = entry.target;
+          step.classList.add('seen');
+  
+          // stagger bullets
+          step.querySelectorAll('.t-content li').forEach((li,i)=>{
+            li.style.transitionDelay = (120 + i*80) + 'ms';
+          });
+  
+          io.unobserve(step);
+        }
+      });
+    }, {threshold:.25, rootMargin:'0px 0px -10% 0px'});
+    steps.forEach(s=>io.observe(s));
+  
+    // 2) Active step highlight + progress draw
+    let ticking = false;
+    const focusRatio = 0.38; // "focuslijn" op ~38% van viewport
+  
+    function update(){
+      const tlRect = tl.getBoundingClientRect();
+      const pageTop = window.scrollY + tlRect.top;
+      const pageBottom = window.scrollY + tlRect.bottom;
+      const focusY = window.scrollY + window.innerHeight * focusRatio;
+  
+      // Active step = dichtst bij focusY
+      let active = null, bestDist = Infinity;
+      steps.forEach(step=>{
+        const r = step.getBoundingClientRect();
+        const centerY = window.scrollY + r.top + r.height/2;
+        const d = Math.abs(centerY - focusY);
+        if(d < bestDist){ bestDist = d; active = step; }
+      });
+      steps.forEach(s => s.classList.toggle('is-active', s === active));
+  
+      // Progress: van timeline-top tot focusY
+      const railTop = pageTop;
+      const railBottom = pageBottom;
+      let h = focusY - railTop;
+      h = Math.max(0, Math.min(h, railBottom - railTop));
+      tl.style.setProperty('--progress', h + 'px');
+  
+      ticking = false;
+    }
+  
+    function onScroll(){
+      if(!ticking){ requestAnimationFrame(update); ticking = true; }
+    }
+  
+    window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('resize', onScroll);
+    update();
+  })();
+  </script>
+  
+    
 </body>
 </html>
