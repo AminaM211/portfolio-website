@@ -576,4 +576,3 @@
 @media (prefers-reduced-motion: reduce){
   .timeline::after, .t-step, .t-badge, .t-step .t-title, .t-step .t-content li{ transition: none !important; }
 }
-

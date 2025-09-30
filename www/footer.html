@@ -1,133 +1,182 @@
 <style>
   /* Footer */
   .site-footer {
-    padding: 50px 150px;
-    border-top: 1px solid #ffffff1a;
-    color: var(--text);
+    /* position: relative; */
+    /* padding: 0px 0px 30px; */
+    background: linear-gradient(180deg, #320F04 0%, #250B03 100%);
+    /* background-image: url('./images/footer.svg'); */
+    background-size: cover;
+    /* background-position-y: 0px; */
+    background-repeat: no-repeat;
+    padding: 100px 4em 30px;
+    color: #fff;
     border-radius: 30px 30px 0 0;
-    margin-top: -20px;
-  }
-
-  footer {
-    background: #00346B !important; 
+    overflow: hidden;
+    text-align: center;
+    margin-top: 60px;
   }
 
   .footer-grid {
-    display: grid;
-    grid-template-columns: 100px 150px; 
-    gap: 30%; 
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
     align-items: center;
     justify-content: center;
-    align-content: center;
+    gap: 30%;
+    /* flex-wrap: wrap; */
+    z-index: 1;
   }
-  
+
   .logo-footer {
-    font-family: Kristi, cursive; 
-    font-size: 60px;
-    color: #fff;
-    /* padding-top: 10px; */
-    margin-top: 50px;
-    text-align: center;
+    align-self: self-start;
   }
-  
+
+  .logo-footer img {
+    width: 60px;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-footer img:hover {
+    transform: rotate(-8deg) scale(1.1);
+  }
+
   .socials {
-    display: flex; 
-    gap: 15px; 
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: nowrap;
   }
-  
+
   .chip {
-    display: inline-block;
-    padding: .45rem 1.2rem;
+    padding: 0.5rem 1.3rem;
     border-radius: 999px;
-    text-decoration: none;
-    background: #ffffff15;
+    background: #ffffff1a;
     border: 1px solid #ffffff3a;
     color: #fff;
-    font-weight: 400;
     font-family: Marcellus, serif;
-    transition: background .2s ease;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.25s ease;
   }
 
   .chip:hover {
-    background: #ffffff4d;
-    box-shadow : 0 0 20px 2px white, 0 0 6px 2px rgba(255,255,255,0.3);
-    transition: all .3s ease;
+    background: #fff;
+    color: #00346B;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    transform: translateY(-2px);
   }
-  
+
   .footer-right p {
-    margin-top: 1em;
-    font-size: 2em;
-    color: #fff;
+    font-size: 1.6em;
+    font-weight: 500;
+    margin: 1em 0 0.4em;
+    text-align: right;
   }
-  
+
   .mail {
+    font-size: 1.2em;
     color: #fff;
     text-decoration: none;
-    font-weight: 400;  
-    font-family: Marcellus, serif;
-    font-size: 1.3em;
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s ease;
+    align-self: end;
   }
 
-  .mail:hover { text-decoration: underline; }
-  
-  .copyright {
-    margin-top: 40px; 
-    font-size: 14px; 
-    color: #cfd6e3; 
-    text-align: center;
+  .footer-right {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* align-items: center;
+    text-align: center; */
+  }
+
+  .mail:hover {
+    border-color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .copyright {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #cfd6e3;
+  }
+
+  .grid-one {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
   }
-  .copy { margin: 0; }
-  
-  /* Tablet */
-  @media (max-width: 1024px) {
-    .site-footer { padding: 40px 60px; }
-    .footer-right h3 { font-size: 40px; }
-  }
-  
-  /* Mobiel breed */
+
+  /* Tablet & mobiel */
   @media (max-width: 720px) {
-    .site-footer { padding: 30px 20px 10px 20px; }
+    .site-footer {
+      padding: 50px 30px 25px;
+    }
+
     .footer-grid {
-      grid-template-columns: 1fr;
+      flex-direction: column;
+      align-items: center;
       gap: 30px;
+    }
+
+    .footer-right p {
+      font-size: 1.4em;
+    }
+
+    .mail {
+      font-size: 1.1em;
+      font-size: 1em;
+      align-self: center;
       text-align: center;
     }
-    .socials { justify-content: center; }
-    .footer-right h3 { font-size: 30px; }
-    .logo-footer { font-size: 50px; }
-  }
-  
-  /* Heel smal */
-  @media (max-width: 480px) {
-    .footer-right h3 { font-size: 24px; }
-    .chip { font-size: 14px; padding: .3rem .6rem; }
-  }
-  </style>
-  
-  <footer id="contact" class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-left">
-        <!-- <div class="logo-footer">Amina</div> -->
-        <a href="#" class="logo-footer"><img src="./images/favicon.webp" style="width: 50px;" alt=""></a>
 
-        <div class="socials">
-          <a href="https://www.linkedin.com/in/amina-moutalibova-02a621297/" class="chip" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/AminaM211" class="chip" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
-  
-      <div class="footer-right">
-        <p>Let’s talk!</p>
-        <a class="mail" href="mailto:amina.m@gmail.com">amina.m@gmail.com</a>
+    .footer-right {
+      align-items: center;
+      text-align: center;
+    }
+    .site-footer {
+      padding: 40px 20px 20px;
+    }
+
+    .footer-right p {
+      font-size: 1.2em;
+    }
+    .socials {
+      gap: 8px;
+    }
+    .logo-footer {
+    align-self: center;
+  }
+    .footer-right p {
+      text-align: center;
+    }
+  }
+</style>
+
+<footer id="contact" class="site-footer">
+  <div class="footer-grid">
+    <div class="grid-one">
+      <!-- Logo -->
+      <a href="#" class="logo-footer">
+        <img src="./images/favicon.webp" alt="Logo Amina">
+      </a>
+
+      <!-- Socials -->
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/amina-moutalibova-02a621297/" class="chip" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/AminaM211" class="chip" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
-  
-    <div class="container copyright">
-      <p class="copy" style="font-size: 21px;">©</p> 2025 Amina – UX/UI Designer
-    </div>
-  </footer>
-  
+
+    <!-- Contact -->
+    <div class="footer-right">
+      <p>Neem contact op en laten we samenwerken aan jouw volgende project!</p>
+      <a class="mail" href="mailto:amina.m@gmail.com">amina.m@gmail.com</a>
+    </div> 
+  </div>
+
+  <div class="copyright">
+    © 2025 Amina - UX/UI Designer. Alle rechten voorbehouden.
+  </div>
+</footer>

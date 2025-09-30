@@ -42,6 +42,7 @@ body{
 .bg-color {
   background-image: url('../images/Untitled.webp');
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 html{
@@ -121,7 +122,7 @@ html{
 .grid{
   display:grid;
   grid-template-columns: repeat(13, minmax(0,1fr));
-  gap: 40px;
+  gap: 20px;
 }
 
 /* basiskaart: halfbreed in desktop, nette hoogte */
@@ -248,7 +249,7 @@ html{
 
 /* About */
 .about{
-  padding:100px 10px; 
+  padding:100px 10px 50px 10px; 
   margin:0 5em;
 }
 
@@ -270,14 +271,32 @@ html{
   color: white;
 }
 
-.stack{list-style:none; padding:0; margin:18px 0 0; display:flex; flex-wrap:wrap; gap:10px}
+.figma {background-color: #f24e1e !important;}
+.html {background-color: #e34f26 !important;}
+.css {background-color: #264de4 !important;}
+.js {background-color: #e0cd56 !important;}
+.react {background-color: #5bcae6 !important;}
+.php {background-color: #777bb4 !important;}
+.illustrator {background-color: #ff9a00 !important;}
+.aftereffects {background-color: #9999ff !important;}
+
+.stack{
+  list-style:none; 
+  padding:0; 
+  margin:20px 0 0; 
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:10px;
+}
+
 .stack li{
   background:#ffffff20; 
   border:1px solid #ffffff44; 
-  padding:.4rem 1rem;
+  padding:.4rem 1.3rem;
   border-radius:999px;
-  font-weight:600; 
+  font-weight:200; 
   backdrop-filter: blur(2px);
+  text-wrap: nowrap;
 }
 
 @media (min-width: 1800px) {
@@ -299,13 +318,8 @@ html{
   .tagline {
     font-size: 30px !important;
   }
-  /* .projects { margin: 0 40px; } */
   .about { margin: 0 40px; }
   .site-footer { padding: 40px 60px; }
-
-  /* .grid {
-    grid-template-columns: 1fr;
-  } */
 }
 
 
@@ -313,7 +327,6 @@ html{
 @media (max-width: 900px){
   .card .thumb{ height: 160px; }
   .projects { padding: 3em 4em !important; }
-
 }
 
 @media (max-width: 800px){
@@ -363,7 +376,6 @@ html{
 @media (max-width: 530px) {
   .name { font-size: 80px !important; margin: 0 0.5em;}
   .roles { font-size: 18px !important; }
-
   .tagline { font-size: 22px !important; }
   .chaos { font-size: 24px !important; }
   .projects {
@@ -389,4 +401,15 @@ html{
   .projects {
     padding: 2em 0em !important;
   }
+}
+ 
+.card:hover {
+  transform: scale(1.3) translateZ(0);
+  transition: transform 0.3s ease;
+  background-blend-mode: lighten;
+}
+
+.grid:hover > .card:not(:hover) {
+  transform: scale(0.93);
+  transition: transform 0.3s ease;
 }

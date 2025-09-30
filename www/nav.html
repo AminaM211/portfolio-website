@@ -34,26 +34,35 @@
       color:#fff; text-decoration:none; line-height:1;
       display:inline-flex; align-items:center; gap:.5rem;
     }
-    .nav-links{ display:flex; align-items:center; gap:28px; }
-    .pill{
-      font-family: var(--font-funky,'Just Me Again Down Here',cursive);
-      font-size: clamp(18px, 2.5vw, 24px);
-      padding: 2px 30px;
-      color:#fff; text-decoration:none; font-weight:600;
-      border: 1.5px solid #ffffff55; border-radius:999px;
-      background: rgba(255,255,255,.10);
-      backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px);
-      transition: border-color .2s, background .2s, box-shadow .2s;
-      white-space: nowrap;
-    }
-    .pill:hover{
-      border-color:#fff; background:rgba(255,255,255,.40);
-      box-shadow:0 0 20px 2px #fff, 0 0 6px 2px rgba(255,255,255,.3);
-    }
+    .nav-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .pill {
+    padding: 0.5rem 1.3rem;
+    border-radius: 999px;
+    background: #ffffff1a;
+    border: 1px solid #ffffff3a;
+    color: #fff;
+    font-family: Marcellus, serif;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  .pill:hover {
+    background: #fff;
+    color: #00346B;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    transform: translateY(-2px);
+  }
     @media (min-width:1500px){ .nav{ padding:0 10%; } }
     @media (max-width:425px){
-      .nav-links{ gap:1em; }
-      .pill{ padding:2px 20px; font-size: clamp(18px,3vw,20px); }
+      .nav-links{ gap:0.5em; flex-wrap: nowrap; }
+      .pill{ padding:0.4rem 1rem; font-size: clamp(0.7em,3vw,20px); }
       .brand{ font-size: clamp(38px,6vw,50px); }
     }
     @media (prefers-reduced-motion: reduce){ .site-header{ transition:none; } }
