@@ -309,7 +309,7 @@
     .hero-mock {background-position: 10px;}
 
     .hero {
-      background-position: -150px 60px;
+      background-position: 150px 60px;
       height: 60vh;
       /* margin: 6em 2em 1em 2em; */
       margin: 0;
@@ -363,7 +363,9 @@
     .h-meta {
       gap:2em;
     }
-
+    .hero {
+      background-position: 0px 70px;
+    }
   }
 
   @media (max-width: 500px){
@@ -375,8 +377,8 @@
 
  @media (max-width: 485px){
   .hero, .hero2 {
-    background-position: -80px 0px;
-    height:40vh;
+    background-position: -80px 60px;
+    height:60vh;
   }
     .h-title {
       font-size: 21px !important;
@@ -448,7 +450,7 @@
       max-width: 100%;
         }
     .hero {
-      background-position: -150px 0px;
+      background-position: -150px 60px;
     }
     .hero2 {
       background-position: -90px 0px;
