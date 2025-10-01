@@ -418,7 +418,7 @@
       font-size: x-large !important;
     }
     .container p {
-      font-size: 14px !important;
+      font-size: 1em !important;
     }
 
     #context, #uitdaging, #rol, #proces, #reflectie {
