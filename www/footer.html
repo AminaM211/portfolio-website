@@ -153,6 +153,38 @@
     }
   }
 
+  .contact-info {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: nowrap;
+  }
+
+  .social img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+  }
+
+  .social {
+    padding: 0rem 0rem;
+    height: 42px;
+    border-radius: 999px;
+    background: #f0f0f0a7;
+    border: 1px solid #ffffff3a;
+    color: #fff;
+    transition: all 0.25s ease;
+  }
+
+  .social:hover {
+    background: #fff;
+    color: #00346B;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+  }
+
+
   .copy {
     font-size: 21px;
     position: relative;    
@@ -170,16 +202,18 @@
 
       <!-- Socials -->
       <div class="socials">
-        <a href="https://www.linkedin.com/in/amina-moutalibova-02a621297/" class="chip" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/AminaM211" class="chip" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/amina-moutalibova-02a621297/" class="social" target="_blank" rel="noopener"><img src="/www/images/linkedin-logo.png" alt=""></a>
+        <a href="https://github.com/AminaM211" class="social" target="_blank" rel="noopener"><img src="/www/images/github-logo.png" alt=""></a>
       </div>
     </div>
 
     <!-- Contact -->
     <div class="footer-right">
-      <p>Neem contact op en laten we samenwerken aan jouw volgende project!</p>
-      <a class="mail" href="mailto:amina.m@gmail.com">amina.m@gmail.com</a>
-      <a class="mail" href="tel:+31612345678">+32 483 687 418</a>
+      <p>Laten we samenwerken aan jouw volgende project!</p>
+      <div class="contact-info">
+        <a class="chip" href="mailto:amina.m@gmail.com">mail me</a>
+        <a class="chip" href="tel:+31612345678">bel me</a>
+      </div>
     </div> 
   </div>
 
