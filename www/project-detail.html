@@ -25,17 +25,6 @@
      gtag('config', 'G-09LMHXY6QL');
    </script>
 
-<!-- <script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:6535050,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script> -->
-
   <!-- Primary SEO -->
   <meta name="description" content="Een interactieve kaart die bezoekers van Hofstade helpt het domein op een intuïtieve en speelse manier te ontdekken." />
   <link rel="canonical" href="https://amina-moutalibova.be/project-detail.html" />
@@ -144,71 +133,76 @@
     </section>
 
     <!-- Het proces (timeline) -->
-    <section id="proces" class="section container">
-      <h2 class="section-title">Het proces</h2>
-
-      <div class="timeline">
-        <div class="t-rail"></div>
-
-        <div class="t-step">
-          <div class="t-badge">Projectanalyse &amp; Definitie</div>
-          <div class="t-content">
-            <p>In deze fase brachten we de noden van bezoekers en stakeholders in kaart. Het sitebezoek hielp ons beter begrijpen hoe mensen zich fysiek door het domein bewegen.</p>
-            <ul>
-              <li>Kick-off met Zuiderbad om noden en verwachtingen in kaart te brengen.</li>
-              <li>Sitebezoek om de fysieke omgeving en de gebruikersbehoeftes beter te begrijpen.</li>
-              <li>Analyse van bestaande kaartoplossingen.</li>
-              <li>Functionele scope bepaald.</li>
-            </ul>
-          </div>
+    <section id="proces" class="proces-slider">
+      <div class="head">
+        <h2>Het proces</h2>
+        <div class="controls">
+          <button id="prev" class="nav-btn" aria-label="Vorige">‹</button>
+          <button id="next" class="nav-btn" aria-label="Volgende">›</button>
         </div>
-
-        <div class="t-step">
-          <div class="t-badge">UX Design</div>
-          <div class="t-content">
-            <p>We onderzochten hoe de kaart intuïtief gebruikt kon worden. Het doel was dat bezoekers met zo min mogelijk clicks de juiste info vinden.</p>
-            <ul>
-              <li>Ontwikkeling van wireframes in Figma met focus op navigatie en gebruiksgemak.</li>
-              <li>Informatiearchitectuur opgesteld en gebruikersflows uitgewerkt.</li>
-              <li>Iteratieve feedbackrondes en interne tests.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="t-step">
-          <div class="t-badge">Visueel Design</div>
-          <div class="t-content">
-            <p>Het visuele luik draaide om herkenbaarheid en plezier. Door speelse iconen en een frisse stijl voelt de kaart uitnodigend en past ze bij de sfeer van Zuiderbad.</p>
-            <ul>
-              <li>Ontwerp van een visuele stijl die aansluit bij de branding van Zuiderbad.</li>
-              <li>Illustraties en iconenset ontwikkelen.</li>
-              <li>High-fidelity designs in Figma uitgewerkt en geoptimaliseerd voor mobile/desktop.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="t-step">
-          <div class="t-badge">Development &amp; Testing</div>
-          <div class="t-content">
-            <p>De focus lag hier op het functioneel maken van het design. Mijn codebijdragen zorgden ervoor dat de visuele elementen en interacties naadloos in de kaart geïntegreerd werden.</p>
-            <ul>
-              <li>Omzetten van de designs naar een werkende kaart in Leaflet.</li>
-              <li>Toevoegen van filters en de zoekfunctionaliteit en de routeplanner.</li>
-              <li>Responsief design geïmplementeerd en prestaties geoptimaliseerd.</li>
-              <li>iteratief testen, zowel op afstand als op locatie.</li>
-              <li>Finale bugfixes en oplevering van een gebruiksklare kaart.</li>
-            </ul>
-          </div>
       </div>
-    </section>
-
-    <!-- Reflectie -->
-    <section id="reflectie" class="section container">
-      <h2 class="section-title">Reflectie</h2>
-          <p>Dit project heeft me veel bijgebracht over hoe een idee uitgroeit tot een concreet product. Als UX/UI designer leerde ik niet alleen hoe belangrijk het is om een consistente visuele stijl te ontwikkelen, maar ook hoe die stijl effectief moet doorgetrokken worden in de front-end.
-            <br><br>Daarnaast merkte ik hoe cruciaal duidelijke communicatie met de klant is. De regelmatige feedbackmomenten met Zuiderbad hielpen ons om verwachtingen scherp te houden, prioriteiten te stellen en misverstanden te vermijden. Het samenspel van design, development en klantcommunicatie maakte dit project voor mij een bijzonder waardevolle ervaring.</p>
-        <div>
+    
+      <div class="slider">
+        <div class="track" id="track">
+    
+          <article class="project-card" active>
+            <img class="project-card__bg" src="/images/zuiderbad-analyse.webp" alt="">
+            <div class="project-card__content">
+              <div>
+                <h3 class="project-card__title">Analyse & Definitie</h3>
+                <p class="project-card__desc">
+                  Kick-off met Zuiderbad, sitebezoeken en onderzoek naar bestaande kaarten om noden en frustraties bloot te leggen. 
+                  We bepaalden de functionele scope en doelen.
+                </p>
+              </div>
+            </div>
+          </article>
+    
+          <article class="project-card">
+            <img class="project-card__bg" src="/images/zuiderbad-ux.webp" alt="">
+            <div class="project-card__content">
+              <div>
+                <h3 class="project-card__title">UX Design</h3>
+                <p class="project-card__desc">
+                  Wireframes, informatiearchitectuur en gebruikersflows in Figma. 
+                  Via testmomenten en iteratie optimaliseerden we navigatie en gebruiksgemak.
+                </p>
+              </div>
+            </div>
+          </article>
+    
+          <article class="project-card">
+            <img class="project-card__bg" src="/images/zuiderbad-visueel.webp" alt="">
+            <div class="project-card__content">
+              <div>
+                <h3 class="project-card__title">Visueel Design</h3>
+                <p class="project-card__desc">
+                  De Zuiderbad-branding vertaald naar een frisse en toegankelijke stijl met iconen, kleuren en typografie die de sfeer van het domein weerspiegelen.
+                </p>
+              </div>
+            </div>
+          </article>
+    
+          <article class="project-card">
+            <img class="project-card__bg" src="/images/zuiderbad-dev.webp" alt="">
+            <div class="project-card__content">
+              <div>
+                <h3 class="project-card__title">Development</h3>
+                <p class="project-card__desc">
+                  De kaart gebouwd in Leaflet.js met filters, pop-ups en routeplanner. 
+                  Responsive en performant ontwikkeld voor mobiel en desktop.
+                </p>
+              </div>
+            </div>
+          </article>
+    
         </div>
+      </div>
+    
+      <div class="dots" id="dots"></div>
     </section>
+    
+    
   </main>
 
   </div>
@@ -298,72 +292,120 @@
   stickToc();
 
   </script>
-<script>
-  // ===== Fancy timeline driver =====
-  (function(){
-    const tl = document.querySelector('.timeline');
-    if(!tl) return;
-    const steps = [...tl.querySelectorAll('.t-step')];
-    const rail = tl.querySelector('.t-rail');
-  
-    // 1) Reveal + stagger once per step
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          const step = entry.target;
-          step.classList.add('seen');
-  
-          // stagger bullets
-          step.querySelectorAll('.t-content li').forEach((li,i)=>{
-            li.style.transitionDelay = (120 + i*80) + 'ms';
-          });
-  
-          io.unobserve(step);
-        }
-      });
-    }, {threshold:.25, rootMargin:'0px 0px -10% 0px'});
-    steps.forEach(s=>io.observe(s));
-  
-    // 2) Active step highlight + progress draw
-    let ticking = false;
-    const focusRatio = 0.38; // "focuslijn" op ~38% van viewport
-  
-    function update(){
-      const tlRect = tl.getBoundingClientRect();
-      const pageTop = window.scrollY + tlRect.top;
-      const pageBottom = window.scrollY + tlRect.bottom;
-      const focusY = window.scrollY + window.innerHeight * focusRatio;
-  
-      // Active step = dichtst bij focusY
-      let active = null, bestDist = Infinity;
-      steps.forEach(step=>{
-        const r = step.getBoundingClientRect();
-        const centerY = window.scrollY + r.top + r.height/2;
-        const d = Math.abs(centerY - focusY);
-        if(d < bestDist){ bestDist = d; active = step; }
-      });
-      steps.forEach(s => s.classList.toggle('is-active', s === active));
-  
-      // Progress: van timeline-top tot focusY
-      const railTop = pageTop;
-      const railBottom = pageBottom;
-      let h = focusY - railTop;
-      h = Math.max(0, Math.min(h, railBottom - railTop));
-      tl.style.setProperty('--progress', h + 'px');
-  
-      ticking = false;
-    }
-  
-    function onScroll(){
-      if(!ticking){ requestAnimationFrame(update); ticking = true; }
-    }
-  
-    window.addEventListener('scroll', onScroll, {passive:true});
-    window.addEventListener('resize', onScroll);
-    update();
-  })();
+  <script>
+    (() => {
+  const track = document.getElementById("track");
+  const wrap = track.parentElement;
+  const cards = Array.from(track.children);
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
+  const dotsBox = document.getElementById("dots");
+
+  // Detect mobile
+  const isMobile = () => matchMedia("(max-width:767px)").matches;
+
+  // Create navigation dots
+  cards.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.className = "dot";
+    dot.onclick = () => activate(i, true);
+    dotsBox.appendChild(dot);
+  });
+  const dots = Array.from(dotsBox.children);
+
+  let current = 0;
+
+  // Center the active card
+  function center(i) {
+    const card = cards[i];
+    const axis = isMobile() ? "top" : "left";
+    const size = isMobile() ? "clientHeight" : "clientWidth";
+    const start = isMobile() ? card.offsetTop : card.offsetLeft;
+
+    wrap.scrollTo({
+      [axis]: start - (wrap[size] / 2 - card[size] / 2),
+      behavior: "smooth"
+    });
+  }
+
+  // Update UI states
+  function toggleUI(i) {
+    cards.forEach((c, k) => c.toggleAttribute("active", k === i));
+    dots.forEach((d, k) => d.classList.toggle("active", k === i));
+    prev.disabled = i === 0;
+    next.disabled = i === cards.length - 1;
+  }
+
+  // Activate specific card
+  function activate(i, scroll = true) {
+    if (i === current) return;
+    current = i;
+    toggleUI(i);
+    if (scroll) center(i);
+  }
+
+  // Move steps
+  function go(step) {
+    const newIndex = Math.min(Math.max(current + step, 0), cards.length - 1);
+    activate(newIndex, true);
+  }
+
+  // Button events
+  prev.onclick = () => go(-1);
+  next.onclick = () => go(1);
+
+  // Keyboard navigation
+  addEventListener(
+    "keydown",
+    (e) => {
+      if (["ArrowRight", "ArrowDown"].includes(e.key)) go(1);
+      if (["ArrowLeft", "ArrowUp"].includes(e.key)) go(-1);
+    },
+    { passive: true }
+  );
+
+  // Hover & click activation
+  cards.forEach((card, i) => {
+    card.addEventListener("mouseenter", () => {
+      if (matchMedia("(hover:hover)").matches) activate(i, true);
+    });
+    card.addEventListener("click", () => activate(i, true));
+  });
+
+  // Touch-swipe on mobile
+  let startX = 0, startY = 0;
+  track.addEventListener(
+    "touchstart",
+    (e) => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    },
+    { passive: true }
+  );
+
+  track.addEventListener(
+    "touchend",
+    (e) => {
+      const dx = e.changedTouches[0].clientX - startX;
+      const dy = e.changedTouches[0].clientY - startY;
+      if (isMobile() ? Math.abs(dy) > 60 : Math.abs(dx) > 60) {
+        go((isMobile() ? dy : dx) > 0 ? -1 : 1);
+      }
+    },
+    { passive: true }
+  );
+
+  // Hide dots on mobile
+  if (isMobile()) dotsBox.hidden = true;
+
+  // Recenter on resize
+  addEventListener("resize", () => center(current));
+
+  // Init
+  toggleUI(0);
+  center(0);
+})();
+
   </script>
-  
-    
 </body>
 </html>

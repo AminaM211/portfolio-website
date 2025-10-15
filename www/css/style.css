@@ -271,14 +271,14 @@ html{
   color: white;
 }
 
-.figma {background-color: #f24e1e !important;}
+/* .figma {background-color: #f24e1e !important;}
 .html {background-color: #e34f26 !important;}
 .css {background-color: #264de4 !important;}
 .js {background-color: #e0cd56 !important;}
 .react {background-color: #5bcae6 !important;}
 .php {background-color: #777bb4 !important;}
 .illustrator {background-color: #ff9a00 !important;}
-.aftereffects {background-color: #9999ff !important;}
+.aftereffects {background-color: #9999ff !important;} */
 
 .stack{
   list-style:none; 
@@ -290,7 +290,7 @@ html{
 }
 
 .stack li{
-  background:#ffffff20; 
+  background:#01010133; 
   border:1px solid #ffffff44; 
   padding:.4rem 1.3rem;
   border-radius:999px;
@@ -403,13 +403,3 @@ html{
   }
 }
  
-.card:hover {
-  transform: scale(1.3) translateZ(0);
-  transition: transform 0.1s ease;
-  background-blend-mode: lighten;
-}
-
-.grid:hover > .card:not(:hover) {
-  transform: scale(0.93);
-  transition: transform 0.1s ease;
-}
