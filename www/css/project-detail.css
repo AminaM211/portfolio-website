@@ -35,7 +35,7 @@
     line-height:1.6;
   }
 
-  img{max-width:100%; height:auto; display:block}
+  /* img{max-width:100%; height:auto; display:block} */
   .container{
     margin-inline:auto;    
   }

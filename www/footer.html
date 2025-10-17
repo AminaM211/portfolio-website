@@ -1,223 +1,196 @@
 <style>
-  /* Footer */
-  .site-footer {
-    /* position: relative; */
-    /* padding: 0px 0px 30px; */
-    background: linear-gradient(180deg, #320F04 0%, #250B03 100%);
-    /* background-image: url('./images/footer.svg'); */
-    background-size: cover;
-    /* background-position-y: 0px; */
-    background-repeat: no-repeat;
-    padding: 100px 4em 30px;
-    color: #fff;
-    border-radius: 30px 30px 0 0;
-    overflow: hidden;
-    text-align: center;
-    margin-top: 60px;
+.site-footer {
+  background: radial-gradient(circle at top left, #2b0c03, #120703 70%);
+  color: #fff;
+  padding: 2rem 2rem 2rem;
+  border-radius: 40px 40px 0 0;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.footer-intro {
+  flex: 1 1 400px;
+}
+
+.footer-logo {
+  width: 65px;
+  margin-bottom: 1.5rem;
+  margin-top: 2em;
+  filter: drop-shadow(0 3px 6px rgba(255, 255, 255, 0.15));
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: rotate(-6deg) scale(1.1);
+}
+
+.footer-intro h2 {
+  font-family: "Marcellus", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+
+.footer-tagline {
+  color: #d3cfcf;
+  font-size: 1.05rem;
+  max-width: 450px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.footer-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-btn {
+  padding: 0.75rem 1.8rem;
+  border-radius: 999px;
+  background: #fff;
+  color: #1a0a06;
+  font-family: "Marcellus", serif;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+    width: 100%;
+    max-width: 250px;
+}
+
+.footer-btn:hover {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.footer-btn.alt {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.footer-btn.alt:hover {
+  background: #fff;
+  color: #1a0a06;
+}
+
+.footer-links {
+  flex: 1 1 250px;
+  padding: 0em 2em;
+  margin-top: 3em;
+}
+
+.footer-links h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.726);
+  padding: 0.2rem;
+  border: 1px solid #ffffff25;
+  transition: all 0.3s ease;
+}
+
+.social-icon img:hover {
+  background: #fff;
+  box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.7);
+  transform: translateY(-3px) scale(1.1);
+}
+
+.footer-bottom {
+  border-top: 1px solid #ffffff00;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #c8c3c1;
+  font-family: "Inter", sans-serif;
+}
+
+@media (max-width: 800px) {
+  .footer-btn {
+    width: 100%;
+    max-width: 250px;
   }
 
-  .footer-grid {
-    position: relative;
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    justify-content: center;
-    gap: 30%;
-    /* flex-wrap: wrap; */
-    z-index: 1;
-  }
+.footer-container {
+  max-width: 1200px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto 4rem;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
 
-  .logo-footer {
-    align-self: self-start;
-  }
+.footer-intro {
+  flex: 1 1 400px;
+}
+}
 
-  .logo-footer img {
-    width: 60px;
-    transition: transform 0.3s ease;
-  }
-
-  .logo-footer img:hover {
-    transform: rotate(-8deg) scale(1.1);
-  }
-
-  .socials {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin-top: 15px;
-    flex-wrap: nowrap;
-  }
-
-  .chip {
-    padding: 0.5rem 1.3rem;
-    border-radius: 999px;
-    background: #ffffff1a;
-    border: 1px solid #ffffff3a;
-    color: #fff;
-    font-family: Marcellus, serif;
-    font-weight: 400;
-    text-decoration: none;
-    transition: all 0.25s ease;
-  }
-
-  .chip:hover {
-    background: #fff;
-    color: #00346B;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
-    transform: translateY(-2px);
-  }
-
-  .footer-right p {
-    font-size: 1.6em;
-    font-weight: 500;
-    margin: 1em 0 0.4em;
-    text-align: right;
-  }
-
-  .mail {
-    font-size: 1.2em;
-    color: #fff;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: all 0.25s ease;
-    align-self: end;
-  }
-
-  .footer-right {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center;
-    text-align: center; */
-  }
-
-  .mail:hover {
-    border-color: #fff;
-    transform: translateY(-2px);
-  }
-
-  .copyright {
-    margin-top: 40px;
-    font-size: 14px;
-    color: #cfd6e3;
-  }
-
-  .grid-one {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  /* Tablet & mobiel */
-  @media (max-width: 720px) {
-    .site-footer {
-      padding: 50px 30px 25px;
-    }
-
-    .footer-grid {
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .footer-right p {
-      font-size: 1.4em;
-    }
-
-    .mail {
-      font-size: 1.1em;
-      font-size: 1em;
-      align-self: center;
-      text-align: center;
-    }
-
-    .footer-right {
-      align-items: center;
-      text-align: center;
-    }
-    .site-footer {
-      padding: 40px 20px 20px;
-    }
-
-    .footer-right p {
-      font-size: 1.2em;
-    }
-    .socials {
-      gap: 8px;
-    }
-    .logo-footer {
-    align-self: center;
-  }
-    .footer-right p {
-      text-align: center;
-    }
-  }
-
-  .contact-info {
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-    margin-top: 15px;
-    flex-wrap: nowrap;
-  }
-
-  .social img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-  }
-
-  .social {
-    padding: 0rem 0rem;
-    height: 42px;
-    border-radius: 999px;
-    background: #f0f0f0a7;
-    border: 1px solid #ffffff3a;
-    color: #fff;
-    transition: all 0.25s ease;
-  }
-
-  .social:hover {
-    background: #fff;
-    color: #00346B;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
-    transform: translateY(-2px);
-  }
-
-
-  .copy {
-    font-size: 21px;
-    position: relative;    
-    top: 5px;
-  }
 </style>
+
 
 <footer id="contact" class="site-footer">
   <div class="footer-grid">
-    <div class="grid-one">
-      <!-- Logo -->
-      <a href="#" class="logo-footer">
-        <img src="./images/favicon.webp" alt="Logo Amina">
-      </a>
-
-      <!-- Socials -->
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/amina-moutalibova-02a621297/" class="social" target="_blank" rel="noopener"><img src="./images/linkedin-logo.png" alt=""></a>
-        <a href="https://github.com/AminaM211" class="social" target="_blank" rel="noopener"><img src="./images/github-logo.png" alt=""></a>
+    <div class="grid-container">
+       <div class="footer-intro">
+        <a href=""></a><img src="./images/favicon.webp" alt="Logo Amina" class="footer-logo" />
+      <h2>Laten we iets moois maken!</h2>
+      <p class="footer-tagline">
+        Ik ben altijd op zoek naar nieuwe projecten en samenwerkingen. Of je nu een idee hebt dat je wilt bespreken of gewoon hallo wilt zeggen, aarzel niet om contact op te nemen!
+      </p>
+      <div class="footer-actions">
+        <a href="mailto:amina_moutalibov@hotmail.com" class="footer-btn">mail me!</a>
+        <a href="tel:+32483687418" class="footer-btn alt">Stuur me op Linkedin</a>
       </div>
     </div>
 
-    <!-- Contact -->
-    <div class="footer-right">
-      <p>Laten we samenwerken aan jouw volgende project!</p>
-      <div class="contact-info">
-        <a class="chip" href="mailto:amina.m@gmail.com">mail me</a>
-        <a class="chip" href="tel:+32483687418">bel me</a>
-      </div>
-    </div> 
+    <div class="footer-links">
+      <h3>vind me online</h3>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/amina-moutalibova-02a621297/" target="_blank" rel="noopener" class="social-icon">
+          <img src="./images/linkedin-logo.png" alt="LinkedIn" />
+        </a>
+         <a href="https://github.com/AminaM211" target="_blank" rel="noopener" class="social-icon">
+          <img src="./images/github-logo.png" alt="GitHub" />
+        </a>
+    </div>
   </div>
 
-  <div class="copyright">
-    <span class="copy">©</span> 2025 Amina - Alle rechten voorbehouden.
+    <div class="footer-bottom">
+    <p>© 2025 AMVA studios — Gemaakt met een vleugje creatieve chaos.</p>
   </div>
 </footer>
