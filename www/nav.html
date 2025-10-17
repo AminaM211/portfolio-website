@@ -41,6 +41,18 @@
     flex-wrap: wrap;
   }
 
+  .pill2 {
+    padding: 0.5rem 1.3rem;
+    border-radius: 999px;
+    background: #00346B;
+    /* border: 1px solid #00346B; */
+    color: #fff;
+    font-family: Marcellus, serif;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
   .pill {
     padding: 0.5rem 1.3rem;
     border-radius: 999px;
@@ -53,16 +65,28 @@
     transition: all 0.25s ease;
   }
 
-  .pill:hover {
+  .pill2:hover {
+    border-radius: 999px;
+    background: #ffffff85;
+    border: 1px solid #ffffff3a;
+    color: #fff;
+    font-family: Marcellus, serif;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  .pill:hover, .pill2 {
     background: #fff;
     color: #00346B;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
     transform: translateY(-2px);
+    
   }
     @media (min-width:1500px){ .nav{ padding:0 10%; } }
     @media (max-width:425px){
       .nav-links{ gap:0.5em; flex-wrap: nowrap; }
-      .pill{ padding:0.4rem 1rem; font-size: clamp(1em,3vw,20px); }
+      .pill, .pill2{ padding:0.4rem 1rem; font-size: clamp(1em,3vw,20px); }
       .brand{ font-size: clamp(38px,6vw,50px); }
     }
     @media (prefers-reduced-motion: reduce){ .site-header{ transition:none; } }
@@ -74,7 +98,7 @@
       <a class="brand" href="/">Amina</a>
       <nav class="nav-links" id="nav-links">
         <a class="pill" href="index.html#arrow" tabindex="1">Projecten</a>
-        <a class="pill" href="#footer-placeholder" tabindex="2">Contact</a>
+        <a class="pill2" href="#footer-placeholder" tabindex="2">Contact</a>
       </nav>
     </div>
   </header>

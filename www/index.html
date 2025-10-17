@@ -11,7 +11,6 @@
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-N6CLJCJR');</script>
-  <!-- End Google Tag Manager -->
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-09LMHXY6QL"></script>
@@ -149,8 +148,9 @@
     
     <section class="hero">
       <div class="hero-inner">
-        <h1 class="name" data-aos="fade-up">Amina Moutalibova</h1>
+        <h1 class="name" data-aos="fade-up">AMVA studios</h1>
         <p class="roles" data-aos="fade-up">UX/UI Design · Webdesign</p>
+        <button class="CTA-button" data-aos="fade-up">download mijn cv</>
       </div>
     </section>
 
@@ -159,8 +159,8 @@
     <div class="tagline-wrap" data-aos="fade-up">
       <h2 class="chaos tagline">van creatieve chaos</h2>
       <div id="tag" class="scroll-down">
-        <img class="mouse" src="images/SVG/scroll-icon.svg" alt="scroll down icon">
-        <img id="arrow" class="arrow" src="images/SVG/arrow.svg" alt="arrow down" style="width: 30px;">
+        <img class="mouse" src="images/SVG/scroll-icon.svg" alt="scroll down icon"  style="width: 30px;"> 
+        <img id="arrow" class="arrow" src="images/SVG/arrow.svg" alt="arrow down" style="width: 20px;">
       </div>
     </div>
   </div>
@@ -170,42 +170,41 @@
 
   <div class="bg-color">
     <!-- Projects -->
-    <section class="projects container">
-      <div class="grid">
-        <a href="project-ecopick.html" class="card card1" data-aos="fade-up" tabindex="1">
-          <div class="card-footer">
-            <h3 class="card-title">ecopick - duurzame mode app</h3>
-            <p class="card-meta">Student Project — Sept 2024-Dec 2024</p>
-          </div>
-        </a>
+    <div class="projects-grid" data-aos="fade-up">
+      <a href="project-ecopick.html" class="project-card">
+        <div class="wrapper bg-color-cover">
+          <img src="/www/images/ecopick-mockup.png" class="cover-image" alt="Ecopick App">
+        </div>
+        <div class="title-p">
+          <h2 class="title">ecopick - duurzame mode app</h2>
+          <p class="wrapper-p">Student Project — Sept 2024-Dec 2024</p>
+        </div>
+       <img src="/www/images/ecopick-transparant.png" class="character" alt="Ecopick Visual">
+      </a>
     
-        <a href="project-foodkiosk.html" class="card card2" data-aos="fade-up" tabindex="2">
-          <div class="card-footer">
-            <h3 class="card-title">3D Mochi Foodkiosk</h3>
-            <p class="card-meta">Student Project — Sept 2025-Dec 2025</p>
-          </div>
-        </a>
+      <a href="project-detail.html" class="project-card">
+        <div class="wrapper bg-color-cover2">
+          <img src="/www/images/zuiderbad-mockup1.jpeg" class="cover-image" alt="Zuiderbad Map">
+        </div>
+        <div class="title-p">
+          <h2 class="title">Zuiderbad - Interactieve Kaart</h2>
+          <p class="wrapper-p">Groepsproject — Sept 2025-Dec 2025</p>
+        </div>
+        <img src="/www/images/kaart-transparant.png" class="character" alt="Zuiderbad Visual">
+      </a>
+
+      <a href="project-foodkiosk.html" class="project-card">
+        <div class="wrapper bg-color-cover3">
+          <img src="/www/images/webflow-mockup.png" class="cover-image laptop-img" alt="3D Foodkiosk">
+        </div>
+        <div class="title-p">
+          <h2 class="title">Cup-a-cino - Webflow</h2>
+          <p class="wrapper-p">Student Project — Sept 2025-Dec 2025</p>
+        </div>
+        <img src="/www/images/webflow-transparant.png" class="character-laptop" alt="3D Foodkiosk Visual">
+      </a>
+    </div>
     
-        <a href="project-detail.html" id="zuiderbad" class="card card-wide" data-aos="fade-up" tabindex="3">
-          <div class="card-footer">
-            <h3 class="card-title">Zuiderbad - Interactieve Kaart</h3>
-            <p class="card-meta">Group Project — Sept 2025-Dec 2025</p>
-          </div>
-        </a>
-        <a href="project-detail.html" class="card card-left" data-aos="fade-up" tabindex="4">
-          <div class="card-footer">
-            <h3 class="card-title">Routeplanner app - UX/UI Design</h3>
-            <p class="card-meta">Student Project — Sept 2025-Dec 2025</p>
-          </div>
-        </a>
-        <a href="project-detail.html" class="card card-bottom" data-aos="fade-up" tabindex="5">
-          <div class="card-footer">
-            <h3 class="card-title">Cup-a-cino - Webflow</h3>
-            <p class="card-meta">Student Project — Sept 2025-Dec 2025</p>
-          </div>
-        </a>
-      </div>
-    </section>
     
     <!-- About -->
     <section id="about" class="about">
@@ -248,6 +247,20 @@
       const scrollPercent = Math.min(100, (scrollTop / docHeight) * 100);
       const bar = document.getElementById('progress-bar');
       if (bar) bar.style.width = scrollPercent + "%";
+    });
+  </script>
+  <script>
+    // on hover van project card, display:none voor de cover-image 
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        const coverImage = card.querySelector('.cover-image');
+        if (coverImage) coverImage.style.display = 'none';
+      });
+      card.addEventListener('mouseleave', () => {
+        const coverImage = card.querySelector('.cover-image');
+        if (coverImage) coverImage.style.display = 'block';
+      });
     });
   </script>
 </body>
