@@ -13,7 +13,7 @@
       position: fixed; inset: 0 auto auto 0; right: 0;
       height: var(--nav-h);
       z-index: 10000;
-      background: linear-gradient(#00000070, #00000000);
+      background: linear-gradient(#270b03, #00000000);
       backdrop-filter: saturate(100%) blur(10px);
       -webkit-backdrop-filter: saturate(100%) blur(10px);
       transform: translateY(0);
@@ -29,8 +29,8 @@
       padding: 0 40px; height: var(--nav-h);
     }
     .brand{
-      font-family: var(--font-brand,'Kristi',cursive);
-      font-size: clamp(45px, 5vw, 60px);
+      font-size: clamp(20px, 5vw, 26px);
+      font-family: 'Marcellus', serif;
       color:#fff; text-decoration:none; line-height:1;
       display:inline-flex; align-items:center; gap:.5rem;
     }
@@ -87,7 +87,7 @@
     @media (max-width:425px){
       .nav-links{ gap:0.5em; flex-wrap: nowrap; }
       .pill, .pill2{ padding:0.4rem 1rem; font-size: clamp(1em,3vw,20px); }
-      .brand{ font-size: clamp(38px,6vw,50px); }
+      .brand{ font-size: clamp(30px,6vw,40px); }
     }
     @media (prefers-reduced-motion: reduce){ .site-header{ transition:none; } }
   </style>
@@ -95,7 +95,7 @@
 <body>
   <header class="site-header" id="site-header">
     <div class="nav">
-      <a class="brand" href="/">Amina</a>
+      <a class="brand" href="/">AMVA studios</a>
       <nav class="nav-links" id="nav-links">
         <a class="pill" href="index.html#arrow" tabindex="1">Projecten</a>
         <a class="pill2" href="#footer-placeholder" tabindex="2">Contact</a>

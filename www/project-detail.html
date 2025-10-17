@@ -115,7 +115,7 @@
 
     <section id="oplossing" class="section container">
       <div class="container">
-        <h2 class="band-title">Oplossing</h2>
+        <h2 class="section-title">Oplossing</h2>
         <p id="opl">We ontwikkelden een interactieve kaart die het volledige domein visueel en intuïtief weergeeft. Dankzij een routeplanner, filters en pop-ups kunnen bezoekers eenvoudig navigeren en direct de info vinden die ze zoeken. Het design is afgestemd op de Zuiderbad-branding, met op maat gemaakte iconen en illustraties. De kaart werkt bovendien responsief, zodat zowel gezinnen als sporters en bedrijven ze makkelijk kunnen gebruiken, op desktop en mobiel.          </p>
       </div>
     </section>
@@ -129,75 +129,86 @@
             In front-end werkte ik o.a. aan pop-ups, detailpagina’s, filters en UI-aanpassingen zodat het ontwerp 1-op-1 werd vertaald naar productie.
           </p>
         </div>
-          <img src="./images/rol-fotos.png" alt="Iconen set">
+          <img class="rol-img" src="./images/rol-fotos.png" alt="Iconen set">
     </section>
 
-    <!-- Het proces (timeline) -->
-    <section id="proces" class="proces-slider">
-      <div class="head">
-        <h2>Het proces</h2>
-        <div class="controls">
-          <button id="prev" class="nav-btn" aria-label="Vorige">‹</button>
-          <button id="next" class="nav-btn" aria-label="Volgende">›</button>
-        </div>
+    <!-- Proces -->
+    <section class="process"  id="proces" class="section container">
+    <h2 class="section-title">Mijn proces</h2>
+
+  <div class="progress-container">
+    <input type="radio" name="step" id="step1" checked>
+    <input type="radio" name="step" id="step2">
+    <input type="radio" name="step" id="step3">
+    <input type="radio" name="step" id="step4">
+
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+      <div class="step" data-step="1">
+        <label for="step1"></label>
       </div>
-    
-      <div class="slider">
-        <div class="track" id="track">
-    
-          <article class="project-card" active>
-            <img class="project-card__bg" src="./images/analyse.jpg" alt="">
-            <div class="project-card__content">
-              <div>
-                <h3 class="project-card__title">Analyse & Definitie</h3>
-                <p class="project-card__desc">
-                  Kick-off met Zuiderbad, sitebezoeken en onderzoek naar bestaande kaarten om noden en frustraties bloot te leggen. 
-                  We bepaalden de functionele scope en doelen.
-                </p>
-              </div>
-            </div>
-          </article>
-    
-          <article class="project-card">
-            <img class="project-card__bg" src="./images/uxdesign.jpg" alt="">
-            <div class="project-card__content">
-              <div>
-                <h3 class="project-card__title">UX Design</h3>
-                <p class="project-card__desc">
-                  Wireframes, informatiearchitectuur en gebruikersflows in Figma. 
-                  Via testmomenten en iteratie optimaliseerden we navigatie en gebruiksgemak.
-                </p>
-              </div>
-            </div>
-          </article>
-    
-          <article class="project-card">
-            <img class="project-card__bg" src="/images/zuiderbad-visueel.webp" alt="">
-            <div class="project-card__content">
-              <div>
-                <h3 class="project-card__title">Visueel Design</h3>
-                <p class="project-card__desc">
-                  De Zuiderbad-branding vertaald naar een frisse en toegankelijke stijl met iconen, kleuren en typografie die de sfeer van het domein weerspiegelen.
-                </p>
-              </div>
-            </div>
-          </article>
-    
-          <article class="project-card">
-            <img class="project-card__bg" src="/images/zuiderbad-dev.webp" alt="">
-            <div class="project-card__content">
-              <div>
-                <h3 class="project-card__title">Development</h3>
-                <p class="project-card__desc">
-                  De kaart gebouwd in Leaflet.js met filters, pop-ups en routeplanner. 
-                  Responsive en performant ontwikkeld voor mobiel en desktop.
-                </p>
-              </div>
-            </div>
-          </article>
-    
-        </div>
+      <div class="step" data-step="2">
+        <label for="step2"></label>
       </div>
+      <div class="step" data-step="3">
+        <label for="step3"></label>
+      </div>
+      <div class="step" data-step="4">
+        <label for="step4"></label>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <div class="tab tab1">
+        <h3>Definitie & Analyse</h3>
+        <p>In deze fase onderzoek ik de doelgroep, doelen en context om het probleem scherp te definiëren.</p>
+        <ul>
+            <li>Kick-off met Zuiderbad om de verwachtingen te bespreken.</li>
+          <li>Sitebezoek om de fysieke omgeving en de gebruikersbehoeftes beter te begrijpen.</li>
+          <li>Analyse van bestaande kaartoplossingen.</li>
+          <li>Functionele scope bepaald.</li>
+        </ul>
+      </div>
+      <div class="tab tab2">
+        <h3>UX Design</h3>
+        <p>Ik werk wireframes, flows en gebruikerstests uit om de structuur en interacties te bepalen.</p>
+        <ul>
+              <li >Ontwikkeling van wireframes in Figma met focus op navigatie en gebruiksgemak.</li>
+              <li>Informatiearchitectuur opgesteld en gebruikersflows uitgewerkt.</li>
+              <li>Iteratieve feedbackrondes en interne tests.</li>
+            </ul>
+      </div>
+      <div class="tab tab3">
+        <h3>Visueel Design</h3>
+        <p>Ik vertaal de structuur naar een visuele stijl die past bij de branding en emoties van het project.</p>
+     <ul>
+                <li>Ontwerp van een visuele stijl die aansluit bij de branding van Zuiderbad.</li>
+                <li>Illustraties en iconenset ontwikkelen.</li>
+                <li>High-fidelity designs in Figma uitgewerkt en geoptimaliseerd voor mobile/desktop.</li>
+              </ul>
+            </div>
+            <div class="tab tab4">
+            <h3>Development & Testing</h3>
+            <p>De designs komen tot leven in code, waarna ik test en verfijn tot alles perfect werkt.</p>
+            <ul>
+                <li>Omzetten van het design naar een werkende kaart in Leaflet.</li>
+                <li>Responsief design en prestatieoptimalisatie.</li>
+                <li>iteratief testen, zowel op afstand als op locatie.</li>
+                <li>Finale bugfixes en oplevering van een gebruiksklare kaart.</li>
+            </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+   
+      <section id="Reflectie" class="section container">
+          <h2 class="section-title">Reflectie</h2>
+        <p>Dit project heeft me veel bijgebracht over hoe een idee uitgroeit tot een concreet product. Als UX/UI designer leerde ik niet alleen hoe belangrijk het is om een consistente visuele stijl te ontwikkelen, maar ook hoe die stijl effectief moet doorgetrokken worden in de front-end.
+        <br><br>Daarnaast merkte ik hoe cruciaal duidelijke communicatie met de klant is. De regelmatige feedbackmomenten met Zuiderbad hielpen ons om verwachtingen scherp te houden, prioriteiten te stellen en misverstanden te vermijden. Het samenspel van design, development en klantcommunicatie maakte dit project voor mij een bijzonder waardevolle ervaring. </p>
+      </section>
+
     
       <div class="dots" id="dots"></div>
     </section>

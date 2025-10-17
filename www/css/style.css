@@ -221,6 +221,7 @@ body{
   background-image: none; /* tenzij je bewust een image wilt */
 }
 
+
 .bg-color {
   /* background-image: url('../images/Untitled.webp'); */
   /* background-image: url("../images/Group\ 98.png"); */
@@ -267,6 +268,7 @@ html{
 .roles{
   font-family:marcellus SC, serif;
   font-size:21px !important; margin:0;
+  margin-bottom: 1.5em;
 }
 .tagline-wrap{
   /* margin-top:22px; */
@@ -280,8 +282,7 @@ html{
 .tagline{
   font-size:32px !important; 
   font-weight:600; 
-  opacity:.95; 
-  margin:.25rem 0;
+  margin: 0;
   text-align: center;
   padding-bottom: 10px;
   font-family: "Marcellus", serif;
@@ -394,7 +395,7 @@ html{
 
   .viewheight {
     position: relative;
-    min-height: 80vh !important; 
+    min-height: 100vh !important; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -477,7 +478,7 @@ html{
   }
 
   .viewheight {
-    min-height: 80vh !important; 
+    min-height: 100vh !important; 
   }
 
   .tagline { font-size: 28px; }
@@ -538,21 +539,27 @@ html{
 
 
 .CTA-button {
-  padding: 0.5rem 1.3rem;
+  padding: 0.8rem 1.3rem;
   border-radius: 999px;
   background: #ffffff1a;
   border: 1px solid #ffffff3a;
-  color: #fff;
   font-family: Marcellus, serif;
   font-weight: 400;
   text-decoration: none;
   transition: all 0.25s ease;
-  margin-top: 1em !important;
 
   background: #fff;
   color: #1f70c7;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
   transform: translateY(-2px);
+}
+
+.CTA-button:hover {
+  background: #ffffff1d;
+  color: #1f70c7;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+  transform: translateY(-4px);
+  color: #fff;
 }
 
 .about {
