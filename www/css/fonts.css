@@ -1,12 +1,25 @@
 /* Google Fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Kristi&family=Manuale:ital@0;1&family=Marcellus&family=Marcellus+SC&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 /* Font-variabelen */
 :root {
   --font-brand: 'Kristi', cursive;        /* enkel voor logo / brand */
   --font-heading: 'Marcellus', serif;     /* titels */
   --font-body: 'Manuale', serif;          /* body tekst */
 }
+.instrument-serif-regular {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.instrument-serif-regular-italic {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
 
 /* Basis gebruik */
 body {

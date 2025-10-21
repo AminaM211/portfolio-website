@@ -33,11 +33,11 @@
   <!-- Primary SEO -->
   <meta name="description" content="Portfolio van Amina Moutalibova" />
   <link rel="canonical" href="https://amina-moutalibova.be/" />
-  <meta name="theme-color" content="#00346B" />
+  <meta name="theme-color" content="#A8CBE7" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Amina Moutalibova" />
   <meta name="keywords" content="UX, UI, Designer, Webdesign, Figma, Front-end, Portfolio, Amina" />
-  <meta name="msapplication-TileColor" content="#00346B">
+  <meta name="msapplication-TileColor" content="#A8CBE7">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -102,7 +102,10 @@
   <script src="./js/index.js" defer></script>
 
   <!-- Unicorn Studio -->
-  <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.31/dist/unicornStudio.umd.js" defer></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.31/dist/unicornStudio.umd.js" defer></script> -->
+
+  <!-- GSAP -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
   <style>
     /* Minimal responsive hardening without stijl te veranderen */
@@ -111,23 +114,27 @@
     img, picture, video, canvas, svg { max-width: 100%; height: auto; }
     iframe { max-width: 100%; }
 
-    /* Lock scroll wanneer mobiel menu open is (class wordt via JS gezet) */
-    /* .no-scroll { overflow: hidden; touch-action: none; } */
-
     /* Responsive unicorn embed */
-    .unicorn-embed {
+    /* .unicorn-embed {
       inline-size: 100%;
       block-size: clamp(360px, 80svh, 900px);
       display: block;
       overflow: hidden;
-      /* height: 80vh !important; */
     }
     @media (max-width: 720px){
       .unicorn-embed { block-size: 60svh; }
-    }
+    } */
   </style>
 </head>
 <body>
+  <div
+    class="unicorn-embed"
+    data-us-project="E7xf4uH1Ja7yjI2TsD7S"
+    data-us-scale="1"
+    data-us-dpi="1.5"
+    data-us-lazyload="true"
+    aria-label="Unicorn Studio canvas">
+  </div>
     <div id="nav-placeholder"></div>
     <div id="progress-bar"></div>
   
@@ -135,30 +142,20 @@
   <div id="nav-placeholder"></div>
   <div id="progress-bar"></div>
 
-  <div class="viewheight">
-    <!-- Unicorn Background -->
-    <div
-      class="unicorn-embed"
-      data-us-project="E7xf4uH1Ja7yjI2TsD7S"
-      data-us-scale="1"
-      data-us-dpi="1.5"
-      data-us-lazyload="true"
-      aria-label="Unicorn Studio canvas">
-    </div>
-    
+  <div class="viewheight">    
     <section class="hero">
       <div class="hero-inner">
         <h1 class="name" data-aos="fade-up" >Amina Moutalibova</h1>
         <p class="roles" data-aos="fade-up">UX/UI Designer & Web Developer</p>
         <!-- <p class="description" data-aos="fade-up">Digitale ervaringen creëren die een visie omzetten in helderheid, waarde en betekenis.</p> -->
-        <button class="CTA-button" data-aos="fade-up" >Bekijk mijn projecten</button>
+        <a href="#projects" class="CTA-button"  data-aos="fade-up" >Bekijk mijn projecten</a>
       </div>
     </section>
 
     <!-- <canvas id="trail"></canvas> -->
 
     <div class="tagline-wrap" data-aos="fade-up">
-      <h2 class="chaos tagline">van creatieve chaos</h2>
+      <h2 class="chaos tagline">Bekijk mijn werk</h2>
       <div id="tag" class="scroll-down">
         <img class="mouse" src="images/SVG/scroll-icon.svg" alt="scroll down icon"  style="width: 30px;"> 
         <img id="arrow" class="arrow" src="images/SVG/arrow.svg" alt="arrow down" style="width: 20px;">
@@ -171,7 +168,7 @@
 
   <div class="bg-color">
     <!-- Projects -->
-    <div class="projects-grid" data-aos="fade-up">
+    <div class="projects-grid" id="projects" data-aos="fade-up" style="scroll-margin-top: 100px;">
       <a href="project-ecopick.html" class="project-card">
         <div class="wrapper bg-color-cover">
           <img src="/www/images/ecopick-mockup.png" class="cover-image" alt="Ecopick App">
@@ -185,24 +182,24 @@
     
       <a href="project-detail.html" class="project-card">
         <div class="wrapper bg-color-cover2">
-          <img src="/www/images/zuiderbad-mockup1.jpeg" class="cover-image" alt="Zuiderbad Map">
+          <img src="./images/zuiderbad-mockup1.jpeg" class="cover-image" alt="Zuiderbad Map">
         </div>
         <div class="title-p">
           <h2 class="title">Zuiderbad - Interactieve Kaart</h2>
           <p class="wrapper-p">Groepsproject — Sept 2025-Dec 2025</p>
         </div>
-        <img src="/www/images/kaart-transparant.png" class="character" alt="Zuiderbad Visual">
+        <img src="./images/kaart-transparant.png" class="character" alt="Zuiderbad Visual">
       </a>
 
       <a href="project-foodkiosk.html" class="project-card">
         <div class="wrapper bg-color-cover3">
-          <img src="/www/images/webflow-mockup.png" class="cover-image laptop-img" alt="3D Foodkiosk">
+          <img src="./images/webflow-mockup.png" class="cover-image laptop-img" alt="3D Foodkiosk">
         </div>
         <div class="title-p">
           <h2 class="title">Cup-a-cino - Webflow</h2>
           <p class="wrapper-p">Student Project — Sept 2025-Dec 2025</p>
         </div>
-        <img src="/www/images/webflow-transparant.png" class="character-laptop" alt="3D Foodkiosk Visual">
+        <img src="./images/webflow-transparant.png" class="character-laptop" alt="3D Foodkiosk Visual">
       </a>
     </div>
     
