@@ -7,13 +7,14 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/fonts.css">
   <style>
-    :root{ --nav-h:80px; }
+    :root{ --nav-h:80px; 
+       --primairy-color: #9F1A03;
+    }
 
     .site-header{
       position: fixed; inset: 0 auto auto 0; right: 0;
       height: var(--nav-h);
       z-index: 10000;
-      background: linear-gradient(#270b03, #00000000);
       backdrop-filter: saturate(100%) blur(10px);
       -webkit-backdrop-filter: saturate(100%) blur(10px);
       transform: translateY(0);
@@ -38,7 +39,7 @@
     .brand img{
       height: 35px;
       width: auto;
-      color: #fff;
+      /* color: #fff; */
     }
     .nav-links {
     display: flex;
@@ -52,7 +53,7 @@
     border-radius: 999px;
     background: #00346B;
     /* border: 1px solid #00346B; */
-    color: #fff;
+    color: var(--primairy-color);
     font-family: Marcellus, serif;
     font-weight: 400;
     text-decoration: none;
@@ -63,8 +64,8 @@
     padding: 0.5rem 1.3rem;
     border-radius: 999px;
     background: #ffffff1a;
-    border: 1px solid #ffffff3a;
-    color: #fff;
+    border: 1px solid #3737373a;
+    color:  var(--primairy-color);
     font-family: Marcellus, serif;
     font-weight: 400;
     text-decoration: none;
@@ -75,7 +76,7 @@
     border-radius: 999px;
     background: #ffffff85;
     border: 1px solid #ffffff3a;
-    color: #fff;
+    color:  var(--primairy-color);
     font-family: Marcellus, serif;
     font-weight: 400;
     text-decoration: none;
@@ -83,8 +84,8 @@
   }
 
   .pill:hover, .pill2 {
-    background: #fff;
-    color: #00346B;
+    background: var(--primairy-color);
+    color: #fff;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
     transform: translateY(-2px);
     
