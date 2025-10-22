@@ -541,6 +541,7 @@ html{
   margin: 0em 4em;
   height: 100vh;
   padding-top: 20%;
+  position: relative;
 }
 
 .description {
