@@ -227,7 +227,7 @@ body{
   margin:0 0;
   font-family: Marcellus, serif;
   color:var(--text);
-  background-color: #EBF0F3;
+  background-color: #c2ddff;
 }
 
 html{
@@ -255,7 +255,7 @@ html{
   font-family:marcellus SC, serif;
   font-size:26px !important; margin:0;
   margin-bottom: 1.5em;
-  color: black;
+  color: white;
 }
 
 .tagline-wrap{
@@ -424,16 +424,18 @@ html{
   padding: 0.8rem 1.5rem;
   border-radius: 999px;
   /* background: var(--primairy-color);  */
-  background-color: #477CAA;
+  background-color: #9b2c1a;
   color: #fff;
-  border: 1px solid #477CAA;
+  border: 1px solid #9b2c1a;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
   font-family: Marcellus, serif;
   font-weight: 400;
   text-decoration: none;
   transition: all 0.25s ease;
   font-size: 1.1em;
+  margin-bottom: 300px;
 }
+
 .CTA-button:hover{
   background: #ffffff85;
   color:  var(--primairy-color);
@@ -540,21 +542,27 @@ html{
 .hero {
   margin: 0em 4em;
   height: 100vh;
-  padding-top: 20%;
+  padding-top: 15%;
   position: relative;
+  text-align: center;
 }
 
 .description {
   font-size: 1.3em !important;
-  color: #334155;
+  color: #fff;
   margin: 2em 0 2.5em 0;
   line-height:1.5;
   font-weight:500;
 }
 
+h2.chaos {
+  padding-top: 70px;
+  color: #fff;
+}
+
 .tagline-2{
   font-size: 1.3em !important;
-  color: #334155;
+  color: #fff;
   margin-left: 4em;
   font-weight: 600;
   line-height:1.3;
@@ -587,3 +595,4 @@ html{
     top: 500px;
   }
 }
+
