@@ -102,7 +102,7 @@
   <script src="./js/index.js" defer></script>
 
   <!-- Unicorn Studio -->
-  <!-- <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.31/dist/unicornStudio.umd.js" defer></script> -->
+  <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.31/dist/unicornStudio.umd.js" defer></script>
 
   <!-- GSAP -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -115,15 +115,16 @@
     iframe { max-width: 100%; }
 
     /* Responsive unicorn embed */
-    /* .unicorn-embed {
+    .unicorn-embed {
       inline-size: 100%;
       block-size: clamp(360px, 80svh, 900px);
       display: block;
       overflow: hidden;
+      z-index: -999;
     }
     @media (max-width: 720px){
       .unicorn-embed { block-size: 60svh; }
-    } */
+    }
   </style>
 </head>
 <body>
@@ -142,29 +143,23 @@
   <div id="nav-placeholder"></div>
   <div id="progress-bar"></div>
 
-  <div class="viewheight">    
-    <section class="hero">
-      <div class="hero-inner">
-        <h1 class="name" data-aos="fade-up" >Amina Moutalibova</h1>
-        <p class="roles" data-aos="fade-up">UX/UI Designer & Web Developer</p>
-        <!-- <p class="description" data-aos="fade-up">Digitale ervaringen creëren die een visie omzetten in helderheid, waarde en betekenis.</p> -->
-        <a href="#projects" class="CTA-button"  data-aos="fade-up" >Bekijk mijn projecten</a>
+  <main class="hero" >
+      <div class="content" aria-hidden="false">
+        <img src="./images/SVG/naam.svg" alt="" class="brand" style="width: 50em;" />
+        <div class="roles">UX/UI Designer & Web Developer</div>
+        <!-- <p class="description">Ik breng ruwe ideeën tot heldere digitale ervaringen.</p> -->
+        <a href="#tag" class="CTA-button" id="cta" aria-label="Scroll to projects section">Bekijk mijn werk ↓</a>
       </div>
-    </section>
 
-    <!-- <canvas id="trail"></canvas> -->
-
-    <div class="tagline-wrap" data-aos="fade-up">
-      <h2 class="chaos tagline">Bekijk mijn werk</h2>
       <div id="tag" class="scroll-down">
-        <img class="mouse" src="images/SVG/scroll-icon.svg" alt="scroll down icon"  style="width: 30px;"> 
-        <img id="arrow" class="arrow" src="images/SVG/arrow.svg" alt="arrow down" style="width: 20px;">
+        <img class="mouse" src="images/SVG/scroll-icon.svg" alt="" style="width: 30px;"> 
+        <img id="arrow" class="arrow" src="images/SVG/arrow.svg" alt="" style="width: 20px;">
       </div>
-    </div>
-  </div>
+  </main>
     
+
   <!-- Eén unieke ID voor scroll-doel -->
-  <h2 id="tagline" class="tagline" data-aos="fade-up">naar krachtige interfaces</h2>
+  <h2 id="tagline" class="tagline-2" data-aos="fade-up">naar krachtige interfaces</h2>
 
   <div class="bg-color">
     <!-- Projects -->
@@ -263,6 +258,72 @@
         const coverImage = card.querySelector('.cover-image');
         if (coverImage) coverImage.style.display = 'block';
       });
+    });
+  </script>
+  <script>
+    // korte check voor reduced motion
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  
+    if (!prefersReduced) {
+      const tl = gsap.timeline({ defaults:{ease: "power3.out"} });
+  
+      // start: subtle "draw" of wireframe pieces
+      tl.from("#r1 .box, #r2 .box, #r3 .box, #r4 .box", {
+        y: 12,
+        opacity: 0,
+        stagger: 0.08,
+        duration: 0.7
+      }, 0);
+  
+      tl.from("#r2 .line", { scaleX:0, transformOrigin:"left center", duration:0.9, ease:"power2.out" }, 0.1);
+  
+      // small pause showing lo-fi
+      tl.to({}, {duration: 0.6});
+  
+      // mid: subtle morph to rounded, spacing adjust, apply faint color
+      tl.to("#screen .box", {
+        backgroundColor: "#f3f4f6",
+        borderRadius: 8,
+        height: (i, el) => el.classList.contains('tall') ? 56 : 20,
+        duration: 0.9,
+        stagger: 0.06
+      }, "+=0.1");
+  
+      // move rows into tighter grid feel
+      tl.to("#r1", { y: -6, duration: 0.6 }, "-=0.5");
+      tl.to("#r3", { y: 4, duration: 0.6 }, "-=0.6");
+  
+      // transition: reveal colors and hi-fi card, fade wireframe strokes
+      tl.to("#r1 .box, #r2 .box, #r3 .box, #r4 .box", {
+        backgroundColor: (i, el) => {
+          // slight color variety for a natural look
+          const palette = ["#ffffff","#f8fafc","#ffffff","#f8fafc"];
+          return palette[i % palette.length];
+        },
+        boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.03)",
+        duration: 0.7,
+        stagger: 0.04
+      }, "+=0.08");
+  
+      // reveal hi-fi card and title
+      tl.to("#hiTitle", { opacity:1, y:0, duration:0.6 }, "-=0.2");
+      tl.to("#hiCard", { opacity:1, scale:1, y:0, duration:0.7 }, "-=0.4");
+      tl.to("#hiText", { opacity:1, duration:0.6 }, "-=0.2");
+  
+      // tiny loop on cta for life
+      gsap.to(".cta", { y: -3, repeat: -1, yoyo: true, duration: 1.8, ease: "sine.inOut", delay: 3 });
+  
+    }
+  
+    // CTA action sample
+    document.getElementById('cta').addEventListener('click', () => {
+      window.location.href = "#projects";
+    });
+  
+    // accessibility: allow animation replay on focus
+    document.querySelector('.screen').addEventListener('click', () => {
+      if (prefersReduced) return;
+      gsap.fromTo("#screen .box", { scale:0.98 }, { scale:1, duration:0.5, ease:"elastic.out(1,0.6)" });
     });
   </script>
 </body>
