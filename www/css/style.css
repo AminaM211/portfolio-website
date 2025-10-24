@@ -390,7 +390,7 @@ html{
     grid-column: span 13 !important;
   }
   .scroll-down {
-    bottom: 1em;
+    bottom: 2em;
   }
   .content {
     height: 55vh !important;
@@ -426,7 +426,7 @@ html{
     padding: 0.5rem 1rem;
   }
   .content {
-    height: 60vh !important;
+    height: 55vh !important;
   }
 }
 

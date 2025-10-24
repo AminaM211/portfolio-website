@@ -31,7 +31,7 @@
       padding: 0 40px; height: var(--nav-h);
     }
     .brand{
-      display:inline-flex; align-items:center; gap:1rem;
+      display:inline-flex; align-self:center; gap:1rem;
     }
 
     .brand img{
@@ -108,12 +108,17 @@
     @media (max-width:425px){
       .nav-links{ gap:0.5em; flex-wrap: nowrap; }
       .pill, .pill2{ padding:0.4rem 1rem; font-size: clamp(1em,3vw,20px); }
-      .brand{ font-size: clamp(30px,6vw,40px); }
+      /* .brand{ font-size: clamp(40px,6vw,50px); } */
       nav {
         padding: 0 15px;;
       }
+      .brand img {
+        height: 25px !important;
+      }
+      .brand {
+        height: auto;
+      }
     }
-    @media (prefers-reduced-motion: reduce){ .site-header{ transition:none; } }
   </style>
 </head>
 <body>
