@@ -213,7 +213,9 @@ html.is-animating.is-rendering #swup { opacity: 0; }
 
 .chaos {
   padding-bottom: 40px !important;
+  font-style: italic;
 }
+
 
 .description {
   font-size: 1em !important;
@@ -285,6 +287,7 @@ html{
   padding-bottom: 10px;
   font-family: "Marcellus", serif;
   color: var(--primairy-color);
+  font-style: italic;
 }
 
 #tag {
@@ -322,10 +325,6 @@ html{
     position: absolute;
     pointer-events:auto;
     left: 49%;
-  }
-
-  .chaos {
-    padding-bottom: 20px;
   }
 
 

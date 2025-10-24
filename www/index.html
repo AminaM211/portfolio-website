@@ -104,8 +104,6 @@
   <!-- Unicorn Studio -->
   <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.31/dist/unicornStudio.umd.js" defer></script>
 
-  <!-- GSAP -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
   <style>
     /* Minimal responsive hardening without stijl te veranderen */
@@ -213,7 +211,8 @@
       </h3>
 
       <p class="intro">
-        Ik ontwerp heldere interfaces en bouw gebruiksvriendelijke websites. Goed design maakt écht een verschil, en dat is precies waarom ik doe wat ik doe. Voor mij is design de plek waar logica en emotie elkaar ontmoeten. Ik werk het liefst met muziek op, een koffie binnen handbereik en ideeën die soms te wild beginnen maar altijd goed landen.
+        Ik ben een UX/UI-designer die denkt in verhalen in plaats van schermen. Wat mij drijft, is het creëren van digitale ervaringen die niet alleen mooi zijn, maar ook iets doen met mensen. Ik geloof dat design pas echt werkt wanneer het emotie oproept en tegelijk helder, logisch en eerlijk blijft. In elk project zoek ik de balans tussen gevoel en structuur, tussen mens en merk. <br><br>Mijn kracht ligt in empathie, detail en het vermogen om chaos om te zetten in iets intuïtiefs. Zo bouw ik interfaces die niet enkel functioneren, maar blijven hangen.
+        Ik werk het liefst met muziek op, een koffie binnen handbereik en ideeën die soms te wild beginnen maar altijd goed landen.
       </p>
 
       <div class="skill-grid">
@@ -259,72 +258,6 @@
         if (coverImage) coverImage.style.display = 'block';
       });
     });
-  </script>
-  <script>
-    // korte check voor reduced motion
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  
-    if (!prefersReduced) {
-      const tl = gsap.timeline({ defaults:{ease: "power3.out"} });
-  
-      // start: subtle "draw" of wireframe pieces
-      tl.from("#r1 .box, #r2 .box, #r3 .box, #r4 .box", {
-        y: 12,
-        opacity: 0,
-        stagger: 0.08,
-        duration: 0.7
-      }, 0);
-  
-      tl.from("#r2 .line", { scaleX:0, transformOrigin:"left center", duration:0.9, ease:"power2.out" }, 0.1);
-  
-      // small pause showing lo-fi
-      tl.to({}, {duration: 0.6});
-  
-      // mid: subtle morph to rounded, spacing adjust, apply faint color
-      tl.to("#screen .box", {
-        backgroundColor: "#f3f4f6",
-        borderRadius: 8,
-        height: (i, el) => el.classList.contains('tall') ? 56 : 20,
-        duration: 0.9,
-        stagger: 0.06
-      }, "+=0.1");
-  
-      // move rows into tighter grid feel
-      tl.to("#r1", { y: -6, duration: 0.6 }, "-=0.5");
-      tl.to("#r3", { y: 4, duration: 0.6 }, "-=0.6");
-  
-      // transition: reveal colors and hi-fi card, fade wireframe strokes
-      tl.to("#r1 .box, #r2 .box, #r3 .box, #r4 .box", {
-        backgroundColor: (i, el) => {
-          // slight color variety for a natural look
-          const palette = ["#ffffff","#f8fafc","#ffffff","#f8fafc"];
-          return palette[i % palette.length];
-        },
-        boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.03)",
-        duration: 0.7,
-        stagger: 0.04
-      }, "+=0.08");
-  
-      // reveal hi-fi card and title
-      tl.to("#hiTitle", { opacity:1, y:0, duration:0.6 }, "-=0.2");
-      tl.to("#hiCard", { opacity:1, scale:1, y:0, duration:0.7 }, "-=0.4");
-      tl.to("#hiText", { opacity:1, duration:0.6 }, "-=0.2");
-  
-      // tiny loop on cta for life
-      gsap.to(".cta", { y: -3, repeat: -1, yoyo: true, duration: 1.8, ease: "sine.inOut", delay: 3 });
-  
-    }
-  
-    // CTA action sample
-    document.getElementById('cta').addEventListener('click', () => {
-      window.location.href = "#projects";
-    });
-  
-    // accessibility: allow animation replay on focus
-    document.querySelector('.screen').addEventListener('click', () => {
-      if (prefersReduced) return;
-      gsap.fromTo("#screen .box", { scale:0.98 }, { scale:1, duration:0.5, ease:"elastic.out(1,0.6)" });
-    });
-  </script>
+  </script>  
 </body>
 </html>

@@ -1,34 +1,25 @@
 <style>
 .site-footer {
-  background: radial-gradient(circle at top left, #2b0c03, #120703 70%);
+  background: #477CAA;
   color: #fff;
-  padding: 2rem 2rem 2rem;
+  padding: 4em 6em 0em 6em;
   border-radius: 40px 40px 0 0;
   overflow: hidden;
-  text-align: center;
   position: relative;
 }
 
 .footer-container {
-  max-width: 1400px;
-  margin: 0 auto 4rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 3rem;
-}
-
-.footer-intro {
-  flex: 1 1 400px;
+  padding-bottom: 3em;
 }
 
 .footer-logo {
   width: 65px;
-  margin-bottom: 1rem;
-  margin-top: 2em;
   filter: drop-shadow(0 3px 6px rgba(255, 255, 255, 0.15));
   transition: transform 0.3s ease;
+  margin-bottom: 2rem;
 }
 
 .footer-logo:hover {
@@ -36,78 +27,73 @@
 }
 
 .footer-intro h2 {
-  font-family: "Marcellus", serif;
+  font-family: "Marcellus SC", serif;
   font-size: 2rem;
+  margin: 0;
   font-weight: 400;
-  margin-bottom: 0.6rem;
+}
+
+.footer-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50%;
 }
 
 .footer-tagline {
-  color: #d3cfcf;
+  color: #fff;
   font-size: 1.05rem;
-  max-width: 450px;
-  margin: 0 auto 2rem;
+  margin: 0;
+  /* max-width: 450px;
+  margin: 0 auto 2rem; */
   line-height: 1.6;
 }
 
-.footer-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-btn {
-  padding: 0.75rem 1.8rem;
+.footer-btn-mail {
+  padding: 0.8rem 1.7rem;
   border-radius: 999px;
-  background: #fff;
-  color: #1a0a06;
-  font-family: "Marcellus", serif;
+  background-color: #9b2c1a;
+  color: #fff;
+  border: 1px solid #9b2c1a;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  font-family: Marcellus, serif;
+  font-weight: 400;
   text-decoration: none;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-    width: 100%;
-    max-width: 250px;
+  transition: all 0.25s ease;
+  font-size: 1.1em;
+  display: block;
+  margin-top: 0.5em;
+  width: fit-content;
 }
 
-.footer-btn:hover {
-  background: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  transform: translateY(-3px);
+.navlinks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.footer-btn.alt {
-  background: transparent;
-  border: 1px solid #fff;
-  color: #fff;
+.footer-btn-mail:hover{
+  background: #ffffff85;
+  color:  var(--primairy-color);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  transform: translateY(0) scale(1.02); box-shadow: 0 8px 24px rgba(2,6,23,.06)
 }
 
-.footer-btn.alt:hover {
-  background: #fff;
-  color: #1a0a06;
+.footer-actions {
+  margin-top: 1em;
 }
 
-.footer-links {
-  flex: 1 1 250px;
-  padding: 0em 2em;
-  margin-top: 3em;
-}
-
-.footer-links h3 {
+h3 {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-bottom: 1rem;
   color: white;
 }
 
 .socials {
   display: flex;
-  justify-content: center;
   gap: 1rem;
 }
 
@@ -116,7 +102,7 @@
   height: 50px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.726);
-  padding: 0.2rem;
+  padding: 0.1rem;
   border: 1px solid #ffffff25;
   transition: all 0.3s ease;
 }
@@ -129,67 +115,79 @@
 
 .footer-bottom {
   border-top: 1px solid #ffffff00;
-  padding-top: 1.5rem;
-  margin-top: 2rem;
 }
 
 .footer-bottom p {
   font-size: 0.9rem;
-  color: #c8c3c1;
+  color: #e0e0e0;
   font-family: "Inter", sans-serif;
 }
 
-@media (max-width: 800px) {
-  .footer-btn {
-    width: 100%;
-    max-width: 250px;
+@media (max-width: 930px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 10em;
   }
-
-.footer-container {
-  max-width: 1200px;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 0 auto 4rem;
-  flex-wrap: wrap;
-  gap: 3rem;
+  .footer-intro {
+    width: 100%;
+    text-align: center;
+}
+a {
+  align-self: center;
+}
+.site-footer {
+    text-align: center;
+  }
+  .socials {
+    justify-content: center;
+  }
+  .footer-bottom {
+    margin-top: 2em;
+  }
 }
 
-.footer-intro {
-  flex: 1 1 400px;
-}
+@media (max-width: 800px) {
+  .footer-container {
+    padding: 0em;
+    margin: 0em;
+  }
 }
 
 </style>
 
 
 <footer id="contact" class="site-footer">
-  <div class="footer-grid">
-    <div class="grid-container">
-       <div class="footer-intro">
-        <a href=""></a><img src="android-chrome-512x512.png" alt="Logo Amina" class="footer-logo" />
-      <h2>Laten we iets moois maken!</h2>
-      <p class="footer-tagline">
-        Ik ben altijd op zoek naar nieuwe projecten en samenwerkingen. Of je nu een idee hebt dat je wilt bespreken of gewoon hallo wilt zeggen, aarzel niet om contact op te nemen!
-      </p>
-      <div class="footer-actions">
-        <a href="mailto:amina_moutalibov@hotmail.com" class="footer-btn">mail me!</a>
-        <a href="tel:+32483687418" class="footer-btn alt">Stuur me op Linkedin</a>
+  <a href=""></a><img src="android-chrome-512x512.png" alt="Logo Amina" class="footer-logo" />
+  <div class="footer-container">
+      <div class="footer-intro">  
+        <h2>Laten we iets moois maken!</h2>
+        <p class="footer-tagline">
+          Ik ben altijd op zoek naar nieuwe projecten en samenwerkingen. Of je nu een idee hebt dat je wilt bespreken of gewoon hallo wilt zeggen, aarzel niet om contact op te nemen!
+        </p>
+        <a href="mailto:amina_moutalibov@hotmail.com" class="footer-btn-mail">mail me!</a>
+    </div>
+    <div class="footer-actions">
+      <div class="footer-links">
+        <div class="navlinks">
+          <a class="pill" href="index.html#tag">Projecten</a>
+          <a class="pill2" href="#footer-placeholder">Contact</a>  
+        </div>
       </div>
     </div>
-
-    <div class="footer-links">
+    <div class="online">
       <h3>vind me online</h3>
       <div class="socials">
-        <a href="https://www.linkedin.com/in/amina-moutalibova-02a621297/" target="_blank" rel="noopener" class="social-icon">
+        <a href="https://www.linkedin.com/in/amina-moutalibova-02a621297/" target="_blank" rel="noopener" class="social-icon linkedin">
           <img src="./images/linkedin-logo.png" alt="LinkedIn" />
         </a>
-         <a href="https://github.com/AminaM211" target="_blank" rel="noopener" class="social-icon">
+         <a href="https://github.com/AminaM211" target="_blank" rel="noopener" class="social-icon github">
           <img src="./images/github-logo.png" alt="GitHub" />
         </a>
+      </div>
     </div>
   </div>
-
     <div class="footer-bottom">
     <p>© 2025 AMVA studios — Gemaakt met een vleugje creatieve chaos.</p>
   </div>
