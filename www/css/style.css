@@ -442,6 +442,12 @@ html{
   .projects {
     padding: 2em 0em !important;
   }
+  .headline {
+    font-size: 1.5rem;
+  }
+  .intro {
+    text-align: left;
+  }
 }
 
 @media (max-width: 360px) {
