@@ -251,6 +251,7 @@ html{
 }
 
 
+
 .roles{
   font-family:marcellus SC, serif;
   font-size:26px !important; margin:0;
@@ -271,9 +272,10 @@ html{
   font-size:28px !important; 
   font-weight:600; 
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 10px !important;
   font-family: "Marcellus", serif;
   color: var(--primairy-color);
+  padding-top: 70px;
 }
 
 .tagline-2{
@@ -316,7 +318,7 @@ html{
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    bottom: 1em;
+    bottom: -1em;
     position: absolute;
     pointer-events:auto;
     left: 49%;
@@ -587,10 +589,6 @@ html{
   font-weight:500;
 }
 
-h2.chaos {
-  padding-top: 80px;
-  color: #fff;
-}
 
 .name {
   margin-top: 3em;
