@@ -665,3 +665,11 @@ html{
     opacity: 0;
   }
 }
+
+@media (max-width: 460px) {
+  .character,
+  .character-laptop,
+  .character-kiosk {
+    display: none;
+  }
+}
