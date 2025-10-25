@@ -52,7 +52,7 @@
   /* HERO */
   .hero{
     background-image: url('../images/zuiderbad-mockup1.jpeg');
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.05);
     background-blend-mode: darken;  
     color:#fff;
     position:relative;
@@ -78,8 +78,8 @@
 
   .hero3{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/cupacino-mockup4.webp);
-    background-color: rgba(0, 0, 0, 0.05);
-    background-blend-mode: darken;  
+    /* background-color: rgba(0, 0, 0, 0.05);
+    background-blend-mode: darken;   */
     color:#fff;
     position:relative;
     padding: 200px 0;
@@ -375,13 +375,6 @@
     .hero-mock{max-width: 720px; margin: 10px auto 0}
     .hero-mock .over{right:-6%; top:-10%}
     .h-meta{grid-template-columns: 1fr 1fr 1fr}
-    .hero{
-      padding: 100px 0;
-    }  
-    .hero {
-      background-position: -80px 60px;
-      height: 60vh;
-    }
     #desktop {
       height: 350px;
       width: 500px;
@@ -390,6 +383,11 @@
       width: 150px;
       height: 350px;
     } 
+    .hero2, .hero3, .hero4 {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
   }
 
 
@@ -472,12 +470,7 @@
     }
     .hero {
       background-position: 0px 70px;
-    }
-    .hero2 {
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center bottom;
-
+      background-color: rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -497,9 +490,10 @@
     }  
 
  @media (max-width: 485px){
-  .hero, .hero2 {
-    background-position: -80px 60px;
-    height:60vh;
+  .hero, .hero2, .hero3, .hero4 {
+    height: 60vh;
+    background-size: cover;
+    background-position: top center;
   }
     .h-title {
       font-size: 21px !important;
@@ -573,9 +567,7 @@
     .hero {
       background-position: -150px 60px;
     }
-    .hero2 {
-      background-position: -90px 0px;
-    }
+  
     #desktop {
       height: 30vh;
       width: 100%;
