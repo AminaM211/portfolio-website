@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ecoPick — Amina</title>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>Interactive Map — Amina</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -24,6 +25,30 @@
      gtag('config', 'G-09LMHXY6QL');
    </script>
 
+  <!-- Primary SEO -->
+  <meta name="description" content="Een interactieve kaart die bezoekers van Hofstade helpt het domein op een intuïtieve en speelse manier te ontdekken." />
+  <link rel="canonical" href="https://amina-moutalibova.be/project-detail.html" />
+  <meta name="theme-color" content="#00346B" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Amina Moutalibova" />
+  <meta name="keywords" content="UX, UI, Designer, Webdesign, Figma, Front-end, Portfolio, Amina" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Amina Moutalibova – Portfolio" />
+  <meta property="og:title" content="Interactive Map — Amina" />
+  <meta property="og:description" content="Een interactieve kaart die bezoekers van Hofstade helpt het domein op een intuïtieve en speelse manier te ontdekken." />
+  <meta property="og:url" content="https://amina-moutalibova.be/project-detail.html" />
+  <meta property="og:image" content="https://amina-moutalibova.be/social-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="nl_BE">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Interactive Map — Amina" /> 
+  <meta name="twitter:description" content="Een interactieve kaart die bezoekers van Hofstade helpt het domein op een intuïtieve en speelse manier te ontdekken." />
+  <meta name="twitter:image" content="https://amina-moutalibova.be/social-preview.png" />
+  <meta name="twitter:image:alt" content="Portfolio van Amina Moutalibova – UX/UI Designer">
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/project-detail.css" />
@@ -31,24 +56,28 @@
 
 </head>
 <body>
+  <div id="progress-bar"></div>
+
+  <div class="content-wrap">
   <!-- HERO -->
   <section id="situatieschets" class="hero2">
     <div id="nav-placeholder"></div>
     <div class="container hero-inner">
-      <div class="hero-copy">
+      <div class="hero-copy" data-id="zuid">
         <h1 class="h-title">ECOPICK:<br>Duurzame Mode App</h1>
         <p class="h-lead">
-          Een mobiele app die consumenten helpt duurzame alternatieven te vinden voor hun favoriete kledingstukken via AI-beeldherkenning en een ondersteunende community.
-        </p>
+            Een mobiele app die consumenten helpt duurzame alternatieven te vinden voor hun favoriete kledingstukken via AI-beeldherkenning en een ondersteunende community.
+          </p>
       </div>
     <!-- Side TOC -->
-    <aside class="toc">
-      <a href="#situatieschets">Situatieschets</a>
+    <aside class="toc toc1">
+      <a href="#">Situatieschets</a>
       <a href="#context">Context</a>
       <a href="#uitdaging">Uitdaging</a>
       <a href="#oplossing">Oplossing</a>
       <a href="#proces">Proces</a>
-      <a href="#reflectie">Reflectie</a>
+      <a href="#proces">Prototypes</a>
+      <a href="#Reflectie">Reflectie</a>
     </aside>
   </div>
 
@@ -60,12 +89,12 @@
       <p>3 maanden<br><span>Sept 2025 – Dec 2025</span></p>
     </div>
     <div class="meta-item">
-      <h3>Samenwerkingen</h3>
+      <h3>Team</h3>
       <p>Solo project</p>
     </div>
     <div class="meta-item">
       <h3>Rol</h3>
-      <p>UX/UI Design<br>Conceptdevelopment</p>
+      <p>Research<br>Branding<br>UX/UI Design<br>front-end & back-end</p>
     </div>
   </div>
 
@@ -90,110 +119,164 @@
       </p>
     </section>
 
-    <!-- Oplossing (gekleurde band) -->
-    <section id="oplossing" class="band2">
+    <section id="oplossing" class="section container">
       <div class="container">
-        <h2 class="band-title">Oplossing</h2>
+        <h2 class="section-title">Oplossing</h2>
         <p id="opl">
-          Met <strong>ecoPick</strong> uploadt de gebruiker een foto van een kledingstuk, waarna de app 
-          via <strong>AI-beeldherkenning</strong> duurzame alternatieven aanbiedt. 
-          Naast integraties met tweedehandsplatformen en duurzame merken, 
-          voorziet de app een <strong>community</strong> waar gebruikers elkaar tips geven. 
-          Via affiliate-links kunnen merken makkelijk deelnemen en blijft het businessmodel schaalbaar.
-        </p>
-      </div>
+            Met <strong>ecoPick</strong> uploadt de gebruiker een foto van een kledingstuk, waarna de app 
+            via <strong>AI-beeldherkenning</strong> duurzame alternatieven aanbiedt. 
+            Naast integraties met tweedehandsplatformen en duurzame merken, 
+            voorziet de app een <strong>community</strong> waar gebruikers elkaar tips geven. 
+            Via affiliate-links kunnen merken makkelijk deelnemen en blijft het businessmodel schaalbaar.
+          </p>      
+    </div>
     </section>
 
-    <!-- Mijn rol -->
-    <section id="rol" class="section container">
-      <h2 class="section-title">Mijn rol</h2>
-      <div>
-        <p>
-          Ik focuste op <strong>UX/UI</strong>: de flow en wireframes, visuele stijl in Figma en 
-          een consistente interface. Daarnaast deed ik <strong>conceptontwikkeling</strong>: onderzoek naar haalbaarheid, 
-          doelgroep en het businessmodel. Zo hielp ik de brug te slaan tussen <strong>gebruikersnoden</strong> en 
-          <strong>technische mogelijkheden</strong>.
-        </p>
-      </div>
-      <img src="/images/ecopick-rol.png" alt="EcoPick schetsen en UI">
-    </section>
-
-    <!-- Het proces (timeline) -->
-    <section id="proces" class="section container">
-      <h2 class="section-title">Het proces</h2>
-
-      <div class="timeline">
-        <div class="t-rail"></div>
-
-        <div class="t-step">
-          <div class="t-badge">Projectanalyse &amp; Definitie</div>
-          <div class="t-content">
-            <p>In deze fase brachten we de noden van bezoekers en stakeholders in kaart. Het sitebezoek hielp ons beter begrijpen hoe mensen zich fysiek door het domein bewegen.</p>
-            <ul>
-              <li>Kick-off met Zuiderbad om noden en verwachtingen in kaart te brengen.</li>
-              <li>Sitebezoek om de fysieke omgeving en de gebruikersbehoeftes beter te begrijpen.</li>
-              <li>Analyse van bestaande kaartoplossingen.</li>
-              <li>Functionele scope bepaald.</li>
-            </ul>
-          </div>
+    <section id="prototypes">
+        <h2 class="section-title">Interactieve Prototypes</h2>
+        <div class="prototypes">
+            <div class="prototype-desktop">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" border-radius= "50px" height="400px" width="500px" height="100%" src="https://embed.figma.com/proto/7hsqh4CfMtdrgWISlsrQdB/Amina_Moutalibov_lab1_prototype?page-id=742%3A314&node-id=742-415&viewport=382%2C347%2C0.08&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=755%3A172&embed-host=share" allowfullscreen=""></iframe>
+            </div>
+            <div class="prototype-mobile">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="200" height="400" src="https://embed.figma.com/proto/7hsqh4CfMtdrgWISlsrQdB/Amina_Moutalibova_lab1_prototype?page-id=422%3A3585&node-id=422-5573&viewport=85%2C918%2C0.15&scaling=scale-down&content-scaling=fixed&starting-point-node-id=422%3A5662&embed-host=share" allowfullscreen></iframe><section id="Reflectie" class="section container">
+            </div>  
         </div>
+    </section>
+    <!-- Proces -->
+    <section class="process"  id="proces" class="section container">
+    <h2 class="section-title">Mijn proces</h2>
 
-        <div class="t-step">
-          <div class="t-badge">UX Design</div>
-          <div class="t-content">
-            <p>We onderzochten hoe de kaart intuïtief gebruikt kon worden. Het doel was dat bezoekers met zo min mogelijk clicks de juiste info vinden.</p>
-            <ul>
-              <li>Ontwikkeling van wireframes in Figma met focus op navigatie en gebruiksgemak.</li>
-              <li>Informatiearchitectuur opgesteld en gebruikersflows uitgewerkt.</li>
-              <li>Iteratieve feedbackrondes en interne tests.</li>
-            </ul>
-          </div>
-        </div>
+  <div class="progress-container">
+    <input type="radio" name="step" id="step1" checked>
+    <input type="radio" name="step" id="step2">
+    <input type="radio" name="step" id="step3">
+    <input type="radio" name="step" id="step4">
 
-        <div class="t-step">
-          <div class="t-badge">Visueel Design</div>
-          <div class="t-content">
-            <p>Het visuele luik draaide om herkenbaarheid en plezier. Door speelse iconen en een frisse stijl voelt de kaart uitnodigend en past ze bij de sfeer van Zuiderbad.</p>
-            <ul>
-              <li>Ontwerp van een visuele stijl die aansluit bij de branding van Zuiderbad.</li>
-              <li>Illustraties en iconenset ontwikkelen.</li>
-              <li>High-fidelity designs in Figma uitgewerkt en geoptimaliseerd voor mobile/desktop.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="t-step">
-          <div class="t-badge">Development &amp; Testing</div>
-          <div class="t-content">
-            <p>De focus lag hier op het functioneel maken van het design. Mijn codebijdragen zorgden ervoor dat de visuele elementen en interacties naadloos in de kaart geïntegreerd werden.</p>
-            <ul>
-              <li>Omzetten van de designs naar een werkende kaart in Leaflet.</li>
-              <li>Toevoegen van filters en de zoekfunctionaliteit en de routeplanner.</li>
-              <li>Responsief design geïmplementeerd en prestaties geoptimaliseerd.</li>
-              <li>iteratief testen, zowel op afstand als op locatie.</li>
-              <li>Finale bugfixes en oplevering van een gebruiksklare kaart.</li>
-            </ul>
-          </div>
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+      <div class="step" data-step="1">
+        <label for="step1"></label>
       </div>
+      <div class="step" data-step="2">
+        <label for="step2"></label>
+      </div>
+      <div class="step" data-step="3">
+        <label for="step3"></label>
+      </div>
+      <div class="step" data-step="4">
+        <label for="step4"></label>
+      </div>
+    </div>
+
+    <div class="tabs">
+        <div class="tab tab1">
+          <h3>Definitie & Analyse</h3>
+          <p>In deze fase onderzoek ik het probleem, de doelgroep en de context rond duurzame mode om de basis van het concept scherp te stellen.</p>
+          <ul>
+            <li>Onderzoek naar fast fashion, overconsumptie en de nood aan transparantie binnen de mode-industrie.</li>
+            <li>Doelgroepanalyse: consumenten tussen 18 en 26 jaar die bewuster willen kopen maar moeite hebben om duurzame alternatieven te vinden.</li>
+            <li>Interviews en enquêtes uitgevoerd om frustraties en verwachtingen te begrijpen.</li>
+            <li>Analyse van bestaande apps zoals Hopshop en Vinted om opportuniteiten en tekortkomingen te identificeren.</li>
+          </ul>
+          <img src="./images/moodboard.webp" alt="" class="proces-img">
+        </div>
+      
+        <div class="tab tab2">
+          <h3>Concept & UX Design</h3>
+          <p>Ik werk het concept uit tot een duidelijke gebruikerservaring met focus op gebruiksgemak, herkenbaarheid en community.</p>
+          <ul>
+            <li>Concept: AI-beeldherkenning waarmee gebruikers foto’s van kleding uploaden en duurzame alternatieven vinden.</li>
+            <li>Wireframes en user flows uitgewerkt rond uploadproces, zoekresultaten en communityfunctionaliteit.</li>
+            <li>Feedback toegepast om de interface intuïtiever te maken (bv. vergelijkingspercentages, filters, aantal resultaten instelbaar).</li>
+          </ul>
+          <img src="./images/user_flow_chart_app_ecopick.webp" class="proces-img" alt="">
+          <img src="./images/wireframes_ecopick.webp" alt="" class="proces-img">
+        </div>
+      
+        <div class="tab tab3">
+          <h3>Visueel Design</h3>
+          <p>De visuele stijl benadrukt duurzaamheid, vertrouwen en eenvoud, met een frisse en toegankelijke uitstraling.</p>
+          <ul>
+            <li>Ontwerp van een visuele identiteit voor <strong>ecoPick</strong> met focus op natuurlijke kleuren en minimalistische typografie.</li>
+            <li>UI-design uitgewerkt in Figma, inclusief iconen, illustraties en feedbackschermen.</li>
+            <li>Focus op herkenbare en toegankelijke interface voor jonge gebruikers.</li>
+            <li>High-fidelity prototypes getest op mobile.</li>
+          </ul>
+            <img src="./images/visualdesign_ecopick.webp" alt="" class="proces-img">
+        </div>
+      
+        <div class="tab tab4">
+            <h3>Development & Testing</h3>
+            <p>In deze fase lag de nadruk op het visueel presenteren van het concept, niet op technische werking.</p>
+            <ul>
+              <li>Prototype uitgewerkt om structuur, stijl en gebruikersflow te tonen.</li>
+              <li>Geen werkende functies ontwikkeld, enkel visuele representatie van de kaart.</li>
+              <li>Feedback verzameld op vormgeving, navigatie en duidelijkheid van het concept.</li>
+            </ul>
+            <img src="./images/final-ecopick.webp" alt="" class="proces-img">
+          </div>
+          
+      </div>
+      
+  </div>
+</section>
+
+    <section id="Reflectie" class="section container">      
+        <h2 class="section-title">Reflectie</h2>
+          <p>
+            Ecopick liet me inzien hoe groot de kloof is tussen <strong>wenselijkheid</strong> en <strong>haalbaarheid</strong>. 
+            Veel jongeren willen duurzamer shoppen, maar de drempels zijn hoog. Door deze inzichten te koppelen 
+            aan een schaalbaar concept met AI-technologie en affiliate marketing, konden we een realistisch 
+            voorstel formuleren. <br><br>
+            Persoonlijk leerde ik hoe belangrijk <strong>concrete feedback</strong> en iteratie zijn bij 
+            conceptontwikkeling. Interviews en desk research verrijkten mijn idee en brachten verbeterpunten naar boven, 
+            zoals betere beeldherkenning en de rol van een ondersteunende community.
+          </p>      
+        </section>
+      <div class="dots" id="dots"></div>
+    </section> 
+
+    <section class="section container mockups">
+        <img src="./images/ecopick-mockup01.webp" alt="">
+        <img src="./images/ecopick-mockup02.webp" alt="">
+        <img src="./images/ecopick-mockup03.webp" alt="">
+        <img src="./images/ecopick-mockup04.webp" alt="">
     </section>
+</main>
 
+  <!-- check out other projects -->
+  <h2 class="projects-title" data-aos="fade-up">Bekijk ook mijn andere projecten</h2>
+  <div class="viewprojects" data-aos="fade-up">
+        <a href="project-detail.html" class="project-card bg-color-cover2">
+            <h2 class="title">Zuiderbad - Interactieve Kaart</h2>
+            <p class="wrapper-p">Groepsproject — Sep '25 - Dec '25</p>
+            <img src="./images/kaart-transparant.png" alt="">
+        </a>
+        <span></span>
+        <a href="project-foodkiosk.html" class="project-card bg-color-cover3">
+            <h2 class="title">Cup-a-cino - Webflow</h2>
+            <p class="wrapper-p">Solo Project — jan '25 - jun '25</p>
+            <img src="./images/webflow-transparant.png" alt="">
+        </a>
+        <span></span>
+        <a href="project-foodkiosk.html" class="project-card bg-color-cover4">
+            <h2 class="title">Mochi Foodkiosk - Blender</h2>
+            <p class="wrapper-p">Solo Project — Nov '25</p>
+            <img src="./images/foodkiosk_transparant.webp" alt="">
+        </a>
+  </div>
 
-    <!-- Reflectie -->
-    <section id="reflectie" class="section container">
-      <h2 class="section-title">Reflectie</h2>
-      <p>
-        ecoPick liet me inzien hoe groot de kloof is tussen <strong>wenselijkheid</strong> en <strong>haalbaarheid</strong>. 
-        Veel jongeren willen duurzamer shoppen, maar de drempels zijn hoog. Door deze inzichten te koppelen 
-        aan een schaalbaar concept met AI-technologie en affiliate marketing, konden we een realistisch 
-        voorstel formuleren. <br><br>
-        Persoonlijk leerde ik hoe belangrijk <strong>concrete feedback</strong> en iteratie zijn bij 
-        conceptontwikkeling. Interviews en desk research verrijkten mijn idee en brachten verbeterpunten naar boven, 
-        zoals betere beeldherkenning en de rol van een ondersteunende community.
-      </p>
-    </section>
-  </main>
-
+</div>
   <div id="footer-placeholder"></div>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // animatie duurtijd in ms
+      once: true      // animatie maar één keer afspelen
+    });
+  </script>
   <script>
     // nav en footer includen
     Promise.all([
@@ -203,6 +286,7 @@
       document.getElementById("nav-placeholder").innerHTML = navHtml;
       document.getElementById("footer-placeholder").innerHTML = footerHtml;
   
+      // nu pas elementen selecteren
       const hamburger = document.querySelector('.hamburger');
       const navLinks = document.querySelector('.nav-links');
   
@@ -211,6 +295,7 @@
         hamburger.classList.toggle('open');
       });
   
+      // sluiten bij klik op link + smooth scroll
       document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', e => {
           e.preventDefault();
@@ -224,6 +309,165 @@
         });
       });
     });
+
+    window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    document.getElementById('progress-bar').style.width = scrollPercent + "%";
+  });
+
+    window.addEventListener('scroll', () => {
+    const hero = document.querySelector('.hero2');
+    const toc = document.querySelector('.toc1');
+
+    if (window.scrollY > hero.scrollHeight - 200) {
+      toc.classList.add('black');
+    } else {
+      toc.classList.remove('black');
+    }
+    });
+
+    // ---- boven de footer blijven ----
+    const tocEl     = document.querySelector('.toc1');
+    // Gebruik de placeholder (die is er altijd), i.p.v. #site-footer
+    const footerEl  = document.getElementById('footer-placeholder');
+
+    function stickToc() {
+      if (!tocEl || !footerEl) return;
+
+      // Hoeveel de footer al de viewport in schuift
+      const footerTopInView = footerEl.getBoundingClientRect().top;
+      const overlap = window.innerHeight - footerTopInView - 50;
+
+      if (overlap > 0) {
+        tocEl.style.top = 'auto';          
+        tocEl.style.bottom = overlap + 'px';
+      } else {
+        tocEl.style.bottom = 'auto';
+        tocEl.style.top = '';
+      }
+    }
+
+  window.addEventListener('scroll', stickToc, { passive: true });
+  window.addEventListener('resize', stickToc);
+  stickToc();
+
+  </script>
+  <script>
+    (() => {
+  const track = document.getElementById("track");
+  const wrap = track.parentElement;
+  const cards = Array.from(track.children);
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
+  const dotsBox = document.getElementById("dots");
+
+  // Detect mobile
+  const isMobile = () => matchMedia("(max-width:767px)").matches;
+
+  // Create navigation dots
+  cards.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.className = "dot";
+    dot.onclick = () => activate(i, true);
+    dotsBox.appendChild(dot);
+  });
+  const dots = Array.from(dotsBox.children);
+
+  let current = 0;
+
+  // Center the active card
+  function center(i) {
+    const card = cards[i];
+    const axis = isMobile() ? "top" : "left";
+    const size = isMobile() ? "clientHeight" : "clientWidth";
+    const start = isMobile() ? card.offsetTop : card.offsetLeft;
+
+    wrap.scrollTo({
+      [axis]: start - (wrap[size] / 2 - card[size] / 2),
+      behavior: "smooth"
+    });
+  }
+
+  // Update UI states
+  function toggleUI(i) {
+    cards.forEach((c, k) => c.toggleAttribute("active", k === i));
+    dots.forEach((d, k) => d.classList.toggle("active", k === i));
+    prev.disabled = i === 0;
+    next.disabled = i === cards.length - 1;
+  }
+
+  // Activate specific card
+  function activate(i, scroll = true) {
+    if (i === current) return;
+    current = i;
+    toggleUI(i);
+    if (scroll) center(i);
+  }
+
+  // Move steps
+  function go(step) {
+    const newIndex = Math.min(Math.max(current + step, 0), cards.length - 1);
+    activate(newIndex, true);
+  }
+
+  // Button events
+  prev.onclick = () => go(-1);
+  next.onclick = () => go(1);
+
+  // Keyboard navigation
+  addEventListener(
+    "keydown",
+    (e) => {
+      if (["ArrowRight", "ArrowDown"].includes(e.key)) go(1);
+      if (["ArrowLeft", "ArrowUp"].includes(e.key)) go(-1);
+    },
+    { passive: true }
+  );
+
+  // Hover & click activation
+  cards.forEach((card, i) => {
+    card.addEventListener("mouseenter", () => {
+      if (matchMedia("(hover:hover)").matches) activate(i, true);
+    });
+    card.addEventListener("click", () => activate(i, true));
+  });
+
+  // Touch-swipe on mobile
+  let startX = 0, startY = 0;
+  track.addEventListener(
+    "touchstart",
+    (e) => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    },
+    { passive: true }
+  );
+
+  track.addEventListener(
+    "touchend",
+    (e) => {
+      const dx = e.changedTouches[0].clientX - startX;
+      const dy = e.changedTouches[0].clientY - startY;
+      if (isMobile() ? Math.abs(dy) > 60 : Math.abs(dx) > 60) {
+        go((isMobile() ? dy : dx) > 0 ? -1 : 1);
+      }
+    },
+    { passive: true }
+  );
+
+  // Hide dots on mobile
+  if (isMobile()) dotsBox.hidden = true;
+
+  // Recenter on resize
+  addEventListener("resize", () => center(current));
+
+  // Init
+  toggleUI(0);
+  center(0);
+})();
+
   </script>
 </body>
 </html>

@@ -59,19 +59,17 @@
     background-position: 30px 0px;
     background-size: cover;
     border-radius: 0 0 30px 30px;
-    /* margin: 0em 2.5em 0em 2.5em; */
   }
 
   .hero2{
-    background-image: url('../images/mockuuups-macbook-air-mockup-on-a-modern-dark-surface.webp');
+    background-image: url('../images/ecopick_mockup.webp');
     color:#fff;
     position:relative;
     padding: 200px 0;
     height: 70vh;
+    background-position: 30px 0px;
     background-size: cover;
-    background-repeat: no-repeat;
     border-radius: 0 0 30px 30px;
-    margin: 0em 2.5em 0em 2.5em;
   }
 
   .meta-item a {
@@ -117,6 +115,32 @@
     box-shadow: none;
     padding: 0;
     border-radius: 30px;
+  }
+
+  .proces-img {
+    width: 40vw;
+    padding-top: 20px;
+    /* padding-left: 4em; */
+    margin: 0 auto;
+    display: block;
+  }
+
+  .mockups img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 30px;
+  }
+
+  .mockups {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    margin-bottom: 5em;
+  }
+
+  .proces-images img {
+    width: 50%;
   }
 
   .hero3{
@@ -223,6 +247,17 @@
     color: #e45f2a;
   }
 
+  .prototypes {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 2em;
+  }
+
+  .toc1.black a {
+    color: #86BAC3;
+  }
+
   .toc a:hover{
     text-decoration: underline;
   }
@@ -321,8 +356,14 @@
     main {
       padding-right: 4em;
     }
-
   }
+
+  @media (max-width: 800px){
+
+  .prototypes {
+    flex-direction: column;
+  }
+}
 
   @media (max-width: 720px){
     .h-meta {
@@ -354,6 +395,7 @@
     .h-lead {
       max-width: 80% !important;
     }
+  
   }
 
   @media (max-width: 620px){
@@ -413,7 +455,7 @@
 
     .section-title {
       text-align: left !important;
-      font-size: x-large;
+      font-size: 1em;
     }
 
     .band-title {
@@ -460,156 +502,20 @@
     }
   }
 
-/* === Fancy timeline === */
-.timeline{
-  --progress: 0px;                /* wordt gezet via JS */
-  position: relative;
-  padding-left: 0;                 /* jouw layout blijft gelden */
-  isolation: isolate;
-}
-
-.t-rail{
-  position:absolute; left:24px; top:0; bottom:0;
-  width:3px; background:#e5e7eb; border-radius:3px;
-  overflow: visible;
-}
-
-/* getekende voortgang */
-.timeline::after{
-  content:"";
-  position:absolute; left:24px; top:0; width:3px;
-  height: var(--progress);
-  background: #e45f2a;
-  border-radius:3px;
-  box-shadow: 0 0 12px rgba(228,95,42,.45);
-  transition: height 80ms linear;
-  z-index: 0; /* Lower z-index to ensure the line is behind the dots */
-}
-
-/* Cards */
-.t-step{
-  position: relative;
-  padding: 3em 2em;
-  opacity: 0;
-  transform: translateY(26px) scale(.98);
-  transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1), box-shadow .4s ease, background .3s ease;
-  will-change: transform, opacity;
-  border-radius: 14px;
-}
-
-.t-step.seen{
-  opacity: 1;
-  transform: translateY(0) scale(1);
-} 
-
-.t-step.is-active{
-  background: #fff;
-  box-shadow: 0 12px 30px rgba(0,0,0,.08);
-  transform: translateY(0) scale(1.015);
-}
-
-/* Dot bij elke step */
-.t-step::before{
-  content:"";
-  position:absolute; left:17px; top: 25px;
-  width:12px; height:12px; border-radius:50%;
-  background:#fff; border:3px solid #e5e7eb;
-  box-shadow: 0 0 0 2px #fff;
-  transition: transform .35s ease, border-color .35s ease, background .35s ease, box-shadow .35s ease;
-  transform: scale(.9);
-  z-index: 9999;
-}
-
-.t-step.seen::before{
-  border-color:#e45f2a;
-}
-.t-step.is-active::before{
-  background: #e45f2a;
-  z-index: 9999;
-  box-shadow: 0 0 0 4px #fff, 0 0 16px 2px rgba(228,95,42,.35);
-  transform: translateX(3px) scale(1.3);
-}
-
-/* Badge pop */
-.t-badge{
-  position:absolute; 
-  left: 55px;
-  top: 19px;
-  background:#fff; 
-  border:2px solid #e45f2a; 
-  color:#e45f2a;
-  font-weight:200; 
-  font-size: 1em; 
-  padding:.18rem .8rem; 
-  border-radius: 50px;
-  transition: transform .35s ease, border-color .35s ease, background .35s ease, box-shadow .35s ease;
-  transform: scale(.9);
-
-  /* transform: translateY(2px) scale(.96);
-  transition: transform .45s cubic-bezier(.2,.7,.2,1), filter .45s ease; */
-}
-
-.t-step.is-active .t-badge{
-  transform: translateY(0) scale(1);
-  font-weight:700; 
-
-}
-
-/* Stagger op titel + bullets */
-.t-step .t-title, .t-step .t-content li{
-  opacity: 0; transform: translateY(10px);
-  transition: opacity .45s ease, transform .45s ease;
-}
-.t-step.seen .t-title{ opacity:1; transform:none; transition-delay:.08s; }
-.t-step.seen .t-content li{ opacity:1; transform:none; }
-
-/* mooie bullet spacing */
-.t-content ul{ padding-left: 1.1rem; margin: .25rem 0 0; }
-.t-content li{ margin:.25rem 0; }
-
-.t-content, .t-title {
-  padding-left: 1em;
-}
-
-.t-content p {
-  line-height: 150%;
-  font-size: 1em;
-  color: black;
-}
-
-/* Minder motion? Respecteer dat. */
-@media (prefers-reduced-motion: reduce){
-  .timeline::after, .t-step, .t-badge, .t-step .t-title, .t-step .t-content li{ transition: none !important; }
-}
-
-.card:hover {
-  transform: scale(1.3) translateZ(0);
-  transition: transform 0.1s ease;
-  background-blend-mode: lighten;
-}
-
-.grid:hover > .card:not(:hover) {
-  transform: scale(0.93);
-  transition: transform 0.1s ease;
-}
 
 /* ===== Timeline Section ===== */
 .section-title {
   font-family: "Marcellus", serif;
-  font-size: 2rem;
+  font-size: 1.5em;
   color: #00346B;
   margin-bottom: 0rem;
 }
 
 /* ===== Card Container ===== */
 .proces-slider .head {
-  /* max-width: 1200px; */
-  /* margin: auto;
-  padding: 60px 20px 40px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* gap: 2rem; */
 }
 
 .proces-slider .head h2 {
@@ -651,101 +557,17 @@
 
 /* === Slider structuur === */
 .slider {
-  /* max-width: 1400px; */
   margin: auto;
   overflow: hidden;
 }
 
 .track {
   display: flex;
-  /* gap: 1.5rem; */
   align-items: flex-start;
-  /* justify-content: center; */
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   padding-bottom: 30px;
 }
-
-/* === Project cards === */
-.project-card {
-  position: relative;
-  flex: 0 0 6rem;
-  height: 24rem;
-  border-radius: 1rem;
-  overflow: hidden;
-  cursor: pointer;
-  transition: flex-basis 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  background: #fff;
-}
-
-.project-card[active] {
-  flex-basis: 30rem;
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 52, 107, 0.15);
-}
-
-/* === Achtergrondafbeelding === */
-.project-card__bg {
-  position: absolute; 
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.8) saturate(90%);
-  transition: filter 0.4s, transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.project-card:hover .project-card__bg {
-  filter: brightness(0.95);
-  transform: scale(1.03);
-}
-
-/* === Inhoud === */
-.project-card__content {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: flex-end;
-  background: linear-gradient(transparent 40%, rgba(255,255,255,0.9) 95%);
-  padding: 1.6rem;
-  z-index: 2;
-  transition: background 0.3s;
-}
-
-.project-card__title {
-  font-family: "Marcellus", serif;
-  font-weight: 600;
-  font-size: 1.3rem;
-  color: #00346B;
-  margin-bottom: 0.4rem;
-}
-
-.project-card__desc {
-  font-family: "Manuale", serif;
-  font-size: 0.95rem;
-  color: #333;
-  line-height: 1.55;
-  max-width: 20rem;
-}
-
-/* === Actieve kaart (open) === */
-.project-card[active] .project-card__content {
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  background: rgba(255, 255, 255, 0.92);
-  padding: 2rem;
-}
-.project-card[active] .project-card__title {
-  font-size: 1.8rem;
-}
-.project-card[active] .project-card__desc {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #222;
-}
-
 
 /* === Responsive === */
 @media (max-width: 767px) {
@@ -754,39 +576,11 @@
     align-items: flex-start;
     gap: 1rem;
   }
-
   .track {
     flex-direction: column;
     gap: 0.8rem;
     padding-bottom: 20px;
   }
-
-  .project-card {
-    flex: 0 0 auto;
-    width: 100%;
-    height: auto;
-    min-height: 22rem;
-  }
-
-  .project-card[active] {
-    transform: none;
-    flex-basis: auto;
-  }
-
-  .project-card__content {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1.5rem;
-  }
-
-  .project-card__title {
-    font-size: 1.4rem;
-  }
-
-  .project-card__desc {
-    font-size: 0.95rem;
-  }
-
   #dots {
     display: none !important;
   }
@@ -880,7 +674,6 @@
   box-shadow: 0 2px 10px 2px rgba(13, 21, 92, 0.605);
 }
 
-
 /* Tabs */
 .tabs {
   background: #fff;
@@ -947,4 +740,98 @@ input[type="radio"] { display: none; }
   color: #260b03;
   font-size: 1.2rem;
   font-weight: 700;
+}
+
+
+
+.project-card {
+  padding: 0 1em;
+  width: auto;
+}
+
+.viewprojects a {
+  text-decoration: none;
+  color: black;
+}
+
+.viewprojects span {
+  display: inline;
+  color: #000000;
+}
+
+.projects-title  {
+  margin-left: 2.2em;
+  margin-bottom: 2em;
+  padding: 0;
+  font-size: 1.3em;
+  color: #00346B;
+}
+
+.viewprojects p {
+  margin: 0;
+  padding: 0;
+}
+
+.viewprojects {
+  margin: 1em 3em;
+  padding-bottom: 3em;
+  
+}
+
+/* Container */
+.viewprojects {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+/* Projectkaart */
+.project-card {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.project-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  background-color: #4F1018;
+  color: white;
+}
+
+/* Titel */
+.project-card .title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0em;
+  margin-top: 0;
+  /* color: white; */
+}
+
+.project-card img {
+  display: none;
+  width: 10px;
+}
+
+.project-card:hover img {
+  display: block;
+  width: 100px;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  transition: all 1s ease;
+}
+
+/* Subtekst */
+.project-card .wrapper-p {
+  font-size: 0.9rem;
+  /* color: white; */
 }

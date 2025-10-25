@@ -6,7 +6,7 @@
   --radius:22px;
   --max:1100px;
   --card-height: 420px;
-  --card-width: calc(var(--card-height) / 1.4);
+  --card-width: 420px;
   --primairy-color: #822010;
 }
 
@@ -97,6 +97,9 @@
    .bg-color-cover3 {
     background-color: #104a14;
   }
+  .bg-color-cover4 {
+    background-color: #010540;
+  }
 
 .project-card:hover .wrapper::before,
 .project-card:hover .wrapper::after {
@@ -116,26 +119,28 @@
   color: white;
   font-size: 1.4em;
   margin: 0;
+  text-align: center;
 }
 
 .wrapper-p {
   color: white;
-  font-size: 0.7em;
+  font-size: 0.9em;
   transition: transform 0.5s ease;
   margin: 0;
+  text-align: center;
 }
 
 .project-card:hover .title, .project-card:hover .wrapper-p {
-  /* transform: translate3d(0, 20px, 100px); */
-  display: none;
+  transform: translate3d(0, -20px, 100px);
+  /* display: none; */
 }
 
 .character {
   position: absolute;
   bottom: 0px;
-  left: 25%;
+  left: 30%;
   opacity: 0;
-  width: 400px;
+  width: 300px;
   transition: all 0.5s ease;
   z-index: 2;
 }
@@ -144,7 +149,16 @@
   position: absolute;
   bottom: 0px;
   opacity: 0;
-  width: 200px;
+  width: 300px;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.character-kiosk {
+  position: absolute;
+  bottom: 0px;
+  opacity: 0;
+  width: 300px;
   transition: all 0.5s ease;
   z-index: 2;
 }
@@ -156,12 +170,17 @@
 
 .project-card:hover .character {
   opacity: 1;
-  transform: translate3d(0, -25%, 900px);
+  transform: translate3d(0, -35%, 900px);
 }
 
 .project-card:hover .character-laptop {
   opacity: 1;
-  transform: translate3d(0, -50%, 1300px);
+  transform: translate3d(0, -25%, 1000px);
+}
+
+.project-card:hover .character-kiosk {
+  opacity: 1;
+  transform: translate3d(0, -40%, 600px);
 }
 
 
@@ -171,11 +190,15 @@
     --card-height: 340px;
   }
   .project-card:hover .character {
-  transform: translate3d(0, -35%, 800px);
+  transform: translate3d(0, -20%, 800px);
 }
 .project-card:hover .character-laptop {
   opacity: 1;
-  transform: translate3d(0, -30%, 800px);
+  transform: translate3d(0, -20%, 700px);
+}
+.project-card:hover .character-kiosk {
+  opacity: 1;
+  transform: translate3d(0, -25%, 300px);
 }
 .title {
   font-size: 1em;
