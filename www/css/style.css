@@ -332,6 +332,8 @@ html{
     background-size: contain;
     background-color: #fff;
     height: 100vh;
+    background-position: center top;
+    background-size: 100% 12%;
   }
 
   /* Unicorn embed als achtergrond */
@@ -586,7 +588,7 @@ html{
     margin-top: 1em;
   }
   body {
-    background-size: 150% 16%;
+    background-size: 100% 80%;
     background-position: center top;
   }
 }
