@@ -224,12 +224,7 @@ html.is-animating.is-rendering #swup { opacity: 0; }
 }
 
 *{box-sizing:border-box}
-body{
-  margin:0 0;
-  font-family: Marcellus, serif;
-  color:var(--text);
-  background-color: #fff;
-}
+
 
 html{
   scroll-behavior:smooth;
@@ -305,6 +300,16 @@ html{
     pointer-events:none;
   }
   
+  body{
+    margin:0 0;
+    font-family: Marcellus, serif;
+    color:var(--text);
+    background-image: url(../images/backup_background_1_1x.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #fff;
+  }
+
   /* Unicorn embed als achtergrond */
   body .unicorn-embed {
     position: absolute;
@@ -326,140 +331,6 @@ html{
     left: 49%;
   }
 
-
-@media (min-width: 1800px) {
-  .bg-color { padding: 0 20%; }
-}
-
-@media (min-width: 1200px) {
-  .projects { padding: 3em 10em; }
-}
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .hero-inner p {
-    font-size: 24px;
-  }
-  .hero-inner h1 {
-    font-size: 5em;
-  }
-  .tagline {
-    font-size: 30px !important;
-  }
-  .about { margin: 0 40px; }
-  .site-footer { padding: 40px 60px; }
-}
-
-
-/* responsive: stapel onder 900px */
-@media (max-width: 900px){
-  .card .thumb{ height: 160px; }
-  .projects { padding: 3em 4em !important; }
-}
-
-@media (max-width: 800px){
-  .projects { padding: 3em 3em !important; }
-  .grid { gap: 25px; }
-    .hero-inner h1 {
-    font-size: 3em;
-  }
-  .name { padding-top: 3em !important;}
-}
-
-
-@media (max-width: 720px) {
-  .mouse {display: none;}
-  .name { 
-    font-size: 2em !important;
-  }
-
-  .tagline { font-size: 28px; }
-  .projects { 
-    margin: 0 30px; 
-    padding: 24px 2em !important; 
-  }
-  .grid { gap: 30px; }
-  .card .thumb { height: 140px; }
-
-  .about { margin: 0 20px; padding: 60px 10px; }
-  .about-copy p { font-size: 20px; }
-
-  .about-inner{grid-template-columns: 1fr}
-  .avatar{margin:auto}
-  .card {
-    grid-column: span 13 !important;
-  }
-  .scroll-down {
-    bottom: 2em;
-  }
-  .content {
-    height: 55vh !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .projects { padding: 24px 3em; }
-  .card {
-    height: 14em;
-  }
-  .name {
-    margin-top: 4em;
-  }
-}
-
-@media (max-width: 530px) {
-  .name { font-size: 2em !important; margin-top: 2em !important;}
-  .roles { font-size: 18px !important; }
-  .tagline { font-size: 22px !important;}
-  .tagline-2 { font-size: 22px !important;}
-  .chaos { font-size: 24px !important; }
-  .projects {
-    padding: 2em 0.5em;
-  }
-  .card-title { font-size: 18px !important; }
-  .card-meta { font-size: 12px !important; }
-
-  .about-copy p { font-size: 18px !important; }
-  .chip { font-size: 14px; padding: .3rem .6rem; }
-  .CTA-button {
-    font-size: 0.9em;
-    padding: 0.5rem 1rem;
-  }
-  .content {
-    height: 55vh !important;
-  }
-}
-
-@media (max-width: 460px) {
-  .card {
-    height: 12em;
-    grid-column: span 9 !important;
-  }
-
-  .grid {
-    grid-template-columns: repeat(1, minmax(0,1fr)) !important;
-  }
-
-  .projects {
-    padding: 2em 0em !important;
-  }
-  .headline {
-    font-size: 1.5rem !important;
-    text-align: left;
-  }
-  .intro {
-    text-align: left;
-  }
-}
-
-@media (max-width: 360px) {
-  .name { font-size: 1.8em !important; }
-  .roles { font-size: 16px !important; }
-  .tagline { font-size: 20px !important; }
-  .tagline-2 { font-size: 20px !important; }
-  .chaos { font-size: 20px !important; }
-}
- 
 
 .CTA-button {
   padding: 0.8rem 1.5rem;
@@ -595,10 +466,151 @@ html{
 }
 
 
-.name {
-  margin-top: 1em;
+.content {
+  height: 40vh;
 }
 
-.content {
-  height: 45vh;
+
+@media (min-width: 1800px) {
+  .bg-color { padding: 0 20%; }
+}
+
+@media (min-width: 1200px) {
+  .projects { padding: 3em 10em; }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-inner p {
+    font-size: 24px;
+  }
+  .hero-inner h1 {
+    font-size: 5em;
+  }
+  .tagline {
+    font-size: 30px !important;
+  }
+  .about { margin: 0 40px; }
+  .site-footer { padding: 40px 60px; }
+}
+
+
+/* responsive: stapel onder 900px */
+@media (max-width: 900px){
+  .card .thumb{ height: 160px; }
+  .projects { padding: 3em 4em !important; }
+}
+
+@media (max-width: 800px){
+  .projects { padding: 3em 3em !important; }
+  .grid { gap: 25px; }
+    .hero-inner h1 {
+    font-size: 3em;
+  }
+  .name { padding-top: 3em !important;}
+}
+
+
+@media (max-width: 720px) {
+  .mouse {display: none;}
+  .name { 
+    font-size: 2em !important;
+  }
+
+  .tagline { font-size: 28px; }
+  .projects { 
+    margin: 0 30px; 
+    padding: 24px 2em !important; 
+  }
+  .grid { gap: 30px; }
+  .card .thumb { height: 140px; }
+
+  .about { margin: 0 20px; padding: 60px 10px; }
+  .about-copy p { font-size: 20px; }
+
+  .about-inner{grid-template-columns: 1fr}
+  .avatar{margin:auto}
+  .card {
+    grid-column: span 13 !important;
+  }
+  .scroll-down {
+    bottom: 2em;
+  }
+  .content {
+    height: 55vh !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects { padding: 24px 3em; }
+  .card {
+    height: 14em;
+  }
+  .name {
+    margin-top: 1em;
+  }
+  body {
+    background-size: 150% 16%;
+    background-position: center top;
+  }
+}
+
+@media (max-width: 530px) {
+  .name { font-size: 3em !important; margin-top: 0em !important;}
+  .roles { font-size: 18px !important;}
+  .tagline { font-size: 22px !important;}
+  .tagline-2 { font-size: 22px !important;}
+  .chaos { font-size: 24px !important; }
+  .projects {
+    padding: 2em 0.5em;
+  }
+  .card-title { font-size: 18px !important; }
+  .card-meta { font-size: 12px !important; }
+
+  .about-copy p { font-size: 18px !important; }
+  .chip { font-size: 14px; padding: .3rem .6rem; }
+  .CTA-button {
+    font-size: 1em;
+    padding: 0.7rem 1.2rem;
+  }
+  .content {
+    height: 60vh !important;
+  }
+}
+
+@media (max-width: 460px) {
+  .card {
+    height: 12em;
+    grid-column: span 9 !important;
+  }
+  .grid {
+    grid-template-columns: repeat(1, minmax(0,1fr)) !important;
+  }
+  .projects {
+    padding: 2em 0em !important;
+  }
+  .headline {
+    font-size: 1.5rem !important;
+    text-align: left;
+  }
+  .intro {
+    text-align: left;
+  }
+  .hero {
+    height: 90vh !important;
+  }
+  .content {
+    height: 60vh !important;
+  }
+  .scroll-down {
+    left: 47%;
+  }
+}
+
+@media (max-width: 360px) {
+  .name { font-size: 1.8em !important; }
+  .roles { font-size: 16px !important; }
+  .tagline { font-size: 20px !important; }
+  .tagline-2 { font-size: 20px !important; }
+  .chaos { font-size: 20px !important; }
 }
