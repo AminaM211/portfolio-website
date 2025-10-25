@@ -76,6 +76,32 @@
     border-radius: 0 0 30px 30px;
   }
 
+  .hero3{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/cupacino-mockup4.webp);
+    background-color: rgba(0, 0, 0, 0.05);
+    background-blend-mode: darken;  
+    color:#fff;
+    position:relative;
+    padding: 200px 0;
+    height: 70vh;
+    /* background-position: 100px 100px;*/
+    background-size: 100%; 
+    border-radius: 0 0 30px 30px;
+  }
+
+  .hero4{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/foodkiosk_mockup1.webp);
+    background-color: rgba(0, 0, 0, 0.05);
+    background-blend-mode: darken;  
+    color:#fff;
+    position:relative;
+    padding: 200px 0;
+    height: 70vh;
+    background-size: cover;
+    border-radius: 0 0 30px 30px;
+    background-position:  center;
+  }
+
   .meta-item a {
     text-decoration: none;
     color: black;
@@ -147,18 +173,6 @@
     width: 50%;
   }
 
-  .hero3{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/foodkiosk.webp);
-    background-image: cover;
-    background-repeat: no-repeat;
-    color:#fff;
-    position:relative;
-    padding: 200px 0;
-    margin: 0em 2.5em 0em 2.5em;
-    height: 60vh;
-    background-position: bottom center;
-    background-size: cover;
-  }
 
   .hero-inner {
     display: flex;
@@ -176,7 +190,7 @@
     font-family: 'Marcellus';
     font-style: normal;
     font-weight: 400;
-    font-size: 4em;
+    font-size: 3em;
     line-height: 100%;
     color: #FFFFFF;
   }
@@ -264,7 +278,11 @@
   }
 
   .toc2.black a {
-    color: #6d9399;
+    color: #9b5d22;
+  }
+
+  .toc3.black a {
+    color: #e34265;
   }
 
   .toc a:hover{
@@ -317,7 +335,7 @@
 
 
   .h-title{
-    font-size: 2.5em !important;
+    font-size: 2em !important;
     line-height: 1em !important;
   }  
   .h-lead {
@@ -890,7 +908,34 @@ input[type="radio"] { display: none; }
 }
 
 /* Subtekst */
-.project-card .wrapper-p {
+.wrapper-p {
   font-size: 0.9rem;
-  /* color: white; */
+  color: black;
+}
+.project-card:hover .wrapper-p {
+  color: white !important;
+}
+
+.primary-button {
+  width: 10em;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  background: #ffffff85;
+  border: 1px solid var(--primairy-color);
+  color:  var(--primairy-color);
+  font-family: Marcellus, serif;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  margin-top: 1em;
+}
+
+.primary-button:hover{
+  background: var(--primairy-color);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  transform: translateY(-3px);
 }

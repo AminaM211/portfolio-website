@@ -32,7 +32,7 @@
 </head>
 <body>
   <!-- HERO -->
-  <section id="situatieschets" class="hero2">
+  <section id="situatieschets" class="hero4">
     <div id="nav-placeholder"></div>
     <div class="container hero-inner">
       <div class="hero-copy">
@@ -42,10 +42,9 @@
         </p>
       </div>
       <!-- Side TOC -->
-      <aside class="toc">
+      <aside class="toc toc3">
         <a href="#situatieschets">Situatieschets</a>
         <a href="#context">Context</a>
-        <a href="#deliverables">Deliverables</a>
         <a href="#reflectie">Reflectie</a>
       </aside>
     </div>
@@ -85,45 +84,236 @@
       </p>
     </section>
 
-    <section class="images">
-      <img src="./images/mockuuups-macbook-air-mockup-on-a-textured-stone-surface.webp" alt="Mochi kiosk render front">
-    </section>
+    <section class="section container mockups">
+      <img src="./images/foodkiosk_mockup2.webp" alt="">
+      <img src="./images/mockuuups-macbook-air-mockup-on-a-modern-dark-surface.webp" alt="">
+      <img src="./images/foodkiosk_mockup3.webp" alt="">
+  </section>
+</main>
 
-  </main>
+<!-- check out other projects -->
+<h2 class="projects-title" data-aos="fade-up">Bekijk ook mijn andere projecten</h2>
+<div class="view-projects" data-aos="fade-up">
+      <a href="project-detail.html" class="project-card bg-color-cover2">
+          <h2 class="title">Zuiderbad - Interactieve Kaart</h2>
+          <p class="wrapper-p">Groepsproject — Sep '25 - Dec '25</p>
+          <img src="./images/kaart-transparant.png" alt="">
+      </a>
+      <span></span>
+      <a href="project-cupacino.html" class="project-card bg-color-cover3">
+          <h2 class="title">Cup-a-cino - Webflow</h2>
+          <p class="wrapper-p">Solo Project — jan '25 - jun '25</p>
+          <img src="./images/webflow-transparant.png" alt="">
+      </a>
+      <span></span>
+      <a href="project-ecopick.html" class="project-card bg-color-cover2">
+        <h2 class="title">Ecopick - duurzame mode app</h2>
+        <p class="wrapper-p">Solo Project — Sep '24 - Dec '24</p>
+        <img src="./images/ecopick-transparant.png" alt="">
+      </a>
+    </div>
 
+</div>
+<div id="footer-placeholder"></div>
 
-  <div id="footer-placeholder"></div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // animatie duurtijd in ms
+    once: true      // animatie maar één keer afspelen
+  });
+</script>
+<script>
+  // nav en footer includen
+  Promise.all([
+    fetch("nav.html").then(res => res.text()),
+    fetch("footer.html").then(res => res.text())
+  ]).then(([navHtml, footerHtml]) => {
+    document.getElementById("nav-placeholder").innerHTML = navHtml;
+    document.getElementById("footer-placeholder").innerHTML = footerHtml;
 
-  <script>
-    // nav en footer includen
-    Promise.all([
-      fetch("nav.html").then(res => res.text()),
-      fetch("footer.html").then(res => res.text())
-    ]).then(([navHtml, footerHtml]) => {
-      document.getElementById("nav-placeholder").innerHTML = navHtml;
-      document.getElementById("footer-placeholder").innerHTML = footerHtml;
-  
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.nav-links');
-  
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('open');
-      });
-  
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', e => {
-          e.preventDefault();
-          const targetId = link.getAttribute('href');
-          const targetEl = document.querySelector(targetId);
-          if (targetEl) {
-            targetEl.scrollIntoView({ behavior: 'smooth' });
-          }
-          navLinks.classList.remove('active');
-          hamburger.classList.remove('open');
-        });
+    // nu pas elementen selecteren
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('open');
+    });
+
+    // sluiten bij klik op link + smooth scroll
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: 'smooth' });
+        }
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('open');
       });
     });
-  </script>
+  });
+
+  window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  document.getElementById('progress-bar').style.width = scrollPercent + "%";
+});
+
+  window.addEventListener('scroll', () => {
+  const hero = document.querySelector('.hero4');
+  const toc = document.querySelector('.toc3');
+
+  if (window.scrollY > hero.scrollHeight - 200) {
+    toc.classList.add('black');
+  } else {
+    toc.classList.remove('black');
+  }
+  });
+
+  // ---- boven de footer blijven ----
+  const tocEl     = document.querySelector('.toc1');
+  // Gebruik de placeholder (die is er altijd), i.p.v. #site-footer
+  const footerEl  = document.getElementById('footer-placeholder');
+
+  function stickToc() {
+    if (!tocEl || !footerEl) return;
+
+    // Hoeveel de footer al de viewport in schuift
+    const footerTopInView = footerEl.getBoundingClientRect().top;
+    const overlap = window.innerHeight - footerTopInView - 50;
+
+    if (overlap > 0) {
+      tocEl.style.top = 'auto';          
+      tocEl.style.bottom = overlap + 'px';
+    } else {
+      tocEl.style.bottom = 'auto';
+      tocEl.style.top = '';
+    }
+  }
+
+window.addEventListener('scroll', stickToc, { passive: true });
+window.addEventListener('resize', stickToc);
+stickToc();
+
+</script>
+<script>
+  (() => {
+const track = document.getElementById("track");
+const wrap = track.parentElement;
+const cards = Array.from(track.children);
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+const dotsBox = document.getElementById("dots");
+
+// Detect mobile
+const isMobile = () => matchMedia("(max-width:767px)").matches;
+
+// Create navigation dots
+cards.forEach((_, i) => {
+  const dot = document.createElement("span");
+  dot.className = "dot";
+  dot.onclick = () => activate(i, true);
+  dotsBox.appendChild(dot);
+});
+const dots = Array.from(dotsBox.children);
+
+let current = 0;
+
+// Center the active card
+function center(i) {
+  const card = cards[i];
+  const axis = isMobile() ? "top" : "left";
+  const size = isMobile() ? "clientHeight" : "clientWidth";
+  const start = isMobile() ? card.offsetTop : card.offsetLeft;
+
+  wrap.scrollTo({
+    [axis]: start - (wrap[size] / 2 - card[size] / 2),
+    behavior: "smooth"
+  });
+}
+
+// Update UI states
+function toggleUI(i) {
+  cards.forEach((c, k) => c.toggleAttribute("active", k === i));
+  dots.forEach((d, k) => d.classList.toggle("active", k === i));
+  prev.disabled = i === 0;
+  next.disabled = i === cards.length - 1;
+}
+
+// Activate specific card
+function activate(i, scroll = true) {
+  if (i === current) return;
+  current = i;
+  toggleUI(i);
+  if (scroll) center(i);
+}
+
+// Move steps
+function go(step) {
+  const newIndex = Math.min(Math.max(current + step, 0), cards.length - 1);
+  activate(newIndex, true);
+}
+
+// Button events
+prev.onclick = () => go(-1);
+next.onclick = () => go(1);
+
+// Keyboard navigation
+addEventListener(
+  "keydown",
+  (e) => {
+    if (["ArrowRight", "ArrowDown"].includes(e.key)) go(1);
+    if (["ArrowLeft", "ArrowUp"].includes(e.key)) go(-1);
+  },
+  { passive: true }
+);
+
+// Hover & click activation
+cards.forEach((card, i) => {
+  card.addEventListener("mouseenter", () => {
+    if (matchMedia("(hover:hover)").matches) activate(i, true);
+  });
+  card.addEventListener("click", () => activate(i, true));
+});
+
+// Touch-swipe on mobile
+let startX = 0, startY = 0;
+track.addEventListener(
+  "touchstart",
+  (e) => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  },
+  { passive: true }
+);
+
+track.addEventListener(
+  "touchend",
+  (e) => {
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = e.changedTouches[0].clientY - startY;
+    if (isMobile() ? Math.abs(dy) > 60 : Math.abs(dx) > 60) {
+      go((isMobile() ? dy : dx) > 0 ? -1 : 1);
+    }
+  },
+  { passive: true }
+);
+
+// Hide dots on mobile
+if (isMobile()) dotsBox.hidden = true;
+
+// Recenter on resize
+addEventListener("resize", () => center(current));
+
+// Init
+toggleUI(0);
+center(0);
+})();
+
+</script>
 </body>
 </html>

@@ -95,7 +95,7 @@
   }
 
    .bg-color-cover3 {
-    background-color: #104a14;
+    background-color: #eccd97;
   }
   .bg-color-cover4 {
     background-color: #010540;
@@ -165,7 +165,6 @@
 
 .laptop-img {
   object-fit: cover;
-  object-position: center;
 }
 
 .project-card:hover .character {
