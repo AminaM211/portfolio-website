@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cup-a-cino — Webflow & React Native App — Amina</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N6CLJCJR');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-09LMHXY6QL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-09LMHXY6QL');
+  </script>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Cup-a-cino — case study: een Webflow webshop voor specialty koffiebonen gekoppeld aan een React Native app. CMS-gedreven producten en blogs, API-koppeling, filters, zoek en winkelmand." />
+  <link rel="canonical" href="https://amina-moutalibova.be/project-cupacino.html" />
+  <meta name="theme-color" content="#8B4513" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Amina Moutalibova" />
+  <meta name="keywords" content="Webflow, React Native, portfolio, coffee, CMS, API, UX, UI, Amina" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Amina Moutalibova – Portfolio" />
+  <meta property="og:title" content="Cup-a-cino — Webflow & React Native App" />
+  <meta property="og:description" content="Case study van Cup-a-cino: Webflow webshop + React Native app. Dynamische CMS-data, filters, zoek en winkelmand." />
+  <meta property="og:url" content="https://amina-moutalibova.be/project-cupacino.html" />
+  <meta property="og:image" content="https://amina-moutalibova.be/social-preview-cupacino.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="nl_BE" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cup-a-cino — Webflow & React Native App" />
+  <meta name="twitter:description" content="Case study van Cup-a-cino: Webflow webshop + React Native app. Dynamische CMS-data, filters, zoek en winkelmand." />
+  <meta name="twitter:image" content="https://amina-moutalibova.be/social-preview-cupacino.png" />
+  <meta name="twitter:image:alt" content="Cup-a-cino project — UX/UI design door Amina Moutalibova">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/project-detail.css" />
+  <link rel="stylesheet" href="css/fonts.css">
+</head>
+<body>
+  <div id="progress-bar"></div>
+
+  <div class="content-wrap" id="top">
+    <!-- HERO -->
+    <section id="situatieschets" class="hero3">
+      <div id="nav-placeholder"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy" data-id="cupacino">
+          <h1 class="h-title">Cup-a-cino:<br> Webflow website & React Native app</h1>
+          <p class="h-lead">
+            Een CMS-gedreven e-commerce ervaring voor specialty koffiebonen. Webflow voor de shop en content, React Native voor mobiel gebruik met live API-data.
+          </p>
+        </div>
+
+        <aside class="toc toc2">
+          <a href="#">Situatieschets</a>
+          <a href="#context">Context</a>
+          <a href="#uitdaging">Uitdaging</a>
+          <a href="#oplossing">Oplossing</a>
+          <a href="#prototypes">Prototype</a>
+          <a href="#proces">Proces</a>
+          <a href="#reflectie">Reflectie</a>
+        </aside>
+
+      </div>
+    </section>
+
+    <div class="h-meta container"> 
+      <div class="meta-item">
+        <h3>Rol</h3>
+        <p>UX/UI Design<br>Webflow Development<br>React Native</p>
+      </div>
+      <div class="meta-item">
+        <h3>Tijdlijn</h3>
+        <p>6 maanden<br><span>Jan 2025 – Jun 2025</span></p>
+      </div>
+      <div class="meta-item">
+        <h3>Type</h3>
+        <p>Solo project</p>
+      </div>
+    </div>
+
+    <main>
+      <!-- Context -->
+      <section id="context" class="section container">
+        <h2 class="section-title">Context</h2>
+        <p>
+          Cup-a-cino is een fictief koffieconcept waar ik een consistente merkervaring wilde bouwen voor web en mobiel. De Webflow-site beheert producten en blogs via CMS. De React Native app leest diezelfde CMS-data via de Webflow API zodat content en producten centraal beheerd kunnen worden.
+        </p>
+      </section>
+
+      <!-- Uitdaging -->
+      <section id="uitdaging" class="section container">
+        <h2 class="section-title">Uitdaging</h2>
+        <p>
+          Ontwerp en bouw een eenvoudige maar robuuste flow die zowel op een publieke Webflow-site als in een mobiele app werkt. Data moet dynamisch zijn en meteen updaten in de app wanneer de CMS-content verandert. De app moet producten tonen, filteren en laten bestellen in een demo-winkelmand.
+        </p>
+      </section>
+
+      <!-- Oplossing -->
+      <section id="oplossing" class="section container">
+        <h2 class="section-title">Oplossing</h2>
+        <p id="opl">
+          Tweedelige aanpak: een Webflow-site met CMS-collecties voor Products en Blogposts, en een React Native app die de Webflow CMS API gebruikt. Features: dynamische productlists, productdetailpagina’s, blogposts, filter, zoek, sort, en een eenvoudige winkelmand in de app.
+        </p>
+      </section>
+
+   
+      <!-- Proces -->
+      <section id="proces" class="process section container">
+        <h2 class="section-title">Mijn proces</h2>
+
+        <div class="progress-container">
+          <input type="radio" name="step" id="step1" checked>
+          <input type="radio" name="step" id="step2">
+          <input type="radio" name="step" id="step3">
+          <input type="radio" name="step" id="step4">
+
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+            <div class="step" data-step="1"><label for="step1"></label></div>
+            <div class="step" data-step="2"><label for="step2"></label></div>
+            <div class="step" data-step="3"><label for="step3"></label></div>
+            <div class="step" data-step="4"><label for="step4"></label></div>
+          </div>
+
+          <div class="tabs">
+            <div class="tab tab1">
+              <h3>Research & scope</h3>
+              <ul>
+                <li>Doelgroep bepalen: koffieliefhebbers die online bestellen</li>
+                <li>Competitie en referenties analyseren</li>
+                <li>Features prioriteren voor examenvereisten</li>
+              </ul>
+            </div>
+
+            <div class="tab tab2">
+              <h3>Design</h3>
+              <ul>
+                <li>Wireframes in Figma voor homepage, productlist en productdetail</li>
+                <li>Design system: kleuren, typografie en spacing</li>
+                <li>Responsive layouts voor mobiel en desktop</li>
+              </ul>
+            </div>
+
+            <div class="tab tab3">
+              <h3>Implementatie Webflow</h3>
+              <ul>
+                <li>Collections aanmaken en voorbeelditems toevoegen</li>
+                <li>Homepage met dynamic lists en collection bindings</li>
+                <li>Publish en test live content</li>
+              </ul>
+            </div>
+
+            <div class="tab tab4">
+              <h3>Implementatie App</h3>
+              <ul>
+                <li>Expo + React Navigation opzetten</li>
+                <li>API-calls implementeren en UI koppelen</li>
+                <li>Cart state en AsyncStorage voor persistentie</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reflectie -->
+      <section id="reflectie" class="section container">
+        <h2 class="section-title">Reflectie</h2>
+        <p>
+          Deze case study toont hoe design en development samenkomen. Ik leerde praktisch werken met Webflow CMS en hoe je die data veilig en efficiënt beschikbaar maakt voor een mobiele app. Voor examenvragen kan ik in detail uitleggen: de CMS-structuur, API-requests, component logica in React Native, en state management voor de cart.
+        </p>
+      </section>
+
+      <!-- Mockups / screenshots -->
+      <section class="section container mockups">
+        <img src="./images/cupacino-home.jpg" alt="Cup-a-cino homepage mockup">
+        <img src="./images/cupacino-product.jpg" alt="Product detail mockup">
+        <img src="./images/cupacino-app-home.jpg" alt="App home mockup">
+        <img src="./images/cupacino-app-product.jpg" alt="App product mockup">
+      </section>
+
+
+      <!-- check out other projects -->
+      <h2 class="projects-title" data-aos="fade-up">Bekijk ook mijn andere projecten</h2>
+      <div class="view-projects" data-aos="fade-up">
+        <a href="project-detail.html" class="project-card bg-color-cover2">
+            <h2 class="title">Zuiderbad - Interactieve Kaart</h2>
+            <p class="wrapper-p">Groepsproject — Sep '25 - Dec '25</p>
+            <img src="./images/kaart-transparant.png" alt="">
+        </a>
+        <span></span>
+        <a href="project-ecopick.html" class="project-card bg-color-cover2">
+          <h2 class="title">Ecopick - duurzame mode app</h2>
+          <p class="wrapper-p">Solo Project — Sep '24 - Dec '24</p>
+          <img src="./images/ecopick-transparant.png" alt="">
+        </a>
+        <span></span>
+        <a href="project-foodkiosk.html" class="project-card bg-color-cover4">
+          <h2 class="title">Mochi Foodkiosk - Blender</h2>
+          <p class="wrapper-p">Solo Project — Nov '25</p>
+          <img src="./images/foodkiosk_transparant.webp" alt="">
+        </a>
+      </div>
+
+    </main>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+ 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // animatie duurtijd in ms
+      once: true      // animatie maar één keer afspelen
+    });
+  </script>
+  <script>
+    // nav en footer includen
+    Promise.all([
+      fetch("nav.html").then(res => res.text()),
+      fetch("footer.html").then(res => res.text())
+    ]).then(([navHtml, footerHtml]) => {
+      document.getElementById("nav-placeholder").innerHTML = navHtml;
+      document.getElementById("footer-placeholder").innerHTML = footerHtml;
+  
+      // nu pas elementen selecteren
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+  
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('open');
+      });
+  
+      // sluiten bij klik op link + smooth scroll
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href');
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('open');
+        });
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    document.getElementById('progress-bar').style.width = scrollPercent + "%";
+  });
+
+    window.addEventListener('scroll', () => {
+    const hero = document.querySelector('.hero3');
+    const toc = document.querySelector('.toc2');
+
+    if (window.scrollY > hero.scrollHeight - 200) {
+      toc.classList.add('black');
+    } else {
+      toc.classList.remove('black');
+    }
+    });
+
+    // ---- boven de footer blijven ----
+    const tocEl     = document.querySelector('.toc1');
+    // Gebruik de placeholder (die is er altijd), i.p.v. #site-footer
+    const footerEl  = document.getElementById('footer-placeholder');
+
+    function stickToc() {
+      if (!tocEl || !footerEl) return;
+
+      // Hoeveel de footer al de viewport in schuift
+      const footerTopInView = footerEl.getBoundingClientRect().top;
+      const overlap = window.innerHeight - footerTopInView - 50;
+
+      if (overlap > 0) {
+        tocEl.style.top = 'auto';          
+        tocEl.style.bottom = overlap + 'px';
+      } else {
+        tocEl.style.bottom = 'auto';
+        tocEl.style.top = '';
+      }
+    }
+
+  window.addEventListener('scroll', stickToc, { passive: true });
+  window.addEventListener('resize', stickToc);
+  stickToc();
+
+  </script>
+  <script>
+    (() => {
+  const track = document.getElementById("track");
+  const wrap = track.parentElement;
+  const cards = Array.from(track.children);
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
+  const dotsBox = document.getElementById("dots");
+
+  // Detect mobile
+  const isMobile = () => matchMedia("(max-width:767px)").matches;
+
+  // Create navigation dots
+  cards.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.className = "dot";
+    dot.onclick = () => activate(i, true);
+    dotsBox.appendChild(dot);
+  });
+  const dots = Array.from(dotsBox.children);
+
+  let current = 0;
+
+  // Center the active card
+  function center(i) {
+    const card = cards[i];
+    const axis = isMobile() ? "top" : "left";
+    const size = isMobile() ? "clientHeight" : "clientWidth";
+    const start = isMobile() ? card.offsetTop : card.offsetLeft;
+
+    wrap.scrollTo({
+      [axis]: start - (wrap[size] / 2 - card[size] / 2),
+      behavior: "smooth"
+    });
+  }
+
+  // Update UI states
+  function toggleUI(i) {
+    cards.forEach((c, k) => c.toggleAttribute("active", k === i));
+    dots.forEach((d, k) => d.classList.toggle("active", k === i));
+    prev.disabled = i === 0;
+    next.disabled = i === cards.length - 1;
+  }
+
+  // Activate specific card
+  function activate(i, scroll = true) {
+    if (i === current) return;
+    current = i;
+    toggleUI(i);
+    if (scroll) center(i);
+  }
+
+  // Move steps
+  function go(step) {
+    const newIndex = Math.min(Math.max(current + step, 0), cards.length - 1);
+    activate(newIndex, true);
+  }
+
+  // Button events
+  prev.onclick = () => go(-1);
+  next.onclick = () => go(1);
+
+  // Keyboard navigation
+  addEventListener(
+    "keydown",
+    (e) => {
+      if (["ArrowRight", "ArrowDown"].includes(e.key)) go(1);
+      if (["ArrowLeft", "ArrowUp"].includes(e.key)) go(-1);
+    },
+    { passive: true }
+  );
+
+  // Hover & click activation
+  cards.forEach((card, i) => {
+    card.addEventListener("mouseenter", () => {
+      if (matchMedia("(hover:hover)").matches) activate(i, true);
+    });
+    card.addEventListener("click", () => activate(i, true));
+  });
+
+  // Touch-swipe on mobile
+  let startX = 0, startY = 0;
+  track.addEventListener(
+    "touchstart",
+    (e) => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    },
+    { passive: true }
+  );
+
+  track.addEventListener(
+    "touchend",
+    (e) => {
+      const dx = e.changedTouches[0].clientX - startX;
+      const dy = e.changedTouches[0].clientY - startY;
+      if (isMobile() ? Math.abs(dy) > 60 : Math.abs(dx) > 60) {
+        go((isMobile() ? dy : dx) > 0 ? -1 : 1);
+      }
+    },
+    { passive: true }
+  );
+
+  // Hide dots on mobile
+  if (isMobile()) dotsBox.hidden = true;
+
+  // Recenter on resize
+  addEventListener("resize", () => center(current));
+
+  // Init
+  toggleUI(0);
+  center(0);
+})();
+
+  </script>
+</body>
+</html>
