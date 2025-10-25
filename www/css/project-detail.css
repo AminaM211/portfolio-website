@@ -939,3 +939,24 @@ input[type="radio"] { display: none; }
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
   transform: translateY(-3px);
 }
+
+/* Disable hover animations on mobile devices */
+@media (hover: none) and (pointer: coarse) {
+  .project-card:hover,
+  .primary-button:hover {
+    transform: none;
+    box-shadow: none;
+    background-color: initial;
+    color: initial;
+  }
+
+  .project-card:hover img {
+    display: none;
+    width: initial;
+    transition: none;
+  }
+
+  .project-card:hover .wrapper-p {
+    color: initial !important;
+  }
+}
