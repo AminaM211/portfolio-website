@@ -201,11 +201,11 @@
  <section id="about" class="about">
   <div class="about-wrapper">
     <div class="about-photo" data-aos="fade-up">
+      <h2 class="section-label">OVER MIJ</h2>
       <img src="./images/me.png" alt="Amina Moutalibova portrait" />
     </div>
 
     <div class="about-text" data-aos="fade-up" data-aos-delay="100">
-      <h2 class="section-label">OVER MIJ</h2>
       <h3 class="headline">
         Hey! Ik ben Amina
       </h3>
@@ -234,30 +234,5 @@
   </div>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
-      const docHeight = Math.max(1, document.body.scrollHeight - window.innerHeight);
-      const scrollPercent = Math.min(100, (scrollTop / docHeight) * 100);
-      const bar = document.getElementById('progress-bar');
-      if (bar) bar.style.width = scrollPercent + "%";
-    });
-  </script>
-  <script>
-    // on hover van project card, display:none voor de cover-image 
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        const coverImage = card.querySelector('.cover-image');
-        if (coverImage) coverImage.style.display = 'none';
-      });
-      card.addEventListener('mouseleave', () => {
-        const coverImage = card.querySelector('.cover-image');
-        if (coverImage) coverImage.style.display = 'block';
-      });
-    });
-  </script>  
 </body>
 </html>

@@ -308,6 +308,7 @@ html{
     background-repeat: no-repeat;
     background-size: contain;
     background-color: #fff;
+    height: 100vh;
   }
 
   /* Unicorn embed als achtergrond */
@@ -385,11 +386,12 @@ html{
 
 .section-label {
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 1rem;
   letter-spacing: 2px;
   color: #aaa;
-  margin-bottom: 0rem;
+  margin-top: 0.3rem;
   display: block;
+  padding-bottom: 3em;
 }
 
 .headline {
@@ -397,7 +399,8 @@ html{
   font-weight: 600;
   line-height: 1.3;
   color: #111;
-  margin-bottom: 0rem;
+  margin: 0rem;
+
 }
 
 .intro {
@@ -492,6 +495,9 @@ html{
   }
   .about { margin: 0 40px; }
   .site-footer { padding: 40px 60px; }
+  .headline {
+    font-size: 2.5rem ;
+  }
 }
 
 
@@ -525,7 +531,7 @@ html{
   .grid { gap: 30px; }
   .card .thumb { height: 140px; }
 
-  .about { margin: 0 20px; padding: 60px 10px; }
+  .about { margin: 0 30px; padding: 60px 10px;}
   .about-copy p { font-size: 20px; }
 
   .about-inner{grid-template-columns: 1fr}
@@ -538,6 +544,13 @@ html{
   }
   .content {
     height: 55vh !important;
+  }
+  .headline {
+    font-size: 2rem ;
+    text-align: left;
+  }
+  .intro {
+    text-align: left;
   }
 }
 
@@ -591,10 +604,6 @@ html{
   }
   .headline {
     font-size: 1.5rem !important;
-    text-align: left;
-  }
-  .intro {
-    text-align: left;
   }
   .hero {
     height: 90vh !important;
