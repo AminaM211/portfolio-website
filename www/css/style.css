@@ -647,3 +647,21 @@ html{
   .tagline-2 { font-size: 20px !important; }
   .chaos { font-size: 20px !important; }
 }
+
+/* Disable hover animations on mobile devices */
+@media (hover: none) {
+  .project-card:hover .wrapper,
+  .project-card:hover .title,
+  .project-card:hover .wrapper-p,
+  .project-card:hover .character,
+  .project-card:hover .character-laptop,
+  .project-card:hover .character-kiosk {
+    transform: none;
+    opacity: 1;
+  }
+
+  .project-card:hover .wrapper::before,
+  .project-card:hover .wrapper::after {
+    opacity: 0;
+  }
+}
