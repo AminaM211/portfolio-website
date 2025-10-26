@@ -692,13 +692,13 @@ html{
 /* Spinner animatie */
 #loader::after {
   content: "";
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   background-image: url('../images/loader.svg');
   background-size: cover;
   background-position: center;
   border-radius: 50%;
-  animation: spin 1.5s linear infinite;
+  animation: spin 4s linear infinite;
 }
 
 @keyframes spin {
