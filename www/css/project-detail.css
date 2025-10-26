@@ -801,6 +801,35 @@ input[type="radio"] { display: none; }
 
 }
 
+.next {
+  margin-top: 2rem;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  border: 1.5px solid #9a9999;
+  padding: 0.5em;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.back {
+  transform: rotate(180deg);
+  border: 1.5px solid #9a9999;
+  padding: 0.5em;
+  border-radius: 99px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.back:hover, .next:hover {
+  background: #a8cbe765;
+  border: 1.5px solid #a8cbe7b3;
+
+  color: #fff;
+}
+
 #step1:checked ~ .progress-bar .step:nth-child(2) label::before,
 #step2:checked ~ .progress-bar .step:nth-child(3) label::before,
 #step3:checked ~ .progress-bar .step:nth-child(4) label::before,
