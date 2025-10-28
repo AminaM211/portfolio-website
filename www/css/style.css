@@ -329,7 +329,7 @@ html{
     background-image: url(../images/backup_background_1_1x.webp);
     background-repeat: no-repeat;
     background-size: contain;
-    background-color: #fff;
+    background-color: #f8fbff;
     height: 100vh;
     background-position: center top;
     background-size: 100% 100%;
@@ -448,11 +448,11 @@ html{
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   cursor: default;
-  background-color: #270b0314;
+  background-color: #d9e8f6;
 }
 
 .skill-grid span:hover {
-  background: #270b03;
+  background: #9B2C1A;
   color: #fff;
   transform: translateY(-3px);
 }
