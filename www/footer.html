@@ -73,14 +73,21 @@
   
   .contact-form input::placeholder,
   .contact-form textarea::placeholder {
-    color: #e0e0e0;
+    color: #e4e1e198;
   }
   
-  .contact-form input:focus,
-  .contact-form textarea:focus {
+  .contact-form input:hover,
+  .contact-form textarea:hover {
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
   }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    background: rgba(0, 0, 0, 0.702);
+    box-shadow: 0 0 15px rgba(1, 1, 1, 0.792);
+  }
+
   
   .footer-btn-mail {
     padding: 0.9rem 2rem;
@@ -248,11 +255,11 @@
         </div>
       </div>
   
-      <div class="online">
+      <div id="thank-you" class="online">
         <h3 class="contact-title">Contacteer me!</h3>
         <form action="https://usebasin.com/f/f99513151bfa" method="POST" class="contact-form">
           <label for="name"></label>
-          <input type="text" id="name" name="name" placeholder="Jouw naam" required>
+          <input type="text" id="name" name="name" placeholder="Naam" required>
           
           <label for="email"></label>
           <input type="email" id="email" name="email" placeholder="jouw@email.com" required>
