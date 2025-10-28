@@ -1,198 +1,276 @@
 <style>
-.site-footer {
-  background: #477CAA;
-  color: #fff;
-  padding: 4em 6em 0em 6em;
-  border-radius: 40px 40px 0 0;
-  overflow: hidden;
-  position: relative;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-bottom: 3em;
-}
-
-.footer-logo {
-  width: 65px;
-  filter: drop-shadow(0 3px 6px rgba(255, 255, 255, 0.15));
-  transition: transform 0.3s ease;
-  margin-bottom: 2rem;
-}
-
-.footer-logo:hover {
-  transform: rotate(-6deg) scale(1.1);
-}
-
-.footer-intro h2 {
-  font-family: "Marcellus SC", serif;
-  font-size: 2rem;
-  margin: 0;
-  font-weight: 400;
-}
-
-.footer-intro {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 50%;
-}
-
-.footer-tagline {
-  color: #fff;
-  font-size: 1.05rem;
-  margin: 0;
-  /* max-width: 450px;
-  margin: 0 auto 2rem; */
-  line-height: 1.6;
-}
-
-.footer-btn-mail {
-  padding: 0.8rem 1.7rem;
-  border-radius: 999px;
-  background-color: #9b2c1a;
-  color: #fff;
-  border: 1px solid #9b2c1a;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
-  font-family: Marcellus, serif;
-  font-weight: 400;
-  text-decoration: none;
-  transition: all 0.25s ease;
-  font-size: 1.1em;
-  display: block;
-  margin-top: 0.5em;
-  width: fit-content;
-}
-
-.navlinks {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.footer-btn-mail:hover{
-  background: #ffffff85;
-  color:  var(--primairy-color);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
-  transform: translateY(0) scale(1.02); box-shadow: 0 8px 24px rgba(2,6,23,.06)
-}
-
-.footer-actions {
-  margin-top: 1em;
-}
-
-h3 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: white;
-}
-
-.socials {
-  display: flex;
-  gap: 1rem;
-}
-
-.social-icon img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.726);
-  padding: 0.1rem;
-  border: 1px solid #ffffff25;
-  transition: all 0.3s ease;
-}
-
-.social-icon img:hover {
-  background: #fff;
-  box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.7);
-  transform: translateY(-3px) scale(1.1);
-}
-
-.footer-bottom {
-  border-top: 1px solid #ffffff00;
-}
-
-.footer-bottom p {
-  font-size: 0.9rem;
-  color: #e0e0e0;
-  font-family: "Inter", sans-serif;
-}
-
-@media (max-width: 930px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 0 10em;
-  }
-  .footer-intro {
-    width: 100%;
-    text-align: center;
-}
-a {
-  align-self: center;
-}
-.site-footer {
-    text-align: center;
-  }
-  .socials {
-    justify-content: center;
-  }
-  .footer-bottom {
-    margin-top: 2em;
-  }
-  .navlinks {
-  display: flex;
-  flex-direction: row;
-  }
-  .footer-container {
-    padding: 0em;
-    margin: 0em;
-  }
-}
-
-@media (max-width: 480px) {
+  /* Footer algemene styling */
   .site-footer {
-    padding: 2em;
-  }
-  .footer-intro h2 {
-    font-size: 1.5rem;
+    background: #477CAA;
+    color: #fff;
+    padding: 4em 6em 2em 6em;
+    border-radius: 40px 40px 0 0;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Inter', sans-serif;
   }
   
-}
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+    flex-wrap: wrap;
+  }
+  
+  .footer-logo {
+    width: 70px;
+    filter: drop-shadow(0 3px 6px rgba(255, 255, 255, 0.15));
+    transition: transform 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .footer-logo:hover {
+    transform: rotate(-6deg) scale(1.1);
+  }
+  
+  /* Intro + contactform */
+  .footer-intro {
+    flex: 1 1 200px;
+  }
+  
+  .footer-intro h2 {
+    font-family: "Marcellus SC", serif;
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+  }
+  
+  .footer-tagline {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    color: #f0f0f0;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+  }
+  
+  .contact-form label {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    backdrop-filter: blur(4px);
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #e0e0e0;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+  
+  .footer-btn-mail {
+    padding: 0.9rem 2rem;
+    width: fit-content;
+    border-radius: 50px;
+    margin-top: 1em;
+    background-color: #9b2c1a;
+    color: #fff;
+    border: none;
+    font-family: Marcellus, serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  
+  .footer-btn-mail:hover {
+    background: #ffffff85;
+    color: #477CAA;
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(2, 6, 23, 0.2);
+  }
+  
+  /* Socials */
+  .online {
+    flex: 1 1 200px;
+  }
+  
+   h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .socials {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 0.2rem;
+    border: 1px solid #ffffff40;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon img:hover {
+    background: #fff;
+    transform: scale(1.15) translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Footer bottom */
+  .footer-bottom {
+    border-top: 1px solid #ffffff40;
+    margin-top: 3em;
+    padding-top: 1.5em;
+    text-align: center;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.85rem;
+    color: #e0e0e0;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 930px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .footer-intro {
+      flex: 1 1 100%;
+    }
+    .socials {
+      justify-content: center;
+    }
+    .footer-logo {
+      margin: auto;
+      display: block;
+    }
 
-</style>
+    .online {
+      width: 100%;
+      margin: auto;
+      display: block;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .site-footer {
+      padding: 2em;
+    }
+    .footer-intro h2 {
+      font-size: 1.5rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 0.95rem;
+    }
+    form {
+      width: 80%;
+      margin: auto;
+    } 
+   }
 
+   @media (max-width: 400px) {
+    .site-footer {
+      padding: 2em;
+    }
+    .footer-intro h2 {
+      font-size: 1.5rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 0.95rem;
+    }
+    form {
+      width: 100%;
+      margin: auto;
+    } 
+   }
 
-<footer id="contact" class="site-footer">
-  <a href=""></a><img src="android-chrome-512x512.png" alt="Logo Amina" class="footer-logo" />
-  <div class="footer-container">
-      <div class="footer-intro">  
+  #form-message {
+    display: none;
+    margin-top: 1em;
+    color: #d4edda;
+    background-color: #155724;
+    padding: 0.75em 1em;
+    border-radius: 5px;
+    font-size: 0.95rem;
+  }
+  </style>
+  
+  <footer id="contact" class="site-footer">
+    <div class="footer-container">
+      <div class="footer-intro">    <img src="android-chrome-512x512.png" alt="Logo Amina" class="footer-logo" />
+
         <h2>Laten we iets moois maken!</h2>
         <p class="footer-tagline">
           Ik ben altijd op zoek naar nieuwe projecten en samenwerkingen. Of je nu een idee hebt dat je wilt bespreken of gewoon hallo wilt zeggen, aarzel niet om contact op te nemen!
         </p>
-        <a href="mailto:amina@amva-studios.be" class="footer-btn-mail">mail me!</a>
-    </div>
-
-    <div class="online">
-      <h3>vind me online</h3>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/amina-moutalibova-02a621297/" target="_blank" rel="noopener" class="social-icon linkedin">
-          <img src="./images/linkedin-logo.png" alt="LinkedIn" />
-        </a>
-         <a href="https://github.com/AminaM211" target="_blank" rel="noopener" class="social-icon github">
-          <img src="./images/github-logo.png" alt="GitHub" />
-        </a>
+        <h3>Vind me online</h3>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/amina-moutalibova-02a621297/" target="_blank" class="social-icon linkedin">
+            <img src="./images/linkedin-logo.png" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/AminaM211" target="_blank" class="social-icon github">
+            <img src="./images/github-logo.png" alt="GitHub" />
+          </a>
+        </div>
+      </div>
+  
+      <div class="online">
+        <h3>Contacteer me!</h3>
+        <form action="https://usebasin.com/f/f99513151bfa" method="POST" class="contact-form">
+          <label for="name"></label>
+          <input type="text" id="name" name="name" placeholder="Jouw naam" required>
+          
+          <label for="email"></label>
+          <input type="email" id="email" name="email" placeholder="jouw@email.com" required>
+          
+          <label for="message"></label>
+          <textarea id="message" name="message" rows="4" placeholder="Schrijf je bericht..." required></textarea>
+          
+          <button type="submit" class="footer-btn-mail">Verzenden</button>
+          <p id="form-message">Verzonden!</p>
+        </form>
       </div>
     </div>
-  </div>
+  
     <div class="footer-bottom">
-    <p>© 2025 AMVA studios — Gemaakt met een vleugje creatieve chaos.</p>
-  </div>
-</footer>
+      <p>© 2025 AMVA studios — Gemaakt met een vleugje creatieve chaos.</p>
+    </div>
+  </footer>
+  <script>
+    // form-message komt tevoorschijn als het formulier succesvol is verzonden
+    const form = document.querySelector('.contact-form');
+    const formMessage = document.getElementById('form-message');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // voorkom standaard formulierverzending
+      formMessage.style.display = 'block'; // toon het bericht
+      form.reset(); // reset het formulier
+    });
+
+
+    </script>
