@@ -335,7 +335,8 @@ html{
   padding-bottom: 10px !important;
   font-family: "Marcellus", serif;
   color: var(--primairy-color);
-  /* padding-top: 70px; */
+  /* padding-top: 70vh; */
+  margin-top: 1em;
 }
 
 .tagline-2{
@@ -372,7 +373,7 @@ html{
     background-repeat: no-repeat;
     background-size: contain;
     background-color: #f8fbff;
-    height: 100vh;
+    height: 80vh;
     background-position: center top;
     background-size: 100% 100%;
   }
@@ -392,10 +393,10 @@ html{
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    bottom: -1em;
-    position: absolute;
+    /* bottom: 5%; */
+    /* position: absolute; */
     pointer-events:auto;
-    left: 49%;
+    /* left: 49%; */
   }
 
 
@@ -559,8 +560,6 @@ html{
   line-height:1.5;
   font-weight:500;
 }
-
-
 .content {
   height: 40vh;
 }
@@ -606,6 +605,7 @@ html{
     font-size: 3em;
   }
   .name { padding-top: 3em !important;}
+  .hero {padding-top: 20%;}
 }
 
 
@@ -663,7 +663,6 @@ html{
 @media (max-width: 530px) {
   .name { font-size: 3em !important; margin-top: 0em !important;}
   .roles { font-size: 18px !important;}
-  .tagline { font-size: 22px !important;}
   .tagline-2 { font-size: 22px !important;}
   .chaos { font-size: 24px !important; }
   .projects {
@@ -701,7 +700,7 @@ html{
     height: 90vh !important;
   }
   .content {
-    height: 60vh !important;
+    height: 50vh !important;
   }
   .scroll-down {
     left: 47%;
@@ -713,7 +712,6 @@ html{
   .roles { font-size: 16px !important; }
   .tagline { font-size: 20px !important; }
   .tagline-2 { font-size: 20px !important; }
-  .chaos { font-size: 20px !important; }
 }
 
 /* Disable hover animations on mobile devices */
