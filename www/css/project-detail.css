@@ -64,7 +64,9 @@
   }
 
   .hero2{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/ecopick_mockup.webp);
+    background-image: url('../images/ecopick_mockup.webp');
+    background-color: rgba(0, 0, 0, 0.15);
+    background-blend-mode: darken;  
     color:#fff;
     position:relative;
     padding: 200px 0;
@@ -257,6 +259,13 @@
     white-space:nowrap;
   }
 
+  aside a:active
+   {
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
     .toc.black a {
     /* color: black; */
     color: #e45f2a;
@@ -275,7 +284,7 @@
   }
 
   .toc2.black a {
-    color: #9b5d22;
+    color: #e9b65f;
   }
 
   .toc3.black a {
