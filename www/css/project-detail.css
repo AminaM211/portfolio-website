@@ -52,7 +52,7 @@
   /* HERO */
   .hero{
     background-image: url('../images/zuiderbad-mockup1.jpeg');
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.15);
     background-blend-mode: darken;  
     color:#fff;
     position:relative;
@@ -64,9 +64,7 @@
   }
 
   .hero2{
-    background-image: url('../images/ecopick_mockup.webp');
-    background-color: rgba(0, 0, 0, 0.2);
-    background-blend-mode: darken;  
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/ecopick_mockup.webp);
     color:#fff;
     position:relative;
     padding: 200px 0;
@@ -78,13 +76,10 @@
 
   .hero3{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/cupacino-mockup4.webp);
-    /* background-color: rgba(0, 0, 0, 0.05);
-    background-blend-mode: darken;   */
     color:#fff;
     position:relative;
     padding: 200px 0;
     height: 70vh;
-    /* background-position: 100px 100px;*/
     background-size: cover; 
     border-radius: 0 0 30px 30px;
     background-repeat: no-repeat;
@@ -184,7 +179,7 @@
     padding: 0;
     position: absolute;
     width: calc(100% - 4em);
-    left: 0;
+    left: 2em;
     bottom: 1em;
   }
 
@@ -302,6 +297,14 @@
     text-align: left;
   }
 
+  .view-projects {
+    padding-left: 4em;
+  }
+
+  .projects-title  {
+    padding-left: 3em !important;
+  }
+
   main p {
     font-family: 'Manuale';
     font-style: normal;
@@ -348,20 +351,6 @@
   .hero-inner{margin: 1em 2em; width: calc(100% - 4em);}
   .hero{background-position: 0px 100px;} 
     
-  /* @media (max-width: 1024px){
-    .h-title{
-      font-size: 2.5em !important;
-      line-height: 1em !important;
-    }  
-    .h-lead {
-      font-size: 1em !important;
-      max-width: 50% !important;
-      padding-bottom: 0;
-    }
-    .hero-inner{margin: 1em 2em; width: calc(100% - 4em);}
-    .hero{background-position: 0px 100px;} 
-  } */
-
   #desktop {
     height: 420px;
     width: 500px;
@@ -430,11 +419,18 @@
     .h-meta {
       grid-template-columns: 1fr; 
       gap:2em;
-      margin:30px 50px ; 
+      margin: 60px 50px ; 
       justify-content: center;
     }
     main {
       padding: 0 3em;
+    }
+    .view-projects {
+      padding-left: 3em;
+    }
+  
+    .projects-title  {
+      padding-left: 2.5em !important;
     }
 
     .h-meta h3 {
@@ -455,6 +451,9 @@
     }
     .h-lead {
       max-width: 80% !important;
+    }
+    .hero-inner {
+      left: 1em !important;
     }
   
   }
@@ -491,11 +490,11 @@
     }  
 
  @media (max-width: 485px){
-  .hero, .hero2, .hero3, .hero4 {
-    height: 60vh;
-    background-size: cover;
-    background-position: top center;
-  }
+    .hero, .hero2, .hero3, .hero4 {
+      height: 60vh;
+      background-size: cover;
+      background-position: top center;
+    }
     .h-title {
       font-size: 21px !important;
       max-width: 60%;
@@ -505,13 +504,9 @@
       max-width: 100% !important;
       margin-bottom: 0px;
     }
-    #context h2, p {
-      text-align: left !important;
-    }
+    /* #context h2, p {text-align: left !important;} */
 
-    .h-meta {
-      margin-left: 2.5em;
-    }
+    .h-meta { margin-left: 2.5em;}
 
     .h-meta h3 {
       font-size: x-large;
@@ -539,19 +534,15 @@
       font-size: 1em !important;
     }
 
-    #context, #uitdaging, #rol, #proces, #reflectie {
-      padding: 0em 0.8em !important;
-    }
-
-    #oplossing {
-      padding: 1em 0.8em !important;
-    }
-    #oplossing p {
-      padding-bottom: 1em;
-      /* padding: 0; */
-    }
     main {
-      padding: 0 1.5em;
+      padding: 0 2.5em;
+    }
+    .view-projects {
+      padding-left: 2.5em;
+    }
+  
+    .projects-title  {
+      padding-left: 2em !important;
     }
   }
 
@@ -672,7 +663,7 @@
 .progress-container {
   position: relative;
   counter-reset: step; 
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
 
 .progress-bar {
@@ -865,7 +856,6 @@ input[type="radio"] { display: none; }
 }
 
 .projects-title  {
-  margin-left: 2.3em;
   margin-bottom: 2em;
   padding: 0;
   font-size: 1.3em;
@@ -880,11 +870,9 @@ input[type="radio"] { display: none; }
 /* Container */
 .view-projects {
   display: grid;
-  /* flex-direction: column; */
   gap: 0.5rem;
   margin-bottom: 8em;
   position: relative;
-  margin-left: 2.8em;
 }
 
 /* Projectkaart */
