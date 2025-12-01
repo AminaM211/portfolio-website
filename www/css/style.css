@@ -723,7 +723,7 @@ html{
     height: 90vh !important;
   }
   .content {
-    height: 50vh !important;
+    height: 60vh !important;
   }
   .scroll-down {
     left: 47%;
@@ -731,7 +731,7 @@ html{
 }
 
 @media (max-width: 360px) {
-  .name { font-size: 1.8em !important; }
+  .name { font-size: 2em !important; }
   .roles { font-size: 16px !important; }
   .tagline { font-size: 20px !important; }
   .tagline-2 { font-size: 20px !important; }
