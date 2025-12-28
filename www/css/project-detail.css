@@ -101,6 +101,34 @@
     background-position:  center;
   }
 
+  .hero5{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/challenge-mockup2.png);
+    background-color: rgba(0, 0, 0, 0.05);
+    background-blend-mode: darken;  
+    color:#fff;
+    position:relative;
+    padding: 200px 0;
+    height: 70vh;
+    background-size: cover;
+    border-radius: 0 0 30px 30px;
+    /* background-position:  center; */
+    background-position: 100% 30% !important;
+  }
+
+  .hero6{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../images/HTF-transparant.png);
+    background-color: rgba(0, 0, 0, 0.05);
+    background-blend-mode: darken;  
+    color:#fff;
+    position:relative;
+    padding: 200px 0;
+    height: 70vh;
+    background-size: cover;
+    border-radius: 0 0 30px 30px;
+    /* background-position:  center; */
+    background-position: 100% 30% !important;
+  }
+
   .meta-item a {
     text-decoration: none;
     color: black;
@@ -289,6 +317,14 @@
 
   .toc3.black a {
     color: #e34265;
+  }
+
+  .toc5.black a {
+    color: #15b1ac;
+  }
+
+  .toc6.black a {
+    color: #9b42e3;
   }
 
   .toc a:hover{
@@ -979,4 +1015,13 @@ input[type="radio"] { display: none; }
   .project-card:hover .wrapper-p {
     color: initial !important;
   }
+}
+
+.list li {
+  font-size: 1.2em ;
+  color: #3b3b3b;
+}
+
+.proces-img{
+  width: 80vw;
 }

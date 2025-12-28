@@ -10,8 +10,6 @@
   --primairy-color: #822010;
 }
 
-
-
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
@@ -32,7 +30,7 @@
   text-decoration: none;
 }
 
-.card1 {width: 30%;}
+.card1 {width: 30%; }
 .card2 {width: 40%;}
 .card3 {width: 40%;}
 .card4 {width: 30%;}
@@ -46,6 +44,7 @@
   border-radius: 14px;
   overflow: hidden;
   z-index: -1;
+  
 }
 
 .cover-image {
@@ -69,6 +68,7 @@
   width: 100%;
   transition: all 0.5s ease;
   opacity: 0;
+  
 }
 
 .wrapper::before {
@@ -80,6 +80,7 @@
     rgba(12, 13, 19, 0.6) 60%,
     rgba(12, 13, 19, 0.9) 100%
   );
+  
 }
 
 .wrapper::after {
@@ -91,6 +92,7 @@
     rgba(12, 13, 19, 0.6) 70%,
     rgba(12, 13, 19, 0.9) 95%
   ); */
+  
 }
 
   .bg-color-cover {
@@ -116,6 +118,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
+
 }
 
 .title {
@@ -811,5 +814,144 @@ html{
   .CTA-container {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+
+.prjct-crd {
+  padding: 0 1em;
+  width: auto;
+}
+
+.vw-prjcts a {
+  text-decoration: none;
+  color: black;
+}
+
+.vw-prjcts span {
+  display: inline;
+  color: #000000;
+
+}
+
+.prjcts-ttl  {
+  margin-bottom: 2em;
+  margin-left: 3em;
+  padding: 0;
+  font-size: 1.3em;
+  color: #00346B;
+}
+
+.vw-prjcts p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.vw-prjcts {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0em 4em 8em 4em;
+  position: relative;
+}
+
+/* Projectkaart */
+.prjct-crd {
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.prjct-crd:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  background-color: #4F1018;
+  color: white;
+}
+
+/* Titel */
+.prject-crd .ttl {
+  font-weight: 600;
+  margin-bottom: 0em;
+  margin-top: 0;
+}
+
+.ttl {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.prjct-crd img {
+  display: none;
+  width: 10px;
+}
+
+.prjct-crd:hover img {
+  display: block;
+  width: 100px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  transition: all 1s ease;
+  border-radius: 10px;
+}
+
+/* Subtekst */
+.wrppr-p {
+  font-size: 0.9rem;
+  color: black;
+}
+.prjct-crd:hover .wrppr-p {
+  color: white !important;
+}
+
+.prmry-bttn {
+  width: 10em;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  background: #ffffff85;
+  border: 1px solid var(--primairy-color);
+  color:  var(--primairy-color);
+  font-family: Marcellus, serif;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  margin-top: 1em;
+}
+
+.prmry-bttn:hover{
+  background: var(--primairy-color);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  transform: translateY(-3px);
+}
+
+/* Disable hover animations on mobile devices */
+@media (hover: none) and (pointer: coarse) {
+  .prjct-crd:hover,
+  .prmry-bttn:hover {
+    transform: none;
+    box-shadow: none;
+    background-color: initial;
+    color: initial;
+  }
+
+  .prjct-crd:hover img {
+    display: none;
+    width: initial;
+    transition: none;
+  }
+
+  .prjct-crd:hover .wrppr-p {
+    color: initial !important;
   }
 }
