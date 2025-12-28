@@ -835,11 +835,19 @@ html{
 }
 
 .prjcts-ttl  {
-  margin-bottom: 2em;
   margin-left: 3em;
-  padding: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
   font-size: 1.3em;
   color: #00346B;
+}
+
+.prjcts-p  {
+  margin-bottom: 1.5em;
+  margin-left: 4em;
+  margin-top: 0;
+  padding: 0;
+  color: #111;
 }
 
 .vw-prjcts p {
