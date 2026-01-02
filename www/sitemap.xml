@@ -1,33 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://amina-moutalibova.be/</loc>
+    <loc>https://amva-studios.be/</loc>
     <lastmod>2025-09-26</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://amina-moutalibova.be/#about</loc>
+    <loc>https://amva-studios.be/#about</loc>
     <lastmod>2025-09-26</lastmod>
     <priority>0.8</priority>
   </url>
   <!-- voeg je projectpagina’s toe -->
   <url>
-    <loc>https://amina-moutalibova.be/project-ecopick.html</loc>
+    <loc>https://amva-studios.be/project-ecopick.html</loc>
     <lastmod>2025-09-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://amina-moutalibova.be/project-detail.html</loc>
+    <loc>https://amva-studios.be/project-detail.html</loc>
     <lastmod>2025-09-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://amina-moutalibova.be/project-foodkiosk.html</loc>
+    <loc>https://amva-studios.be/project-foodkiosk.html</loc>
     <lastmod>2025-09-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-  <loc>https://amina-moutalibova.be/favicon.ico</loc>
+  <loc>https://amva-studios.be/favicon.ico</loc>
   <lastmod>2025-09-26</lastmod>
 </url>
+  <url>
+    <loc>https://amva-studios.be/project-PET-budarina.html</loc>
+    <lastmod>2025-09-26</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amva-studios.be/project-PET-HTF.html</loc>
+    <lastmod>2025-09-26</lastmod>
+    <priority>0.7</priority>
+  </url>
 </urlset>

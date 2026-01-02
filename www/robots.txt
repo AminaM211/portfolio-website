@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://amina-moutalibova.be/sitemap.xml
+Sitemap: https://amva-studios.be/sitemap.xml
