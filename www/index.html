@@ -64,44 +64,48 @@
   <script src="./js/index.js" defer></script>
 </head>
 <body>
-  <div class="site-wrap">
-    <header class="site-header">
-      <div class="logo">AMVA</div>
-      <nav class="site-nav">
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+  	<main class="page">
+		<header class="nav">
+			<div class="logo" aria-label="logo"><img src="./images/vectors/logo-color.svg" alt="Logo"></div>
+			<nav class="nav-links" aria-label="Main navigation">
+				<a class="primary" href="#projects">Projects</a>
+				<a class="primary" href="#contact">Contact</a>
+			</nav>
+		</header>
 
-    <main class="intro" role="main">
-      <div class="left">
-        <h1 class="name">Amina<br/>Moutalibova</h1>
-      </div>
+		<section class="hero" id="projects">
+			<h1 class="name">Amina<br />Moutalibova</h1>
+			<div class="bio">
+				<p>I am a UX/UI designer who thinks in stories rather than screens. What drives me is creating digital experiences that are not only beautiful, but that also make people feel something. I believe design truly works when it evokes emotion while remaining clear, logical, and honest. In every project, I search for the balance between feeling and structure, between people and brand.</p>
+				<p>My strength lies in empathy and attention to detail. That's how I create interfaces that do not just function, but leave a lasting impression. I work best with music playing, a coffee within reach, and ideas that may start out a little wild but always come together beautifully.</p>
+			</div>
+			<div class="portrait-wrap">
+				<img
+					class="portrait"
+					src="./images/me.png"
+					alt="Portrait of Amina"
+				/>
+			</div>
+		</section>
 
-      <div class="right">
-        <p class="lead">I am a UX/UI designer who thinks in stories rather than screens. What drives me is creating digital experiences that are not only beautiful, but that also make people feel something. I believe design truly works when it evokes emotion while remaining clear, logical, and honest. In every project, I search for the balance between feeling and structure, between people and brand.</p>
+		<section class="contact" id="contact">
+			<h2>Get in touch</h2>
+			<div class="buttons">
+				<a class="secondary" href="mailto:amina.moutalibov@hotmail.com">Email</a>
+				<a class="secondary" href="https://www.linkedin.com/in/aminamoutalibova/" target="_blank" rel="noreferrer">LinkedIn</a>
+			</div>
+			<img src="./images/vectors/logo-white.svg" alt="" class="bg-img">
+		</section>
 
-        <p class="lead">My strength lies in empathy and attention to detail. That’s how I create interfaces that don’t just function, but leave a lasting impression. I work best with music playing, a coffee within reach, and ideas that may start out a little wild but always come together beautifully.</p>
-
-        <img src="./images/me.png" alt="Amina portrait" class="portrait" />
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-left">AMVA</div>
-      <div class="footer-center">
-        <div class="footer-links">
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div>© 2026 AMVA studios</div>
-      </div>
-      <div class="socials">
-        <a href="#" aria-label="LinkedIn">in</a>
-        <a href="#" aria-label="Instagram">ig</a>
-      </div>
-    </footer>
-  </div>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		
+	</main>
+	<footer class="footer">
+			<img src="./images/vectors/logo-white.svg" alt="" class="logo">
+			<div class="footer-nav">
+				<a href="#projects">Projects</a>
+				<a href="#contact">Contact</a>
+			</div>
+			<p class="copyright">&copy; 2026 AMVA studios</p>
+		</footer>
 </body>
 </html>
