@@ -15,29 +15,6 @@
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-09LMHXY6QL"></script>
 
-  <!-- Start VWO Async SmartCode -->
-  <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
-  <script type='text/javascript' id='vwoCode'>
-  window._vwo_code ||
-  (function () {
-  var w=window,
-  d=document;
-  var account_id=1161002,
-  version=2.2,
-  settings_tolerance=2000,
-  hide_element='body',
-  hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important';
-  /* DO NOT EDIT BELOW THIS LINE */
-  if(f=!1,v=d.querySelector('#vwoCode'),cc={},-1<d.URL.indexOf('__vwo_disable__')||w._vwo_code)return;try{var e=JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config'));cc=e&&'object'==typeof e?e:{}}catch(e){}function r(t){try{return decodeURIComponent(t)}catch(e){return t}}var s=function(){var e={combination:[],combinationChoose:[],split:[],exclude:[],uuid:null,consent:null,optOut:null},t=d.cookie||'';if(!t)return e;for(var n,i,o=/(?:^|;\s*)(?:(_vis_opt_exp_(\d+)_combi=([^;]*))|(_vis_opt_exp_(\d+)_combi_choose=([^;]*))|(_vis_opt_exp_(\d+)_split=([^:;]*))|(_vis_opt_exp_(\d+)_exclude=[^;]*)|(_vis_opt_out=([^;]*))|(_vwo_global_opt_out=[^;]*)|(_vwo_uuid=([^;]*))|(_vwo_consent=([^;]*)))/g;null!==(n=o.exec(t));)try{n[1]?e.combination.push({id:n[2],value:r(n[3])}):n[4]?e.combinationChoose.push({id:n[5],value:r(n[6])}):n[7]?e.split.push({id:n[8],value:r(n[9])}):n[10]?e.exclude.push({id:n[11]}):n[12]?e.optOut=r(n[13]):n[14]?e.optOut=!0:n[15]?e.uuid=r(n[16]):n[17]&&(i=r(n[18]),e.consent=i&&3<=i.length?i.substring(0,3):null)}catch(e){}return e}();function i(){var e=function(){if(w.VWO&&Array.isArray(w.VWO))for(var e=0;e<w.VWO.length;e++){var t=w.VWO[e];if(Array.isArray(t)&&('setVisitorId'===t[0]||'setSessionId'===t[0]))return!0}return!1}(),t='a='+account_id+'&u='+encodeURIComponent(w._vis_opt_url||d.URL)+'&vn='+version+'&ph=1'+('undefined'!=typeof platform?'&p='+platform:'')+'&st='+w.performance.now();e||((n=function(){var e,t=[],n={},i=w.VWO&&w.VWO.appliedCampaigns||{};for(e in i){var o=i[e]&&i[e].v;o&&(t.push(e+'-'+o+'-1'),n[e]=!0)}if(s&&s.combination)for(var r=0;r<s.combination.length;r++){var a=s.combination[r];n[a.id]||t.push(a.id+'-'+a.value)}return t.join('|')}())&&(t+='&c='+n),(n=function(){var e=[],t={};if(s&&s.combinationChoose)for(var n=0;n<s.combinationChoose.length;n++){var i=s.combinationChoose[n];e.push(i.id+'-'+i.value),t[i.id]=!0}if(s&&s.split)for(var o=0;o<s.split.length;o++)t[(i=s.split[o]).id]||e.push(i.id+'-'+i.value);return e.join('|')}())&&(t+='&cc='+n),(n=function(){var e={},t=[];if(w.VWO&&Array.isArray(w.VWO))for(var n=0;n<w.VWO.length;n++){var i=w.VWO[n];if(Array.isArray(i)&&'setVariation'===i[0]&&i[1]&&Array.isArray(i[1]))for(var o=0;o<i[1].length;o++){var r,a=i[1][o];a&&'object'==typeof a&&(r=a.e,a=a.v,r&&a&&(e[r]=a))}}for(r in e)t.push(r+'-'+e[r]);return t.join('|')}())&&(t+='&sv='+n)),s&&s.optOut&&(t+='&o='+s.optOut);var n=function(){var e=[],t={};if(s&&s.exclude)for(var n=0;n<s.exclude.length;n++){var i=s.exclude[n];t[i.id]||(e.push(i.id),t[i.id]=!0)}return e.join('|')}();return n&&(t+='&e='+n),s&&s.uuid&&(t+='&id='+s.uuid),s&&s.consent&&(t+='&consent='+s.consent),w.name&&-1<w.name.indexOf('_vis_preview')&&(t+='&pM=true'),w.VWO&&w.VWO.ed&&(t+='&ed='+w.VWO.ed),t}code={nonce:v&&v.nonce,library_tolerance:function(){return'undefined'!=typeof library_tolerance?library_tolerance:void 0},settings_tolerance:function(){return cc.sT||settings_tolerance},hide_element_style:function(){return'{'+(cc.hES||hide_element_style)+'}'},hide_element:function(){return performance.getEntriesByName('first-contentful-paint')[0]?'':'string'==typeof cc.hE?cc.hE:hide_element},getVersion:function(){return version},finish:function(e){var t;f||(f=!0,(t=d.getElementById('_vis_opt_path_hides'))&&t.parentNode.removeChild(t),e&&((new Image).src='https://dev.visualwebsiteoptimizer.com/ee.gif?a='+account_id+e))},finished:function(){return f},addScript:function(e){var t=d.createElement('script');t.type='text/javascript',e.src?t.src=e.src:t.text=e.text,v&&t.setAttribute('nonce',v.nonce),d.getElementsByTagName('head')[0].appendChild(t)},load:function(e,t){t=t||{};var n=new XMLHttpRequest;n.open('GET',e,!0),n.withCredentials=!t.dSC,n.responseType=t.responseType||'text',n.onload=function(){if(t.onloadCb)return t.onloadCb(n,e);200===n.status?_vwo_code.addScript({text:n.responseText}):_vwo_code.finish('&e=loading_failure:'+e)},n.onerror=function(){if(t.onerrorCb)return t.onerrorCb(e);_vwo_code.finish('&e=loading_failure:'+e)},n.send()},init:function(){var e,t=this.settings_tolerance();w._vwo_settings_timer=setTimeout(function(){_vwo_code.finish()},t),'body'!==this.hide_element()?(n=d.createElement('style'),e=(t=this.hide_element())?t+this.hide_element_style():'',t=d.getElementsByTagName('head')[0],n.setAttribute('id','_vis_opt_path_hides'),v&&n.setAttribute('nonce',v.nonce),n.setAttribute('type','text/css'),n.styleSheet?n.styleSheet.cssText=e:n.appendChild(d.createTextNode(e)),t.appendChild(n)):(n=d.getElementsByTagName('head')[0],(e=d.createElement('div')).style.cssText='z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;',e.setAttribute('id','_vis_opt_path_hides'),e.classList.add('_vis_hide_layer'),n.parentNode.insertBefore(e,n.nextSibling));var n='https://dev.visualwebsiteoptimizer.com/j.php?'+i();-1!==w.location.search.indexOf('_vwo_xhr')?this.addScript({src:n}):this.load(n+'&x=true',{l:1})}};w._vwo_code=code;code.init();})();
-  </script>
-  
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-09LMHXY6QL');
-  </script>
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -77,39 +54,7 @@
   <!-- Perf: preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Person",
-      "name":"Amina Moutalibova",
-      "jobTitle":"UX/UI Designer",
-      "url":"https://AMVA-studios.be/",
-      "image":"https://AMVA-studios.be/images/me.png",
-      "sameAs":[
-        "https://www.linkedin.com/in/amina-moutalibova-02a621297/",
-        "https://github.com/AminaM211"
-      ],
-      "worksFor": { "@type":"Organization", "name":"Freelance" },
-      "knowsAbout":["UX","UI","Webdesign","Prototyping","Figma","front-end"]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"WebSite",
-      "name":"Amina – UX/UI Designer",
-      "url":"https://AMVA-studios.be/",
-      "potentialAction":{
-        "@type":"SearchAction",
-        "target":"https://AMVA-studios.be/?q={search_term_string}",
-        "query-input":"required name=search_term_string"
-      }
-    }
-    </script>
     
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
   <!-- Styles -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -117,175 +62,45 @@
 
   <!-- scripts -->
   <script src="./js/index.js" defer></script>
-
-  <!-- Unicorn Studio -->
-  <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.31/dist/unicornStudio.umd.js" defer></script>
-
-
-  <style>
-    /* Minimal responsive hardening without stijl te veranderen */
-    html { box-sizing: border-box; }
-    *, *::before, *::after { box-sizing: inherit; }
-    img, picture, video, canvas, svg { max-width: 100%; height: auto; }
-    iframe { max-width: 100%; }
-
-    /* Responsive unicorn embed */
-    .unicorn-embed {
-      inline-size: 100%;
-      block-size: clamp(360px, 80svh, 900px);
-      display: block;
-      overflow: hidden;
-      z-index: -999;
-    }
-    @media (max-width: 720px){
-      .unicorn-embed { block-size: 60svh; }
-    }
-  </style>
-
-<!-- MailerLite Universal -->
-<script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '1858698');
-</script>
-<!-- End MailerLite Universal -->
 </head>
 <body>
-  <div
-    class="unicorn-embed"
-    data-us-project="bdDkBymwgJIHfJtb12Bh"
-    data-us-scale="1"
-    data-us-dpi="1.5"
-    data-us-lazyload="true"
-    aria-label="Unicorn Studio canvas">
-  </div>
-    <div id="nav-placeholder"></div>
-    <div id="progress-bar"></div>
-       
-  <main class="hero" data-aos="fade-up">
-      <div class="content" aria-hidden="false">
-        <img src="./images/SVG/naam.svg" alt="" class="name" style="width: 50em;" />
-        <div class="roles">UX/UI Designer & Web Developer</div>
-        <div class="CTA-container">
-          <a href="#tag" class="CTA-button" id="cta" aria-label="Scroll to projects section">Ontdek mijn projecten</a>
-            // <a href="./images/resume.pdf" class="CTA-button-white" id="cta" target="_blank" aria-label="Download mijn CV">Download mijn CV</a>
-        </div>
+  <div class="site-wrap">
+    <header class="site-header">
+      <div class="logo">AMVA</div>
+      <nav class="site-nav">
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="intro" role="main">
+      <div class="left">
+        <h1 class="name">Amina<br/>Moutalibova</h1>
       </div>
 
-        <h2 id="tagline" class="tagline chaos">van creatieve chaos</h2>
-        <div id="tag" class="scroll-down">
-          <img class="mouse" src="images/SVG/scroll-icon.svg" alt="" style="width: 30px;"> 
-          <img id="arrow" class="arrow" src="images/SVG/arrow.svg" alt="" style="width: 20px;">
-        </div>
-  </main>
-    
+      <div class="right">
+        <p class="lead">I am a UX/UI designer who thinks in stories rather than screens. What drives me is creating digital experiences that are not only beautiful, but that also make people feel something. I believe design truly works when it evokes emotion while remaining clear, logical, and honest. In every project, I search for the balance between feeling and structure, between people and brand.</p>
 
-  <!-- Eén unieke ID voor scroll-doel -->
-  <h2 id="tagline" class="tagline-2" data-aos="fade-up">naar krachtige interfaces</h2>
+        <p class="lead">My strength lies in empathy and attention to detail. That’s how I create interfaces that don’t just function, but leave a lasting impression. I work best with music playing, a coffee within reach, and ideas that may start out a little wild but always come together beautifully.</p>
 
-  <div class="bg-color">
-    <!-- Projects -->
-    <div class="projects-grid" id="projects" data-aos="fade-up" style="scroll-margin-top: 100px;">
-      <a href="project-ecopick.html" class="project-card card1">
-        <div class="wrapper bg-color-cover">
-          <img src="./images/ecopick_mockup.webp" class="cover-image" alt="Ecopick App" >
-        </div>
-        <div class="title-p">
-          <h2 class="title">ecopick - Mode app</h2>
-          <p class="wrapper-p">Solo Project — Sep '24 - Dec '24</p>
-        </div>
-       <img src="./images/ecopick-transparant.png" class="character" alt="Ecopick Visual">
-      </a>
-    
-      <a href="project-detail.html" class="project-card card2">
-        <div class="wrapper bg-color-cover2">
-          <img src="./images/zuiderbad-mockup1.jpeg" class="cover-image" alt="Zuiderbad Map">
-        </div>
-        <div class="title-p">
-          <h2 class="title">Zuiderbad - Interactieve kaart</h2>
-          <p class="wrapper-p">Groepsproject — Sep '25 - Dec '25</p>
-        </div>
-        <img src="./images/kaart-transparant.png" class="character" alt="Zuiderbad Visual">
-      </a>
-
-      <a href="project-cupacino.html" class="project-card card3">
-        <div class="wrapper bg-color-cover3">
-          <img src="./images/cupacino-mockup2.webp" class="cover-image laptop-img" alt="3D Foodkiosk">
-        </div>
-        <div class="title-p">
-          <h2 class="title">Cup-a-cino - Webflow</h2>
-          <p class="wrapper-p">Solo Project — jan '25 - jun '25</p>
-        </div>
-        <img src="./images/webflow-transparant.png" class="character-laptop" alt="3D Foodkiosk Visual">
-      </a>
-      <a href="project-foodkiosk.html" class="project-card card4">
-        <div class="wrapper bg-color-cover4">
-          <img src="./images/foodkiosk_mockup1.webp" class="cover-image laptop-img" alt="3D Foodkiosk">
-        </div>
-        <div class="title-p">
-          <h2 class="title">Mochi Foodkiosk - Blender</h2>
-          <p class="wrapper-p">Solo Project — Nov '25</p>
-        </div>
-        <img src="./images/foodkiosk_transparant.webp" class="character-kiosk" alt="3D Foodkiosk Visual">
-      </a>
-    </div>
-    
-    
-    <!-- About -->
- <section id="about" class="about">
-  <div class="about-wrapper">
-    <div class="about-photo" data-aos="fade-up">
-      <h2 class="section-label">OVER MIJ</h2>
-      <img src="./images/me.png" alt="Amina Moutalibova portrait" />
-    </div>
-
-    <div class="about-text" data-aos="fade-up" data-aos-delay="100">
-      <h3 class="headline">
-        Hey! Ik ben Amina
-      </h3>
-
-      <p class="intro">
-        Ik ben een UX/UI-designer die denkt in verhalen in plaats van schermen. Wat mij drijft, is het creëren van digitale ervaringen die niet alleen mooi zijn, maar ook iets doen met mensen. Ik geloof dat design pas echt werkt wanneer het emotie oproept en tegelijk helder, logisch en eerlijk blijft. In elk project zoek ik de balans tussen gevoel en structuur, tussen mens en merk. <br><br>Mijn kracht ligt in empathie, detail en het vermogen om chaos om te zetten in iets intuïtiefs. Zo bouw ik interfaces die niet enkel functioneren, maar blijven hangen.
-        Ik werk het liefst met muziek op, een koffie binnen handbereik en ideeën die soms te wild beginnen maar altijd goed landen.
-      </p>
-
-      <div class="skill-grid">
-        <span>Figma</span>
-        <span>Illustrator</span>
-        <span>After Effects</span>
-        <span>React</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JS</span>
-        <span>PHP</span>
+        <img src="./images/me.png" alt="Amina portrait" class="portrait" />
       </div>
-    </div>
-  </div>
-</section>
+    </main>
 
-<div data-aos="fade-up">
-  <h2 id="PET" class="prjcts-ttl">Honorable mentions</h2>
-  <p class="prjcts-p"> Hier vind je kleine experimenten en challenges.</p>  
-</div>
-<div class="vw-prjcts" data-aos="fade-up">
-  <a href="project-PET-budarina.html" class="prjct-crd bg-color-cover2">
-      <h2 class="ttl">Late-night navigation app</h2>
-      <p class="wrppr-p">Budarina Design Challenge</p>
-      <img src="./images/bundarina-transparant.png" alt="">
-  </a>
-  <span></span>
-  <a href="project-PET-HTF.html" class="prjct-crd bg-color-cover2">
-    <h2 class="ttl">Humix Deep Sea Challenge</h2>
-    <p class="wrppr-p">Hack The Future 2025</p>
-    <img src="./images/HTF-transparant.png" alt="">
-  </a>
-</div>
-
-
-
-  <div id="footer-placeholder"></div>
+    <footer class="site-footer">
+      <div class="footer-left">AMVA</div>
+      <div class="footer-center">
+        <div class="footer-links">
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div>© 2026 AMVA studios</div>
+      </div>
+      <div class="socials">
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Instagram">ig</a>
+      </div>
+    </footer>
   </div>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
