@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AMVA studios - Home</title>
+  <title>Amina Moutalibova - Home</title>
 
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -61,9 +61,8 @@
   <link rel="stylesheet" href="css/fonts.css">
 
   <!-- scripts -->
-  <script src="./js/index.js" defer></script>
 </head>
-<body>
+<body class="home-shell">
   	<main class="page">
 		<header class="nav">
 			<div class="logo" aria-label="logo"><img src="./images/vectors/logo-color.svg" alt="Logo"></div>
@@ -73,20 +72,131 @@
 			</nav>
 		</header>
 
-		<section class="hero" id="projects">
-			<h1 class="name">Amina<br />Moutalibova</h1>
-			<div class="bio">
-				<p>I am a UX/UI designer who thinks in stories rather than screens. What drives me is creating digital experiences that are not only beautiful, but that also make people feel something. I believe design truly works when it evokes emotion while remaining clear, logical, and honest. In every project, I search for the balance between feeling and structure, between people and brand.</p>
-				<p>My strength lies in empathy and attention to detail. That's how I create interfaces that do not just function, but leave a lasting impression. I work best with music playing, a coffee within reach, and ideas that may start out a little wild but always come together beautifully.</p>
-			</div>
-			<div class="portrait-wrap">
-				<img
-					class="portrait"
-					src="./images/me.png"
-					alt="Portrait of Amina"
-				/>
-			</div>
-		</section>
+    <section class="hero" id="intro">
+        <div class="portrait-wrap">
+        <img
+          class="portrait"
+          src="./images/me.png"
+          alt="Portrait of Amina"
+        />
+      </div>
+      <div class="bio">
+              <h1 class="name">Amina<br />Moutalibova</h1>
+
+        <p>I am a UX/UI designer who thinks in stories rather than screens. What drives me is creating digital experiences that are not only beautiful, but that also make people feel something. I believe design truly works when it evokes emotion while remaining clear, logical, and honest. In every project, I search for the balance between feeling and structure, between people and brand.</p>
+        <p>My strength lies in empathy and attention to detail. That's how I create interfaces that do not just function, but leave a lasting impression. I work best with music playing, a coffee within reach, and ideas that may start out a little wild but always come together beautifully.</p>
+      </div>
+
+    </section>
+
+    <section class="projects" id="projects">
+      <h2 class="section-title">My Projects</h2>
+      <div class="project-list">
+        <a class="project-card project-card--ecopick" href="project-ecopick.html">
+          <div class="project-card__copy">
+            <p class="project-card__eyebrow">Ecopick</p>
+            <h3 class="project-card__title">An AI-powered app that uses image recognition and community support to suggest sustainable clothing alternatives.</h3>
+            <dl class="project-card__meta">
+              <div>
+                <dt>Year</dt>
+                <dd>Sept 2025 – Dec 2025</dd>
+              </div>
+              <div>
+                <dt>Role</dt>
+                <dd>Product Designer</dd>
+              </div>
+              <div>
+                <dt>Scope</dt>
+                <dd>UX Design, Visual Design, Development</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="project-card__visuals" aria-hidden="true">
+            <img src="./images/ecopick-mockup01.webp" alt="">
+            <img src="./images/ecopick-mockup02.webp" alt="">
+            <img src="./images/ecopick-mockup03.webp" alt="">
+          </div>
+        </a>
+
+        <a class="project-card project-card--cupacino" href="project-cupacino.html">
+          <div class="project-card__copy">
+            <p class="project-card__eyebrow">Cup-a-cino</p>
+            <h3 class="project-card__title">A CMS-driven coffee webshop and mobile app built to feel warm, editorial and usable on every screen.</h3>
+            <dl class="project-card__meta">
+              <div>
+                <dt>Year</dt>
+                <dd>Jan 2025 – Jun 2025</dd>
+              </div>
+              <div>
+                <dt>Role</dt>
+                <dd>Webflow Development</dd>
+              </div>
+              <div>
+                <dt>Scope</dt>
+                <dd>Webflow, React Native, API integration</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="project-card__visuals" aria-hidden="true">
+            <img src="./images/cupacino-mockup1.webp" alt="">
+            <img src="./images/cupacino-mockup2.webp" alt="">
+            <img src="./images/cupacino-mockup3.webp" alt="">
+          </div>
+        </a>
+
+        <a class="project-card project-card--detail" href="project-detail.html">
+          <div class="project-card__copy">
+            <p class="project-card__eyebrow">Zuiderbad</p>
+            <h3 class="project-card__title">An interactive map that helps visitors explore Hofstade clearly, intuitively and on mobile without friction.</h3>
+            <dl class="project-card__meta">
+              <div>
+                <dt>Year</dt>
+                <dd>Sept 2025 – Dec 2025</dd>
+              </div>
+              <div>
+                <dt>Role</dt>
+                <dd>UX/UI Design</dd>
+              </div>
+              <div>
+                <dt>Scope</dt>
+                <dd>Information architecture, interaction design, testing</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="project-card__visuals" aria-hidden="true">
+            <img src="./images/kaart_mockup1.webp" alt="">
+            <img src="./images/kaart_mockup2.webp" alt="">
+            <img src="./images/kaart-transparant.png" alt="">
+          </div>
+        </a>
+
+        <a class="project-card project-card--foodkiosk" href="project-foodkiosk.html">
+          <div class="project-card__copy">
+            <p class="project-card__eyebrow">Mochi Foodkiosk</p>
+            <h3 class="project-card__title">A 3D food kiosk concept shaped around branding, materiality and a playful visual atmosphere.</h3>
+            <dl class="project-card__meta">
+              <div>
+                <dt>Year</dt>
+                <dd>2025</dd>
+              </div>
+              <div>
+                <dt>Role</dt>
+                <dd>3D Design</dd>
+              </div>
+              <div>
+                <dt>Scope</dt>
+                <dd>Blender, branding, lighting</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="project-card__visuals" aria-hidden="true">
+            <img src="./images/foodkiosk_mockup1.webp" alt="">
+            <img src="./images/foodkiosk_mockup2.webp" alt="">
+            <img src="./images/foodkiosk_mockup3.webp" alt="">
+          </div>
+        </a>
+      </div>
+    </section>
 
 		<section class="contact" id="contact">
 			<h2>Get in touch</h2>
@@ -105,7 +215,11 @@
 				<a href="#projects">Projects</a>
 				<a href="#contact">Contact</a>
 			</div>
-			<p class="copyright">&copy; 2026 AMVA studios</p>
+			<p class="copyright">&copy; 2026 Amina Moutalibova</p>
 		</footer>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+  <script src="./js/gsap-site.js"></script>
 </body>
 </html>

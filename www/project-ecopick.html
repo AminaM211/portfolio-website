@@ -54,254 +54,321 @@
   <link rel="stylesheet" href="css/project-detail.css" />
   <link rel="stylesheet" href="css/fonts.css">
 
-  <!-- MailerLite Universal -->
-<script>
-  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-  .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-  n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-  (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-  ml('account', '1858698');
-</script>
-<!-- End MailerLite Universal -->
-</head>
-<body>
-  <div id="progress-bar"></div>
+  <style>
+    body.ecopick-page main {
+      padding: 0;
+    }
 
+    body.ecopick-page .content-wrap {
+      overflow: hidden;
+    }
+
+    body.ecopick-page .hero2 {
+      background: #e45f2a;
+      min-height: 72vh;
+      height: auto;
+      border-radius: 0 0 30px 30px;
+    }
+
+    body.ecopick-page .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(240px, 0.9fr) minmax(360px, 1.25fr) minmax(170px, 0.6fr);
+      gap: 2rem;
+      align-items: end;
+      width: min(1180px, calc(100% - 4rem));
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      margin: 0;
+      padding: 0 0 2rem;
+      position: absolute;
+    }
+
+    body.ecopick-page .hero-copy {
+      max-width: 340px;
+      z-index: 1;
+    }
+
+    body.ecopick-page .hero-copy .h-lead {
+      max-width: 280px;
+    }
+
+    body.ecopick-page .hero-art {
+      align-self: end;
+      justify-self: center;
+      width: min(640px, 100%);
+      filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.16));
+      z-index: 0;
+    }
+
+    body.ecopick-page .hero-art img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    body.ecopick-page .hero-meta-inline {
+      display: grid;
+      gap: 1.5rem;
+      align-self: end;
+      justify-self: end;
+      text-align: center;
+      color: #fff;
+      z-index: 1;
+    }
+
+    body.ecopick-page .hero-meta-inline h3,
+    body.ecopick-page .hero-meta-inline p {
+      color: #fff;
+      margin: 0;
+    }
+
+    body.ecopick-page .section-wrap {
+      width: min(760px, calc(100% - 4rem));
+      margin: 0 auto;
+      padding: 6rem 0;
+    }
+
+    body.ecopick-page .band {
+      width: 100%;
+    }
+
+    body.ecopick-page .band--peach {
+      background: #f7e7df;
+    }
+
+    body.ecopick-page .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(220px, 0.95fr);
+      gap: 4rem;
+      align-items: center;
+    }
+
+    body.ecopick-page .two-col.reverse {
+      grid-template-columns: minmax(220px, 0.95fr) minmax(0, 1.05fr);
+    }
+
+    body.ecopick-page .case-image {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      background: #e6e6e6;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    body.ecopick-page .project-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      padding-bottom: 4rem;
+    }
+
+    body.ecopick-page .project-nav a {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    body.ecopick-page .project-nav span {
+      font-size: 1.15rem;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 0.2rem;
+      width: fit-content;
+    }
+
+    body.ecopick-page .section-title {
+      margin-bottom: 1.5rem;
+    }
+
+    body.ecopick-page .narrow-copy {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 920px) {
+      body.ecopick-page .hero-inner {
+        grid-template-columns: 1fr;
+        width: min(100%, calc(100% - 2rem));
+        gap: 1.5rem;
+        justify-items: start;
+        left: auto;
+        transform: none;
+      }
+
+      body.ecopick-page .hero-copy,
+      body.ecopick-page .hero-meta-inline {
+        max-width: none;
+        justify-self: start;
+        text-align: left;
+      }
+
+      body.ecopick-page .hero-art {
+        width: 100%;
+      }
+
+      body.ecopick-page .section-wrap {
+        width: min(100%, calc(100% - 2rem));
+      }
+
+      body.ecopick-page .two-col,
+      body.ecopick-page .two-col.reverse {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      body.ecopick-page .project-nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+
+
+</head>
+<body class="ecopick-page">
   <div class="content-wrap" id="top">
-  <!-- HERO -->
-  <section id="situatieschets" class="hero2">
-    <div id="nav-placeholder"></div>
-    <div class="container hero-inner">
-      <div class="hero-copy" data-id="zuid">
-        <h1 class="h-title">ECOPICK:<br>Duurzame Mode App</h1>
-        <p class="h-lead">
+    <section id="situatieschets" class="hero2">
+      <div id="nav-placeholder"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy" data-id="ecopick">
+          <h1 class="h-title">Ecopick:<br>Duurzame Mode App</h1>
+          <p class="h-lead">
             Een mobiele app die consumenten helpt duurzame alternatieven te vinden voor hun favoriete kledingstukken via AI-beeldherkenning en een ondersteunende community.
           </p>
-      </div>
-    <!-- Side TOC -->
-    <aside class="toc toc1">
-      <a href="#">Situatieschets</a>
-      <a href="#context-scroll">Context</a>
-      <a href="#context">Uitdaging</a>
-      <a href="#uitdaging">Oplossing</a>
-      <a href="#opl">Prototypes</a>
-      <a href="#proces">Proces</a>
-      <a href="#reflectie">Reflectie</a>
-    </aside>
-  </div>
-
-  </section>
-
-  <div class="h-meta" id="context-scroll"> 
-    <div class="meta-item">
-      <h3>Rol</h3>
-      <p>Conceptontwikkeling<br>Branding<br>UX/UI Design<br>Development</p>
-    </div>
-    <div class="meta-item">
-      <h3>Tijdlijn</h3>
-      <p>3 maanden<br><span>Sept 2025 – Dec 2025</span></p>
-    </div>
-    <div class="meta-item">
-      <h3>Team</h3>
-      <p>Solo project</p>
-    </div>
-   
-  </div>
-
-  <main>
-    <!-- Context -->
-    <section id="context" class="section container">
-      <h2 class="section-title">Context</h2>
-      <p>
-        Voor Lab1 rond <strong>sustainable fashion</strong> ontwikkelde ik een concept-app. 
-        ecoPick speelt in op de groeiende vraag naar duurzame mode door consumenten op een laagdrempelige manier 
-        toegang te geven tot alternatieve kledingstukken die beter zijn voor mens en milieu.
-      </p>
-    </section>
-
-    <!-- Uitdaging -->
-    <section id="uitdaging" class="section container">
-      <h2 class="section-title">Uitdaging</h2>
-      <p>
-        Veel consumenten <strong>willen duurzamer winkelen</strong>, maar vinden het moeilijk om geschikte alternatieven 
-        te vinden die betaalbaar én stijlvol zijn. De markt is versnipperd, labels zijn onduidelijk en 
-        fast fashion blijft de standaard. Er is nood aan een intuïtieve oplossing die duurzame keuzes toegankelijk maakt.
-      </p>
-    </section>
-
-    <section class="section container">
-      <div class="container">
-        <h2 class="section-title">Oplossing</h2>
-        <p id="opl">
-            Met <strong>ecoPick</strong> uploadt de gebruiker een foto van een kledingstuk, waarna de app 
-            via <strong>AI-beeldherkenning</strong> duurzame alternatieven aanbiedt. 
-            Naast integraties met tweedehandsplatformen en duurzame merken, 
-            voorziet de app een <strong>community</strong> waar gebruikers elkaar tips geven. 
-            Via affiliate-links kunnen merken makkelijk deelnemen en blijft het businessmodel schaalbaar.
-          </p>      
-    </div>
-    </section>
-
-    <section id="prototypes">
-        <h2 class="section-title">Interactieve Prototypes</h2>
-        <div class="prototypes">
-            <div class="prototype-desktop">
-              <iframe id="desktop" style="border: 1px solid rgba(0, 0, 0, 0.1);" border-radius= "50px"  src="https://embed.figma.com/proto/7hsqh4CfMtdrgWISlsrQdB/Amina_Moutalibova_lab1_prototype?page-id=742%3A314&node-id=742-415&viewport=313%2C391%2C0.08&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=742%3A415&embed-host=share" allowfullscreen></iframe>
-            </div>
-            <div class="prototype-mobile">
-              <iframe id="mobile" style="border: 1px solid rgba(0, 0, 0, 0.1);" border-radius= "50px" src="https://embed.figma.com/proto/7hsqh4CfMtdrgWISlsrQdB/Amina_Moutalibova_lab1_prototype?page-id=422%3A3585&node-id=422-5573&p=f&viewport=254%2C267%2C0.05&scaling=scale-down&content-scaling=fixed&starting-point-node-id=422%3A5662&embed-host=share" allowfullscreen></iframe>
-            </div>  
         </div>
-        <span style="padding-top: 50px; color: white;" id="proces">.</span>
-    </section>
-    <!-- Proces -->
-    <section class="process" class="section container">
-    <h2 class="section-title">Mijn proces</h2>
 
-  <div class="progress-container">
-    <input type="radio" name="step" id="step1" checked>
-    <input type="radio" name="step" id="step2">
-    <input type="radio" name="step" id="step3">
-    <input type="radio" name="step" id="step4">
+        <div class="hero-art" aria-hidden="true">
+          <img src="./images/ecopick-mockup01.webp" alt="">
+        </div>
 
-    <div class="progress-bar">
-      <div class="progress-fill"></div>
-      <div class="step" data-step="1">
-        <label for="step1"></label>
-      </div>
-      <div class="step" data-step="2">
-        <label for="step2"></label>
-      </div>
-      <div class="step" data-step="3">
-        <label for="step3"></label>
-      </div>
-      <div class="step" data-step="4">
-        <label for="step4"></label>
-      </div>
-    </div>
-
-    <div class="tabs">
-        <div class="tab tab1">
-          <h3>Definitie & Analyse</h3>
-          <p>In deze fase onderzoek ik het probleem, de doelgroep en de context rond duurzame mode om de basis van het concept scherp te stellen.</p>
-          <ul>
-            <li>Onderzoek naar fast fashion, overconsumptie en de nood aan transparantie binnen de mode-industrie.</li>
-            <li>Doelgroepanalyse: consumenten tussen 18 en 26 jaar die bewuster willen kopen maar moeite hebben om duurzame alternatieven te vinden.</li>
-            <li>Interviews en enquêtes uitgevoerd om frustraties en verwachtingen te begrijpen.</li>
-            <li>Analyse van bestaande apps zoals Hopshop en Vinted om opportuniteiten en tekortkomingen te identificeren.</li>
-          </ul>
-          <img src="./images/moodboard.webp" alt="" class="proces-img">
-            <a href="#proces" onclick="document.getElementById('step2').checked = true;">
-            <img src="./images/arrow.svg" alt="" class="next">
-            </a>
-        </div>
-      
-        <div class="tab tab2">
-          <h3>Concept & UX Design</h3>
-          <p>Ik werk het concept uit tot een duidelijke gebruikerservaring met focus op gebruiksgemak, herkenbaarheid en community.</p>
-          <ul>
-            <li>Concept: AI-beeldherkenning waarmee gebruikers foto’s van kleding uploaden en duurzame alternatieven vinden.</li>
-            <li>Wireframes en user flows uitgewerkt rond uploadproces, zoekresultaten en communityfunctionaliteit.</li>
-            <li>Feedback toegepast om de interface intuïtiever te maken (bv. vergelijkingspercentages, filters, aantal resultaten instelbaar).</li>
-          </ul>
-          <img src="./images/user_flow_chart_app_ecopick.webp" class="proces-img" alt="">
-          <img src="./images/wireframes_ecopick.webp" alt="" class="proces-img">
-          <a href="#proces" onclick="document.getElementById('step1').checked = true;">
-            <img src="./images/arrow.svg" alt="" class="back">
-            </a>  
-          <a href="#proces" onclick="document.getElementById('step3').checked = true;">
-            <img src="./images/arrow.svg" alt="" class="next">
-            </a>
-        </div>
-      
-        <div class="tab tab3">
-          <h3>Visueel Design</h3>
-          <p>De visuele stijl benadrukt duurzaamheid, vertrouwen en eenvoud, met een frisse en toegankelijke uitstraling.</p>
-          <ul>
-            <li>Ontwerp van een visuele identiteit voor <strong>ecoPick</strong> met focus op natuurlijke kleuren en minimalistische typografie.</li>
-            <li>UI-design uitgewerkt in Figma, inclusief iconen, illustraties en feedbackschermen.</li>
-            <li>Focus op herkenbare en toegankelijke interface voor jonge gebruikers.</li>
-            <li>High-fidelity prototypes getest op mobile.</li>
-          </ul>
-            <img src="./images/visualdesign_ecopick.webp" alt="" class="proces-img">
-            <a href="#proces" onclick="document.getElementById('step2').checked = true;">
-              <img src="./images/arrow.svg" alt="" class="back">
-              </a>  
-            <a href="#proces" onclick="document.getElementById('step4').checked = true;">
-              <img src="./images/arrow.svg" alt="" class="next">
-            </a>  
-        </div>
-      
-        <div class="tab tab4">
-            <h3>Development & Testing</h3>
-            <p>In deze fase lag de nadruk op het visueel presenteren van het concept, niet op technische werking.</p>
-            <ul>
-              <li>Prototype uitgewerkt om structuur, stijl en gebruikersflow te tonen.</li>
-              <li>Geen werkende functies ontwikkeld, enkel visuele representatie van de kaart.</li>
-              <li>Feedback verzameld op vormgeving, navigatie en duidelijkheid van het concept.</li>
-            </ul>
-            <img src="./images/final-ecopick.webp" alt="" class="proces-img">
-            <a href="javascript:void(0);" onclick="document.getElementById('step3').checked = true;">
-              <img src="./images/arrow.svg" alt="" class="back">
-              </a>  
+        <div class="hero-meta-inline">
+          <div>
+            <h3>Timeline</h3>
+            <p>Sept 2025 – Dec 2025</p>
           </div>
-          
+          <div>
+            <h3>Collaborations</h3>
+            <p>Solo project</p>
+          </div>
+          <div>
+            <h3>Scope</h3>
+            <p>Concept development<br>Branding<br>UX/UI Design<br>Development</p>
+          </div>
+        </div>
       </div>
-      
-  </div>
-  <span style="padding-top: 50px; color: white;" id="reflectie">.</span>
-
-</section>
-
-    <section class="section container">      
-        <h2 class="section-title">Reflectie</h2>
-          <p>
-            Ecopick liet me inzien hoe groot de kloof is tussen <strong>wenselijkheid</strong> en <strong>haalbaarheid</strong>. 
-            Veel jongeren willen duurzamer shoppen, maar de drempels zijn hoog. Door deze inzichten te koppelen 
-            aan een schaalbaar concept met AI-technologie en affiliate marketing, konden we een realistisch 
-            voorstel formuleren. <br><br>
-            Persoonlijk leerde ik hoe belangrijk <strong>concrete feedback</strong> en iteratie zijn bij 
-            conceptontwikkeling. Interviews en desk research verrijkten mijn idee en brachten verbeterpunten naar boven, 
-            zoals betere beeldherkenning en de rol van een ondersteunende community.
-          </p>      
-        </section>
-      <div class="dots" id="dots"></div>
-    </section> 
-
-    <section class="section container mockups">
-        <img src="./images/ecopick-mockup01.webp" alt="">
-        <img src="./images/ecopick-mockup02.webp" alt="">
-        <img src="./images/ecopick-mockup03.webp" alt="">
-        <img src="./images/ecopick-mockup04.webp" alt="">
     </section>
-</main>
 
-  <!-- check out other projects -->
-  <h2 class="projects-title" data-aos="fade-up">Bekijk ook mijn andere projecten</h2>
-  <div class="view-projects" data-aos="fade-up">
-        <a href="project-detail.html" class="project-card bg-color-cover2">
-            <h2 class="title">Zuiderbad - Interactieve Kaart</h2>
-            <p class="wrapper-p">Groepsproject — Sep '25 - Dec '25</p>
-            <img src="./images/kaart-transparant.png" alt="">
-        </a>
-        <span></span>
-        <a href="project-cupacino.html" class="project-card bg-color-cover3">
-            <h2 class="title">Cup-a-cino - Webflow</h2>
-            <p class="wrapper-p">Solo Project — jan '25 - jun '25</p>
-            <img src="./images/webflow-transparant.png" alt="">
-        </a>
-        <span></span>
-        <a href="project-foodkiosk.html" class="project-card bg-color-cover4">
-            <h2 class="title">Mochi Foodkiosk - Blender</h2>
-            <p class="wrapper-p">Solo Project — Nov '25</p>
-            <img src="./images/foodkiosk_transparant.webp" alt="">
-        </a>
+    <main>
+      <section id="context" class="section band">
+        <div class="section-wrap narrow-copy">
+          <h2 class="section-title">Context</h2>
+          <p>
+            For Lab1 around sustainable fashion I developed a concept app. Ecopick responds to the growing demand for sustainable fashion by giving users a low-threshold way to discover alternatives that are better for people and the planet.
+          </p>
+        </div>
+      </section>
+
+      <section id="uitdaging" class="section band band--peach">
+        <div class="section-wrap narrow-copy">
+          <h2 class="section-title">Uitdaging</h2>
+          <p>
+            Many consumers want to shop more sustainably, but it is hard to find stylish and affordable alternatives. The market is fragmented, labels are unclear and fast fashion remains the default. The challenge was to make the sustainable choice feel simple and intuitive.
+          </p>
+        </div>
+      </section>
+
+      <section id="opl" class="section band">
+        <div class="section-wrap two-col">
+          <div>
+            <h2 class="section-title">Oplossing</h2>
+            <p>
+              With Ecopick, users upload a photo of a clothing item and receive sustainable alternatives through AI image recognition. The app combines second-hand platforms, sustainable brands and a community where users can share tips and discoveries.
+            </p>
+            <p>
+              The concept is designed to stay scalable through affiliate links and clear product flows.
+            </p>
+          </div>
+          <img class="case-image" src="./images/ecopick-mockup03.webp" alt="Ecopick app preview">
+        </div>
+      </section>
+
+      <section id="proces" class="section band">
+        <div class="section-wrap two-col reverse">
+          <img class="case-image" src="./images/ecopick-mockup04.webp" alt="Ecopick laptop preview">
+          <div>
+            <h2 class="section-title">Mijn rol</h2>
+            <p>
+              I handled the concept development, branding direction and UX/UI decisions. The project taught me how to translate an abstract sustainability idea into a clear, actionable experience.
+            </p>
+            <p>
+              I also refined my approach to validation and iteration by testing what felt clear and what needed simplification.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="reflectie" class="section band">
+        <div class="section-wrap narrow-copy">
+          <h2 class="section-title">Reflectie</h2>
+          <p>
+            Ecopick showed me how large the gap can be between desire and feasibility. Many people want to shop more sustainably, but the barriers are high. By connecting the concept to AI and affiliate marketing, I could turn that idea into something more realistic and scalable.
+          </p>
+          <p>
+            The project also reinforced how important concrete feedback and iteration are when shaping a concept.
+          </p>
+        </div>
+      </section>
+
+      <section class="section band">
+        <div class="section-wrap project-nav">
+          <a href="index.html#projects"><span>Back to projects overview</span></a>
+          <a href="project-cupacino.html" style="text-align:right;"><span>Next</span><small>Cup-a-cino</small></a>
+        </div>
+      </section>
+    </main>
   </div>
 
-</div>
   <div id="footer-placeholder"></div>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="js/project.js"></script>
+  <script>
+    // nav en footer includen
+    Promise.all([
+      fetch("nav.html").then(res => res.text()),
+      fetch("footer.html").then(res => res.text())
+    ]).then(([navHtml, footerHtml]) => {
+      document.getElementById("nav-placeholder").innerHTML = navHtml;
+      document.getElementById("footer-placeholder").innerHTML = footerHtml;
+  
+      // nu pas elementen selecteren
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+  
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('open');
+      });
+  
+      // sluiten bij klik op link + smooth scroll
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href');
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('open');
+        });
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+  <script src="./js/gsap-site.js"></script>
 </body>
 </html>

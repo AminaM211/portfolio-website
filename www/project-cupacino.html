@@ -3,26 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AMVA studios - Cup-a-cino</title>
+  <title>Amina Moutalibova - Cup-a-cino</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-N6CLJCJR');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-09LMHXY6QL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-09LMHXY6QL');
-  </script>
 
   <!-- Primary SEO -->
   <meta name="description" content="Cup-a-cino — case study: een Webflow webshop voor specialty koffiebonen gekoppeld aan een React Native app. CMS-gedreven producten en blogs, API-koppeling, filters, zoek en winkelmand." />
@@ -55,18 +38,179 @@
   <link rel="stylesheet" href="css/project-detail.css" />
   <link rel="stylesheet" href="css/fonts.css">
 
-  <!-- MailerLite Universal -->
-<script>
-  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-  .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-  n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-  (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-  ml('account', '1858698');
-</script>
-<!-- End MailerLite Universal -->
+  <style>
+    body.cupacino-page main {
+      padding: 0;
+    }
+
+    body.cupacino-page .content-wrap {
+      overflow: hidden;
+    }
+
+    body.cupacino-page .hero3 {
+      background: #e45f2a;
+      min-height: 72vh;
+      height: auto;
+      border-radius: 0 0 30px 30px;
+    }
+
+    body.cupacino-page .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(240px, 0.9fr) minmax(360px, 1.25fr) minmax(170px, 0.6fr);
+      gap: 2rem;
+      align-items: end;
+      width: min(1180px, calc(100% - 4rem));
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      margin: 0;
+      padding: 0 0 2rem;
+    }
+
+    body.cupacino-page .hero-copy {
+      max-width: 340px;
+      z-index: 1;
+    }
+
+    body.cupacino-page .hero-copy .h-lead {
+      max-width: 280px;
+    }
+
+    body.cupacino-page .hero-art {
+      align-self: end;
+      justify-self: center;
+      width: min(620px, 100%);
+      filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.16));
+      z-index: 0;
+    }
+
+    body.cupacino-page .hero-art img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    body.cupacino-page .hero-meta-inline {
+      display: grid;
+      gap: 1.5rem;
+      align-self: end;
+      justify-self: end;
+      text-align: center;
+      color: #fff;
+      z-index: 1;
+    }
+
+    body.cupacino-page .hero-meta-inline h3,
+    body.cupacino-page .hero-meta-inline p {
+      color: #fff;
+      margin: 0;
+    }
+
+    body.cupacino-page .section-wrap {
+      width: min(760px, calc(100% - 4rem));
+      margin: 0 auto;
+      padding: 6rem 0;
+    }
+
+    body.cupacino-page .band {
+      width: 100%;
+    }
+
+    body.cupacino-page .band--peach {
+      background: #f7e7df;
+    }
+
+    body.cupacino-page .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(220px, 0.95fr);
+      gap: 4rem;
+      align-items: center;
+    }
+
+    body.cupacino-page .two-col.reverse {
+      grid-template-columns: minmax(220px, 0.95fr) minmax(0, 1.05fr);
+    }
+
+    body.cupacino-page .case-image {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      background: #e6e6e6;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    body.cupacino-page .project-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      padding-bottom: 4rem;
+    }
+
+    body.cupacino-page .project-nav a {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    body.cupacino-page .project-nav span {
+      font-size: 1.15rem;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 0.2rem;
+      width: fit-content;
+    }
+
+    body.cupacino-page .section-title {
+      margin-bottom: 1.5rem;
+    }
+
+    body.cupacino-page .narrow-copy {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 920px) {
+      body.cupacino-page .hero-inner {
+        grid-template-columns: 1fr;
+        width: min(100%, calc(100% - 2rem));
+        gap: 1.5rem;
+        justify-items: start;
+        left: auto;
+        transform: none;
+      }
+
+      body.cupacino-page .hero-copy,
+      body.cupacino-page .hero-meta-inline {
+        max-width: none;
+        justify-self: start;
+        text-align: left;
+      }
+
+      body.cupacino-page .hero-art {
+        width: 100%;
+      }
+
+      body.cupacino-page .section-wrap {
+        width: min(100%, calc(100% - 2rem));
+      }
+
+      body.cupacino-page .two-col,
+      body.cupacino-page .two-col.reverse {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      body.cupacino-page .project-nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+
 </head>
-<body>
-  <div id="progress-bar"></div>
+<body class="cupacino-page">
 
   <div class="content-wrap" id="top">
     <!-- HERO -->
@@ -78,154 +222,101 @@
           <p class="h-lead">
             Een CMS-gedreven e-commerce ervaring voor specialty koffiebonen. Webflow voor de shop en content, React Native voor mobiel gebruik met live API-data.
           </p>
-          <a href="https://cup-a-cino.webflow.io/" target="_blank" rel="noopener noreferrer" class="primary-button">
-            Bekijk de website
-          </a>
         </div>
 
-        <aside class="toc toc2">
-          <a href="#">Situatieschets</a>
-          <a href="#contextscroll">Context</a>
-          <a href="#context">Uitdaging</a>
-          <a href="#uitdaging">Proces</a>
-          <a href="#reflectie">Reflectie</a>
-        </aside>
+        <div class="hero-art" aria-hidden="true">
+          <img src="./images/cupacino-mockup4.webp" alt="">
+        </div>
 
+        <div class="hero-meta-inline">
+          <div>
+            <h3>Timeline</h3>
+            <p>Jan 2025 – Jun 2025</p>
+          </div>
+          <div>
+            <h3>Collaborations</h3>
+            <p>Solo project</p>
+          </div>
+          <div>
+            <h3>Scope</h3>
+            <p>Webflow<br>React Native<br>API</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <div id="contextscroll" class="h-meta container"> 
-      <div class="meta-item">
-        <h3>Rol</h3>
-        <p>Webflow Development<br>React Native</p>
-      </div>
-      <div class="meta-item">
-        <h3>Tijdlijn</h3>
-        <p>6 maanden<br><span>Jan 2025 – Jun 2025</span></p>
-      </div>
-      <div class="meta-item">
-        <h3>Team</h3>
-        <p>Solo project</p>
-      </div>
-    </div>
-
     <main>
-      <!-- Context -->
-      <section id="context" class="section container">
-        <h2 class="section-title">Context</h2>
-        <p>
-          Het Cupacino-project bestond uit het bouwen van een app en website voor een koffiewebshop via Webflow en React Native. Mijn focus lag volledig op development: werken met Webflow, werken met een CMS, API-calls integreren, states en props gebruiken, enzovoort.        </p>
+      <section id="context" class="section band">
+        <div class="section-wrap narrow-copy">
+          <h2 class="section-title">Context</h2>
+          <p>
+            Cup-a-cino started as a web and app concept for specialty coffee. The goal was to build a clear, CMS-driven experience where products, blog content and ordering flow felt warm, simple and consistent across devices.
+          </p>
+          <p>
+            My focus was on translating the brand into a practical digital system: a responsive storefront in Webflow and a companion mobile experience in React Native.
+          </p>
+        </div>
       </section>
 
-      <!-- Uitdaging -->
-      <section id="uitdaging" class="section container">
-        <h2 class="section-title">Uitdaging</h2>
-        <p>
-          De grootste uitdaging in React Native was het correct beheren van de states en props bij het laden van dynamische content. Vooral bij het navigeren tussen schermen moesten data consistent blijven en updates realtime weergegeven worden. In Webflow voelde ik me beperkt doordat ik minder controle en vrijheid had dan in VS Code met HTML en CSS, waardoor het aanpassen van specifieke functionaliteiten soms omslachtiger en minder flexibel was dan ik gewend ben.        </p>
+      <section id="uitdaging" class="section band band--peach">
+        <div class="section-wrap narrow-copy">
+          <h2 class="section-title">Uitdaging</h2>
+          <p>
+            The biggest challenge was keeping the design consistent while handling CMS-driven content and app states. The shop needed to feel polished, but also stay easy to maintain and flexible enough for future product updates.
+          </p>
+        </div>
       </section>
- 
-      <!-- Proces -->
-      <section id="proces" class="process section container">
-        <h2 class="section-title">Mijn proces</h2>
 
-        <div class="progress-container">
-          <input type="radio" name="step" id="step1" checked>
-          <input type="radio" name="step" id="step2">
-          <input type="radio" name="step" id="step3">
-          <input type="radio" name="step" id="step4">
-
-          <div class="progress-bar">
-            <div class="progress-fill"></div>
-            <div class="step" data-step="1"><label for="step1"></label></div>
-            <div class="step" data-step="2"><label for="step2"></label></div>
-            <div class="step" data-step="3"><label for="step3"></label></div>
-            <div class="step" data-step="4"><label for="step4"></label></div>
+      <section id="opl" class="section band">
+        <div class="section-wrap two-col">
+          <div>
+            <h2 class="section-title">Oplossing</h2>
+            <p>
+              I designed the Webflow storefront around strong editorial layout, clear hierarchy and reusable components. This kept the shopping flow intuitive while leaving room for CMS content like product stories and blog articles.
+            </p>
+            <p>
+              The visual system uses soft neutrals, coffee tones and generous spacing so the brand feels calm and premium rather than crowded or overly technical.
+            </p>
           </div>
+          <img class="case-image" src="./images/cupacino-mockup1.webp" alt="Cup-a-cino product and app preview">
+        </div>
+      </section>
 
-          <div class="tabs">
-            <div class="tab tab1">
-              <h3>Research & scope</h3>
-              <ul>
-                <li>Doelgroep bepalen: koffieliefhebbers die online bestellen</li>
-                <li>Competitie en referenties analyseren</li>
-                <li>Features prioriteren voor examenvereisten</li>
-              </ul>
-            </div>
-
-            <div class="tab tab2">
-              <h3>Design</h3>
-              <ul>
-                <li>Wireframes in Figma voor homepage, productlist en productdetail</li>
-                <li>Design system: kleuren, typografie en spacing</li>
-                <li>Responsive layouts voor mobiel en desktop</li>
-              </ul>
-            </div>
-
-            <div class="tab tab3">
-              <h3>Implementatie Webflow</h3>
-              <ul>
-                <li>Collections aanmaken en voorbeelditems toevoegen</li>
-                <li>Homepage met dynamic lists en collection bindings</li>
-                <li>Publish en test live content</li>
-              </ul>
-            </div>
-
-            <div class="tab tab4">
-              <h3>Implementatie App</h3>
-              <ul>
-                <li>Expo + React Navigation opzetten</li>
-                <li>API-calls implementeren en UI koppelen</li>
-                <li>Cart state en AsyncStorage voor persistentie</li>
-              </ul>
-            </div>
+      <section id="proces" class="section band">
+        <div class="section-wrap two-col reverse">
+          <img class="case-image" src="./images/cupacino-mockup3.webp" alt="Cup-a-cino blog and collection preview">
+          <div>
+            <h2 class="section-title">Mijn rol</h2>
+            <p>
+              I handled the Webflow build, the content structure and the design decisions that kept the webshop readable on desktop and mobile. In the mobile app, I worked on the React Native structure and the connection between content and interface.
+            </p>
+            <p>
+              The project sharpened my skills in component thinking, implementation detail and balancing visual polish with maintainable front-end decisions.
+            </p>
           </div>
         </div>
-        <span style="padding-top: 50px; color: white;" id="reflectie">.</span>
       </section>
 
-      <!-- Reflectie -->
-      <section id="reflectie" class="section container">
-        <h2 class="section-title">Reflectie</h2>
-        <p>
-           Tijdens het Cupacino-project heb ik vooral technisch geleerd werken met Webflow en React Native. Ik heb inzicht gekregen in hoe je een website en app kunt koppelen aan een CMS, hoe je API-calls correct integreert en hoe states en props in React Native werken. Het project heeft me geleerd om oplossingsgericht te werken, fouten te debuggen en de samenwerking tussen front-end en CMS efficiënt aan te pakken.         </p>
+      <section id="reflectie" class="section band">
+        <div class="section-wrap narrow-copy">
+          <h2 class="section-title">Reflectie</h2>
+          <p>
+            Cup-a-cino taught me how important it is to connect content, layout and behavior into one coherent experience. The strongest part of the project was turning a concept into something that feels usable and editorial at the same time.
+          </p>
+        </div>
       </section>
 
-      <!-- Mockups / screenshots -->
-      <section class="section container mockups">
-        <img src="./images/cupacino-mockup1.webp" alt="">
-        <img src="./images/cupacino-mockup3.webp" alt="">
-        <img src="./images/cupacino-mockup2.webp" alt="">
+      <section class="section band">
+        <div class="section-wrap project-nav">
+          <a href="index.html#projects"><span>Back to projects overview</span></a>
+          <a href="project-foodkiosk.html" style="text-align:right;"><span>Next</span><small>Mochi Foodkiosk</small></a>
+        </div>
       </section>
-
-
-      <!-- check out other projects -->
-      <h2 class="projects-title" data-aos="fade-up">Bekijk ook mijn andere projecten</h2>
-      <div class="view-projects" data-aos="fade-up">
-        <a href="project-detail.html" class="project-card bg-color-cover2">
-            <h2 class="title">Zuiderbad - Interactieve Kaart</h2>
-            <p class="wrapper-p">Groepsproject — Sep '25 - Dec '25</p>
-            <img src="./images/kaart-transparant.png" alt="">
-        </a>
-        <span></span>
-        <a href="project-ecopick.html" class="project-card bg-color-cover2">
-          <h2 class="title">Ecopick - duurzame mode app</h2>
-          <p class="wrapper-p">Solo Project — Sep '24 - Dec '24</p>
-          <img src="./images/ecopick-transparant.png" alt="">
-        </a>
-        <span></span>
-        <a href="project-foodkiosk.html" class="project-card bg-color-cover4">
-          <h2 class="title">Mochi Foodkiosk - Blender</h2>
-          <p class="wrapper-p">Solo Project — Nov '25</p>
-          <img src="./images/foodkiosk_transparant.webp" alt="">
-        </a>
-      </div>
-
     </main>
   </div>
 
   <div id="footer-placeholder"></div>
 
- 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -241,51 +332,36 @@
     ]).then(([navHtml, footerHtml]) => {
       document.getElementById("nav-placeholder").innerHTML = navHtml;
       document.getElementById("footer-placeholder").innerHTML = footerHtml;
+  
+      // nu pas elementen selecteren
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+  
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('open');
+      });
+  
+      // sluiten bij klik op link + smooth scroll
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href');
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('open');
+        });
+      });
     });
-
-    window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.body.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / docHeight) * 100;
-    document.getElementById('progress-bar').style.width = scrollPercent + "%";
-  });
-
-    window.addEventListener('scroll', () => {
-    const hero = document.querySelector('.hero3');
-    const toc = document.querySelector('.toc2');
-
-    if (window.scrollY > hero.scrollHeight - 200) {
-      toc.classList.add('black');
-    } else {
-      toc.classList.remove('black');
-    }
-    });
-
-    // ---- boven de footer blijven ----
-    const tocEl     = document.querySelector('.toc1');
-    // Gebruik de placeholder (die is er altijd), i.p.v. #site-footer
-    const footerEl  = document.getElementById('footer-placeholder');
-
-    function stickToc() {
-      if (!tocEl || !footerEl) return;
-
-      // Hoeveel de footer al de viewport in schuift
-      const footerTopInView = footerEl.getBoundingClientRect().top;
-      const overlap = window.innerHeight - footerTopInView - 50;
-
-      if (overlap > 0) {
-        tocEl.style.top = 'auto';          
-        tocEl.style.bottom = overlap + 'px';
-      } else {
-        tocEl.style.bottom = 'auto';
-        tocEl.style.top = '';
-      }
-    }
-
-  window.addEventListener('scroll', stickToc, { passive: true });
-  window.addEventListener('resize', stickToc);
-  stickToc();
+  </script>
 
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+  <script src="./js/gsap-site.js"></script>
 </body>
 </html>

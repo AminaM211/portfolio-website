@@ -13,17 +13,6 @@
     --max:1100px;
   }
 
-  #progress-bar {
-    position: fixed;
-    top: 75px;
-    left: 0;
-    height: 5px;
-    background: linear-gradient(90deg, #ff6a95, #ffc773);
-    width: 0%;
-    z-index: 999999;
-    transition: width 0.1s ease;
-  }
-  
   /* Base */
   *{box-sizing:border-box}
   html,body{margin:0;padding:0; scroll-behavior: smooth;}
@@ -240,7 +229,6 @@
     grid-template-columns: repeat(3, minmax(0,auto)); 
     gap:5%;
     margin:20px 100px ; 
-    justify-content: center;
     }
 
   .meta-item h3{
