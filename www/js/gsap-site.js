@@ -81,11 +81,15 @@
       return;
     }
 
+    const nav = document.querySelector('.nav');
+    const navHeight = nav ? nav.offsetHeight : 0;
+    const offsetY = navHeight ? navHeight + 12 : 16;
+
     window.gsap.to(window, {
       duration: 0.85,
       scrollTo: {
         y: element,
-        offsetY: 16
+        offsetY
       },
       ease: 'power2.out'
     });
@@ -149,14 +153,25 @@
     const sections = Array.from(document.querySelectorAll('main > section'));
     if (!sections.length) return;
 
-    document.documentElement.style.scrollBehavior = 'smooth';
-    document.documentElement.style.scrollSnapType = 'y proximity';
-    document.body.style.scrollBehavior = 'smooth';
-    document.body.style.scrollSnapType = 'y proximity';
+    // Only enable scroll-snap on larger screens to avoid jarring snaps on small scrolls
+    const enableSnap = window.matchMedia('(min-width: 900px)').matches;
+    if (enableSnap) {
+      const main = document.querySelector('main');
+      const nav = document.querySelector('.nav');
+      const navHeight = nav ? nav.offsetHeight : 0;
 
-    sections.forEach((section) => {
-      section.style.scrollSnapAlign = 'start';
-    });
+      // Apply snap to the main container so elements above it (like a header) are not affected
+      if (main) {
+        main.style.scrollBehavior = 'smooth';
+        main.style.scrollSnapType = 'y proximity';
+        // Ensure snap aligns below the nav so the nav stays visible when scrolling
+        main.style.scrollPaddingTop = `${navHeight + 8}px`;
+      }
+
+      sections.forEach((section) => {
+        section.style.scrollSnapAlign = 'start';
+      });
+    }
 
     if (!hasGsap || prefersReducedMotion || typeof window.ScrollTrigger === 'undefined') return;
 
