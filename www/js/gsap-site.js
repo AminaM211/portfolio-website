@@ -232,10 +232,72 @@
     }
   };
 
+  const setupProjectCardObserver = () => {
+    const cards = Array.from(document.querySelectorAll('.project-card'));
+    if (!cards.length) return;
+
+    const options = {
+      root: null,
+      rootMargin: '0px 0px -40% 0px',
+      threshold: 0.55
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const el = entry.target;
+        if (entry.isIntersecting) {
+          el.classList.add('in-view');
+        } else {
+          el.classList.remove('in-view');
+        }
+      });
+    }, options);
+
+    cards.forEach((c) => observer.observe(c));
+
+    // Fallback for scroll-only interactions when the pointer stays still.
+    // Calculate the card closest to viewport center and mark it `in-view`.
+    let rafPending = false;
+
+    const updateNearestCard = () => {
+      rafPending = false;
+      const centerY = window.innerHeight / 2;
+      let nearest = null;
+      let nearestDistance = Infinity;
+
+      cards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.top + rect.height / 2;
+        const distance = Math.abs(cardCenter - centerY);
+        if (distance < nearestDistance) {
+          nearestDistance = distance;
+          nearest = card;
+        }
+      });
+
+      if (nearest) {
+        cards.forEach((c) => c.classList.toggle('in-view', c === nearest));
+      }
+    };
+
+    const onScroll = () => {
+      if (rafPending) return;
+      rafPending = true;
+      requestAnimationFrame(updateNearestCard);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+
+    // run once to set initial state
+    updateNearestCard();
+  };
+
   const init = () => {
     animateIn();
     setupInternalNavigation();
     setupHomeSnap();
+    setupProjectCardObserver();
 
     window.addEventListener('pageshow', (event) => {
       if (event.persisted) {
