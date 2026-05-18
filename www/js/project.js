@@ -11,20 +11,6 @@ Promise.all([
 ]).then(([navHtml, footerHtml]) => {
     document.getElementById("nav-placeholder").innerHTML = navHtml;
     document.getElementById("footer-placeholder").innerHTML = footerHtml;
-
-    // ---- Smooth Scroll en Sluiten van Menu ----
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', e => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href');
-            const targetEl = document.querySelector(targetId);
-            if (targetEl) {
-                targetEl.scrollIntoView({ behavior: 'smooth' });
-            }
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('open');
-        });
-    });
 });
 
 // ---- Scroll Progress Bar ----

@@ -323,12 +323,12 @@
     text-decoration: underline;
   }
 
-  main {
+  /* main {
     padding-right: 25%;
     padding-left: 4em;
     padding-top: 1em;
     text-align: left;
-  }
+  } */
 
   .view-projects {
     padding-left: 4em;

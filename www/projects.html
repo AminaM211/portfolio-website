@@ -51,26 +51,16 @@
   <link rel="stylesheet" href="css/style-showcase.css">
 </head>
 <body class="home-shell">
+  	<main class="page">
 
-	<header class="nav-header">
-    <div class="nav-logo-area">
-      <a href="/">
-        <img src="./images/vectors/zd-logo-mark.svg" class="nav-logo" alt="Amina Moutalibova logo" >
-      </a>
-    </div>
+		<header class="nav">
+      <div class="logo" aria-label="logo"><a href="index.html"><img src="./images/vectors/logo-black.svg" alt="Amina Moutalibova logo"></a></div>
+			<nav class="nav-links" aria-label="Main navigation">
+				<a class="primary active" href="projects.html">Projects</a>
+				<a class="primary" href="contact.html">Contact</a>
+			</nav>
+		</header>
 
-    <nav class="nav-links" id="nav-links">
-      <a href="/#projects">Projects</a>
-      <a href="/#contact">Contact</a>
-    </nav>
-
-    <button class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-    </button>
-	</header>
-
-	<main>
     <section class="projects-showcase" id="projects">
       <div class="projects-showcase__left">
         <div class="projects-showcase__intro">
@@ -81,24 +71,33 @@
         </div>
       </div>
       <div class="showcase-list">
-        <button class="showcase-item" data-project="ecopick" data-image="./images/ecopick_thumbnail.png" data-name="Ecopick">
-          <div class="showcase-item__description">An AI-powered app that uses image recognition and community support to suggest sustainable clothing alternatives.</div>
-          <div class="showcase-item__arrow">↗</div>
-        </button>
-
-        <button class="showcase-item" data-project="zuiderbad" data-image="./images/zuiderbad_thumbnail.png" data-name="Zuiderbad">
-          <div class="showcase-item__description">An interactive map that helps visitors explore Hofstade clearly, intuitively and on mobile without friction.</div>
-          <div class="showcase-item__arrow">↗</div>
-        </button>
-
-        <button class="showcase-item" data-project="begijnhof" data-image="./images/begijnhof_thumbnail.png" data-name="Begijnhof Hasselt">
+        
+        <button class="showcase-item" data-project="begijnhof" data-image="./images/begijnhof_thumbnail.png" data-name="Begijnhof Hasselt" data-year="2026">
+          <div class="showcase-item__year">2026</div>
+          <div class="showcase-item__name">Begijnhof Hasselt</div>
           <div class="showcase-item__description">A website for the Begijnhof Visitor Center, translating the heritage experience into an accessible platform with QR-linked content.</div>
-          <div class="showcase-item__arrow">↗</div>
+          <div class="showcase-item__arrow"><img src="./images/arrow.svg" alt=""></div>
         </button>
 
-        <button class="showcase-item" data-project="kinexpert" data-image="./images/kinexpert_thumbnail.png" data-name="KineXpert">
+        <!-- <button class="showcase-item" data-project="kinexpert" data-image="./images/kinexpert_thumbnail.png" data-name="KineXpert" data-year="2025">
+          <div class="showcase-item__year">2026</div>
+          <div class="showcase-item__name">KineXpert</div>
           <div class="showcase-item__description">A physiotherapy practice platform with appointment booking and patient management.</div>
-          <div class="showcase-item__arrow">↗</div>
+          <div class="showcase-item__arrow"><img src="./images/arrow.svg" alt=""></div>
+        </button> -->
+
+        <button class="showcase-item" data-project="ecopick" data-image="./images/ecopick_thumbnail.png" data-name="Ecopick" data-year="2025">
+          <div class="showcase-item__year">2025</div>
+          <div class="showcase-item__name">Ecopick</div>
+          <div class="showcase-item__description">An AI-powered app that uses image recognition and community support to suggest sustainable clothing alternatives.</div>
+          <div class="showcase-item__arrow"><img src="./images/arrow.svg" alt=""></div>
+        </button>
+
+        <button class="showcase-item" data-project="zuiderbad" data-image="./images/zuiderbad_thumbnail.png" data-name="Zuiderbad" data-year="2025">
+          <div class="showcase-item__year">2025</div>
+          <div class="showcase-item__name">Zuiderbad</div>
+          <div class="showcase-item__description">An interactive map that helps visitors explore Hofstade clearly, intuitively and on mobile without friction.</div>
+          <div class="showcase-item__arrow"><img src="./images/arrow.svg" alt=""></div>
         </button>
       </div>
     </section>
@@ -130,28 +129,47 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
   <script src="./js/gsap-site.js"></script>
   <script>
-    // Update image and title on project hover
+    const showcase = document.querySelector('.projects-showcase');
     const titleEl = document.getElementById('projects-showcase-title');
+    const imageEl = document.getElementById('projects-image-display');
+    const items = Array.from(document.querySelectorAll('.showcase-item'));
     const originalTitle = 'My Projects';
-    
-    document.querySelectorAll('.showcase-item').forEach(item => {
-      item.addEventListener('mouseenter', () => {
-        const imageSrc = item.getAttribute('data-image');
-        const projectName = item.getAttribute('data-name');
-        const imageHolder = document.getElementById('projects-image-display');
-        if (imageSrc && imageHolder) {
-          imageHolder.src = imageSrc;
-        }
-        if (projectName && titleEl) {
-          titleEl.textContent = projectName;
-        }
+
+    function setActiveItem(item) {
+      if (!item) return;
+      const imageSrc = item.getAttribute('data-image');
+      const projectName = item.getAttribute('data-name');
+
+      if (imageSrc && imageEl) {
+        imageEl.src = imageSrc;
+      }
+      if (projectName && titleEl) {
+        titleEl.textContent = projectName;
+      }
+      if (showcase) {
+        showcase.classList.add('has-active-project');
+      }
+
+      items.forEach(current => {
+        current.classList.toggle('is-active', current === item);
       });
-      
-      item.addEventListener('mouseleave', () => {
-        if (titleEl) {
-          titleEl.textContent = originalTitle;
-        }
-      });
+    }
+
+    function clearActiveItem() {
+      if (titleEl) {
+        titleEl.textContent = originalTitle;
+      }
+      if (showcase) {
+        showcase.classList.remove('has-active-project');
+      }
+      items.forEach(current => current.classList.remove('is-active'));
+    }
+
+    items.forEach(item => {
+      item.addEventListener('mouseenter', () => setActiveItem(item));
+      item.addEventListener('focus', () => setActiveItem(item));
+      item.addEventListener('mouseleave', clearActiveItem);
+      item.addEventListener('blur', clearActiveItem);
     });
   </script>
 </body>
