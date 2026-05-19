@@ -77,6 +77,7 @@
           <div class="showcase-item__name">Begijnhof Hasselt</div>
           <div class="showcase-item__description">A website for the Begijnhof Visitor Center, translating the heritage experience into an accessible platform with QR-linked content.</div>
           <div class="showcase-item__arrow"><img src="./images/arrow.svg" alt=""></div>
+          <img src="./images/begijnhof_thumbnail.png" alt="" class="showcase-item__image">
         </button>
 
         <!-- <button class="showcase-item" data-project="kinexpert" data-image="./images/kinexpert_thumbnail.png" data-name="KineXpert" data-year="2025">
@@ -91,6 +92,7 @@
           <div class="showcase-item__name">Ecopick</div>
           <div class="showcase-item__description">An AI-powered app that uses image recognition and community support to suggest sustainable clothing alternatives.</div>
           <div class="showcase-item__arrow"><img src="./images/arrow.svg" alt=""></div>
+          <img src="./images/ecopick_thumbnail.png" alt="" class="showcase-item__image">
         </button>
 
         <button href="zuiderbad.html" class="showcase-item" data-project="zuiderbad" data-image="./images/zuiderbad_thumbnail.png" data-name="Zuiderbad" data-year="2025">
@@ -98,6 +100,7 @@
           <div class="showcase-item__name">Zuiderbad</div>
           <div class="showcase-item__description">An interactive map that helps visitors explore Hofstade clearly, intuitively and on mobile without friction.</div>
           <div class="showcase-item__arrow"><img src="./images/arrow.svg" alt=""></div>
+          <img src="./images/zuiderbad_thumbnail.png" alt="" class="showcase-item__image">
         </button>
       </div>
     </section>
@@ -165,12 +168,29 @@
       items.forEach(current => current.classList.remove('is-active'));
     }
 
-    items.forEach(item => {
-      item.addEventListener('mouseenter', () => setActiveItem(item));
-      item.addEventListener('focus', () => setActiveItem(item));
-      item.addEventListener('mouseleave', clearActiveItem);
-      item.addEventListener('blur', clearActiveItem);
-    });
+    // Hover state enabled only on desktop (> 768px)
+    const itemsWithListeners = new Set();
+
+    function setupHoverState() {
+      if (window.innerWidth <= 768) return;
+      
+      items.forEach(item => {
+        if (itemsWithListeners.has(item)) return; // Already attached
+        
+        item.addEventListener('mouseenter', () => setActiveItem(item));
+        item.addEventListener('mouseleave', clearActiveItem);
+        item.addEventListener('focus', () => setActiveItem(item));
+        item.addEventListener('blur', clearActiveItem);
+
+        itemsWithListeners.add(item);
+      });
+    }
+
+    // Initialize on load
+    setupHoverState();
+
+    // Re-check on resize
+    window.addEventListener('resize', setupHoverState);
   </script>
 </body>
 </html>

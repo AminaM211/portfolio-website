@@ -308,7 +308,7 @@
             padding: 80px 80px;
             gap: 40px;
             isolation: isolate;
-
+            margin-bottom: 120px;
             background: var(--accent);
 
             flex: none;
