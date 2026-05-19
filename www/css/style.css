@@ -349,6 +349,11 @@
 			transition: background-color 0.2s ease, color 0.2s ease;
 		}
 
+    .secondary:hover {
+      background: #fff;
+      color: var(--accent);
+    }
+
 		.btn:hover {
 			background: #fff;
 			color: var(--accent);
@@ -531,7 +536,6 @@
             width: 100%;
 			font-size: 14px;
 			letter-spacing: 0.01em;
-            margin-top: 120px;
 		}
 
 		.footer .logo {
@@ -552,6 +556,12 @@
 			border-bottom: 1px solid #fff;
 			padding-bottom: 2px;
 		}
+
+    .footer-nav a:hover {
+      border-bottom: 2px solid transparent;
+      transition: border-bottom-color 0.3s ease;
+      border-bottom-color: #fff;  
+      }
 
 		.copyright {
 			justify-self: end;
