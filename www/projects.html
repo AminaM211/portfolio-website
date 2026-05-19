@@ -168,11 +168,11 @@
       items.forEach(current => current.classList.remove('is-active'));
     }
 
-    // Hover state enabled only on desktop (> 768px)
+    // Hover state enabled only on desktop (> 900px)
     const itemsWithListeners = new Set();
 
     function setupHoverState() {
-      if (window.innerWidth <= 768) return;
+      if (window.innerWidth <= 900) return;
       
       items.forEach(item => {
         if (itemsWithListeners.has(item)) return; // Already attached
