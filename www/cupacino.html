@@ -9,7 +9,7 @@
 
   <!-- Primary SEO -->
   <meta name="description" content="Cup-a-cino — case study: een Webflow webshop voor specialty koffiebonen gekoppeld aan een React Native app. CMS-gedreven producten en blogs, API-koppeling, filters, zoek en winkelmand." />
-  <link rel="canonical" href="https://amina-moutalibova.be/project-cupacino.html" />
+  <link rel="canonical" href="https://amina-moutalibova.be/cupacino.html" />
   <meta name="theme-color" content="#9b5d22" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Amina Moutalibova" />
@@ -20,21 +20,36 @@
   <meta property="og:site_name" content="Amina Moutalibova – Portfolio" />
   <meta property="og:title" content="Cup-a-cino — Webflow & React Native App" />
   <meta property="og:description" content="Case study van Cup-a-cino: Webflow webshop + React Native app. Dynamische CMS-data, filters, zoek en winkelmand." />
-  <meta property="og:url" content="https://amina-moutalibova.be/project-cupacino.html" />
+  <meta property="og:url" content="https://amina-moutalibova.be/cupacino.html" />
   <meta property="og:image" content="https://amina-moutalibova.be/social-preview-cupacino.png" />
   <meta property="og:image:width" content="1611" />
   <meta property="og:image:height" content="858" />
   <meta property="og:locale" content="nl_BE" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
+    <meta name="description" content="Cup-a-cino is een Webflow webshop gekoppeld aan een React Native app met CMS-gedreven content, filters en winkelmand." />
   <meta name="twitter:title" content="Cup-a-cino — Webflow & React Native App" />
   <meta name="twitter:description" content="Case study van Cup-a-cino: Webflow webshop + React Native app. Dynamische CMS-data, filters, zoek en winkelmand." />
   <meta name="twitter:image" content="https://amina-moutalibova.be/social-preview-cupacino.png" />
   <meta name="twitter:image:alt" content="Cup-a-cino project — UX/UI design door Amina Moutalibova">
-
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Amina Moutalibova – Portfolio" />
+    <meta property="og:title" content="Cup-a-cino — Webflow & React Native App" />
+    <meta property="og:description" content="Cup-a-cino is een Webflow webshop gekoppeld aan een React Native app met CMS-gedreven content, filters en winkelmand." />
+    <meta property="og:url" content="https://amina-moutalibova.be/cupacino.html" />
+    <meta property="og:image" content="https://amina-moutalibova.be/social-preview-cupacino.png" />
+    <meta property="og:image:width" content="1611" />
+    <meta property="og:image:height" content="858" />
+    <meta property="og:locale" content="nl_BE" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cup-a-cino — Webflow & React Native App" />
+    <meta name="twitter:description" content="Cup-a-cino is een Webflow webshop gekoppeld aan een React Native app met CMS-gedreven content, filters en winkelmand." />
+    <meta name="twitter:image" content="https://amina-moutalibova.be/social-preview-cupacino.png" />
+    <meta name="twitter:image:alt" content="Cup-a-cino project — UX/UI design door Amina Moutalibova">
   <!-- Styles -->
-  <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+    <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/project-detail.css" />
   <link rel="stylesheet" href="css/fonts.css">
 
@@ -309,7 +324,7 @@
       <section class="section band">
         <div class="section-wrap project-nav">
           <a href="index.html#projects"><span>Back to projects overview</span></a>
-          <a href="project-foodkiosk.html" style="text-align:right;"><span>Next</span><small>Mochi Foodkiosk</small></a>
+          <a href="foodkiosk.html" style="text-align:right;"><span>Next</span><small>Mochi Foodkiosk</small></a>
         </div>
       </section>
     </main>
@@ -322,39 +337,6 @@
     AOS.init({
       duration: 1000, // animatie duurtijd in ms
       once: true      // animatie maar één keer afspelen
-    });
-  </script>
-  <script>
-    // nav en footer includen
-    Promise.all([
-      fetch("nav.html").then(res => res.text()),
-      fetch("footer.html").then(res => res.text())
-    ]).then(([navHtml, footerHtml]) => {
-      document.getElementById("nav-placeholder").innerHTML = navHtml;
-      document.getElementById("footer-placeholder").innerHTML = footerHtml;
-  
-      // nu pas elementen selecteren
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.nav-links');
-  
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('open');
-      });
-  
-      // sluiten bij klik op link + smooth scroll
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', e => {
-          e.preventDefault();
-          const targetId = link.getAttribute('href');
-          const targetEl = document.querySelector(targetId);
-          if (targetEl) {
-            targetEl.scrollIntoView({ behavior: 'smooth' });
-          }
-          navLinks.classList.remove('active');
-          hamburger.classList.remove('open');
-        });
-      });
     });
   </script>
 
