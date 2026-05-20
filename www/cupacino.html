@@ -3,347 +3,113 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Amina Moutalibova - Cup-a-cino</title>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-
-  <!-- Primary SEO -->
-  <meta name="description" content="Cup-a-cino — case study: een Webflow webshop voor specialty koffiebonen gekoppeld aan een React Native app. CMS-gedreven producten en blogs, API-koppeling, filters, zoek en winkelmand." />
-  <link rel="canonical" href="https://amina-moutalibova.be/cupacino.html" />
-  <meta name="theme-color" content="#9b5d22" />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Amina Moutalibova" />
-  <meta name="keywords" content="Webflow, React Native, portfolio, coffee, CMS, API, UX, UI, Amina" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Amina Moutalibova – Portfolio" />
-  <meta property="og:title" content="Cup-a-cino — Webflow & React Native App" />
-  <meta property="og:description" content="Case study van Cup-a-cino: Webflow webshop + React Native app. Dynamische CMS-data, filters, zoek en winkelmand." />
-  <meta property="og:url" content="https://amina-moutalibova.be/cupacino.html" />
-  <meta property="og:image" content="https://amina-moutalibova.be/social-preview-cupacino.png" />
-  <meta property="og:image:width" content="1611" />
-  <meta property="og:image:height" content="858" />
-  <meta property="og:locale" content="nl_BE" />
-
-  <!-- Twitter Card -->
-    <meta name="description" content="Cup-a-cino is een Webflow webshop gekoppeld aan een React Native app met CMS-gedreven content, filters en winkelmand." />
-  <meta name="twitter:title" content="Cup-a-cino — Webflow & React Native App" />
-  <meta name="twitter:description" content="Case study van Cup-a-cino: Webflow webshop + React Native app. Dynamische CMS-data, filters, zoek en winkelmand." />
-  <meta name="twitter:image" content="https://amina-moutalibova.be/social-preview-cupacino.png" />
-  <meta name="twitter:image:alt" content="Cup-a-cino project — UX/UI design door Amina Moutalibova">
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Amina Moutalibova – Portfolio" />
-    <meta property="og:title" content="Cup-a-cino — Webflow & React Native App" />
-    <meta property="og:description" content="Cup-a-cino is een Webflow webshop gekoppeld aan een React Native app met CMS-gedreven content, filters en winkelmand." />
-    <meta property="og:url" content="https://amina-moutalibova.be/cupacino.html" />
-    <meta property="og:image" content="https://amina-moutalibova.be/social-preview-cupacino.png" />
-    <meta property="og:image:width" content="1611" />
-    <meta property="og:image:height" content="858" />
-    <meta property="og:locale" content="nl_BE" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Cup-a-cino — Webflow & React Native App" />
-    <meta name="twitter:description" content="Cup-a-cino is een Webflow webshop gekoppeld aan een React Native app met CMS-gedreven content, filters en winkelmand." />
-    <meta name="twitter:image" content="https://amina-moutalibova.be/social-preview-cupacino.png" />
-    <meta name="twitter:image:alt" content="Cup-a-cino project — UX/UI design door Amina Moutalibova">
-  <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/project-detail.css">
-    <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/project-detail.css" />
+  <title>Cup-a-cino — Webflow & React Native App</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+
+  <meta name="description" content="Cup-a-cino — Webflow webshop gekoppeld aan een React Native app. CMS-gedreven producten, filters, zoek en winkelmand." />
+  <meta name="theme-color" content="#b26a26" />
 
   <style>
-    body.cupacino-page main {
-      padding: 0;
-    }
-
-    body.cupacino-page .content-wrap {
-      overflow: hidden;
-    }
-
-    body.cupacino-page .hero3 {
-      background: #e45f2a;
-      min-height: 72vh;
-      height: auto;
-      border-radius: 0 0 30px 30px;
-    }
-
-    body.cupacino-page .hero-inner {
-      display: grid;
-      grid-template-columns: minmax(240px, 0.9fr) minmax(360px, 1.25fr) minmax(170px, 0.6fr);
-      gap: 2rem;
-      align-items: end;
-      width: min(1180px, calc(100% - 4rem));
-      left: 50%;
-      bottom: 0;
-      transform: translateX(-50%);
-      margin: 0;
-      padding: 0 0 2rem;
-    }
-
-    body.cupacino-page .hero-copy {
-      max-width: 340px;
-      z-index: 1;
-    }
-
-    body.cupacino-page .hero-copy .h-lead {
-      max-width: 280px;
-    }
-
-    body.cupacino-page .hero-art {
-      align-self: end;
-      justify-self: center;
-      width: min(620px, 100%);
-      filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.16));
-      z-index: 0;
-    }
-
-    body.cupacino-page .hero-art img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    body.cupacino-page .hero-meta-inline {
-      display: grid;
-      gap: 1.5rem;
-      align-self: end;
-      justify-self: end;
-      text-align: center;
-      color: #fff;
-      z-index: 1;
-    }
-
-    body.cupacino-page .hero-meta-inline h3,
-    body.cupacino-page .hero-meta-inline p {
-      color: #fff;
-      margin: 0;
-    }
-
-    body.cupacino-page .section-wrap {
-      width: min(760px, calc(100% - 4rem));
-      margin: 0 auto;
-      padding: 6rem 0;
-    }
-
-    body.cupacino-page .band {
-      width: 100%;
-    }
-
-    body.cupacino-page .band--peach {
-      background: #f7e7df;
-    }
-
-    body.cupacino-page .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(220px, 0.95fr);
-      gap: 4rem;
-      align-items: center;
-    }
-
-    body.cupacino-page .two-col.reverse {
-      grid-template-columns: minmax(220px, 0.95fr) minmax(0, 1.05fr);
-    }
-
-    body.cupacino-page .case-image {
-      width: 100%;
-      display: block;
-      border-radius: 18px;
-      background: #e6e6e6;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
-    }
-
-    body.cupacino-page .project-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 2rem;
-      padding-bottom: 4rem;
-    }
-
-    body.cupacino-page .project-nav a {
-      display: inline-flex;
-      flex-direction: column;
-      gap: 0.35rem;
-      color: var(--ink);
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-
-    body.cupacino-page .project-nav span {
-      font-size: 1.15rem;
-      border-bottom: 1px solid currentColor;
-      padding-bottom: 0.2rem;
-      width: fit-content;
-    }
-
-    body.cupacino-page .section-title {
-      margin-bottom: 1.5rem;
-    }
-
-    body.cupacino-page .narrow-copy {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 920px) {
-      body.cupacino-page .hero-inner {
-        grid-template-columns: 1fr;
-        width: min(100%, calc(100% - 2rem));
-        gap: 1.5rem;
-        justify-items: start;
-        left: auto;
-        transform: none;
-      }
-
-      body.cupacino-page .hero-copy,
-      body.cupacino-page .hero-meta-inline {
-        max-width: none;
-        justify-self: start;
-        text-align: left;
-      }
-
-      body.cupacino-page .hero-art {
-        width: 100%;
-      }
-
-      body.cupacino-page .section-wrap {
-        width: min(100%, calc(100% - 2rem));
-      }
-
-      body.cupacino-page .two-col,
-      body.cupacino-page .two-col.reverse {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      body.cupacino-page .project-nav {
-        flex-direction: column;
-      }
-    }
+    :root { --primary-color: #b26a26; }
   </style>
-
 </head>
-<body class="cupacino-page">
 
-  <div class="content-wrap" id="top">
-    <!-- HERO -->
-    <section id="situatieschets" class="hero3">
-      <div id="nav-placeholder"></div>
-      <div class="container hero-inner">
-        <div class="hero-copy" data-id="cupacino">
-          <h1 class="h-title">Cup-a-cino:<br> Webflow website & React Native app</h1>
-          <p class="h-lead">
-            Een CMS-gedreven e-commerce ervaring voor specialty koffiebonen. Webflow voor de shop en content, React Native voor mobiel gebruik met live API-data.
-          </p>
+<body class="project-detail">
+  <main class="page">
+
+    <section class="detail__hero padding-color">
+        <header class="nav">
+            <div class="logo" aria-label="logo"><a href="index.html"><img src="./images/vectors/logo-white.svg" alt="Amina Moutalibova logo"></a></div>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a class="primary" href="projects.html">Projects</a>
+                <a class="primary" href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <section class="project-hero">
+        <div class="project-hero__inner">
+            <div class="project-hero__left">
+              <h1 class="project-title">Cup-a-cino</h1>
+              <p class="project-sub">Webflow webshop & React Native companion app for specialty coffee — CMS-driven products, filters and ordering.</p>
+            </div>
+
+            <div class="project-hero__media" aria-hidden="true">
+            <div class="phone-mockup">
+                <img src="./images/cupacino_thumbnail.png" alt="Cup-a-cino mockup">
+            </div>
+            </div>
+
+            <aside class="project-hero__meta" aria-label="Project details">
+            <div class="meta-item"><strong>Timeline</strong><div>Jan 2025 – Jun 2025</div></div>
+            <div class="meta-item"><strong>Collaborations</strong><div>Solo project</div></div>
+            <div class="meta-item"><strong>Scope</strong>
+                <ul>
+                  <li>Webflow storefront</li>
+                  <li>React Native app</li>
+                  <li>CMS & API integration</li>
+                </ul>
+            </div>
+            </aside>
+        </div>
+        </section> 
+    </section>
+
+
+    <section class="project-content">
+      <div class="container">
+        <div class="row padding">
+          <p>Cup-a-cino is a CMS-driven e-commerce experience for specialty coffee. Webflow powers the shop and content through Collections and dynamic templates, so product pages, category pages and blog posts can be maintained without touching code. The React Native app acts as the mobile companion and uses the same content source: users can browse the full catalogue, open product detail pages with images and tasting notes, filter and sort items by origin, roast, price or tags, add products to a cart, and move through the shopping flow in a mobile-first interface.</p>
         </div>
 
-        <div class="hero-art" aria-hidden="true">
-          <img src="./images/cupacino-mockup4.webp" alt="">
+        <div class="row-color row-flex padding-color">
+          <p>The challenge was to keep a polished visual system while remaining maintainable. CMS-driven products bring a lot of structure behind the scenes, because variants, images, metadata and categories all need to stay consistent. The app also had to reflect the same content in a clear, performant way, which meant thinking carefully about reusable components, predictable product flows and a clean content schema that works for both the website and the app.</p>
+          <img class="standard-img" src="./images/cupacino-mockup1.webp" alt="">
         </div>
 
-        <div class="hero-meta-inline">
-          <div>
-            <h3>Timeline</h3>
-            <p>Jan 2025 – Jun 2025</p>
-          </div>
-          <div>
-            <h3>Collaborations</h3>
-            <p>Solo project</p>
-          </div>
-          <div>
-            <h3>Scope</h3>
-            <p>Webflow<br>React Native<br>API</p>
-          </div>
+
+        <div class="row padding">
+          <p>The project taught me how to balance content needs with e-commerce constraints and how to design components that remain flexible for future product additions.</p>
         </div>
+
+        <div class="row row-images mockups padding">
+          <img class="big-img" src="./images/cupacino-mockup2.webp" alt="">
+          <img class="big-img" src="./images/cupacino-mockup3.webp" alt="">
+        </div>
+
+
+        <section class="project-nav padding">
+          <a href="projects.html" class="back">
+            <img src="./images/arrow-pink-L.svg" alt="" class="arrow">
+            <p class="back-text-long">Back to projects overview</p>
+            <p class="back-text-short">Back</p>
+        </a>
+        <div class="next-div">
+          <a href="zuiderbad.html" class="next">
+            <p>Next</p> 
+            <img src="./images/arrow-pink-R.svg" alt="" class="arrow">
+           </a>
+           <p>Zuiderbad</p>
+        </div>
+    </section>
       </div>
     </section>
 
-    <main>
-      <section id="context" class="section band">
-        <div class="section-wrap narrow-copy">
-          <h2 class="section-title">Context</h2>
-          <p>
-            Cup-a-cino started as a web and app concept for specialty coffee. The goal was to build a clear, CMS-driven experience where products, blog content and ordering flow felt warm, simple and consistent across devices.
-          </p>
-          <p>
-            My focus was on translating the brand into a practical digital system: a responsive storefront in Webflow and a companion mobile experience in React Native.
-          </p>
-        </div>
-      </section>
+  </main>
 
-      <section id="uitdaging" class="section band band--peach">
-        <div class="section-wrap narrow-copy">
-          <h2 class="section-title">Uitdaging</h2>
-          <p>
-            The biggest challenge was keeping the design consistent while handling CMS-driven content and app states. The shop needed to feel polished, but also stay easy to maintain and flexible enough for future product updates.
-          </p>
-        </div>
-      </section>
+	<footer class="footer">
+            <img src="./images/vectors/logo-white.svg" alt="Amina Moutalibova logo" class="logo">
+			<div class="footer-nav">
+				<a href="projects.html">Projects</a>
+				<a href="contact.html">Contact</a>
+			</div>
+			<p class="copyright">
+        <span>&copy;</span> 
+        2026 Amina Moutalibova
+      </p>
+	</footer>
 
-      <section id="opl" class="section band">
-        <div class="section-wrap two-col">
-          <div>
-            <h2 class="section-title">Oplossing</h2>
-            <p>
-              I designed the Webflow storefront around strong editorial layout, clear hierarchy and reusable components. This kept the shopping flow intuitive while leaving room for CMS content like product stories and blog articles.
-            </p>
-            <p>
-              The visual system uses soft neutrals, coffee tones and generous spacing so the brand feels calm and premium rather than crowded or overly technical.
-            </p>
-          </div>
-          <img class="case-image" src="./images/cupacino-mockup1.webp" alt="Cup-a-cino product and app preview">
-        </div>
-      </section>
-
-      <section id="proces" class="section band">
-        <div class="section-wrap two-col reverse">
-          <img class="case-image" src="./images/cupacino-mockup3.webp" alt="Cup-a-cino blog and collection preview">
-          <div>
-            <h2 class="section-title">Mijn rol</h2>
-            <p>
-              I handled the Webflow build, the content structure and the design decisions that kept the webshop readable on desktop and mobile. In the mobile app, I worked on the React Native structure and the connection between content and interface.
-            </p>
-            <p>
-              The project sharpened my skills in component thinking, implementation detail and balancing visual polish with maintainable front-end decisions.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="reflectie" class="section band">
-        <div class="section-wrap narrow-copy">
-          <h2 class="section-title">Reflectie</h2>
-          <p>
-            Cup-a-cino taught me how important it is to connect content, layout and behavior into one coherent experience. The strongest part of the project was turning a concept into something that feels usable and editorial at the same time.
-          </p>
-        </div>
-      </section>
-
-      <section class="section band">
-        <div class="section-wrap project-nav">
-          <a href="index.html#projects"><span>Back to projects overview</span></a>
-          <a href="foodkiosk.html" style="text-align:right;"><span>Next</span><small>Mochi Foodkiosk</small></a>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <div id="footer-placeholder"></div>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000, // animatie duurtijd in ms
-      once: true      // animatie maar één keer afspelen
-    });
-  </script>
-
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
-  <script src="./js/gsap-site.js"></script>
 </body>
 </html>
