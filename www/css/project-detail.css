@@ -280,11 +280,11 @@ video  {
 
 @media (max-width: 1280px) {
   .padding-color {
-    padding: 28px 4em !important;
+    padding: 40px 4em !important;
   }
 
   .padding {
-    padding: 28px 4em !important;
+    padding: 40px 4em !important;
   }
 
   .nav {
@@ -296,7 +296,7 @@ video  {
   }
 
   .row-images img {
-    width: 200px;
+    width: 160px;
   }
   .row-color.row-images {
     flex-direction: column;
@@ -305,6 +305,10 @@ video  {
 
     .detail__hero {
     padding-bottom: 0px !important;
+  }
+
+  .row-flex {
+    gap: 40px;
   }
 }
 
@@ -397,11 +401,18 @@ video  {
   }
 
       .row-images img {
-    width: 30% !important;
+    width: 100% !important;
     border-radius: 8px;
+    display:none;
+  }
+
+  .row-images {
+    flex-direction: column !important;
+    gap: 24px !important;
   }
 
   .row-img, .row-images {
+    flex-direction: column !important;
     gap: 24px !important;
   }
 }
