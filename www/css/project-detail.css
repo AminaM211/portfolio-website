@@ -80,6 +80,11 @@ body.project-detail {
   padding-bottom: 48px;
 }
 
+.project-hero__cup img {
+  width: 900px !important;
+}
+
+
 .project-hero__media {
   position: absolute;
   bottom: -40%;
@@ -91,9 +96,7 @@ body.project-detail {
   justify-content: center;
   align-items: center;
   pointer-events: none;
-
 }
-
 .phone-mockup img {
   width: 600px;
   height: 100%;
@@ -305,6 +308,10 @@ video  {
     width: 50% !important;
   }
 
+  .project-hero__cup {
+    width: 80% !important;
+  }
+
 }
 
 @media (max-width: 1000px) {
@@ -316,6 +323,11 @@ video  {
     top: auto;
     left: auto;
   }
+
+  .project-hero__cup img {
+  width: 120% !important;
+}
+
 
   .project-hero {
     padding-top: 0;
