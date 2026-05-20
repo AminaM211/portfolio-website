@@ -760,6 +760,7 @@
 
        .contact {
         height: auto;
+		padding: 60px 40px;
       }
 
       .bg-img {
@@ -787,10 +788,22 @@
 	  	.footer {
 		padding: 24px;
 			}
+
+		.projects {
+			margin-top: 24px;
+		}
     }
 
 
        @media (max-width: 430px) {
+		.detail__hero {
+		max-height: 480px !important;
+		}
+
+		.project-hero__inner {
+			padding-top: 18px !important;
+		}
+
         .project-card__visuals {
           position: relative;
           width: 200%;
@@ -808,5 +821,58 @@
         padding: 0 24px;
         gap: 40px;
       }
+
+	    .contact {
+        height: auto;
+		padding: 40px;
+		gap: 12px;
+		margin-bottom: 64px;
+      }
+	  .contact h2 {
+		font-size: 2.3em;
+	  }
+
+
+	  		.project-card:hover {
+			transform: translateY(0px);
+			background: #F6F6F6;
+			border-color: #fff;
+			color: #000;
+		}
+
+		.project-card:hover .project-card__eyebrow,
+		.project-card:hover .project-card__title,
+		.project-card:hover .project-card__meta dt,
+		.project-card:hover .project-card__meta dd {
+			color: #000;
+		}
+
+		.project-card:hover .tag {
+			border-color: #de0043;
+			color: #de0043;
+		}
+
+		.project-card:active {
+			transform: translateY(-2px);
+			background: #de0043;
+			border-color: #de0043;
+			color: #fff;
+
+		}
+			.project-card:active .project-card__eyebrow,
+		.project-card:active .project-card__title,
+		.project-card:active .project-card__meta dt,
+		.project-card:active .project-card__meta dd {
+			color: #fff;
+		}
+
+		.project-card:active .tag {
+			border-color: #fff;
+			color: #fff;
+		}
+
+		.project-card__arrow {
+			right: 1.5em;
+		}
     }
 
