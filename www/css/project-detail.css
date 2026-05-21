@@ -204,6 +204,11 @@ video  {
   border-radius: 0px !important;
 }
 
+.row-img img {
+  width: 25%;
+  border-radius: 16px;
+}
+
 .big-img {
   width: 580px !important;
   height: auto;
@@ -386,7 +391,7 @@ video  {
   }
 
     .mockups img {
-    width: 80% !important;
+    width: 60% !important;
   }
 
   .two-img {
@@ -401,20 +406,23 @@ video  {
   }
 
       .row-images img {
-    width: 100% !important;
+    /* width: 100% !important; */
     border-radius: 8px;
-    display:none;
-  }
-
-  .row-images {
-    flex-direction: column !important;
-    gap: 24px !important;
+    /* display:none; */
   }
 
   .row-img, .row-images {
-    flex-direction: column !important;
+    flex-direction: row !important;
     gap: 24px !important;
+    width: 100vw !important;
   }
+
+    .row-images {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+
+
 }
 
 
@@ -425,6 +433,10 @@ video  {
     .project-hero {
     max-height: auto !important;
   }
+  .row-img img{
+    width: 26%;
+    border-radius: 8px;
+  }
 
 }
 
@@ -432,6 +444,11 @@ video  {
   .project-hero__media {
     width: 100%;
     height: auto;
+  }
+
+    .row-img img{
+    width: 26% !important;
+    border-radius: 8px;
   }
 
     .row-img, .row-images {
@@ -483,6 +500,15 @@ video  {
 
     .row-images {
     gap: 12px !important;
+  }
+      .mockups img {
+    width: 90% !important;
+      }
+
+  .mockups {
+    display: flex;
+    flex-direction: column !important;
+    gap: 24px !important;
   }
 }
 
