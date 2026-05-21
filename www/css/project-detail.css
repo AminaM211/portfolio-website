@@ -510,6 +510,10 @@ video  {
     flex-direction: column !important;
     gap: 24px !important;
   }
+    .padding, .padding-color {
+    padding: 40px 24px !important;
+  }
+
 }
 
 .back-text-short {
@@ -544,10 +548,6 @@ video  {
 
   video {
     width: 50%;
-  }
-
-  .padding, .padding-color {
-    padding: 40px 24px !important;
   }
 
   .detail__hero {

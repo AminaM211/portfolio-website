@@ -293,11 +293,32 @@
     updateNearestCard();
   };
 
+  const setupProjectCardTapState = () => {
+    const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+    if (!isTouchDevice) return;
+
+    const cards = Array.from(document.querySelectorAll('.project-card'));
+    if (!cards.length) return;
+
+    cards.forEach((card) => {
+      card.addEventListener('click', (event) => {
+        const alreadyActive = card.classList.contains('is-active');
+
+        if (!alreadyActive) {
+          event.preventDefault();
+          cards.forEach((current) => current.classList.remove('is-active'));
+          card.classList.add('is-active');
+        }
+      });
+    });
+  };
+
   const init = () => {
     animateIn();
     setupInternalNavigation();
     setupHomeSnap();
     setupProjectCardObserver();
+    setupProjectCardTapState();
 
     window.addEventListener('pageshow', (event) => {
       if (event.persisted) {
