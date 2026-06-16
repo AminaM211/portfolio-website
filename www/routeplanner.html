@@ -22,6 +22,10 @@
       object-fit: contain;
     }
 
+    .device-hero {
+      margin-top: 40px;
+    }
+
     body.ucd-case-study .ucd-single-image img,
     body.ucd-case-study .carousel-image {
       cursor: zoom-in;
@@ -132,6 +136,7 @@
         grid-template-columns: 1fr;
         gap: 28px;
         min-height: 0;
+        padding: 24px 16px;
       }
 
       body.ucd-case-study .ucd-decision img {
@@ -147,11 +152,22 @@
         margin-top: 32px;
       }
 
+
+    .device-hero {
+      margin-top: 24px;
+    }
+
       body.ucd-case-study .ucd-outcome {
         grid-template-columns: 1fr;
         width: min(100%, 332px);
       }
     }
+
+        @media (max-width: 420px) {
+    .device-hero {
+      margin-top: 16px;
+    }
+  }
   </style>
 </head>
 
@@ -217,7 +233,7 @@
             <h3 class="ucd-decision__label"><span class="ucd-decision__number">01</span><span>Clear Selection States</span></h3>
             <p class="case-copy">Early iterations relied primarily on color to indicate the selected transport mode. Following WCAG principles, an additional checkmark was introduced to provide a secondary visual cue and ensure that selection states remained understandable for users with color vision deficiencies.</p>
           </div>
-          <img class="expandable-image" src="./images/ucd-figma/decision-transport.webp" width="458" height="573" loading="lazy" decoding="async" alt="Accessible selected state feedback for transport modes">
+          <img class="expandable-image" src="./images/ucd-figma/decision-transport.png" width="458" height="573" loading="lazy" decoding="async" alt="Accessible selected state feedback for transport modes">
         </article>
 
         <article class="ucd-decision ucd-decision--small">
