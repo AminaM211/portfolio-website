@@ -49,20 +49,11 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fonts.css">
 
+  <script src="js/site-nav.js" defer></script>
 </head>
 <body class="home-shell">
   	<main class="page">
-		<header class="nav">
-            <div class="logo" aria-label="logo"><img src="./images/vectors/logo-color.svg" alt="Amina Moutalibova logo"></div>
-			<nav class="nav-links" aria-label="Main navigation">
-				<a class="primary" href="projects.html">Projects</a>
-				<a class="primary" href="contact.html">Contact</a>
-        <a class="primary" href="https://amina-moutalibova.be/images/resume.pdf" target="_blank" rel="noreferrer">
-          <span class="resume-text resume-text--mobile">Resume</span>
-          <span class="resume-text resume-text--desktop">Open Resume</span>
-        </a>
-			</nav>
-		</header>
+    <div data-site-nav data-nav-variant="default" data-nav-logo="color"></div>
 
     <section class="hero" id="intro">
         <div class="portrait-wrap">
@@ -87,26 +78,6 @@
         <h2 class="section-title">My Projects</h2>
         <p class="projects__subtitle">A selection of my most recent work</p>
       </div>
-        <a class="project-card" href="ecopick.html">
-          <div class="project-card__copy">
-            <span class="project-card__arrow" aria-hidden="true"><img src="./images/arrow.svg" alt=""></span>
-            <p class="project-card__eyebrow">Ecopick</p>
-            <h3 class="project-card__title">An AI-powered app that uses image recognition and community support to suggest sustainable clothing alternatives.</h3>
-            <dl class="project-card__meta">
-              <div>
-                <div class="tags">
-                  <dd class="tag">UX Design</dd>
-                  <dd class="tag">Visual Design</dd>
-                  <dd class="tag">Development</dd>
-                </div>
-              </div>
-            </dl>
-          </div>
-          <div class="project-card__visuals" aria-hidden="true">
-            <img src="./images/ecopick_thumbnail.png" alt="">
-          </div>
-        </a>
-
         <a class="project-card" href="nimbli.html">
           <div class="project-card__copy">
             <span class="project-card__arrow" aria-hidden="true"><img src="./images/arrow.svg" alt=""></span>
@@ -118,6 +89,7 @@
                   <dd class="tag">Concept Development</dd>
                   <dd class="tag">UX Research</dd>
                   <dd class="tag">Branding</dd>
+                  <dd class="tag">AI-integration</dd>
                 </div>
               </div>
             </dl>
@@ -137,7 +109,7 @@
               <div>
                 <div class="tags">
                   <dd class="tag">UX Design</dd>
-                  <dd class="tag">Visual Design</dd>
+                  <dd class="tag">Interactive Maps</dd>
                   <dd class="tag">Development</dd>
                 </div>
               </div>
@@ -148,6 +120,25 @@
           </div>
         </a>
 
+                <a class="project-card" href="ecopick.html">
+          <div class="project-card__copy">
+            <span class="project-card__arrow" aria-hidden="true"><img src="./images/arrow.svg" alt=""></span>
+            <p class="project-card__eyebrow">Ecopick</p>
+            <h3 class="project-card__title">An AI-powered app that uses image recognition and community support to suggest sustainable clothing alternatives.</h3>
+            <dl class="project-card__meta">
+              <div>
+                <div class="tags">
+                  <dd class="tag">UX Design</dd>
+                  <dd class="tag">Visual Design</dd>
+                  <dd class="tag">AI Integration</dd>
+                </div>
+              </div>
+            </dl>
+          </div>
+          <div class="project-card__visuals" aria-hidden="true">
+            <img src="./images/ecopick_thumbnail.png" alt="">
+          </div>
+        </a>
         <!-- <a class="project-card" href="begijnhof.html">
           <div class="project-card__copy">
             <span class="project-card__arrow" aria-hidden="true"><img src="./images/arrow.svg" alt=""></span>
@@ -167,44 +158,48 @@
           </div>
         </a> -->
 
-          <a class="project-card" href="cupacino.html">
+
+                <a class="project-card" href="specialolympics.html">
           <div class="project-card__copy">
             <span class="project-card__arrow" aria-hidden="true"><img src="./images/arrow.svg" alt=""></span>
-            <p class="project-card__eyebrow">Cup-a-cino</p>
-            <h3 class="project-card__title">A CMS-driven e-commerce experience for specialty coffee.</h3>
+            <p class="project-card__eyebrow">Special Olympics</p>
+            <h3 class="project-card__title">Redesign of the website’s information architecture through card sorting, tree testing and usability research to create a more intuitive navigation experience.</h3>
             <dl class="project-card__meta">
               <div>
                 <div class="tags">
+                  <dd class="tag">User Research</dd>
                   <dd class="tag">UX Design</dd>
-                  <dd class="tag">Visual Design</dd>
-                  <dd class="tag">Webflow</dd>
+                  <dd class="tag">Information Architecture</dd>
                 </div>
               </div>
             </dl>
           </div>
           <div class="project-card__visuals" aria-hidden="true">
-            <img src="./images/cupacino-thumbnail.png" alt="">
+            <img src="./images/special-thumbnail.png" alt="">
           </div>
         </a>
 
-           <a class="project-card" href="late-night-navigation.html">
+
+                <a class="project-card" href="routeplanner.html">
           <div class="project-card__copy">
             <span class="project-card__arrow" aria-hidden="true"><img src="./images/arrow.svg" alt=""></span>
-            <p class="project-card__eyebrow">Late Night Navigation App</p>
-            <h3 class="project-card__title">A UX/UI concept for a late-night navigation app that helps people get home safely with a calm, simple and slightly playful flow.</h3>
+            <p class="project-card__eyebrow">Route Planner</p>
+            <h3 class="project-card__title">Designed and developed a route planning application focused on usability, efficient trip management and an improved user experience across devices.</h3>
             <dl class="project-card__meta">
               <div>
                 <div class="tags">
-                  <dd class="tag">UX Design</dd>
-                  <dd class="tag">Visual Design</dd>
+                  <dd class="tag">UX/UI Design</dd>
+                  <dd class="tag">User Experience</dd>
+                  <dd class="tag">Accessibility</dd>
                 </div>
               </div>
             </dl>
           </div>
           <div class="project-card__visuals" aria-hidden="true">
-            <img src="./images/budarina-thumbnail.png" alt="">
+            <img src="./images/routeplanner-thumbnail.png" alt="">
           </div>
         </a>
+
       </div>
     </section>
 

@@ -3,166 +3,354 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nimbli</title>
+  <title>Nimbli | Gamification for at home pediatric rehabilitation</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="preload" as="image" href="./images/nimbli-figma/hero.webp">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/project-detail.css">
-
+  <script src="js/site-nav.js" defer></script>
   <style>
-    :root {
-      --primary-color: #2BB39B;
+    body.nimbli-case-study .device-hero img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
     }
 
-    .neutral-img {
-        width: auto;
-        height: 100%;
+    .nimbli-copy {
+      margin-top: 0 !important;
+      font-size: clamp(16px, 3vw, 16px) !important;
     }
 
-    .nimbli-placeholder strong {
-      display: block;
-      margin-bottom: 8px;
-      color: #fff;
-      font-size: 1.1rem;
+    body.nimbli-case-study .nimbli-single-image,
+    body.nimbli-case-study .nimbli-single-image img {
+      width: 100%;
+      height: auto;
     }
 
-    .nimbli-inline-link {
-      color: #fff;
-      text-decoration: underline;
-      text-underline-offset: 3px;
+    body.nimbli-case-study .nimbli-single-image img,
+    body.nimbli-case-study .carousel-image {
+      cursor: zoom-in;
     }
 
-    .nimbli-note {
-      font-size: 0.95rem;
-      line-height: 1.55;
-      color: var(--muted);
+    body.nimbli-case-study .nimbli-research-carousel { width: min(100%, 629px); }
+    body.nimbli-case-study .nimbli-strategy-image { max-width: 540px; }
+    body.nimbli-case-study .nimbli-wireframe-image { max-width: 760px; margin: 48px auto 0; }
+    body.nimbli-case-study .nimbli-visual-carousel { width: min(100%, 545px); }
+
+    body.nimbli-case-study .nimbli-flow-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 0.7fr);
+      align-items: start;
+      gap: 32px;
+      width: min(100%, 980px);
+      margin: 44px auto 0;
     }
 
-    .primary-link {
-      margin-top: 24px;
+    body.nimbli-case-study .nimbli-flow-grid img {
+      width: 100%;
+      height: auto;
+      cursor: zoom-in;
     }
 
-    .primary-link a {
-        padding: 8px 4px;
-        border-bottom: 1px solid #DE0043;
+    body.nimbli-case-study .nimbli-outcome-carousel {
+      width: min(100%, 588px);
+      margin: 64px auto 0;
+    }
+
+    body.nimbli-case-study .stakeholder-list {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin: 28px 0;
+      padding: 0;
+      list-style: none;
+      font-size: 18px;
+    }
+
+    body.nimbli-case-study .stakeholder-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    body.nimbli-case-study .stakeholder-list img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      flex: 0 0 32px;
+    }
+
+    body.nimbli-case-study .research-list {
+      display: grid;
+      gap: 10px;
+      margin: 16px 0 0;
+      padding-left: 24px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    body.nimbli-case-study .research-list + p {
+      margin-top: 40px;
+    }
+
+    @media (max-width: 980px) {
+      body.nimbli-case-study .media-section,
+      body.nimbli-case-study .split-section {
+        align-items: flex-start;
+      }
+
+      body.nimbli-case-study .visual-image,
+      body.nimbli-case-study .concept-image,
+      body.nimbli-case-study .nimbli-research-carousel,
+      body.nimbli-case-study .nimbli-strategy-image,
+      body.nimbli-case-study .nimbli-visual-image {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      body.nimbli-case-study .nimbli-research-carousel {
+        width: min(100%, 629px);
+        max-width: 629px;
+      }
+
+      body.nimbli-case-study .nimbli-visual-carousel {
+        width: min(100%, 545px);
+        max-width: 545px;
+      }
+
+      body.nimbli-case-study .nimbli-outcome-carousel {
+        width: min(100%, 588px);
+        max-width: 588px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body.nimbli-case-study .stakeholder-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body.nimbli-case-study .nimbli-flow-grid,
+      body.nimbli-case-study .nimbli-research-carousel,
+      body.nimbli-case-study .nimbli-outcome-carousel,
+      body.nimbli-case-study .nimbli-wireframe-image {
+        margin-top: 32px;
+      }
+
+      body.nimbli-case-study .nimbli-flow-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
     }
   </style>
 </head>
 
-<body class="project-detail">
+<body class="project-detail case-study nimbli-case-study">
   <main class="page">
+    <div data-site-nav data-nav-variant="case-study" data-nav-active="projects"></div>
 
-    <section class="detail__hero padding-color">
-      <header class="nav">
-        <div class="logo" aria-label="logo"><a href="index.html"><img src="./images/vectors/logo-white.svg" alt="Amina Moutalibova logo"></a></div>
-        <nav class="nav-links" aria-label="Main navigation">
-          <a class="primary" href="projects.html">Projects</a>
-                  <a class="primary" href="contact.html">Contact</a>
-        <a class="primary" href="https://amina-moutalibova.be/images/resume.pdf" target="_blank" rel="noreferrer">
-          <span class="resume-text resume-text--mobile">Resume</span>
-          <span class="resume-text resume-text--desktop">Open Resume</span>
-</a>
-        </nav>
-      </header>
+    <section class="project-intro" aria-labelledby="project-title">
+      <div class="device-hero">
+        <img src="./images/nimbli-figma/hero.webp" width="1204" height="625" fetchpriority="high" decoding="async" alt="Nimbli rehabilitation dashboards on laptop and phone">
+      </div>
 
-      <section class="project-hero">
-        <div class="project-hero__inner">
-          <div class="project-hero__left">
-            <h1 class="project-title">Nimbli</h1>
-            <p class="project-sub">Gamification in home rehabilitation that helps kids keep exercising, supports parents, and gives kinesitherapists a clear overview.</p>
-          </div>
+      <div class="case-summary">
+        <div class="case-summary__copy">
+          <p class="eyebrow">Nimbli</p>
+          <h1 id="project-title">Gamification for at home pediatric rehabilitation</h1>
+          <p class="case-copy">Nimbli was developed as a bachelor thesis project addressing a common challenge in pediatric rehabilitation: children often lose motivation when they have to continue exercises at home.
 
-              <div class="project-hero__media" aria-hidden="true">
-            <div class="phone-mockup">
-              <img src="./images/nimbli-hero-cover.png" loading="eager" fetchpriority="high" decoding="async" alt="Nimbli app mockup">
-            </div>
-            </div>
-
-          <aside class="project-hero__meta" aria-label="Project details">
-            <div class="meta-item"><strong>Timeline</strong><div>Bachelor project, 2026</div></div>
-            <div class="meta-item"><strong>Collaborations</strong><div>Team of 3</div></div>
-            <div class="meta-item"><strong>Scope</strong>
-              <ul>
-                <li>Concept Development</li>
-                <li>UX Research</li>
-                <li>Design & Brand system</li>
-                <li>Development</li>
-              </ul>
-            </div>
-          </aside>
-        </div>
-      </section>
-    </section>
-
-    <section class="project-content">
-      <div class="container">
-        <div class="row padding">
-          <p>Nimbli explores how gamification can make home rehabilitation more motivating for children. The project responds to a clear gap between what is clinically prescribed and what families can realistically keep up at home: children lose motivation quickly, parents are unsure how to support them, and kinesitherapists have limited visibility between sessions.</p>
+The platform combines gamification, AI-powered pose detection and progress tracking to help children stay engaged while providing parents and physiotherapists with better visibility into the rehabilitation process.</p>
         </div>
 
-        <div class="row-color padding-color">
-          <p>The research phase combined desk research, expert interviews and journey maps to map the problem from three sides: the child, the parent and the kinesitherapist. That process consistently showed the same pattern: routines fade after a few days, feedback is missing, and the people involved do not have enough structure to keep the exercises going. The intro boards in Figma capture that foundation in a compact overview.</p>
-        </div>
-
-        <div class="row row-flex padding">
-          <p>The primary audience is parents of children aged 6 to 12 who need support with daily home exercises. The child remains the end user, but the parent is the daily gatekeeper: they remind, guide and motivate. Kinesitherapists are the professional users who set up and follow the exercise plan. That makes Nimbli a B2B product with a family-facing experience.</p>
-        <img src="./images/nimbli-intro-overview.png" alt="Intro overview">
-        </div>
-
-        <div class="row-color row-flex padding-color">
-                         <div class="row-img">
-          <img src="./images/nimbli-wireframes-1.png" loading="lazy" decoding="async" alt="Wireframe 1">
-          <img src="./images/nimbli-wireframes-2.png" loading="lazy" decoding="async" alt="Wireframe 2">
-          <img src="./images/nimbli-wireframes-3.png" loading="lazy" decoding="async" alt="Wireframe 3">
-        </div>
-          <p>The concept uses gamification to make the routine feel less like a duty and more like a small daily challenge. Children get visible progress, badges and feedback; parents get clarity and reassurance; therapists get a lightweight way to track adherence and adjust the programme without extra admin. The wireflow and mid-fi screens translate that logic into a clear structure.</p>
-        </div>
-
-
-        <div class="row row-flex padding">
-            <div>
-            <p>The marketing website translates the project into a clear external story for parents, kinesitherapists and stakeholders. This part of the process shows the product in a more public-facing format.</p>
-            <div class="primary-link">
-                <a href="https://nimbli.be" class="next" target="_blank" rel="noreferrer">
-                nimbli.be
-                </a>
-            </div>
-            </div>
-          <img class="neutral-img" src="./images/nimbli-desktop.png" alt="">
-        </div>
-
-        <div class="row-color row-flex padding-color">
-           <img class="neutral-img" src="./images/nimbli-style.png" alt="">
-          <p>The branding strategy gave the project its tone, visuals and message. It connects the clinical problem with a calmer, more playful identity that still feels trustworthy.</p>
-        </div>
-
-        <div class="row row-flex padding">
-          <p>In short, Nimbli is a concept that turns home rehabilitation into a more guided and motivating experience, while still respecting the realities of families and the time constraints of kinesitherapists. The design challenge was to keep it playful for children, clear for parents and useful for professionals.
-          <br><br>The final outcome is not only an app concept, but a complete ecosystem: research, brand direction, marketing website and a design system that keeps the product coherent across all touchpoints.</p>
-        </div>
-
-            <div class="row mockups padding">
-          <img class="big-img" src="./images/nimbli-hifi-1.png" loading="lazy" decoding="async" alt="">
-          <img class="big-img" src="./images/nimbli-hifi-2.png" loading="lazy" decoding="async" alt="">
-        </div>
-
-        <section class="project-nav padding">
-          <a href="projects.html" class="back">
-            <img src="./images/arrow-pink-L.svg" alt="" class="arrow">
-            <p class="back-text-long">Back to projects overview</p>
-            <p class="back-text-short">Back</p>
-          </a>
-          <div class="next-div">
-            <a href="zuiderbad.html" class="next">
-              <p>Next</p>
-              <img src="./images/arrow-pink-R.svg" alt="" class="arrow">
-            </a>
-            <p>Zuiderbad</p>
-          </div>
-        </section>
+        <aside class="case-meta" aria-label="Project details">
+          <div><strong>Timeline</strong><span>Sep 2025 &mdash; jun 2026</span></div>
+          <div><strong>Collaborations</strong><span>3-person team</span></div>
+          <div><strong>Scope</strong><span>UX Research<br>UX/UI Design<br>Brand Strategy<br>Front-End Development</span></div>
+        </aside>
       </div>
     </section>
 
+    <section class="band band--pink">
+      <div class="center-block">
+        <h2>Problem</h2>
+        <p class="case-copy">Children often struggle to stay motivated when performing physiotherapy exercises at home. Without the encouragement of a therapist, exercises quickly become repetitive and feel like an obligation. This leads to low adherence rates, slower recovery, and limited visibility for parents and physiotherapists regarding a child's progress. Research shows that only about half of families consistently follow home exercise programs.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="split-section">
+        <div class="split-section__copy">
+          <h2>Research &amp; Discovery</h2>
+          <p class="case-copy nimbli-copy">To better understand the problem, we conducted extensive research including:</p>
+          <ul class="research-list nimbli-copy">
+            <li>Expert interviews with physiotherapists and child coaches</li>
+            <li>Journey mapping</li>
+            <li>Competitor analysis</li>
+            <li>Literature review</li>
+            <li>Market research</li>
+          </ul>
+          <p class="case-copy nimbli-copy">The findings revealed three recurring themes:</p>
+          <ul class="research-list nimbli-copy">
+            <li>Low motivation among children</li>
+            <li>High dependence on parental involvement</li>
+            <li>Limited visibility for physiotherapists between sessions</li>
+          </ul>
+        </div>
+        <div class="image-stack carousel visual-image nimbli-research-carousel" data-carousel>
+          <div class="carousel-frame">
+            <img class="carousel-image is-active" src="./images/nimbli-figma/research-journey-map.webp" width="629" height="377" loading="lazy" decoding="async" alt="Nimbli journey map research board">
+            <img class="carousel-image" src="./images/nimbli-figma/research-service-blueprint.webp" width="574" height="364" loading="lazy" decoding="async" alt="Nimbli service blueprint research board">
+          </div>
+          <div class="carousel-controls" aria-label="Research image controls">
+            <button type="button" data-carousel-prev>&larr; Prev</button>
+            <span class="carousel-status" aria-live="polite">Image 1 of 2</span>
+            <button type="button" data-carousel-next>Next &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--pink">
+      <div class="center-block">
+        <h2>Key Insight</h2>
+        <p class="case-copy">Research revealed that the biggest challenge wasn't performing the exercises themselves, but maintaining motivation between physiotherapy sessions. Children often relied on parental encouragement, while physiotherapists had little visibility into what happened at home. This insight shifted the focus from exercise management towards motivation, engagement and progress visibility.</p>
+      </div>
+    </section>
+
+    <section class="concept-section split-section concept-development-section">
+      <div class="concept-copy">
+        <h2>Strategy &amp; User Flows</h2>
+        <p>Based on our research findings, we translated the main user needs into a structured product strategy. Since children, parents and physiotherapists all interact with the rehabilitation process differently, it was essential to define which features would deliver the most value to each stakeholder.</p>
+        <p>A MoSCoW prioritization workshop helped determine which features were essential for the first version of the platform and which could be introduced later.</p>
+      </div>
+      <div class="concept-image nimbli-single-image nimbli-strategy-image">
+        <img class="expandable-image" src="./images/nimbli-figma/strategy-moscow.webp" width="594" height="520" loading="lazy" decoding="async" alt="Nimbli MoSCoW prioritization board">
+      </div>
+    </section>
+
+    <section class="band band--pink">
+      <div class="center-block">
+        <h2>User Flows &amp; Information Architecture</h2>
+        <p class="case-copy">Based on our research insights, we mapped the interactions between the three main stakeholders:</p>
+        <ul class="stakeholder-list" aria-label="Main stakeholders">
+          <li><img src="./images/nimbli-figma/icon-child.svg" alt="" aria-hidden="true">Child</li>
+          <li><img src="./images/nimbli-figma/icon-parents.svg" alt="" aria-hidden="true">Parents</li>
+          <li><img src="./images/nimbli-figma/icon-physiotherapist.svg" alt="" aria-hidden="true">Physiotherapist</li>
+        </ul>
+        <p class="case-copy">Each stakeholder had different goals and information needs. This led to a platform structure that connected all three user journeys while keeping the child experience at the center of the product.</p>
+      </div>
+      <div class="nimbli-flow-grid" aria-label="Nimbli user flow and information architecture visuals">
+        <img class="expandable-image" src="./images/nimbli-figma/user-flow-child.webp" width="541" height="686" loading="lazy" decoding="async" alt="Nimbli child user flow diagram">
+        <img class="expandable-image" src="./images/nimbli-figma/information-architecture-2.webp" width="439" height="686" loading="lazy" decoding="async" alt="Nimbli information architecture wireflow">
+      </div>
+    </section>
+
+    <section class="features-section split-section">
+      <div>
+        <h2>Key Features</h2>
+        <p class="case-copy">To address the challenges of motivation, parental involvement and therapist visibility, Nimbli combines gamification, AI-assisted exercise tracking and progress monitoring into one connected platform.</p>
+      </div>
+      <div class="feature-list">
+        <article class="feature-item">
+          <div class="feature-item__heading"><span class="feature-item__number">01</span><h3>Gamified Exercise Experience</h3></div>
+          <p>Children complete rehabilitation exercises through interactive challenges, rewards, badges, and progression systems.</p>
+        </article>
+        <article class="feature-item">
+          <div class="feature-item__heading"><span class="feature-item__number">02</span><h3>AI Pose Detection</h3></div>
+          <p>The platform uses camera-based pose detection to verify movement and provide real-time feedback.</p>
+        </article>
+        <article class="feature-item">
+          <div class="feature-item__heading"><span class="feature-item__number">03</span><h3>Parent Dashboard</h3></div>
+          <p>Parents can monitor progress, completed exercises, and upcoming tasks.</p>
+        </article>
+        <article class="feature-item">
+          <div class="feature-item__heading"><span class="feature-item__number">04</span><h3>Therapist Dashboard</h3></div>
+          <p>Physiotherapists can assign exercises, monitor adherence, and track patient progress remotely.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="band band--pink">
+      <div class="center-block">
+        <h2>Wireframing</h2>
+        <p class="case-copy">Before moving into high-fidelity design, we explored different interaction patterns and dashboard structures through wireframes. Special attention was given to simplifying exercise flows and reducing cognitive load for young users.</p>
+      </div>
+      <div class="nimbli-single-image nimbli-wireframe-image">
+        <img class="expandable-image" src="./images/nimbli-figma/wireframes.webp" width="804" height="551" loading="lazy" decoding="async" alt="Nimbli wireframes">
+      </div>
+    </section>
+
+    <section class="visual-section media-section">
+      <div class="visual-copy">
+        <h2>Branding &amp; Visual Direction</h2>
+        <p>To make rehabilitation feel less clinical and more engaging, we developed a playful and approachable brand identity.</p>
+        <p>The visual language combines friendly illustrations, vibrant colors, and game-inspired elements to create a motivating experience for children while maintaining trust for parents and therapists.</p>
+      </div>
+      <div class="image-stack carousel visual-image" data-carousel>
+        <div class="carousel-frame">
+          <img class="carousel-image is-active" src="./images/nimbli-figma/visual-direction.webp" width="545" height="307" loading="lazy" decoding="async" alt="Nimbli branding and visual direction board">
+          <img class="carousel-image" src="./images/nimbli-figma/visual-direction-2.webp" width="506" height="318" loading="lazy" decoding="async" alt="Nimbli visual direction reference board">
+          <img class="carousel-image" src="./images/nimbli-figma/visual-direction-3.webp" width="535" height="317" loading="lazy" decoding="async" alt="Nimbli visual direction typography and color board">
+        </div>
+        <div class="carousel-controls" aria-label="Visual direction image controls">
+          <button type="button" data-carousel-prev>&larr; Prev</button>
+          <span class="carousel-status" aria-live="polite">Image 1 of 3</span>
+          <button type="button" data-carousel-next>Next &rarr;</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--pink">
+      <div class="center-block">
+        <h2>Finale Outcome</h2>
+        <p class="case-copy">The final concept combines gamification, AI-assisted exercise tracking and progress monitoring into a single rehabilitation platform designed for children, parents and physiotherapists.
+
+Children are guided through engaging exercise challenges, receive rewards for completing activities and can track their progress over time. Parents gain better visibility into completed exercises and rehabilitation goals, while physiotherapists can remotely monitor adherence and adjust treatment plans when needed.
+
+By transforming repetitive rehabilitation exercises into a more interactive and rewarding experience, Nimbli aims to increase motivation, improve consistency and strengthen communication between all stakeholders involved in the recovery process.</p>
+      </div>
+      <div class="image-stack carousel nimbli-outcome-carousel" data-carousel>
+        <div class="carousel-frame">
+          <img class="carousel-image is-active" src="./images/nimbli-figma/outcome-child-dashboard.webp" width="588" height="401" loading="lazy" decoding="async" alt="Nimbli child dashboard final screen">
+          <img class="carousel-image" src="./images/nimbli-figma/outcome-parent-dashboard.webp" width="588" height="401" loading="lazy" decoding="async" alt="Nimbli parent dashboard final screen">
+          <img class="carousel-image" src="./images/nimbli-figma/outcome-therapist-dashboard.webp" width="588" height="401" loading="lazy" decoding="async" alt="Nimbli therapist dashboard final screen">
+        </div>
+        <div class="carousel-controls" aria-label="Final outcome image controls">
+          <button type="button" data-carousel-prev>&larr; Prev</button>
+          <span class="carousel-status" aria-live="polite">Image 1 of 3</span>
+          <button type="button" data-carousel-next>Next &rarr;</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-project-nav">
+      <a href="projects.html" class="back">
+        <img src="./images/arrow-pink-L.svg" alt="" class="arrow">
+        <span class="back-text-long">Back to projects overview</span>
+        <span class="back-text-short">Back</span>
+      </a>
+      <div class="next-div">
+        <a href="routeplanner.html" class="next" aria-disabled="true">
+          <span>Next</span>
+          <img src="./images/arrow-pink-R.svg" alt="" class="arrow">
+        </a>
+        <p>Route Planner</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Get in touch</h2>
+      <div class="buttons">
+        <a class="secondary" href="mailto:amoutalibova@gmail.com">Email</a>
+        <a class="secondary" href="https://www.linkedin.com/in/amina-moutalibova" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+      <img src="./images/vectors/logo-white.svg" alt="" class="bg-img" aria-hidden="true">
+    </section>
   </main>
 
   <footer class="footer">
@@ -171,11 +359,70 @@
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
     </div>
-    <p class="copyright">
-      <span>&copy;</span>
-      2026 Amina Moutalibova
-    </p>
+    <p class="copyright"><span>&copy;</span> 2026 Amina Moutalibova</p>
   </footer>
 
+  <script>
+    const lightbox = document.createElement('div');
+    lightbox.className = 'image-lightbox';
+    lightbox.innerHTML = '<div class="image-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Expanded image"><button class="image-lightbox__close" type="button" aria-label="Close image">&times;</button><img alt=""></div>';
+    document.body.appendChild(lightbox);
+    const lightboxImage = lightbox.querySelector('img');
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-open');
+      document.body.classList.remove('is-lightbox-open');
+      lightboxImage.removeAttribute('src');
+      lightboxImage.alt = '';
+    };
+    const openLightbox = (image) => {
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt || '';
+      lightbox.classList.add('is-open');
+      document.body.classList.add('is-lightbox-open');
+    };
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox || event.target.closest('.image-lightbox__close')) closeLightbox();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+    });
+
+    document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+      const images = [...carousel.querySelectorAll('.carousel-image')];
+      const status = carousel.querySelector('.carousel-status');
+      const previousButtons = [...carousel.querySelectorAll('[data-carousel-prev]')];
+      const nextButtons = [...carousel.querySelectorAll('[data-carousel-next]')];
+      let activeIndex = 0;
+      let touchStartX = 0;
+
+      const showSlide = (index) => {
+        activeIndex = Math.max(0, Math.min(index, images.length - 1));
+        images.forEach((image, imageIndex) => {
+          image.classList.toggle('is-active', imageIndex === activeIndex);
+          image.classList.toggle('is-before', imageIndex < activeIndex);
+          image.classList.toggle('is-after', imageIndex > activeIndex);
+        });
+        status.textContent = 'Image ' + (activeIndex + 1) + ' of ' + images.length;
+        previousButtons.forEach((button) => { button.hidden = activeIndex === 0; });
+        nextButtons.forEach((button) => { button.hidden = activeIndex === images.length - 1; });
+      };
+
+      previousButtons.forEach((button) => button.addEventListener('click', () => showSlide(activeIndex - 1)));
+      nextButtons.forEach((button) => button.addEventListener('click', () => showSlide(activeIndex + 1)));
+      images.forEach((image) => image.addEventListener('click', () => {
+        if (image.classList.contains('is-active')) openLightbox(image);
+      }));
+      carousel.addEventListener('touchstart', (event) => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });
+      carousel.addEventListener('touchend', (event) => {
+        const delta = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(delta) > 40) showSlide(activeIndex + (delta < 0 ? 1 : -1));
+      }, { passive: true });
+      showSlide(0);
+    });
+
+    document.querySelectorAll('.expandable-image').forEach((image) => {
+      image.addEventListener('click', () => openLightbox(image));
+    });
+  </script>
 </body>
 </html>
