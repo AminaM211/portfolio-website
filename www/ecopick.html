@@ -3,144 +3,206 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ecopick</title>
+  <title>Ecopick | Sustainable Fashion App</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="preload" as="image" href="./images/ecopick-figma/hero.webp">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/project-detail.css">
-
-  <style>
-    :root {
-      --primary-color: #58a3b0;
-    }
-  </style>
 </head>
 
-<body class="project-detail">
+<body class="project-detail case-study">
   <main class="page">
-
-    <section class="detail__hero padding-color">
-        <header class="nav">
-            <div class="logo" aria-label="logo"><a href="index.html"><img src="./images/vectors/logo-white.svg" alt="Amina Moutalibova logo"></a></div>
-            <nav class="nav-links" aria-label="Main navigation">
-                <a class="primary" href="projects.html">Projects</a>
-                        <a class="primary" href="contact.html">Contact</a>
-        <a class="primary" href="https://amina-moutalibova.be/images/resume.pdf" target="_blank" rel="noreferrer">
+    <header class="case-nav">
+      <a class="case-logo" href="index.html" aria-label="Amina Moutalibova home">
+        <img src="./images/vectors/logo-black.svg" alt="Amina Moutalibova logo">
+      </a>
+      <nav class="case-nav__links" aria-label="Main navigation">
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://amina-moutalibova.be/images/resume.pdf" target="_blank" rel="noreferrer">
           <span class="resume-text resume-text--mobile">Resume</span>
           <span class="resume-text resume-text--desktop">Open Resume</span>
-</a>
-            </nav>
-        </header>
-
-        <section class="project-hero">
-        <div class="project-hero__inner">
-            <div class="project-hero__left">
-              <h1 class="project-title">Ecopick</h1>
-              <p class="project-sub">A mobile app that shows sustainable alternatives for clothing items using AI image recognition and a supportive community.</p>            
-            </div>
-            <div class="project-hero__media" aria-hidden="true">
-            <div class="phone-mockup">
-              <img src="./images/ecopick-thumbnail-01.png" loading="eager" fetchpriority="high" decoding="async" alt="Ecopick app mockup">
-            </div>
-            </div>
-
-            <aside class="project-hero__meta" aria-label="Project details">
-            <div class="meta-item"><strong>Timeline</strong><div>Sep 2024 - Dec 2024</div></div>
-            <div class="meta-item"><strong>Collaborations</strong><div>Team of 3</div></div>
-            <div class="meta-item"><strong>Scope</strong>
-                <ul>
-                  <li>Concept development</li>
-                  <li>UX/UI Design</li>
-                  <li>Development</li>
-                </ul>
-            </div>
-            </aside>
-        </div>
-        </section> 
-    </section>
-
-
-    <section class="project-content">
-      <div class="container">
-        <div class="row padding">
-          <p>EcoPick is a mobile application concept developed as part of a sustainable fashion design challenge. The project explores how technology can help users make more conscious clothing choices by making sustainable alternatives easier to find, more accessible, and better aligned with personal style preferences.
-          The idea emerged from the observation that while interest in sustainable fashion is growing, many users still struggle to actually find and choose sustainable alternatives in a fast and intuitive way.</p>
-        </div>
-
-        <div class="row-color row-flex padding-color">
-          <p>
-            During the research phase, the goal was to understand not only the environmental issues behind fast fashion, but also how users behave when making clothing decisions and where the main barriers lie in adopting more sustainable habits. This research revealed a clear gap between intention and action: while many consumers express interest in sustainable clothing, they often struggle to find accessible and visually appealing alternatives that match their personal style.
-            <br><br>
-            I made a mindmap organizing the research starting from sustainable fashion as the central topic and branching into key problems such as overconsumption, lack of accessibility, and fast fashion dependency, as well as potential opportunities like AI-based recommendations and second-hand integration. The moodboard defines the visual and emotional direction of the project, combining natural textures, fashion references, and modern digital aesthetics to establish the tone and identity that guided the development of the concept.
-          </p>
-          <div class="two-img">
-            <img class="standard-img" src="./images/moodboard-ecopick.png" loading="lazy" decoding="async" alt="">
-            <img class="standard-img" src="./images/mindmap-ecopick.png" loading="lazy" decoding="async" alt="">
-          </div>
-        </div>
-
-        <div class="row row-flex padding">
-          <p>EcoPick was developed as a solution to this problem. The concept focuses on simplifying sustainable fashion discovery through an AI-powered system that recognizes clothing from images and suggests sustainable alternatives.
-          The app is designed around three core ideas: accessibility, personalization, and guidance. Instead of forcing users to search manually, EcoPick allows them to simply upload an image of clothing they like and immediately receive relevant sustainable options.</p>
-        </div>
-
-        <div class="row row-img padding">
-          <img src="./images/ecopick-lofi-1.png" loading="lazy" decoding="async" alt="">
-          <img src="./images/ecopick-lofi-2.png" loading="lazy" decoding="async" alt="">
-          <img src="./images/ecopick-lofi-3.png" loading="lazy" decoding="async" alt="">
-        </div>
-
-        <div class="row-color row-flex padding-color">
-          <p>The user experience is designed to be extremely intuitive, reducing the process of finding sustainable clothing to a few simple steps. Users upload an image, the system analyses it using AI, and relevant sustainable alternatives are presented immediately.</p>
-            <img class="standard-img" src="./images/user_flow_chart_app_ecopick.webp" loading="lazy" decoding="async" alt="">
-        </div>
-
-
-        <div class="row row-flex padding">
-          <video id="ecopick-video" loop autoplay muted playsinline aria-hidden="true">
-            <source src="./images/ecopick-video.mp4" type="video/mp4">
-          </video>
-          <p>Once the structure and flow were defined, the concept was translated into high-fidelity screens. These focus on a clean and modern interface that prioritizes visual content, since image-based search is the core feature of the app.</p>
-        </div>
-
-        <div class="row-color row-img padding-color">
-            <img src="./images/ecopick_thumbnail_1.png" alt="">
-            <img src="./images/ecopick_thumbnail_2.png" alt="">
-            <img src="./images/ecopick_thumbnail_3.png" alt="">
-        </div>
-
-         <div class="row padding">
-          <p>The development of EcoPick demonstrates how a clear problem can evolve into a structured digital solution through research, ideation, and iterative design. Each stage contributed to shaping a concept that addresses the gap between sustainability awareness and practical application.s</p>        </div>
-
-
-
-        <div class="row row-images mockups padding">
-          <img class="big-img" src="./images/ecopick-mockup02.webp" loading="lazy" decoding="async" alt="">
-          <img class="big-img" src="./images/ecopick-mockup04.webp" loading="lazy" decoding="async" alt="">
-        </div>
-
-
-        <section class="project-nav padding">
-          <a href="projects.html" class="back">
-            <img src="./images/arrow-pink-L.svg" alt="" class="arrow">
-            <p class="back-text-long">Back to projects overview</p>
-            <p class="back-text-short">Back</p>
         </a>
-        <div class="next-div">
-          <a href="nimbli.html" class="next">
-            <p>Next</p> 
-            <img src="./images/arrow-pink-R.svg" alt="" class="arrow">
-           </a>
-           <p>Nimbli</p>
+      </nav>
+    </header>
+
+    <section class="project-intro" aria-labelledby="project-title">
+      <div class="device-hero">
+        <img src="./images/ecopick-figma/hero.webp" width="1200" height="620" fetchpriority="high" decoding="async" alt="Ecopick laptop and mobile app mockups">
+      </div>
+
+      <div class="case-summary">
+        <div class="case-summary__copy">
+          <p class="eyebrow">Ecopick</p>
+          <h1 id="project-title">Sustainable Fashion App</h1>
+          <p class="case-copy">Sustainable fashion is becoming increasingly important to consumers, yet many people struggle to find clothing that aligns with both their style and their values.
+
+EcoPick was developed as a concept that bridges this gap by using AI image recognition to identify clothing items and instantly suggest sustainable alternatives from ethical brands and second-hand platforms.</p>
         </div>
-    </section>
+
+        <aside class="case-meta" aria-label="Project details">
+          <div><strong>Timeline</strong><span>Sep 2024 - Dec 2024</span></div>
+          <div><strong>Collaborations</strong><span>Individual Project</span></div>
+          <div><strong>Scope</strong><span>Concept Development<br>UX/UI Designer<br>Development</span></div>
+        </aside>
       </div>
     </section>
 
+    <section class="band band--pink">
+      <div class="center-block">
+        <h2>Problem</h2>
+        <p class="case-copy">Consumers often want to make more sustainable fashion choices but struggle to find affordable and stylish alternatives that match their preferences.
+
+As a result, many continue purchasing from fast-fashion brands despite their environmental concerns. Existing solutions require extensive searching and lack personalization, making sustainable shopping feel inconvenient and inaccessible.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="split-section">
+        <h2 class="split-section__title">Research &amp; Discovery</h2>
+        <div class="split-section__copy">I conducted desk research and a user survey to better understand how people approach sustainable fashion and what prevents them from making more conscious purchasing decisions.
+
+The research revealed a <strong>clear gap between intention and action</strong>. While most participants expressed interest in shopping more sustainably, they often struggled to find alternatives that matched their personal style, budget and preferences.
+
+<strong>72% of respondents indicated that finding sustainable alternatives required too much time and effort</strong>, despite wanting to make more conscious purchasing decisions.
+
+Many respondents described sustainable shopping as overwhelming, requiring them to manually search through multiple websites before finding relevant products.
+
+This insight led to the core concept behind EcoPick: instead of asking users to search for sustainable alternatives, the platform would identify products they already liked and instantly recommend more sustainable options.</div>
+      </div>
+    </section>
+
+    <section class="band band--pink">
+      <div class="center-block">
+        <h2>Key Insight</h2>
+        <p class="case-copy">Users didn't need more information about sustainability.
+They needed a faster way to discover sustainable alternatives that matched products they already wanted to buy.</p>
+      </div>
+    </section>
+
+    <section class="concept-section split-section concept-development-section">
+      <div class="image-stack carousel concept-image" data-carousel>
+        <div class="carousel-frame">
+          <img class="carousel-image is-active" src="./images/ecopick-figma/concept.webp" width="500" height="473" loading="lazy" decoding="async" alt="Ecopick concept development notes">
+          <img class="carousel-image" src="./images/ecopick-figma/concept-2.webp" width="451" height="494" loading="lazy" decoding="async" alt="Ecopick MoSCoW prioritisation board">
+        </div>
+        <div class="carousel-controls" aria-label="Concept image controls">
+          <button type="button" data-carousel-prev>← Prev</button>
+          <span class="carousel-status" aria-live="polite">Image 1 of 2</span>
+          <button type="button" data-carousel-next>Next →</button>
+        </div>
+      </div>
+      <div class="concept-copy">
+        <h2>Concept Development</h2>
+        <p>Based on the research insights, the concept was built around three principles:</p>
+        <ul class="principles" aria-label="Concept principles">
+          <li><span class="principle-icon"><img src="./images/ecopick-figma/principle-accessibility.svg" alt="" aria-hidden="true"></span>Accessibility</li>
+          <li><span class="principle-icon"><img src="./images/ecopick-figma/principle-personalization.svg" alt="" aria-hidden="true"></span>Personalization</li>
+          <li><span class="principle-icon"><img src="./images/ecopick-figma/principle-guidance.svg" alt="" aria-hidden="true"></span>Guidance</li>
+        </ul>
+        <p>Sustainable shopping should feel as effortless as traditional online shopping. The goal was to remove the friction from it by replacing manual searching with a simple image-based workflow.</p>
+        <p>By focusing on familiarity instead of education, the platform lowers the barrier to making more sustainable purchasing decisions.</p>
+      </div>
+    </section>
+
+    <section class="features-section split-section">
+      <div>
+        <h2>Key Features</h2>
+        <div class="feature-list">
+          <article class="feature-item">
+            <div class="feature-item__heading"><span class="feature-item__number">01</span><h3>AI Clothing Recognition</h3></div>
+            <p>Upload a photo of any clothing item and receive visually similar sustainable alternatives within seconds.</p>
+          </article>
+          <article class="feature-item">
+            <div class="feature-item__heading"><span class="feature-item__number">02</span><h3>Personalized Recommendations</h3></div>
+            <p>Suggestions are tailored to the user's style preferences, making sustainable shopping more relevant and accessible.</p>
+          </article>
+          <article class="feature-item">
+            <div class="feature-item__heading"><span class="feature-item__number">03</span><h3>Sustainable Brand Discovery</h3></div>
+            <p>Explore products from ethical brands and second-hand platforms through a single interface.</p>
+          </article>
+          <article class="feature-item">
+            <div class="feature-item__heading"><span class="feature-item__number">04</span><h3>Community Support</h3></div>
+            <p>Users can share recommendations, ask for advice, and help each other discover sustainable fashion options.</p>
+          </article>
+        </div>
+      </div>
+      <video class="feature-phone" src="./images/ecopick_video.mp4" width="282" height="597" loading="lazy" decoding="async" alt="Ecopick mobile feature screen" autoplay muted loop></video>
+    </section>
+
+    <section class="band band--pink">
+      <div class="center-block">
+        <h2>Wireframing</h2>
+        <p class="case-copy">The wireframes focused on simplifying the experience into a few clear steps: upload an image, review AI-generated matches, apply filters, and explore recommended alternatives.</p>
+      </div>
+      <img class="wireframe-image" src="./images/ecopick-figma/wireframes.webp" width="712" height="487" loading="lazy" decoding="async" alt="Ecopick wireframes">
+    </section>
+
+    <section class="visual-section media-section">
+      <div class="visual-copy">
+        <h2>Visual Direction</h2>
+        <p>The visual identity combines clean interfaces with natural colors inspired by sustainability, fashion, and conscious consumption.</p>
+        <p>The design emphasizes product imagery and discovery while maintaining a modern and approachable aesthetic.</p>
+      </div>
+      <div class="image-stack carousel visual-image" data-carousel>
+        <div class="carousel-frame">
+          <img class="carousel-image is-active" src="./images/ecopick-figma/visual-direction.webp" width="500" height="356" loading="lazy" decoding="async" alt="Ecopick visual direction moodboard">
+          <img class="carousel-image" src="./images/ecopick-figma/visual-direction-2.webp" width="540" height="475" loading="lazy" decoding="async" alt="Ecopick color palette">
+          <img class="carousel-image" src="./images/ecopick-figma/visual-direction-3.webp" width="641" height="518" loading="lazy" decoding="async" alt="Ecopick typography direction">
+        </div>
+        <div class="carousel-controls" aria-label="Visual direction image controls">
+          <button type="button" data-carousel-prev>← Prev</button>
+          <span class="carousel-status" aria-live="polite">Image 1 of 3</span>
+          <button type="button" data-carousel-next>Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--pink">
+      <div class="center-block">
+        <h2>Final Outcome</h2>
+        <p class="case-copy">The final concept transforms sustainable fashion discovery into a simple and intuitive experience. By combining AI-powered image recognition, personalized recommendations, and community-driven insights, EcoPick helps users bridge the gap between wanting to shop sustainably and actually doing so.</p>
+      </div>
+      <div class="outcome-screens" aria-label="Ecopick final app screens">
+        <img src="./images/ecopick-figma/outcome-1.webp" width="390" height="844" loading="lazy" decoding="async" alt="Ecopick upload result screen">
+        <img src="./images/ecopick-figma/outcome-2.webp" width="390" height="844" loading="lazy" decoding="async" alt="Ecopick clothing detail screen">
+        <img src="./images/ecopick-figma/outcome-3.webp" width="390" height="844" loading="lazy" decoding="async" alt="Ecopick inspiration feed screen">
+        <img src="./images/ecopick-figma/outcome-4.webp" width="390" height="844" loading="lazy" decoding="async" alt="Ecopick community post screen">
+      </div>
+    </section>
+
+    <section class="final-gallery" aria-label="Ecopick mockup gallery">
+      <img src="./images/ecopick-figma/final-gallery.webp" width="1200" height="594" loading="lazy" decoding="async" alt="Ecopick final product mockup gallery">
+    </section>
+
+    <section class="case-project-nav">
+      <a href="projects.html" class="back">
+        <img src="./images/arrow-pink-L.svg" alt="" class="arrow">
+        <span class="back-text-long">Back to projects overview</span>
+        <span class="back-text-short">Back</span>
+      </a>
+      <div class="next-div">
+        <a href="nimbli.html" class="next">
+          <span>Next</span>
+          <img src="./images/arrow-pink-R.svg" alt="" class="arrow">
+        </a>
+        <p>Nimbli</p>
+      </div>
+    </section>
+
+   		<section class="contact" id="contact">
+			<h2>Get in touch</h2>
+			<div class="buttons">
+				<a class="secondary" href="mailto:amoutalibova@gmail.com">Email</a>
+				<a class="secondary" href="https://www.linkedin.com/in/amina-moutalibova" target="_blank" rel="noreferrer">LinkedIn</a>
+			</div>
+      <img src="./images/vectors/logo-white.svg" alt="" class="bg-img" aria-hidden="true">
+		</section>
   </main>
 
 	<footer class="footer">
-            <img src="./images/vectors/logo-white.svg" alt="Amina Moutalibova logo" class="logo">
+    <img src="./images/vectors/logo-white.svg" alt="Amina Moutalibova logo" class="logo">
 			<div class="footer-nav">
 				<a href="projects.html">Projects</a>
 				<a href="contact.html">Contact</a>
@@ -149,7 +211,79 @@
         <span>&copy;</span> 
         2026 Amina Moutalibova
       </p>
-	</footer>
+		</footer>
+  <script>
+    const lightbox = document.createElement('div');
+    lightbox.className = 'image-lightbox';
+    lightbox.innerHTML = `<div class="image-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Expanded image"><button class="image-lightbox__close" type="button" aria-label="Close image">×</button><img alt=""></div>`;
+    document.body.appendChild(lightbox);
+    const lightboxImage = lightbox.querySelector('img');
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-open');
+      document.body.classList.remove('is-lightbox-open');
+      lightboxImage.removeAttribute('src');
+      lightboxImage.alt = '';
+    };
+    const openLightbox = (image) => {
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt || '';
+      lightbox.classList.add('is-open');
+      document.body.classList.add('is-lightbox-open');
+    };
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox || event.target.closest('.image-lightbox__close')) closeLightbox();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+    });
+
+
+    document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+      const images = [...carousel.querySelectorAll('.carousel-image')];
+      const status = carousel.querySelector('.carousel-status');
+      const previousButtons = [...carousel.querySelectorAll('[data-carousel-prev]')];
+      const nextButtons = [...carousel.querySelectorAll('[data-carousel-next]')];
+      let activeIndex = 0;
+      let touchStartX = 0;
+
+      const showSlide = (index) => {
+        activeIndex = Math.max(0, Math.min(index, images.length - 1));
+        images.forEach((image, imageIndex) => {
+          image.classList.toggle('is-active', imageIndex === activeIndex);
+          image.classList.toggle('is-before', imageIndex < activeIndex);
+          image.classList.toggle('is-after', imageIndex > activeIndex);
+        });
+        status.textContent = `Image ${activeIndex + 1} of ${images.length}`;
+        previousButtons.forEach((button) => { button.hidden = activeIndex === 0; });
+        nextButtons.forEach((button) => { button.hidden = activeIndex === images.length - 1; });
+      };
+
+      previousButtons.forEach((button) => {
+        button.addEventListener('click', () => showSlide(activeIndex - 1));
+      });
+
+      nextButtons.forEach((button) => {
+        button.addEventListener('click', () => showSlide(activeIndex + 1));
+      });
+
+      images.forEach((image) => {
+        image.addEventListener('click', () => {
+          if (image.classList.contains('is-active')) openLightbox(image);
+        });
+      });
+
+      carousel.addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0].clientX;
+      }, { passive: true });
+
+      carousel.addEventListener('touchend', (event) => {
+        const deltaX = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(deltaX) > 40) showSlide(activeIndex + (deltaX < 0 ? 1 : -1));
+      }, { passive: true });
+
+      showSlide(0);
+    });
+  </script>
 
 </body>
 </html>
