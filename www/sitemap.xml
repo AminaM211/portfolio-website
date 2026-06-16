@@ -17,6 +17,16 @@
   </url>
   <!-- voeg je projectpagina’s toe -->
   <url>
+    <loc>https://amina-moutalibova.be/nimbli.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amina-moutalibova.be/routeplanner.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://amina-moutalibova.be/ecopick.html</loc>
     <lastmod>2025-09-26</lastmod>
     <priority>0.8</priority>
