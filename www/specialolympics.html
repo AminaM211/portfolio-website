@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Special Olympics Belgium | Information Architecture & UX Redesign</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="preload" as="image" href="./images/special-olympics-figma/hero.webp">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+  <script src="js/site-nav.js" defer></script>
+  <style>
+    body.special-olympics-case .device-hero img,
+    body.special-olympics-case .case-asset img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    body.special-olympics-case .case-asset img,
+    body.special-olympics-case .outcome-wide img {
+      cursor: zoom-in;
+    }
+
+    body.special-olympics-case .so-section {
+      width: calc(100% + (var(--page-pad) * 2));
+      margin-inline: calc(var(--page-pad) * -1);
+      padding: 80px var(--page-pad);
+    }
+
+    body.special-olympics-case .so-split {
+      display: grid;
+      grid-template-columns: minmax(0, 562px) minmax(0, 564px);
+      justify-content: space-between;
+      align-items: start;
+      gap: clamp(48px, 7vw, 96px);
+    }
+
+    body.special-olympics-case .so-centered {
+      width: min(100%, 65ch);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    body.special-olympics-case .so-centered .case-copy,
+    body.special-olympics-case .so-copy .case-copy {
+      margin-top: 16px;
+    }
+
+    body.special-olympics-case .so-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    body.special-olympics-case .so-table th,
+    body.special-olympics-case .so-table td {
+      padding: 24px 0;
+      border-bottom: 1px solid #000;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    body.special-olympics-case .so-table th {
+      font-weight: 700;
+    }
+
+    body.special-olympics-case .so-question-list {
+      display: grid;
+      gap: 12px;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    body.special-olympics-case .so-question-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    body.special-olympics-case .so-question-list img {
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      margin-top: 1px;
+    }
+
+    body.special-olympics-case .so-finding-list {
+      display: grid;
+      gap: 0;
+    }
+
+    body.special-olympics-case .so-finding {
+      padding: 24px;
+      border-bottom: 1px solid #000;
+    }
+
+    body.special-olympics-case .so-finding__heading {
+      display: flex;
+      gap: 40px;
+      align-items: baseline;
+      margin-bottom: 16px;
+    }
+
+    body.special-olympics-case .so-finding__number {
+      min-width: 25px;
+      color: var(--accent);
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    body.special-olympics-case .so-finding h3 {
+      font-size: clamp(20px, 1.8vw, 22px);
+      line-height: 1.35;
+    }
+
+    body.special-olympics-case .so-full-image {
+      width: min(100%, 800px);
+      margin: 40px auto 0;
+    }
+
+    body.special-olympics-case .outcome-wide {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 600px));
+      justify-content: center;
+      gap: 24px;
+      margin-top: 64px;
+    }
+
+    body.special-olympics-case .outcome-wide img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 980px) {
+      body.special-olympics-case .so-split {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      body.special-olympics-case .so-centered {
+        margin: 0;
+        text-align: left;
+      }
+
+      body.special-olympics-case .so-table {
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body.special-olympics-case .so-section {
+        padding-block: 64px;
+      }
+
+      body.special-olympics-case .so-table th,
+      body.special-olympics-case .so-table td {
+        padding: 16px 0;
+      }
+
+      body.special-olympics-case .so-finding {
+        padding: 24px 0;
+      }
+
+      body.special-olympics-case .so-finding__heading {
+        gap: 20px;
+        align-items: flex-start;
+      }
+
+      body.special-olympics-case .outcome-wide {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body class="project-detail case-study special-olympics-case">
+  <main class="page">
+    <div data-site-nav data-nav-variant="case-study" data-nav-active="projects"></div>
+
+    <section class="project-intro" aria-labelledby="project-title">
+      <div class="device-hero">
+        <img src="./images/special-olympics-figma/hero.webp" width="1192" height="625" fetchpriority="high" decoding="async" alt="Special Olympics Belgium website redesign screens">
+      </div>
+
+      <div class="case-summary">
+        <div class="case-summary__copy">
+          <p class="eyebrow">Special Olympics Belgium</p>
+          <h1 id="project-title">Information Architecture &amp; UX Redesign</h1>
+          <p class="case-copy">Special Olympics Belgium serves a wide range of audiences, including athletes, volunteers, donors, sponsors and family members. The existing website contained valuable information, but users often struggled to find relevant content due to an outdated structure and unclear navigation.</p>
+          <p class="case-copy">The goal of this academic project was to redesign the website's information architecture and validate navigation decisions through user-centered research methods before creating the final interface.</p>
+        </div>
+
+        <aside class="case-meta" aria-label="Project details">
+          <div><strong>Timeline</strong><span>Jan 2025</span></div>
+          <div><strong>Collaborations</strong><span>Individual</span></div>
+          <div><strong>Scope</strong><span>Information Architecture<br>User Research<br>Usability Testing<br>UI Design</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="so-section band band--pink">
+      <div class="so-split">
+        <div class="so-copy">
+          <h2>Challenge</h2>
+          <p class="case-copy">The existing website had grown over time and no longer reflected how users expected information to be organised. Rather than jumping directly into visual redesigns, the project focused on understanding how users searched for information and how the content structure could be improved.</p>
+        </div>
+        <div class="case-asset">
+          <img class="expandable-image" src="./images/special-olympics-figma/challenge.webp" width="510" height="472" loading="lazy" decoding="async" alt="Special Olympics existing website structure audit">
+        </div>
+      </div>
+    </section>
+
+    <section class="so-section band">
+      <div class="so-split">
+        <div class="so-copy">
+          <h2>Research &amp; Discovery</h2>
+          <p class="case-copy">To better understand user needs, I first identified the primary target groups and their goals.</p>
+          <p class="case-copy">This helped define the research questions that would guide the redesign:</p>
+          <ul class="so-question-list" aria-label="Research questions">
+            <li><img src="./images/special-olympics-figma/question.svg" alt="" aria-hidden="true">What information do visitors expect to find first?</li>
+            <li><img src="./images/special-olympics-figma/question.svg" alt="" aria-hidden="true">Which content is difficult to locate?</li>
+            <li><img src="./images/special-olympics-figma/question.svg" alt="" aria-hidden="true">How do users naturally group information?</li>
+            <li><img src="./images/special-olympics-figma/question.svg" alt="" aria-hidden="true">Which navigation labels feel most intuitive?</li>
+          </ul>
+        </div>
+        <table class="so-table" aria-label="Special Olympics target groups and goals">
+          <thead>
+            <tr><th>User Group</th><th>Main Goal</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Athletes</td><td>Register for sports and find event information</td></tr>
+            <tr><td>Volunteers</td><td>Learn how to participate and sign up</td></tr>
+            <tr><td>Donors</td><td>Understand impact and make donations easily</td></tr>
+            <tr><td>Sponsors &amp; Partners</td><td>Explore partnership opportunities</td></tr>
+            <tr><td>Family &amp; Supporters</td><td>Find event information and updates</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="so-section band band--pink">
+      <div class="so-centered">
+        <h2>Card Sorting</h2>
+        <p class="case-copy">To create a structure based on users' mental models instead of internal organisational categories, I conducted a card sorting exercise. The results revealed consistent content groupings across participants.</p>
+        <p class="case-copy">Categories such as About Us, Sports, Get Involved, What We Do and Support Us emerged naturally. Rather than structuring content around internal organisational departments, the final navigation was built around how participants naturally grouped information.</p>
+      </div>
+      <div class="case-asset so-full-image">
+        <img class="expandable-image" src="./images/special-olympics-figma/card-sorting.webp" width="700" height="381" loading="lazy" decoding="async" alt="Special Olympics card sorting results">
+      </div>
+    </section>
+
+    <section class="so-section band">
+      <div class="so-split">
+        <div class="so-copy">
+          <h2>Most Common Content Categories</h2>
+          <p class="case-copy">The card sorting exercise revealed several recurring categories that participants consistently used to group content. These patterns helped shape the final information architecture.</p>
+          <p class="case-copy">The results showed strong agreement among participants, particularly around the categories About Us, Sports &amp; Events, Get Involved and What We Do. These recurring patterns formed the basis of the redesigned navigation structure.</p>
+        </div>
+        <table class="so-table" aria-label="Most common content categories">
+          <thead>
+            <tr><th>Category</th><th>Number of Occurrences</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>About Us</td><td>5</td></tr>
+            <tr><td>Sports &amp; Events</td><td>5</td></tr>
+            <tr><td>Get Involved</td><td>5</td></tr>
+            <tr><td>What We Do &amp; Projects</td><td>5</td></tr>
+            <tr><td>Support Us &amp; Donations</td><td>4</td></tr>
+            <tr><td>Partner Area</td><td>2</td></tr>
+            <tr><td>News &amp; Press</td><td>2</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="so-section band band--pink">
+      <div class="so-centered">
+        <h2>TO BE structure</h2>
+        <p class="case-copy">Based on the card sorting results, the navigation was reorganised into five primary categories: About Us, Sports, Get Involved, What We Do and Support Us. The new structure aligned more closely with users' mental models and reduced navigation complexity.</p>
+      </div>
+      <div class="case-asset so-full-image">
+        <img class="expandable-image" src="./images/special-olympics-figma/to-be-structure.webp" width="800" height="669" loading="lazy" decoding="async" alt="Special Olympics proposed information architecture structure">
+      </div>
+    </section>
+
+    <section class="so-section band">
+      <div class="so-split">
+        <div class="so-copy">
+          <h2>Key Findings</h2>
+          <p class="case-copy">After defining the new information architecture through card sorting, I validated the navigation using tree testing and one-click testing. Participants completed tasks related to athlete registration, volunteering, donations, events and organisation information. The findings below informed the final navigation refinements.</p>
+        </div>
+        <div class="so-finding-list" aria-label="Key findings">
+          <article class="so-finding">
+            <div class="so-finding__heading"><span class="so-finding__number">01</span><h3>Donation terminology caused confusion</h3></div>
+            <p class="case-copy">4 out of 5 participants successfully located the donation section. One participant experienced hesitation due to unclear terminology. To improve clarity, one of the "Support Us" labels was renamed to "Make a Donation", making the action more explicit.</p>
+          </article>
+          <article class="so-finding">
+            <div class="so-finding__heading"><span class="so-finding__number">02</span><h3>Youth Board Run Club was expected elsewhere</h3></div>
+            <p class="case-copy">Two participants looked for the Youth Board Run Club under "Get Involved" rather than "What We Do". This highlighted a mismatch between the website structure and users' mental models.</p>
+          </article>
+          <article class="so-finding">
+            <div class="so-finding__heading"><span class="so-finding__number">03</span><h3>Core tasks were generally successful</h3></div>
+            <p class="case-copy">Most participants were able to complete important tasks such as finding volunteer opportunities, athlete registration and organisation information, providing confidence in the overall navigation structure.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="so-section band band--pink">
+      <div class="so-centered">
+        <h2>Navigation Refinements</h2>
+        <p class="case-copy">Based on tree testing and one-click testing results, several navigation labels and content groupings were refined before moving into the final prototype. Users expected the "Support Us" section to immediately present available support options.</p>
+        <p class="case-copy">Instead of using a dropdown navigation with multiple subpages, the final version links directly to a dedicated support page where all donation and sponsorship opportunities are grouped together.</p>
+      </div>
+      <div class="case-asset so-full-image">
+        <img class="expandable-image" src="./images/special-olympics-figma/key-findings.webp" width="760" height="591" loading="lazy" decoding="async" alt="Special Olympics navigation refinement comparison">
+      </div>
+    </section>
+
+    <section class="so-section band">
+      <div class="so-split">
+        <div class="so-copy">
+          <h2>Design Improvements</h2>
+          <p class="case-copy">The redesigned structure was tested with users through usability testing and one-click tests. These findings directly informed further iterations of the navigation structure and page hierarchy.</p>
+        </div>
+        <div class="so-finding-list" aria-label="Design improvements">
+          <article class="so-finding">
+            <div class="so-finding__heading"><span class="so-finding__number">01</span><h3>Athlete Registration Visibility</h3></div>
+            <p class="case-copy">Several participants struggled to locate athlete registration. To improve discoverability, a dedicated homepage section with a clear call-to-action was introduced.</p>
+          </article>
+          <article class="so-finding">
+            <div class="so-finding__heading"><span class="so-finding__number">02</span><h3>Event Discoverability</h3></div>
+            <p class="case-copy">Participants expected upcoming events to be easier to find. A dedicated Calendar section was added alongside a homepage overview of upcoming events.</p>
+          </article>
+          <article class="so-finding">
+            <div class="so-finding__heading"><span class="so-finding__number">03</span><h3>Donation Clarity</h3></div>
+            <p class="case-copy">Donation and sponsorship pathways were rewritten using clearer language to reduce confusion between individual donations and corporate sponsorships.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="so-section band band--pink">
+      <div class="so-centered">
+        <h2>Finale Outcome</h2>
+        <p class="case-copy">The final information architecture reduced ambiguity in the navigation structure and improved the discoverability of key tasks such as athlete registration, volunteering and donations. User testing validated that the revised navigation better matched users' expectations and mental models.</p>
+      </div>
+      <div class="outcome-wide" aria-label="Special Olympics final website screens">
+        <img class="expandable-image" src="./images/special-olympics-figma/outcome-1.webp" width="600" height="512" loading="lazy" decoding="async" alt="Special Olympics final website homepage">
+        <img class="expandable-image" src="./images/special-olympics-figma/outcome-2.webp" width="600" height="512" loading="lazy" decoding="async" alt="Special Olympics final website support page">
+      </div>
+    </section>
+
+ <section class="case-project-nav">
+      <a href="projects.html" class="back">
+        <img src="./images/arrow-pink-L.svg" alt="" class="arrow">
+        <span class="back-text-long">Back to projects overview</span>
+        <span class="back-text-short">Back</span>
+      </a>
+      <div class="next-div">
+        <a href="routeplanner.html" class="next">
+          <span>Next</span>
+          <img src="./images/arrow-pink-R.svg" alt="" class="arrow">
+        </a>
+        <p>Route Planner</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Get in touch</h2>
+      <div class="buttons">
+        <a class="secondary" href="mailto:amoutalibova@gmail.com">Email</a>
+        <a class="secondary" href="https://www.linkedin.com/in/amina-moutalibova" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+      <img src="./images/vectors/logo-white.svg" alt="" class="bg-img" aria-hidden="true">
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="./images/vectors/logo-white.svg" alt="Amina Moutalibova logo" class="logo">
+    <div class="footer-nav">
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="copyright"><span>&copy;</span> 2026 Amina Moutalibova</p>
+  </footer>
+
+  <script>
+    const lightbox = document.createElement('div');
+    lightbox.className = 'image-lightbox';
+    lightbox.innerHTML = `<div class="image-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Expanded image"><button class="image-lightbox__close" type="button" aria-label="Close image">×</button><img alt=""></div>`;
+    document.body.appendChild(lightbox);
+    const lightboxImage = lightbox.querySelector('img');
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-open');
+      document.body.classList.remove('is-lightbox-open');
+      lightboxImage.removeAttribute('src');
+      lightboxImage.alt = '';
+    };
+    const openLightbox = (image) => {
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt || '';
+      lightbox.classList.add('is-open');
+      document.body.classList.add('is-lightbox-open');
+    };
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox || event.target.closest('.image-lightbox__close')) closeLightbox();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+    });
+    document.querySelectorAll('.expandable-image').forEach((image) => {
+      image.addEventListener('click', () => openLightbox(image));
+    });
+  </script>
+</body>
+</html>

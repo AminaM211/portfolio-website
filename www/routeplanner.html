@@ -22,6 +22,16 @@
       object-fit: contain;
     }
 
+    .red {
+      color: red;
+      font-weight: 900;
+    }
+
+     .blue {
+      color: rgb(0, 110, 255);
+      font-weight: 900;
+    }
+
     .device-hero {
       margin-top: 40px;
     }
@@ -85,7 +95,7 @@
 
     body.ucd-case-study .ucd-decision__number {
       color: var(--accent);
-      min-width: 25px;
+      min-width: 30px;
     }
 
     body.ucd-case-study .ucd-decision img {
@@ -167,6 +177,10 @@
     .device-hero {
       margin-top: 16px;
     }
+
+    .ucd-decision__label span {
+      font-size: 18px !important;
+    }
   }
   </style>
 </head>
@@ -208,7 +222,7 @@
       <div class="split-section">
         <h2 class="split-section__title">Research &amp; Discovery</h2>
         <div class="split-section__copy">
-          <p>To better understand accessibility challenges in route planning applications, I evaluated existing solutions using Nielsen's usability heuristics and accessibility guidelines such as WCAG.</p>
+          <p>To better understand accessibility challenges in route planning applications, I evaluated existing solutions using <span class="red">Nielsen's usability heuristics</span> and accessibility guidelines such as <span class="blue">WCAG</span>.</p>
           <p>The evaluation revealed several recurring issues, including unclear interface states, feedback that relied solely on color, inconsistent navigation patterns and limited support for different accessibility needs.</p>
         </div>
       </div>
@@ -233,7 +247,7 @@
             <h3 class="ucd-decision__label"><span class="ucd-decision__number">01</span><span>Clear Selection States</span></h3>
             <p class="case-copy">Early iterations relied primarily on color to indicate the selected transport mode. Following WCAG principles, an additional checkmark was introduced to provide a secondary visual cue and ensure that selection states remained understandable for users with color vision deficiencies.</p>
           </div>
-          <img class="expandable-image" src="./images/ucd-figma/decision-transport.png" width="458" height="573" loading="lazy" decoding="async" alt="Accessible selected state feedback for transport modes">
+          <img class="expandable-image" src="./images/ucd-figma/decision-transport.webp" width="458" height="573" loading="lazy" decoding="async" alt="Accessible selected state feedback for transport modes">
         </article>
 
         <article class="ucd-decision ucd-decision--small">

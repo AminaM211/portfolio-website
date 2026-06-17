@@ -8,6 +8,7 @@
 
 .page {
   padding: 0;
+  font-weight: 200;
 }
 
 .padding, .padding-color {
@@ -807,8 +808,12 @@ body.case-study .visual-section {
   padding-block: 80px;
 }
 
+strong {
+  font-weight: 900 !important;
+}
+
 body.case-study .concept-image {
-  flex: 0 1 500px;
+  /* flex: 0 1 500px; */
   min-width: 0;
 }
 
@@ -903,10 +908,10 @@ body.case-study .visual-copy {
 
 body.case-study .visual-copy p { margin-top: 16px; }
 
-body.case-study .visual-image {
+/* body.case-study .visual-image {
   flex: 0 1 545px;
   min-width: 0;
-}
+} */
 
 body.case-study .outcome-screens {
   display: flex;
@@ -1115,7 +1120,7 @@ body.case-study .copyright {
   body.case-study .concept-section,
   body.case-study .features-section,
   body.case-study .visual-section {
-    padding-block: 36px;
+    padding-block: 64px;
   }
   body.case-study .split-section,
   body.case-study .media-section,
@@ -1294,7 +1299,7 @@ body.case-study .image-stack {
 body.case-study .carousel-frame {
   position: relative;
   width: 100%;
-  height: clamp(320px, 34vw, 494px);
+  height: clamp(320px, 34vw, 300px);
   overflow: hidden;
   display: flex;
   align-items: center;
