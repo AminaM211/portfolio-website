@@ -23,6 +23,21 @@
       cursor: zoom-in;
     }
 
+    body.special-olympics-case .challenge-carousel {
+      width: 100%;
+      min-width: 0;
+    }
+
+    body.special-olympics-case .challenge-carousel .carousel-frame {
+      height: clamp(360px, 38vw, 474px);
+    }
+
+    body.special-olympics-case .challenge-carousel .carousel-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
     body.special-olympics-case .so-section {
       width: calc(100% + (var(--page-pad) * 2));
       margin-inline: calc(var(--page-pad) * -1);
@@ -153,6 +168,12 @@
       }
     }
 
+    .carousel-caption {
+      font-size: 14px;
+      line-height: 1.35;
+      margin-top: 4px !important;
+    }
+
     @media (max-width: 768px) {
       body.special-olympics-case .so-section {
         padding-block: 64px;
@@ -187,7 +208,7 @@
 
     <section class="project-intro" aria-labelledby="project-title">
       <div class="device-hero">
-        <img src="./images/special-olympics-figma/hero.webp" width="1192" height="625" fetchpriority="high" decoding="async" alt="Special Olympics Belgium website redesign screens">
+        <img src="./images/special-olympics-figma/hero.webp" width="2384" height="1250" fetchpriority="high" decoding="async" alt="Special Olympics Belgium website redesign screens">
       </div>
 
       <div class="case-summary">
@@ -212,8 +233,21 @@
           <h2>Challenge</h2>
           <p class="case-copy">The existing website had grown over time and no longer reflected how users expected information to be organised. Rather than jumping directly into visual redesigns, the project focused on understanding how users searched for information and how the content structure could be improved.</p>
         </div>
-        <div class="case-asset">
-          <img class="expandable-image" src="./images/special-olympics-figma/challenge.webp" width="510" height="472" loading="lazy" decoding="async" alt="Special Olympics existing website structure audit">
+        <div class="case-asset image-stack carousel challenge-carousel" data-carousel>
+          <div class="carousel-frame">
+            <div class="carousel-image">
+              <img class="is-active" src="./images/special-olympics-figma/challenge.webp" width="1020" height="944" loading="lazy" decoding="async" alt="Special Olympics existing website structure audit">
+              <p class="carousel-caption">Existing website structure</p>
+            </div>
+            <div class="carousel-image">
+              <img class="" src="./images/special-olympics-figma/challenge-structure.webp" width="1028" height="948" loading="lazy" decoding="async" alt="Special Olympics content structure diagram">
+              <p class="carousel-caption">AS IS structure mindmapped</p>
+          </div>
+          <div class="carousel-controls" aria-label="Challenge image controls">
+            <button type="button" data-carousel-prev>← Prev</button>
+            <span class="carousel-status" aria-live="polite">Image 1 of 2</span>
+            <button type="button" data-carousel-next>Next →</button>
+          </div>
         </div>
       </div>
     </section>
@@ -253,7 +287,8 @@
         <p class="case-copy">Categories such as About Us, Sports, Get Involved, What We Do and Support Us emerged naturally. Rather than structuring content around internal organisational departments, the final navigation was built around how participants naturally grouped information.</p>
       </div>
       <div class="case-asset so-full-image">
-        <img class="expandable-image" src="./images/special-olympics-figma/card-sorting.webp" width="700" height="381" loading="lazy" decoding="async" alt="Special Olympics card sorting results">
+        <img class="expandable-image" src="./images/special-olympics-figma/card-sorting.webp" width="1400" height="762" loading="lazy" decoding="async" alt="Special Olympics card sorting results">
+        <p class="carousel-caption">card sorting example from a participant</p>
       </div>
     </section>
 
@@ -287,7 +322,7 @@
         <p class="case-copy">Based on the card sorting results, the navigation was reorganised into five primary categories: About Us, Sports, Get Involved, What We Do and Support Us. The new structure aligned more closely with users' mental models and reduced navigation complexity.</p>
       </div>
       <div class="case-asset so-full-image">
-        <img class="expandable-image" src="./images/special-olympics-figma/to-be-structure.webp" width="800" height="669" loading="lazy" decoding="async" alt="Special Olympics proposed information architecture structure">
+        <img class="expandable-image" src="./images/special-olympics-figma/to-be-structure.webp" width="1600" height="1338" loading="lazy" decoding="async" alt="Special Olympics proposed information architecture structure">
       </div>
     </section>
 
@@ -321,7 +356,7 @@
         <p class="case-copy">Instead of using a dropdown navigation with multiple subpages, the final version links directly to a dedicated support page where all donation and sponsorship opportunities are grouped together.</p>
       </div>
       <div class="case-asset so-full-image">
-        <img class="expandable-image" src="./images/special-olympics-figma/key-findings.webp" width="760" height="591" loading="lazy" decoding="async" alt="Special Olympics navigation refinement comparison">
+        <img class="expandable-image" src="./images/special-olympics-figma/key-findings.webp" width="1520" height="1182" loading="lazy" decoding="async" alt="Special Olympics navigation refinement comparison">
       </div>
     </section>
 
@@ -354,8 +389,8 @@
         <p class="case-copy">The final information architecture reduced ambiguity in the navigation structure and improved the discoverability of key tasks such as athlete registration, volunteering and donations. User testing validated that the revised navigation better matched users' expectations and mental models.</p>
       </div>
       <div class="outcome-wide" aria-label="Special Olympics final website screens">
-        <img class="expandable-image" src="./images/special-olympics-figma/outcome-1.webp" width="600" height="512" loading="lazy" decoding="async" alt="Special Olympics final website homepage">
-        <img class="expandable-image" src="./images/special-olympics-figma/outcome-2.webp" width="600" height="512" loading="lazy" decoding="async" alt="Special Olympics final website support page">
+        <img class="expandable-image" src="./images/special-olympics-figma/outcome-1.webp" width="1200" height="1024" loading="lazy" decoding="async" alt="Special Olympics final website homepage">
+        <img class="expandable-image" src="./images/special-olympics-figma/outcome-2.webp" width="1200" height="1000" loading="lazy" decoding="async" alt="Special Olympics final website support page">
       </div>
     </section>
 
@@ -417,6 +452,52 @@
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
     });
+    document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+      const images = [...carousel.querySelectorAll('.carousel-image')];
+      const status = carousel.querySelector('.carousel-status');
+      const previousButtons = [...carousel.querySelectorAll('[data-carousel-prev]')];
+      const nextButtons = [...carousel.querySelectorAll('[data-carousel-next]')];
+      let activeIndex = 0;
+      let touchStartX = 0;
+
+      const showSlide = (index) => {
+        activeIndex = Math.max(0, Math.min(index, images.length - 1));
+        images.forEach((image, imageIndex) => {
+          image.classList.toggle('is-active', imageIndex === activeIndex);
+          image.classList.toggle('is-before', imageIndex < activeIndex);
+          image.classList.toggle('is-after', imageIndex > activeIndex);
+        });
+        status.textContent = `Image ${activeIndex + 1} of ${images.length}`;
+        previousButtons.forEach((button) => { button.hidden = activeIndex === 0; });
+        nextButtons.forEach((button) => { button.hidden = activeIndex === images.length - 1; });
+      };
+
+      previousButtons.forEach((button) => {
+        button.addEventListener('click', () => showSlide(activeIndex - 1));
+      });
+
+      nextButtons.forEach((button) => {
+        button.addEventListener('click', () => showSlide(activeIndex + 1));
+      });
+
+      images.forEach((image) => {
+        image.addEventListener('click', () => {
+          if (image.classList.contains('is-active')) openLightbox(image);
+        });
+      });
+
+      carousel.addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0].clientX;
+      }, { passive: true });
+
+      carousel.addEventListener('touchend', (event) => {
+        const deltaX = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(deltaX) > 40) showSlide(activeIndex + (deltaX < 0 ? 1 : -1));
+      }, { passive: true });
+
+      showSlide(0);
+    });
+
     document.querySelectorAll('.expandable-image').forEach((image) => {
       image.addEventListener('click', () => openLightbox(image));
     });

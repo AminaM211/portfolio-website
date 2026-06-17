@@ -283,6 +283,15 @@ video  {
   gap: 16px;
 }
 
+thead {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+td {
+  padding-right: 16px !important;
+}
+
   .mockups img {
     width: 40% !important;
   }
