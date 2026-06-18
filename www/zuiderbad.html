@@ -8,6 +8,7 @@
   <link rel="preload" as="image" href="./images/zuiderbad-figma/device-hero.webp">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/project-detail.css">
   <style>
     :root {
       --accent: #de0043;
@@ -51,6 +52,7 @@
       display: block;
       width: min(100%, var(--max-page));
       max-width: var(--max-page);
+      
       margin: 0 auto;
       padding: 0 var(--page-pad);
       background: var(--paper);
@@ -115,6 +117,33 @@
       object-fit: cover;
     }
 
+  .case-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-end !important;
+  justify-content: space-between;
+  align-self: flex-end;
+  min-height: 250px;
+  text-align: right;
+  white-space: nowrap;
+  font-size: 18px;
+  line-height: 1.8;
+  max-height: 360px;
+}
+
+.accent-color {
+  color: #C5013C;
+  font-weight: 700;
+}
+
+.case-meta strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
     .case-summary {
       display: flex;
       align-items: stretch;
@@ -122,10 +151,10 @@
       gap: 48px;
     }
 
-    .case-summary__copy {
+    /* .case-summary__copy {
       width: min(65ch, 100%);
       max-width: 65ch;
-    }
+    } */
 
     .eyebrow {
       margin: 0;
@@ -158,8 +187,6 @@
 
     .case-copy {
       margin-top: 24px;
-      font-size: 18px;
-      white-space: pre-line;
     }
 
     .case-copy strong { font-weight: 700; }
@@ -172,28 +199,13 @@
     .visual-copy,
     .case-copy,
     .feature-item p,
-    .question-list p {
-      max-width: 65ch;
+    .question-list p, p {
+      max-width: 65ch !important;
+      font-size: 20px !important;
+      line-height: 1.8 !important;
+
     }
 
-    .case-meta {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      justify-content: space-between;
-      min-height: 246px;
-      text-align: right;
-      white-space: nowrap;
-      font-size: 16px;
-      line-height: 1.35;
-    }
-
-    .case-meta strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 18px;
-      font-weight: 700;
-    }
 
     .band {
       width: calc(100% + (var(--page-pad) * 2));
@@ -1678,9 +1690,9 @@
         <div class="case-summary__copy">
           <p class="eyebrow">Zuiderbad</p>
           <h1 id="project-title">Interactive Map</h1>
-          <p class="case-copy"><strong>An interactive map for Zuiderbad in Hofstade that helps visitors explore the park in an intuitive and playful way.</strong>
+          <p class="case-copy">An interactive map for Zuiderbad in Hofstade that <strong class="accent-color">helps visitors explore the park in an intuitive and playful way.</strong>
 
-The platform combines route planning, smart filters, location pop-ups and responsive design to help visitors quickly find restaurants, activities, parking areas and event locations. The visual style follows Zuiderbad's playful branding through custom icons, illustrations and a clear mobile-first interface.</p>
+<br><br>The platform combines route planning, smart filters, location pop-ups and responsive design to help visitors quickly find restaurants, activities, parking areas and event locations. The visual style follows Zuiderbad's playful branding through custom icons, illustrations and a clear mobile-first interface.</p>
         </div>
 
         <aside class="case-meta" aria-label="Project details">
@@ -1694,9 +1706,8 @@ The platform combines route planning, smart filters, location pop-ups and respon
     <section class="band band--pink">
       <div class="center-block">
         <h2>Problem</h2>
-        <p class="case-copy">Hofstade covers a large area with restaurants, playgrounds, sports facilities, walking routes and event locations spread across the domain. Visitors often relied on Google Maps, static signage and PDF plans, which made it difficult to understand what was available and how to get there.
-
-The challenge wasn't simply navigation. Visitors first needed help discovering what the park had to offer before deciding where to go.</p>
+        <p class="case-copy">Hofstade covers a large area with restaurants, playgrounds, sports facilities, walking routes and event locations spread across the domain. Visitors often relied on Google Maps, static signage and PDF plans, which made it <strong class="accent-color">difficult to understand what was available and how to get there.</strong>
+      <br><br>The challenge wasn't simply navigation. Visitors first needed help discovering what the park had to offer before deciding where to go.</p>
       </div>
       <img class="problem-image" src="./images/zuiderbad-figma/problem-map.webp" width="646" height="454" loading="lazy" decoding="async" alt="Illustrated map of the Hofstade domain">
     </section>
@@ -1705,15 +1716,15 @@ The challenge wasn't simply navigation. Visitors first needed help discovering w
       <div class="split-section">
         <h2 class="split-section__title">Discovery &amp; Research</h2>
         <div class="split-section__copy">
-          <p>We started with <strong>stakeholder interviews, competitor analysis and an on-site visit</strong> of the Hofstade domain.</p>
-          <p style="margin-top: 24px;">Walking through the park revealed several moments where visitors could easily lose orientation, especially around larger activity zones. We also observed that visitors were constantly <strong>switching between different sources of information</strong> to answer simple questions such as:</p>
+          <p>We started with <strong class="accent-color">stakeholder interviews, competitor analysis and an on-site visit</strong> of the Hofstade domain.</p>
+          <p style="margin-top: 24px;">Walking through the park revealed several moments where visitors could easily lose orientation, especially around larger activity zones. We also observed that visitors were constantly <strong class="accent-color">switching between different sources of information</strong> to answer simple questions such as:</p>
           <div class="question-list">
             <p>"Where is the restaurant located?"</p>
             <p>"How do I get to the playground?"</p>
             <p>"Where is the nearest parking?"</p>
           </div>
-          <p>Research revealed that visitors weren't primarily looking for directions. They first needed help <strong>discovering what the domain had to offer</strong> before deciding where to go.</p>
-          <p style="margin-top: 24px;">This insight shifted the project from a traditional navigation tool towards a <strong>combined exploration and wayfinding experience</strong>. The map became the central interface, allowing visitors to discover attractions, access information and start routes from a single location.</p>
+          <p>Research revealed that visitors weren't primarily looking for directions. They first needed help <strong class="accent-color">discovering what the domain had to offer</strong> before deciding where to go.</p>
+          <p style="margin-top: 24px;">This insight shifted the project from a traditional navigation tool towards a <strong class="accent-color">combined exploration and wayfinding experience</strong>. The map became the central interface, allowing visitors to discover attractions, access information and start routes from a single location.</p>
         </div>
       </div>
     </section>
@@ -1721,7 +1732,7 @@ The challenge wasn't simply navigation. Visitors first needed help discovering w
     <section class="band band--pink">
       <div class="features-intro">
         <h2>Key Features</h2>
-        <p>Based on our research findings, we designed a mobile-first platform that combines discovery, navigation and visitor information into a single experience.</p>
+        <p>Based on our research findings, we designed a mobile-first platform that <strong class="accent-color">combines discovery, navigation and visitor information</strong> into a single experience.</p>
       </div>
       <div class="feature-list">
         <article class="feature-item">
@@ -1746,7 +1757,7 @@ The challenge wasn't simply navigation. Visitors first needed help discovering w
     <section class="media-section split-section">
       <div class="visual-copy">
         <h2>Visual Direction</h2>
-        <p>Traditional navigation tools often feel functional but impersonal. To create a more engaging experience, we adopted an illustrated visual style inspired by theme parks, helping visitors recognize landmarks more easily while reinforcing Zuiderbad's playful identity.</p>
+        <p>Traditional navigation tools often feel functional but impersonal. To create a more engaging experience, we adopted an <strong class="accent-color">illustrated visual style</strong> inspired by theme parks, helping visitors recognize landmarks more easily while reinforcing Zuiderbad's playful identity.</p>
       </div>
       <div class="image-stack carousel" data-carousel>
         <div class="carousel-frame">
@@ -1775,17 +1786,17 @@ The challenge wasn't simply navigation. Visitors first needed help discovering w
       </div>
       <div class="visual-copy">
         <h2>Wireframing</h2>
-        <p>We explored how visitors could use the map in the most intuitive way, with a focus on reducing friction and helping users find information in as few clicks as possible.</p>
-        <p>Early wireframes focused on reducing the number of interactions required to access information. The final structure allowed visitors to access routes, filters and location details directly from the map view without navigating through multiple screens.</p>
+        <p>We explored how visitors could use the map in the most intuitive way, with a <strong class="accent-color">focus on reducing friction and helping users find information in as few clicks as possible.</strong></p>
+        <p>The final structure allowed visitors to access routes, filters and location details directly from the map view without navigating through multiple screens.</p>
       </div>
     </section>
 
     <section class="band band--pink">
       <div class="center-block">
         <h2>Final Outcome</h2>
-        <p class="case-copy">The final platform transformed a fragmented visitor experience into a single digital solution. Instead of switching between Google Maps, static park maps and separate information sources, visitors can now discover locations, plan routes and navigate the domain through one intuitive interface.
+        <p class="case-copy">The final platform transformed a fragmented visitor experience into a <strong class="accent-color">single digital solution</strong>. Instead of switching between Google Maps, static park maps and separate information sources, visitors can now discover locations, plan routes and navigate the domain through one intuitive interface.
 
-By combining exploration, wayfinding and practical visitor information, the platform makes the Hofstade domain easier to understand and more enjoyable to explore.</p>
+<br><br>By <strong class="accent-color">combining exploration, wayfinding and practical visitor information</strong>, the platform makes the Hofstade domain easier to understand and more enjoyable to explore.</p>
       </div>
       <img class="outcome-image" src="./images/zuiderbad-figma/final-outcome.webp" width="868" height="585" loading="lazy" decoding="async" alt="Final Zuiderbad interactive map screens">
     </section>
