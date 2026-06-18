@@ -105,11 +105,9 @@
 		}
 
 		.bio {
-			max-width: 500px;
-			font-size: clamp(1rem, 1.35vw, 1.65rem);
-			line-height: 1.35;
-			font-weight: 400;
-			color: var(--muted);
+   max-width: 65ch; 
+   font-size: 18px;
+  line-height: 1.8;
 		}
 
     .bio p {
@@ -140,7 +138,6 @@
 			font-size: clamp(2.2rem, 4.6vw, 3.7rem);
 			line-height: 1;
 			font-weight: 500;
-			letter-spacing: -0.03em;
 			margin-top: 8px;
 		}
 
@@ -173,6 +170,11 @@
 			background: #de0043;
 			border-color: #de0043;
 			color: #fff;
+		}
+
+		.project-card__title {
+   font-size: 16px !important;
+  line-height: 1.6 !important;
 		}
 
 		.project-card:hover .project-card__eyebrow,
@@ -471,9 +473,8 @@
 
 		.contact-hero__title {
 			font-size: clamp(3rem, 7vw, 4rem);
-			line-height: 1.1;
+			line-height: 1;
 			font-weight: 500;
-			letter-spacing: -0.01em;
 			max-width: 10ch;
 		}
 
@@ -632,7 +633,6 @@
 			padding: 40px 12rem;
             width: 100%;
 			font-size: 14px;
-			letter-spacing: 0.01em;
 		}
 
 		.footer .logo {
@@ -884,7 +884,11 @@
 			margin-top:0px;
 		}
 
-
+		.bio {
+   max-width: 65ch; 
+   font-size: 18px;
+  line-height: 1.8;
+		}
 
 	  		.project-card:hover {
 			transform: translateY(0px);
