@@ -58,47 +58,6 @@
       background: var(--paper);
     }
 
-    .zuiderbad-nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 40px 0;
-      gap: 32px;
-    }
-
-    .zuiderbad-logo {
-      width: 64px;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 18px;
-    }
-
-    .zuiderbad-logo img { height: 36px; width: auto; }
-
-    .zuiderbad-nav__links {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 16px;
-      line-height: 1;
-    }
-
-    .zuiderbad-nav__links a {
-      min-width: 96px;
-      padding: 15px 24px 13px;
-      text-align: center;
-      border-bottom: 1px solid #000;
-      color: #000;
-      text-decoration: none;
-    }
-
-    .zuiderbad-nav__links a[aria-current="page"] {
-      color: #fff;
-      background: var(--accent);
-      border-color: var(--accent);
-    }
 
     .project-intro {
       display: flex;
@@ -191,19 +150,18 @@
 
     .case-copy strong { font-weight: 700; }
 
-    .case-summary__copy,
-    .center-block,
-    .split-section__copy,
-    .features-intro,
-    .feature-list,
-    .visual-copy,
-    .case-copy,
-    .feature-item p,
+      .case-summary__copy,
+      .case-copy,
+      .split-section__copy,
+      .split-section__copy p,
+      .features-intro p,
+      .feature-list,
+      .visual-copy p,
+      .feature-item p,
     .question-list p, p {
       max-width: 65ch !important;
       font-size: 20px !important;
       line-height: 1.8 !important;
-
     }
 
 
@@ -499,30 +457,50 @@
 
     .case-nav {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
       gap: 32px;
       padding: 40px 0;
     }
 
-    .case-nav a {
-      display: inline-flex;
+    .case-logo {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+
+    .case-logo img {
+      width: auto;
+      height: 36px;
+    }
+
+    .case-nav__links {
+      display: flex;
       align-items: center;
       gap: 12px;
-      padding: 8px 0;
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .case-nav__links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 96px;
+      padding: 15px 24px 13px;
       border-bottom: 1px solid #000;
       color: #000;
       text-decoration: none;
-      font-size: 22px;
-      line-height: 1.3;
+      text-align: center;
     }
 
-    .case-nav__next {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 16px;
-      font-size: 16px;
+    .case-nav__links a[aria-current="page"] {
+      color: #fff;
+      background: var(--accent);
+      border-color: var(--accent);
     }
 
     .arrow-icon {
@@ -668,6 +646,45 @@
         height: auto;
       }
 
+      .case-summary {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        gap: 32px !important;
+      }
+
+      .case-summary__copy,
+      .case-meta {
+        width: 100% !important;
+        max-width: 65ch !important;
+        align-self: flex-start !important;
+      }
+
+      .case-meta {
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        margin: 0 !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        text-align: left !important;
+        white-space: normal !important;
+        gap: 24px !important;
+      }
+
+      .case-summary__copy,
+      .case-copy,
+      .split-section__copy,
+      .split-section__copy p,
+      .features-intro p,
+      .feature-list,
+      .visual-copy p,
+      .feature-item p,
+      .question-list p {
+        font-size: 18px !important;
+        line-height: 1.65 !important;
+      }
+
       .media-section .carousel,
       .media-section .carousel-frame {
         width: 100%;
@@ -713,30 +730,6 @@
         max-width: 100%;
       }
 
-      .zuiderbad-nav {
-        padding: 24px 0 40px;
-        align-items: flex-start;
-        gap: 20px;
-      }
-
-      .zuiderbad-logo {
-        width: 44px;
-        height: 44px;
-        padding: 8px;
-        flex: 0 0 auto;
-      }
-
-      .zuiderbad-nav__links {
-        gap: 8px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-      }
-
-      .zuiderbad-nav__links a {
-        min-width: 0;
-        padding: 12px 14px 10px;
-      }
-
       .project-intro {
         gap: 28px;
         padding-bottom: 48px;
@@ -757,7 +750,6 @@
         object-fit: contain;
       }
 
-      .case-summary,
       .split-section {
         flex-direction: column;
         gap: 32px;
@@ -771,14 +763,6 @@
       .feature-list {
         width: 100%;
         max-width: 100%;
-      }
-
-      .case-meta {
-        align-items: flex-start;
-        text-align: left;
-        gap: 20px;
-        min-height: 0;
-        white-space: normal;
       }
 
       .band {
@@ -904,17 +888,17 @@
         padding: 48px 18px;
       }
 
-      .zuiderbad-nav {
+      .case-nav {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      .zuiderbad-nav__links {
+      .case-nav__links {
         width: 100%;
         justify-content: flex-start;
       }
 
-      .zuiderbad-nav__links a {
+      .case-nav__links a {
         font-size: 15px;
         padding-inline: 12px;
       }
@@ -984,7 +968,7 @@
         margin: 0;
       }
 
-      .zuiderbad-nav,
+      .case-nav,
       .project-intro,
       .media-section,
       .final-gallery,
@@ -1271,11 +1255,6 @@
         font-size: 42px;
       }
 
-      body.project-detail .zuiderbad-logo img {
-        width: auto !important;
-        height: 36px !important;
-      }
-
       body.project-detail .project-nav img {
         width: 24px !important;
         height: 24px !important;
@@ -1468,7 +1447,7 @@
     @media (max-width: 700px) {
       :root { --page-pad: 24px; }
 
-      body.project-detail .zuiderbad-nav {
+      body.project-detail .case-nav {
         padding: 24px 0 40px !important;
       }
 
@@ -1679,7 +1658,7 @@
 
 <body class="project-detail">
   <main class="page">
-    <div data-site-nav data-nav-variant="zuiderbad" data-nav-active="projects"></div>
+    <div data-site-nav data-nav-variant="case-study" data-nav-active="projects"></div>
 
     <section class="project-intro" aria-labelledby="project-title">
       <div class="device-hero">
@@ -1805,7 +1784,7 @@
       <img src="./images/zuiderbad-figma/final-gallery.webp" width="1200" height="604" loading="lazy" decoding="async" alt="Zuiderbad mobile interface mockup gallery">
     </section>
 
-      <section class="project-nav padding">
+      <section class="project-nav ">
           <a href="projects.html" class="back">
             <img src="./images/arrow-pink-L.svg" alt="" class="arrow">
             <p class="back-text-long">Back to projects overview</p>
@@ -1841,7 +1820,7 @@
         2026 Amina Moutalibova
       </p>
 		</footer>
-  <script>
+<script>
     const lightbox = document.createElement('div');
     lightbox.className = 'image-lightbox';
     lightbox.innerHTML = `<div class="image-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Expanded image"><button class="image-lightbox__close" type="button" aria-label="Close image">×</button><img alt=""></div>`;
@@ -1865,8 +1844,6 @@
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
     });
-
-
     document.querySelectorAll('[data-carousel]').forEach((carousel) => {
       const images = [...carousel.querySelectorAll('.carousel-image')];
       const status = carousel.querySelector('.carousel-status');
@@ -1874,6 +1851,7 @@
       const nextButtons = [...carousel.querySelectorAll('[data-carousel-next]')];
       let activeIndex = 0;
       let touchStartX = 0;
+
       const showSlide = (index) => {
         activeIndex = Math.max(0, Math.min(index, images.length - 1));
         images.forEach((image, imageIndex) => {
@@ -1886,16 +1864,12 @@
         nextButtons.forEach((button) => { button.hidden = activeIndex === images.length - 1; });
       };
 
-      const goToSlide = (index) => {
-        showSlide(index);
-      };
-
       previousButtons.forEach((button) => {
-        button.addEventListener('click', () => goToSlide(activeIndex - 1));
+        button.addEventListener('click', () => showSlide(activeIndex - 1));
       });
 
       nextButtons.forEach((button) => {
-        button.addEventListener('click', () => goToSlide(activeIndex + 1));
+        button.addEventListener('click', () => showSlide(activeIndex + 1));
       });
 
       images.forEach((image) => {
@@ -1910,10 +1884,14 @@
 
       carousel.addEventListener('touchend', (event) => {
         const deltaX = event.changedTouches[0].clientX - touchStartX;
-        if (Math.abs(deltaX) > 40) goToSlide(activeIndex + (deltaX < 0 ? 1 : -1));
+        if (Math.abs(deltaX) > 40) showSlide(activeIndex + (deltaX < 0 ? 1 : -1));
       }, { passive: true });
 
       showSlide(0);
+    });
+
+    document.querySelectorAll('.expandable-image').forEach((image) => {
+      image.addEventListener('click', () => openLightbox(image));
     });
   </script>
 

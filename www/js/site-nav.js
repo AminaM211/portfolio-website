@@ -45,23 +45,9 @@
     ].join('');
   }
 
-  function renderZuiderbad(activeKey) {
-    return [
-      '<header class="zuiderbad-nav">',
-      '  <a class="zuiderbad-logo" href="index.html" aria-label="Amina Moutalibova home">',
-      '    <img src="./images/vectors/logo-black.svg" alt="Amina Moutalibova logo" width="25" height="36">',
-      '  </a>',
-      '  <nav class="zuiderbad-nav__links" aria-label="Main navigation">',
-      '    ' + links.map((link) => navLink(link, activeKey, 'zuiderbad')).join(''),
-      '  </nav>',
-      '</header>'
-    ].join('');
-  }
-
   const renderers = {
     default: renderDefault,
-    'case-study': renderCaseStudy,
-    zuiderbad: renderZuiderbad
+    'case-study': renderCaseStudy
   };
 
   document.querySelectorAll('[data-site-nav]').forEach((slot) => {

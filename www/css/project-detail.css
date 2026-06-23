@@ -1104,15 +1104,29 @@ body.case-study .concept-copy,
   body.case-study .media-section,
   body.case-study .features-section {
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 32px;
   }
+  body.case-study .case-summary__copy,
   body.case-study .case-meta {
-    align-items: flex-start;
+    width: 100%;
+    align-self: flex-start;
+  }
+  body.case-study .case-meta {
+    align-items: flex-start !important;
+    margin: 0;
     min-height: 0;
     text-align: left;
     white-space: normal;
     gap: 24px;
   }
+
+  .case-summary {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+  
   body.case-study .feature-phone {
     margin-right: 0;
     width: min(282px, 58vw);
