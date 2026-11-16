@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D Food Kiosk | Blender</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="preload" as="image" href="../images/kiosk-figma/kiosk-1.png">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/project-detail.css">
+  <script src="../js/site-nav.js" defer></script>
+</head>
+
+<body class="project-detail case-study">
+  <div class="lang-switcher" style="position:fixed;top:16px;right:16px;z-index:2000;display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.92);border:1px solid rgba(21,21,21,0.1);box-shadow:0 12px 30px rgba(21,21,21,0.08);">
+    <a href="../kiosk.html" lang="nl">NL</a>
+    <span aria-hidden="true">/</span>
+    <a href="kiosk.html" lang="en" aria-current="page">EN</a>
+  </div>
+
+  <main class="page">
+    <div data-site-nav data-nav-variant="case-study" data-nav-active="projects"></div>
+
+    <section class="project-intro" aria-labelledby="project-title">
+      <div class="device-hero">
+        <img src="../images/kiosk-figma/kiosk-1.png" width="1200" height="760" fetchpriority="high" decoding="async" alt="3D Food Kiosk render in Blender">
+      </div>
+
+      <div class="case-summary">
+        <div class="case-summary__copy">
+          <p class="eyebrow">3D Food Kiosk</p>
+          <h1 id="project-title">3D Food Kiosk in Blender</h1>
+          <p class="case-copy">A 3D scene of a food kiosk in a neon-lit night setting, with attention to form, atmosphere and visual composition.</p>
+        </div>
+
+        <aside class="case-meta" aria-label="Project details">
+          <div><strong>Tooling</strong><span>Blender</span></div>
+          <div><strong>Scope</strong><span>3D Modeling<br>Lighting<br>Scene Design</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="band band--pink">
+      <div class="center-block">
+        <h2>Goal</h2>
+        <p class="case-copy">This project explores how a scene can build a strong visual presence through form, material choices and a clear nighttime atmosphere.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="split-section">
+        <h2 class="split-section__title">Execution</h2>
+        <div class="split-section__copy">
+          <p>The kiosk was designed as a colorful food stand with a strong atmosphere. I played with tone, form, lighting and a stylized look so the scene immediately tells a story.</p>
+          <p>I experimented with modeling, texturing and composition in Blender to build a clear visual identity that matches the desired nighttime ambiance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="visual-section media-section">
+      <div class="visual-copy">
+        <h2>View the scene</h2>
+        <p>The renders show the kiosk in a nighttime setting with neon lighting, warm materials and a compact retail concept that works visually at a glance.</p>
+      </div>
+      <div class="image-stack carousel visual-image" data-carousel>
+        <div class="carousel-frame">
+          <img class="carousel-image is-active" src="../images/kiosk-figma/kiosk-1.png" width="900" height="630" loading="lazy" decoding="async" alt="Food kiosk 3D render front view">
+          <img class="carousel-image" src="../images/kiosk-figma/kiosk-2.png" width="900" height="630" loading="lazy" decoding="async" alt="Food kiosk 3D render side view">
+          <img class="carousel-image" src="../images/kiosk-figma/kiosk-3.png" width="900" height="630" loading="lazy" decoding="async" alt="Food kiosk 3D render close-up">
+        </div>
+        <div class="carousel-controls" aria-label="Image controls">
+          <button type="button" data-carousel-prev>← Prev</button>
+          <span class="carousel-status" aria-live="polite">Image 1 of 3</span>
+          <button type="button" data-carousel-next>Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-project-nav">
+      <a href="../projects.html" class="back">
+        <img src="../images/arrow-pink-L.svg" alt="" class="arrow">
+        <span class="back-text-long">Back to projects</span>
+        <span class="back-text-short">Back</span>
+      </a>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Get in touch</h2>
+      <div class="buttons">
+        <a class="secondary" href="mailto:amoutalibova@gmail.com">Email</a>
+        <a class="secondary" href="https://www.linkedin.com/in/amina-moutalibova" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+      <img src="../images/vectors/logo-white.svg" alt="" class="bg-img" aria-hidden="true">
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="../images/vectors/logo-white.svg" alt="Amina Moutalibova logo" class="logo">
+    <div class="footer-nav">
+      <a href="../projects.html">Projects</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <p class="copyright"><span>&copy;</span> 2026 Amina Moutalibova</p>
+  </footer>
+
+  <script>
+    const lightbox = document.createElement('div');
+    lightbox.className = 'image-lightbox';
+    lightbox.innerHTML = '<div class="image-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Expanded image"><button class="image-lightbox__close" type="button" aria-label="Close image">×</button><img alt=""></div>';
+    document.body.appendChild(lightbox);
+    const lightboxImage = lightbox.querySelector('img');
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-open');
+      document.body.classList.remove('is-lightbox-open');
+      lightboxImage.removeAttribute('src');
+      lightboxImage.alt = '';
+    };
+    const openLightbox = (image) => {
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt || '';
+      lightbox.classList.add('is-open');
+      document.body.classList.add('is-lightbox-open');
+    };
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox || event.target.closest('.image-lightbox__close')) closeLightbox();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+    });
+    document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+      const images = [...carousel.querySelectorAll('.carousel-image')];
+      const status = carousel.querySelector('.carousel-status');
+      const previousButtons = [...carousel.querySelectorAll('[data-carousel-prev]')];
+      const nextButtons = [...carousel.querySelectorAll('[data-carousel-next]')];
+      let activeIndex = 0;
+      let touchStartX = 0;
+      const showSlide = (index) => {
+        activeIndex = Math.max(0, Math.min(index, images.length - 1));
+        images.forEach((image, imageIndex) => {
+          image.classList.toggle('is-active', imageIndex === activeIndex);
+          image.classList.toggle('is-before', imageIndex < activeIndex);
+          image.classList.toggle('is-after', imageIndex > activeIndex);
+        });
+        status.textContent = `Image ${activeIndex + 1} of ${images.length}`;
+        previousButtons.forEach((button) => { button.hidden = activeIndex === 0; });
+        nextButtons.forEach((button) => { button.hidden = activeIndex === images.length - 1; });
+      };
+      previousButtons.forEach((button) => button.addEventListener('click', () => showSlide(activeIndex - 1)));
+      nextButtons.forEach((button) => button.addEventListener('click', () => showSlide(activeIndex + 1)));
+      images.forEach((image) => {
+        image.addEventListener('click', () => {
+          if (image.classList.contains('is-active')) openLightbox(image);
+        });
+      });
+      carousel.addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0].clientX;
+      }, { passive: true });
+      carousel.addEventListener('touchend', (event) => {
+        const deltaX = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(deltaX) > 40) showSlide(activeIndex + (deltaX < 0 ? 1 : -1));
+      }, { passive: true });
+      showSlide(0);
+    });
+  </script>
+</body>
+</html>

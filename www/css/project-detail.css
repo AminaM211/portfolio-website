@@ -665,7 +665,7 @@ body.case-study .case-nav__links {
 
 body.case-study .case-nav__links a {
   min-width: 96px;
-  padding: 15px 24px 13px;
+  padding: 18px;
   text-align: center;
   border-bottom: 1px solid #000;
 }
@@ -1168,7 +1168,7 @@ body.case-study .concept-copy,
   }
   body.case-study .case-nav__links a {
     min-width: 74px;
-    padding: 12px 0px;
+    padding: 14px 16px;
     font-size: 14px;
     width: fit-content !important;
   }
@@ -1545,11 +1545,11 @@ body.case-study .feature-phone {
 }
 
 
-@media (max-width: 360px) {
+@media (max-width: 385px) {
   body.case-study .case-nav__links a {
     min-width: 60px;
-    padding: 12px 0;
-    font-size: 14px;
+    padding: 12px;
+    font-size: 12px;
     width: fit-content !important;
   }
 }

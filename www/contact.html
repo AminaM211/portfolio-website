@@ -36,8 +36,8 @@
 
     <section class="contact-hero">
       <div class="contact-hero__content">
-        <h1 class="contact-hero__title">Ready to bring ideas to life?</h1>
-        <p class="contact-hero__subtitle">Have a project in mind, a job opportunity or just want to connect? I'm always open to interesting conversations.</p>
+        <h1 class="contact-hero__title">Klaar om ideeën tot leven te brengen?</h1>
+        <p class="contact-hero__subtitle">Heb je een project in gedachten, een vacature of wil je gewoon even contact leggen? Ik ben altijd open voor inspirerende gesprekken.</p>
       </div>
 
       <form class="contact-form" name="contact" method="POST" action="https://formspree.io/f/mnjrpodq" accept-charset="UTF-8">
@@ -46,22 +46,22 @@
           <label>Laat dit veld leeg als je een mens bent: <input name="_gotcha"></label>
         </p>
         <div class="form-group">
-          <label for="email" class="form-label">Email</label>
+          <label for="email" class="form-label">E-mail</label>
           <input type="email" id="email" name="email" class="form-input" required>
         </div>
         <div class="form-group">
-          <label for="message" class="form-label">Message</label>
-          <textarea id="message" name="message" class="form-textarea" placeholder="Write your message here" rows="6" required></textarea>
+          <label for="message" class="form-label">Bericht</label>
+          <textarea id="message" name="message" class="form-textarea" placeholder="Schrijf hier je bericht" rows="6" required></textarea>
         </div>
-        <button type="submit" class="contact-form__button">Send</button>
+        <button type="submit" class="contact-form__button">Verstuur</button>
         <div class="form-feedback" aria-live="polite" role="status" style="display:none;margin-top:16px;color:var(--muted);"></div>
       </form>
     </section>
 
 		<section class="contact" id="contact">
-			<h2>Get in touch</h2>
+			<h2>Neem contact op</h2>
 			<div class="buttons">
-				<a class="secondary" href="mailto:amoutalibova@gmail.com">Email</a>
+				<a class="secondary" href="mailto:amoutalibova@gmail.com">E-mail</a>
 				<a class="secondary" href="https://www.linkedin.com/in/amina-moutalibova" target="_blank" rel="noreferrer">LinkedIn</a>
 			</div>
       <img src="./images/vectors/logo-white.svg" alt="" class="bg-img" aria-hidden="true">
@@ -72,7 +72,7 @@
 	<footer class="footer">
             <img src="./images/vectors/logo-white.svg" alt="Amina Moutalibova logo" class="logo">
 			<div class="footer-nav">
-				<a href="projects.html">Projects</a>
+				<a href="projects.html">Projecten</a>
 				<a href="contact.html">Contact</a>
 			</div>
 			<p class="copyright">
@@ -111,7 +111,7 @@
             if (response.ok) {
               feedback.style.display = 'block';
               feedback.style.color = 'green';
-              feedback.textContent = 'Thank you for your message! I will get back to you as soon as possible.';
+              feedback.textContent = 'Bedankt voor je bericht! Ik neem zo snel mogelijk contact met je op.';
               form.reset();
               return;
             }
@@ -121,7 +121,7 @@
           .catch(function () {
             feedback.style.display = 'block';
             feedback.style.color = 'red';
-            feedback.textContent = 'Something went wrong. Try again later.';
+            feedback.textContent = 'Er ging iets mis. Probeer het later opnieuw.';
           })
           .finally(function () {
             submitButton.disabled = false;

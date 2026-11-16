@@ -265,11 +265,6 @@
 				color: #000;
 			}
 
-			.project-card:hover .tag {
-				border-color: #de0043;
-				color: #de0043;
-			}
-
 			.project-card:hover .project-card__arrow {
 				opacity: 0;
 				transform: translate(-8px, 8px);
@@ -290,11 +285,6 @@
 			.project-card.is-active .project-card__title,
 			.project-card.is-active .project-card__meta dt,
 			.project-card.is-active .project-card__meta dd {
-				color: #fff;
-			}
-
-			.project-card.is-active .tag {
-				border-color: #fff;
 				color: #fff;
 			}
 
@@ -922,7 +912,7 @@
 
 		.project-card:hover .tag {
 			border-color: #de0043;
-			color: #de0043;
+			color: #de0043 !important;
 		}
 
 		.project-card:active {
