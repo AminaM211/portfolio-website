@@ -226,6 +226,8 @@
 			transition: transform 0.25s ease;
 		}
 
+
+
 		.project-card.is-active .project-card__eyebrow,
 		.project-card.is-active .project-card__title,
 		.project-card.is-active .project-card__meta dt,
@@ -383,6 +385,13 @@
 		display: flex;
 		flex-direction: column;
 		}
+
+		.kiosk-visual {
+		margin-left: -200px;
+		margin-top: 50px;
+		}
+
+
 
 		.portrait-wrap {
 			grid-column: 2;
@@ -734,6 +743,13 @@
 		  bottom: 30px;
 		  right: 70px;
       }
+
+	  	.kiosk-visual {
+		margin-left: -100px;
+		margin-top: 50px;
+		width: 700px;
+		}
+
 
       .project-card__meta {
         display: flex;
